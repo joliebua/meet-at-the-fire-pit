@@ -121,7 +121,7 @@ DIAGRAM = """
 <rect x="225" y="405" width="160" height="70" class="b" rx="12"/><text x="240" y="433" class="t">🎯 Strategist</text><text x="240" y="455" class="s">coach · or autopilot</text>
 <rect x="420" y="405" width="180" height="70" class="c" rx="12"/><text x="434" y="433" class="t">🗓️ Season engine (code)</text><text x="434" y="455" class="s">draft · moves checked · weeks</text>
 <path class="l" d="M180,355 L223,425"/><path class="l" d="M385,440 L418,440"/><path class="l" d="M598,405 C590,330 596,270 606,242"/>
-<text x="200" y="497" class="s">Ref fixes go through verify.py too · nothing changes scores until the commissioner approves · Strategist moves pass code checks</text>
+<text x="200" y="497" class="s">Ref fixes and Strategist moves are checked in code · nothing changes scores until the commissioner approves</text>
 <text x="200" y="515" class="s">Gold boxes are plain code; pink boxes are gpt-6-luna agents; teal boxes are inputs</text>
 </svg>"""
 

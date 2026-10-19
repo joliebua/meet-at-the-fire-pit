@@ -43,6 +43,10 @@ CSS = """
 :root { --hot:#ff2e93; --sunset:#ff8a3d; --pool:#29e6d6; --gold:#ffd23f; --ink:#fff7fb; }
 .reveal-viewport { background: radial-gradient(circle at 80% 15%, rgba(255,210,63,.45) 0, rgba(255,138,61,.25) 10%, transparent 26%),
   linear-gradient(180deg,#1d0730 0%,#4a0f4f 30%,#9c1f6e 58%,#ff2e93 82%,#ff8a3d 100%); }
+/* PDF export (?print-pdf): every page gets the full sunset background */
+html.print-pdf .reveal .slides .pdf-page { background: radial-gradient(circle at 80% 15%, rgba(255,210,63,.45) 0, rgba(255,138,61,.25) 10%, transparent 26%),
+  linear-gradient(180deg,#1d0730 0%,#4a0f4f 30%,#9c1f6e 58%,#ff2e93 82%,#ff8a3d 100%); }
+html.print-pdf .reveal .slide-number { display: none; }
 .reveal { font-family: Poppins, "Helvetica Neue", Arial, sans-serif; color: var(--ink); font-size: 30px; }
 .reveal h1, .reveal h2 { font-family: Pacifico, "Brush Script MT", cursive; font-weight: 400; text-transform: none; color: #ffe6f2;
   text-shadow: 0 0 8px rgba(255,46,147,.9), 0 0 24px rgba(255,46,147,.6); letter-spacing: 0; }
@@ -193,7 +197,8 @@ slides.append(f"""
         <li><b>Injection in recaps:</b> hidden text stripped, the line flagged, its quotes can't count</li>
         <li><b>Injection in disputes:</b> fake "commissioner approved" denied, nothing changes without approval</li>
         <li><b>Invented events:</b> fake quotes, fake islanders, wrong days, an islander who wasn't in the villa: all rejected by code</li>
-        <li><b>Overspending:</b> request, token, web-search and input-size caps</li>
+        <li><b>Overspending:</b> per-run request, token and web-search caps, plus a $1/day app budget and a rate limit</li>
+        <li><b>Privacy:</b> phones, emails and card numbers removed before the AI sees them; the API key never leaves the server</li>
         <li><b>Autonomous coach:</b> sees only aired weeks; autopilot can't apply illegal moves</li>
       </ul>
       <p class="small"><span class="hl">Known limit:</span> a believable lie planted in a trusted source can pass. It shows as single-source and can be disputed.</p>

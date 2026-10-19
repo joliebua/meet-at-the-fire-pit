@@ -137,6 +137,7 @@ npm run build                                   # refresh frontend/dist, which t
 .venv/bin/python scripts/capture_screenshots.py --url http://127.0.0.1:8000 --play-demo   # app must be running; --play-demo also replays the "Villa Demo" league
 .venv/bin/python scripts/build_report.py              # → report.html (self-contained)
 .venv/bin/python scripts/build_slides.py              # → slides.html (reveal.js, 10 slides; arrows, F = full screen, S = notes)
+.venv/bin/python scripts/build_slides_pdf.py          # → slides.pdf (same deck, one 16:9 page per slide)
 ```
 
 ---
@@ -175,6 +176,7 @@ docs/screenshots/   screenshots used in the report and slides
 scripts/            snapshot builder, accuracy eval, safety tests, screenshots, report + slides builders (evidence.py = shared numbers)
 report.html         the written report (self-contained)
 slides.html         the slide deck (reveal.js from a CDN, screenshots embedded)
+slides.pdf          the same deck as a PDF (10 pages)
 ```
 
 No secrets are committed: `.env` is git-ignored, and `.env.example` lists the key name only.
