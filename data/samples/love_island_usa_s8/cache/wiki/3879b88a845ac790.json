@@ -1,0 +1,19 @@
+{
+ "kind": "wiki",
+ "key": {
+  "wiki": "wikipedia",
+  "action": "parse",
+  "page": "Love Island USA season 8",
+  "prop": "wikitext",
+  "redirects": 1,
+  "section": "1"
+ },
+ "value": {
+  "parse": {
+   "title": "Love Island USA season 8",
+   "pageid": 83120112,
+   "redirects": [],
+   "wikitext": "== Format ==\n{{further|Love Island USA#Format}}\n''Love Island'' is a [[reality television]] program where a group of contestants, who are referred to as \"Islanders,\" are living in a villa in [[Fiji]]. The Islanders are cut off from the outside world and are under constant video surveillance. To survive in the villa, the islanders must be in a relationship with another islander. The Islanders couple up for the first time on first impressions but will later \"re-couple\" at special ceremonies where they can choose to remain with their current partners or to switch partners. At the villa, the couples must share a bed for sleeping and are permitted to talk with other Islanders at any time, allowing them to get to know everyone.<ref name=\"format 22\">{{Cite web |last=Phillips |first=Hedy |date=July 16, 2019 |title=So You've Been Watching Love Island and Have a Few Questions — Let Us Help |url=https://www.popsugar.com/entertainment/How-Does-Love-Island-Work-46382406 |access-date=April 4, 2020 |website=popsugar.com |publisher=POPSUGAR}}</ref> While in the villa, each Islander has his or her own telephone, with which they can contact other Islanders via [[SMS|text]] and can receive text messages informing them of the latest challenges, dumpings, and re-couplings. The Islanders are limited in their communication with the outside world.<ref>{{Cite web |last=Sorren |first=Martha |title=Here's How \"Love Island\" Works, In Case You've New To The Villa |url=https://www.refinery29.com/en-us/2019/07/237359/what-are-american-love-island-rules |access-date=April 3, 2021 |website=www.refinery29.com |language=en}}</ref>\n\nThe Islanders are presented with many games and challenges that are designed to test their physical and mental abilities, after which the winners are sometimes presented with special prizes, such as a night at the [[Love Island USA season 6#Villa|Hideaway]] or a special date.<ref name=\"format2\">{{Cite web |title=What to Know About Love Island Before Its U.S. Debut |date=8 July 2019 |url=https://www.vulture.com/2019/07/how-does-love-island-work-us-premiere-date.html}}</ref>\n\nIslanders can be eliminated, or \"dumped,\" for several reasons; these include remaining single after a re-coupling and by public vote through the ''Love Island'' [[mobile app]]. During the show's final week, members of the public vote to decide which couple should win the series; the couple who receive the most votes win.<ref name=\"format2\" />"
+  }
+ }
+}

@@ -1,0 +1,147 @@
+{
+ "run": {
+  "agent": "scout",
+  "season": "love_island_usa_s8",
+  "week": "Week 3",
+  "mode": "live",
+  "started": "2026-10-19T18:35:59+00:00",
+  "seconds": 14.1,
+  "usage": {
+   "scout_agent": {
+    "requests": 3,
+    "input_tokens": 6461,
+    "cached_input_tokens": 1675,
+    "cache_write_tokens": 3693,
+    "output_tokens": 603,
+    "reasoning_tokens": 337,
+    "web_searches": 0,
+    "cost_usd": 0.000889
+   },
+   "web_search_tool": {
+    "requests": 0,
+    "input_tokens": 0,
+    "cached_input_tokens": 0,
+    "cache_write_tokens": 0,
+    "output_tokens": 0,
+    "reasoning_tokens": 0,
+    "web_searches": 0,
+    "cost_usd": 0.0
+   },
+   "total_cost_usd": 0.000889
+  },
+  "sources_gathered": 10,
+  "sources_chosen": 5,
+  "steps": [
+   {
+    "tool": "episode_guide",
+    "arguments": {},
+    "result": "[{'episode': '1', 'week': 'Week 1', 'days': 'Days 1–2', 'aired': '2026-06-02'}, {'episode': '2', 'week': 'Week 1', 'days': 'Days 2–3', 'aired': '2026-06-03'}, {'episode': '3', 'week': 'Week 1', 'days': 'Days 3–4', 'aired': '2026-06-04'}, {'episode': '4', 'week': 'Week 1', 'days': 'Days 4–5', 'aired': '2026-06-05'}, {'episode': '5', 'week': 'Week 1', 'days': 'Days 5–6', 'aired': '2026-06-07'}, {'episode': '6', 'week': 'Week 1', 'days': 'Days 6–7', 'aired': '2026-06-08'}, {'episode': '7', 'week': 'Week 2', 'days': 'Days 7–8', 'aired': '2026-06-09'}, {'episode': '8', 'week': 'Week 2', 'days': 'Da"
+   },
+   {
+    "tool": "episode_guide",
+    "arguments": {},
+    "result": "[{'episode': '1', 'week': 'Week 1', 'days': 'Days 1–2', 'aired': '2026-06-02'}, {'episode': '2', 'week': 'Week 1', 'days': 'Days 2–3', 'aired': '2026-06-03'}, {'episode': '3', 'week': 'Week 1', 'days': 'Days 3–4', 'aired': '2026-06-04'}, {'episode': '4', 'week': 'Week 1', 'days': 'Days 4–5', 'aired': '2026-06-05'}, {'episode': '5', 'week': 'Week 1', 'days': 'Days 5–6', 'aired': '2026-06-07'}, {'episode': '6', 'week': 'Week 1', 'days': 'Days 6–7', 'aired': '2026-06-08'}, {'episode': '7', 'week': 'Week 2', 'days': 'Days 7–8', 'aired': '2026-06-09'}, {'episode': '8', 'week': 'Week 2', 'days': 'Da"
+   },
+   {
+    "tool": "read_week",
+    "arguments": {
+     "wiki_name": "wikipedia",
+     "page": "Love Island USA season 8",
+     "section": "Weekly summary",
+     "week": "Week 3"
+    },
+    "result": "{'source_id': 'S2', 'chars': 1760, 'headings': ['Entrances', 'Coupling', 'Challenges', 'Exits'], 'days_mentioned': [16, 17, 19, 20, 21], 'preview': 'Entrances:\\nOn Day 16, Alannah, Amora, Jaiden, Parmida, Sydney, and Tierra entered Casa Amor.\\nOn Day 17, Carl, Chandlar, Chay, Corey, Dylan, Gal, Keyon, Kyle, Ronnie, Ryan, Tino and Trae entered the main villa.\\nOn Day 21, Amora and Carl re-entered the villa after the public voted them back in.\\nCoupling:\\nOn Day 20, as the final part for the Casa Amor twist, Casa Amor and the villa held two separate re-coupling ceremonies for the original island"
+   },
+   {
+    "tool": "read_week",
+    "arguments": {
+     "wiki_name": "fandom",
+     "page": "Love Island USA (Season 8)",
+     "section": "Weekly Summary",
+     "week": "Week 3"
+    },
+    "result": "{'source_id': 'S1', 'chars': 1170, 'headings': ['Coupling', 'Exits'], 'days_mentioned': [17, 19, 20], 'preview': '[Coupling]\\n\\nOn Day 20, the original islanders were told that they would be re-coupling. They were given the option to remain in their current couple, or to choose one of the new islanders. However, as the boys and the girls were living in separate villas, they were not aware of what the other one chose. Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all chose to remain in their couples. Elsewhere, Caleb chose to couple up with Jaiden, Corbin picked Parmida, Kenzie wen"
+   },
+   {
+    "tool": "search_news",
+    "arguments": {
+     "query": "Love Island USA season 8",
+     "after": "2026-06-19",
+     "before": "2026-06-28"
+    },
+    "result": "[{'source_id': 'S3', 'title': '‘Love Island USA’ Season 8 Cast Revealed - The Hollywood Reporter', 'outlet': 'The Hollywood Reporter', 'published': 'Tue, 30 Jun 2026 07:00:00 GMT'}, {'source_id': 'S4', 'title': 'I Ranked The Men Of ‘LIUSA’ Season 8 Based On Who Is The Biggest Villain - Her Campus', 'outlet': 'Her Campus', 'published': 'Mon, 22 Jun 2026 07:00:00 GMT'}, {'source_id': 'S5', 'title': '‘Love Island USA’ Season 8 Post-Casa Amor Recap: What Happened Between Trinity and Tierra? - Sports Illustrated Lifestyle', 'outlet': 'Sports Illustrated Lifestyle', 'published': 'Mon, 29 Jun 2026 07"
+   }
+  ]
+ },
+ "bundle": {
+  "show": "Love Island USA",
+  "season": "8",
+  "week": "Week 3",
+  "episodes": [
+   "15",
+   "16",
+   "17",
+   "18",
+   "19",
+   "20",
+   "21",
+   "22",
+   "23"
+  ],
+  "sources": [
+   {
+    "id": "S2",
+    "kind": "wiki",
+    "title": "Love Island USA season 8 - Weekly summary - Week 3",
+    "url": "https://en.wikipedia.org/wiki/Love_Island_USA_season_8",
+    "outlet": "wikipedia",
+    "published": "",
+    "text": "Entrances:\nOn Day 16, Alannah, Amora, Jaiden, Parmida, Sydney, and Tierra entered Casa Amor.\nOn Day 17, Carl, Chandlar, Chay, Corey, Dylan, Gal, Keyon, Kyle, Ronnie, Ryan, Tino and Trae entered the main villa.\nOn Day 21, Amora and Carl re-entered the villa after the public voted them back in.\nCoupling:\nOn Day 20, as the final part for the Casa Amor twist, Casa Amor and the villa held two separate re-coupling ceremonies for the original islanders to choose whether to return to their previous partner or pick any new partner. Kayda and Zach, Melanie and Sincere and Trinity and Bryce all remained loyal to one another. Jen chose to recouple with Gal and Kenzie chose Dylan. Caleb brought Jaiden to the main villa, Corbin brought Parmida and KC brought Tierra. \nChallenges:\nOn Day 21, Megan Thee Stallion hosted a girls vs boys challenge. In the first round, as they music play and once it stops, the islanders must sit on a cake. The girls won the first round. In the second round each team got to throw a cake at the opposing team members. The girls won the second round as well. In the final round, each team had to have a representative eat a cake to find a heart in the middle. The boys won the round.\nExits:\nOn Day 17, the original girl islanders had to decided which six Casa Amor boys they wanted to stay in the villa. The original girls chose Carl, Chay, Corey, Dylan, Gal and Ronnie to remain in the villa. This meant that Chandlar, Keyon, Kyle, Ryan, Tino and Trae were dumped from the villa. \nOn Day 19, Alannah was removed from the villa due to a resurfaced video of her using racist language.\nOn Day 20, Casa Amor islanders, Amora, Carl, Chay, Corey, Ronnie, and Sydney, remained single at the end the night, and were all dumped from the villa.",
+    "flags": []
+   },
+   {
+    "id": "S1",
+    "kind": "wiki",
+    "title": "Love Island USA (Season 8) - Weekly Summary - Week 3",
+    "url": "https://loveisland.fandom.com/wiki/Love_Island_USA_(Season_8)",
+    "outlet": "fandom",
+    "published": "",
+    "text": "[Coupling]\n\nOn Day 20, the original islanders were told that they would be re-coupling. They were given the option to remain in their current couple, or to choose one of the new islanders. However, as the boys and the girls were living in separate villas, they were not aware of what the other one chose. Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all chose to remain in their couples. Elsewhere, Caleb chose to couple up with Jaiden, Corbin picked Parmida, Kenzie went with Dylan, and Jen chose Gal. As Aniya decided to remain loyal to KC, but he chose to twist and couple up with Tierra, she remained in the villa as a single islander. The remaining single Casa islanders were dumped from the island after failing to be in a couple.\n\n[Exits]\n\nOn Day 17, the original girls had to choose which 6 of the 12 Casa Amor boys would remain in the villa. They ultimately chose to dump Chandlar, Keyon, Kyle, Ryan, Tino and Trae.\nOn Day 19, Alannah was removed from the villa due to evidence surfacing of her using a racial slur.\nOn Day 20, Casa Amor islanders Amora, Carl, Chay, Corey, Ronnie, and Sydney were dumped from the island after failing to couple up.",
+    "flags": []
+   },
+   {
+    "id": "S9",
+    "kind": "news_headline",
+    "title": "'Love Island USA' Season 8 Casa Amor Results: List Of All Islanders Dumped & The Couples Who Survived - Deadline",
+    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5RcmdnbVlDTE1zd2JIUEE2ZTVVRGh2aGRNNkdDNGgyVkw3bGJGR3dQOVhtNlJQbHduSGNWc042dG5qNFRjZDkwTE1iRXZJTnBaeWR5ckZVbllOaXRCTVhmTFVZM01pMkVQel9UeVFWRlZMNnlPUmNnZFZ4SUs?oc=5",
+    "outlet": "Deadline",
+    "published": "Fri, 26 Jun 2026 07:00:00 GMT",
+    "text": "'Love Island USA' Season 8 Casa Amor Results: List Of All Islanders Dumped & The Couples Who Survived - Deadline",
+    "flags": []
+   },
+   {
+    "id": "S7",
+    "kind": "news_headline",
+    "title": "Love Island USA Season 8 Week 3 Recap: Episodes 14-19 - Write Through the Night",
+    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPRWgxVl84YWVESEp0cHAwQmpZaU1rdzc3aXRnMjN3TEsxVUl5WFljanYwQ2JrV29ub19zVTU4QWw0LWEzVE9FM2ZwTDBGQzZHb1hzcHZPM1ZOZmkya3ZiQjRIVWczYUV5VXB1Q0xwOWh3bU8zcXJsOXZFNDJ3a3JCU1dMNGVxMlI3bzFjSGdWSQ?oc=5",
+    "outlet": "Write Through the Night",
+    "published": "Wed, 24 Jun 2026 07:00:00 GMT",
+    "text": "Love Island USA Season 8 Week 3 Recap: Episodes 14-19 - Write Through the Night",
+    "flags": []
+   },
+   {
+    "id": "S6",
+    "kind": "news_headline",
+    "title": "The Love Island USA Ladies Are Performing For Men Who Don’t Deserve Them — & It’s Hard To Watch - Refinery29",
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNc3g5b2JEUEtDWFpPcV9vVVVORXhjekdqdjlubWZaMk8tSzZvbzg0bjlnSUphanpZTjlVNjJSY0VPQ09kUW44YWZBX0oxeTVma3pLSnVOLW90azlmb1JaeTY4akpnYlhsRmZYd28xeWIwQnM2eFRaLU56N2xsZ1hQWXdMT0o2RnpaV0dqZTBDTDQ0UDlGdUJZ?oc=5",
+    "outlet": "Refinery29",
+    "published": "Thu, 25 Jun 2026 07:00:00 GMT",
+    "text": "The Love Island USA Ladies Are Performing For Men Who Don’t Deserve Them — & It’s Hard To Watch - Refinery29",
+    "flags": []
+   }
+  ],
+  "gaps": [],
+  "notes": "The two weekly wiki summaries cover the week’s main events; the Casa Amor results article and episode recap provide additional corroboration. The episode recap headline covers only episodes 14–19.",
+  "rejected_ids": []
+ }
+}

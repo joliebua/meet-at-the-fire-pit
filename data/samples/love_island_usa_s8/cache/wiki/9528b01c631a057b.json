@@ -1,0 +1,108 @@
+{
+ "kind": "wiki",
+ "key": {
+  "wiki": "fandom",
+  "action": "parse",
+  "page": "Love Island USA (Season 8)",
+  "prop": "sections",
+  "redirects": 1
+ },
+ "value": {
+  "parse": {
+   "title": "Love Island USA (Season 8)",
+   "pageid": 4828,
+   "redirects": [],
+   "sections": [
+    {
+     "toclevel": 1,
+     "level": "2",
+     "line": "Islanders",
+     "number": "1",
+     "index": "1",
+     "fromtitle": "Love_Island_USA_(Season_8)",
+     "byteoffset": 774,
+     "anchor": "Islanders",
+     "linkAnchor": "Islanders"
+    },
+    {
+     "toclevel": 1,
+     "level": "2",
+     "line": "Coupling",
+     "number": "2",
+     "index": "2",
+     "fromtitle": "Love_Island_USA_(Season_8)",
+     "byteoffset": 5779,
+     "anchor": "Coupling",
+     "linkAnchor": "Coupling"
+    },
+    {
+     "toclevel": 2,
+     "level": "3",
+     "line": "Notes",
+     "number": "2.1",
+     "index": "3",
+     "fromtitle": "Love_Island_USA_(Season_8)",
+     "byteoffset": 10051,
+     "anchor": "Notes",
+     "linkAnchor": "Notes"
+    },
+    {
+     "toclevel": 1,
+     "level": "2",
+     "line": "Weekly Summary",
+     "number": "3",
+     "index": "4",
+     "fromtitle": "Love_Island_USA_(Season_8)",
+     "byteoffset": 11085,
+     "anchor": "Weekly_Summary",
+     "linkAnchor": "Weekly_Summary"
+    },
+    {
+     "toclevel": 1,
+     "level": "2",
+     "line": "Trivia",
+     "number": "4",
+     "index": "5",
+     "fromtitle": "Love_Island_USA_(Season_8)",
+     "byteoffset": 20198,
+     "anchor": "Trivia",
+     "linkAnchor": "Trivia"
+    },
+    {
+     "toclevel": 2,
+     "level": "3",
+     "line": "Controversies",
+     "number": "4.1",
+     "index": "6",
+     "fromtitle": "Love_Island_USA_(Season_8)",
+     "byteoffset": 20382,
+     "anchor": "Controversies",
+     "linkAnchor": "Controversies"
+    },
+    {
+     "toclevel": 2,
+     "level": "3",
+     "line": "Couple Status",
+     "number": "4.2",
+     "index": "7",
+     "fromtitle": "Love_Island_USA_(Season_8)",
+     "byteoffset": 21154,
+     "anchor": "Couple_Status",
+     "linkAnchor": "Couple_Status"
+    },
+    {
+     "toclevel": 1,
+     "level": "2",
+     "line": "References",
+     "number": "5",
+     "index": "8",
+     "fromtitle": "Love_Island_USA_(Season_8)",
+     "byteoffset": 21744,
+     "anchor": "References",
+     "linkAnchor": "References"
+    }
+   ],
+   "showtoc": true
+  }
+ }
+}

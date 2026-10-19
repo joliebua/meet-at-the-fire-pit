@@ -1,0 +1,19 @@
+{
+ "kind": "wiki",
+ "key": {
+  "wiki": "fandom",
+  "action": "parse",
+  "page": "Love Island USA (Season 8)",
+  "prop": "wikitext",
+  "redirects": 1,
+  "section": "3"
+ },
+ "value": {
+  "parse": {
+   "title": "Love Island USA (Season 8)",
+   "pageid": 4828,
+   "redirects": [],
+   "wikitext": "===Notes===\n*<small>{{note|1|Note 1}}: On Day 3, new islanders Gabriel and Kayda had to recouple with one of the islanders who offered to be their partner. Gabriel decided to steal Beatriz, and Kayda chose Zach, thus leaving Sean and Kenzie single and vulnerable.</small>\n*<small>{{note|2|Note 2}}: On Day 10, it was revealed that America had been voting for which islanders the bombshells would couple up with. Caleb was coupled with Kenzie, Jen with Gabriel, and Sol with Sincere. As three islanders were left single, it was down to Corbin to decide which girl he would save and couple up with. He ultimately chose Melanie.</small>\n*<small>{{note|3|Note 3}}: On Day 13, the couples were determined by the islanders writing letters to who they wanted to couple up with. As Caleb and Sol did not receive a letter, they were automatically coupled up.</small>\n*<small>{{note|4|Note 4}}: The original Islanders were told they either had to stick with their current partner, or twist and choose a new islander to couple up with.</small>"
+  }
+ }
+}

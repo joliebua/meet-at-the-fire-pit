@@ -1,0 +1,19 @@
+{
+ "kind": "wiki",
+ "key": {
+  "wiki": "fandom",
+  "action": "parse",
+  "page": "Love Island USA (Season 8)",
+  "prop": "wikitext",
+  "redirects": 1,
+  "section": "8"
+ },
+ "value": {
+  "parse": {
+   "title": "Love Island USA (Season 8)",
+   "pageid": 4828,
+   "redirects": [],
+   "wikitext": "==References==\n{{reflist}}\n[[Category:Love Island USA]]\n[[Category:USA Seasons]]\n[[Category:2026 Seasons]]\n[[Category:Love Island USA (Season 8)]]\n{{DEFAULTSORT:USA (Season 8)}}"
+  }
+ }
+}

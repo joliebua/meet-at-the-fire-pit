@@ -1,0 +1,116 @@
+{
+ "kind": "wiki",
+ "key": {
+  "wiki": "wikipedia",
+  "action": "parse",
+  "page": "Love Island USA season 8",
+  "prop": "sections",
+  "redirects": 1
+ },
+ "value": {
+  "warnings": {
+   "main": {
+    "warnings": "Subscribe to the mediawiki-api-announce mailing list at <https://lists.wikimedia.org/postorius/lists/mediawiki-api-announce.lists.wikimedia.org/> for notice of API deprecations and breaking changes. Use [[Special:ApiFeatureUsage]] to see usage of deprecated features by your application."
+   },
+   "parse": {
+    "warnings": "\"prop=sections\" has been deprecated. Please use \"prop=tocdata\" instead."
+   }
+  },
+  "parse": {
+   "title": "Love Island USA season 8",
+   "pageid": 83120112,
+   "redirects": [],
+   "sections": [
+    {
+     "toclevel": 1,
+     "level": "2",
+     "line": "Format",
+     "number": "1",
+     "index": "1",
+     "fromtitle": "Love_Island_USA_season_8",
+     "byteoffset": 1084,
+     "anchor": "Format",
+     "linkAnchor": "Format"
+    },
+    {
+     "toclevel": 1,
+     "level": "2",
+     "line": "Islanders",
+     "number": "2",
+     "index": "2",
+     "fromtitle": "Love_Island_USA_season_8",
+     "byteoffset": 3534,
+     "anchor": "Islanders",
+     "linkAnchor": "Islanders"
+    },
+    {
+     "toclevel": 1,
+     "level": "2",
+     "line": "Production",
+     "number": "3",
+     "index": "3",
+     "fromtitle": "Love_Island_USA_season_8",
+     "byteoffset": 13712,
+     "anchor": "Production",
+     "linkAnchor": "Production"
+    },
+    {
+     "toclevel": 1,
+     "level": "2",
+     "line": "Coupling and elimination history",
+     "number": "4",
+     "index": "4",
+     "fromtitle": "Love_Island_USA_season_8",
+     "byteoffset": 15868,
+     "anchor": "Coupling_and_elimination_history",
+     "linkAnchor": "Coupling_and_elimination_history"
+    },
+    {
+     "toclevel": 2,
+     "level": "3",
+     "line": "Notes",
+     "number": "4.1",
+     "index": "5",
+     "fromtitle": "Love_Island_USA_season_8",
+     "byteoffset": 27369,
+     "anchor": "Notes",
+     "linkAnchor": "Notes"
+    },
+    {
+     "toclevel": 1,
+     "level": "2",
+     "line": "Weekly summary",
+     "number": "5",
+     "index": "6",
+     "fromtitle": "Love_Island_USA_season_8",
+     "byteoffset": 31532,
+     "anchor": "Weekly_summary",
+     "linkAnchor": "Weekly_summary"
+    },
+    {
+     "toclevel": 1,
+     "level": "2",
+     "line": "Episodes",
+     "number": "6",
+     "index": "7",
+     "fromtitle": "Love_Island_USA_season_8",
+     "byteoffset": 40197,
+     "anchor": "Episodes",
+     "linkAnchor": "Episodes"
+    },
+    {
+     "toclevel": 1,
+     "level": "2",
+     "line": "References",
+     "number": "7",
+     "index": "8",
+     "fromtitle": "Love_Island_USA_season_8",
+     "byteoffset": 51225,
+     "anchor": "References",
+     "linkAnchor": "References"
+    }
+   ],
+   "showtoc": true
+  }
+ }
+}

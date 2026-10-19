@@ -1,0 +1,151 @@
+{
+ "run": {
+  "agent": "scout",
+  "season": "love_island_usa_s8",
+  "week": "Week 2",
+  "mode": "live",
+  "started": "2026-10-19T18:34:24+00:00",
+  "seconds": 15.9,
+  "usage": {
+   "scout_agent": {
+    "requests": 3,
+    "input_tokens": 6060,
+    "cached_input_tokens": 0,
+    "cache_write_tokens": 4967,
+    "output_tokens": 469,
+    "reasoning_tokens": 223,
+    "web_searches": 0,
+    "cost_usd": 0.000965
+   },
+   "web_search_tool": {
+    "requests": 0,
+    "input_tokens": 0,
+    "cached_input_tokens": 0,
+    "cache_write_tokens": 0,
+    "output_tokens": 0,
+    "reasoning_tokens": 0,
+    "web_searches": 0,
+    "cost_usd": 0.0
+   },
+   "total_cost_usd": 0.000965
+  },
+  "sources_gathered": 10,
+  "sources_chosen": 6,
+  "steps": [
+   {
+    "tool": "episode_guide",
+    "arguments": {},
+    "result": "[{'episode': '1', 'week': 'Week 1', 'days': 'Days 1–2', 'aired': '2026-06-02'}, {'episode': '2', 'week': 'Week 1', 'days': 'Days 2–3', 'aired': '2026-06-03'}, {'episode': '3', 'week': 'Week 1', 'days': 'Days 3–4', 'aired': '2026-06-04'}, {'episode': '4', 'week': 'Week 1', 'days': 'Days 4–5', 'aired': '2026-06-05'}, {'episode': '5', 'week': 'Week 1', 'days': 'Days 5–6', 'aired': '2026-06-07'}, {'episode': '6', 'week': 'Week 1', 'days': 'Days 6–7', 'aired': '2026-06-08'}, {'episode': '7', 'week': 'Week 2', 'days': 'Days 7–8', 'aired': '2026-06-09'}, {'episode': '8', 'week': 'Week 2', 'days': 'Da"
+   },
+   {
+    "tool": "read_week",
+    "arguments": {
+     "wiki_name": "wikipedia",
+     "page": "Love Island USA season 8",
+     "section": "Weekly summary",
+     "week": "Week 2"
+    },
+    "result": "{'source_id': 'S2', 'chars': 2066, 'headings': ['Coupling', 'Challenges', 'Dates', 'Exits'], 'days_mentioned': [10, 11, 13, 14], 'preview': 'Coupling:\\n On Day 10, America voted for which Islanders the new bombshells should couple up with. America chose Caleb to couple up with Kenzie, Sol to couple up with Sincere and Jen to couple up with Gabriel. This left Corbin, Melanie, and Beatriz single and vulnerable. Corbin then had to choose a girl islander to couple up with. He chose Melanie leaving Beatriz dumped from the villa.\\n On Day 13, islanders recoupled by writing love letters to who they w"
+   },
+   {
+    "tool": "read_week",
+    "arguments": {
+     "wiki_name": "fandom",
+     "page": "Love Island USA (Season 8)",
+     "section": "Weekly Summary",
+     "week": "Week 2"
+    },
+    "result": "{'source_id': 'S1', 'chars': 2151, 'headings': ['Coupling', 'Challenges', 'Dates', 'Exits'], 'days_mentioned': [10, 11, 13, 14], 'preview': '[Coupling]\\n\\nOn Day 10, it was revealed that America had been voting for islanders the bombshells would couple up with. Caleb was coupled with Kenzie, Jen with Gabriel, and Sol with Sincere. As a result, Beatriz, Corbin and Melanie were left single and vulnerable. Corbin was then given the power to save one girl to be in a couple with him. As he chose Melanie, Beatriz was dumped from the island.\\nOn Day 13, the islanders recoupled by writing love letters"
+   },
+   {
+    "tool": "search_news",
+    "arguments": {
+     "query": "Love Island USA season 8 recap",
+     "after": "2026-06-09",
+     "before": "2026-06-18"
+    },
+    "result": "[{'source_id': 'S3', 'title': 'Love Island USA Season 8 Week 2 Recap: Episodes 6-13 - Write Through the Night', 'outlet': 'Write Through the Night', 'published': 'Wed, 17 Jun 2026 07:00:00 GMT'}, {'source_id': 'S4', 'title': '‘Love Island USA’ Week 2 Recap: Fans Stirred the Pot But Islanders Kept the Drama Boiling - The Hollywood Reporter', 'outlet': 'The Hollywood Reporter', 'published': 'Wed, 17 Jun 2026 07:00:00 GMT'}, {'source_id': 'S5', 'title': 'Love Island USA Recap: Is It Time To Start Worrying About Melanie? - Vulture', 'outlet': 'Vulture', 'published': 'Wed, 10 Jun 2026 07:00:00 GMT'"
+   }
+  ]
+ },
+ "bundle": {
+  "show": "Love Island USA",
+  "season": "8",
+  "week": "Week 2",
+  "episodes": [
+   "7",
+   "8",
+   "9",
+   "10",
+   "11",
+   "12",
+   "13",
+   "14"
+  ],
+  "sources": [
+   {
+    "id": "S2",
+    "kind": "wiki",
+    "title": "Love Island USA season 8 - Weekly summary - Week 2",
+    "url": "https://en.wikipedia.org/wiki/Love_Island_USA_season_8",
+    "outlet": "wikipedia",
+    "published": "",
+    "text": "Coupling:\n On Day 10, America voted for which Islanders the new bombshells should couple up with. America chose Caleb to couple up with Kenzie, Sol to couple up with Sincere and Jen to couple up with Gabriel. This left Corbin, Melanie, and Beatriz single and vulnerable. Corbin then had to choose a girl islander to couple up with. He chose Melanie leaving Beatriz dumped from the villa.\n On Day 13, islanders recoupled by writing love letters to who they wanted to couple up with. Trinity and Bryce, Aniya and KC, Jen and Gabriel and Kayda and Zach mutually wrote letters to one another and remained in their couples. Corbin and Caleb each wrote letters to Kenzie while Kenzie only wrote a letter for Corbin and they recoupled. Sol and Melanie each wrote letters to Sincere while Sincere only wrote a letter to Melanie and they recoupled. As the only two islanders to not receive love letters, Sol and Caleb became the final couple. \nChallenges:\n On Day 10, the boy and girl islanders competed against each other in \"Sweet as Pie\" where they had to answer a series of questions about islanders of the opposite gender. If it was a \"nice\" round, they would lock in their answers with a kiss. However, if it was a \"naughty\" round, they would lock in their answers with a pie to the face.\n On Day 11, the couples competed in a soccer style team challenge involving moving a soccer ball without their hands, eating a hot dog controlled by their legs, collecting slime from an inflatable pool, and dumping it on an islander who the couple thought fit the description of the \"Red Card\" question.\nDates:\nOn Day 11, Kayda and Zach were selected by their fellow islanders spend the night in the hideaway.\nExits:\nOn Day 10, Corbin chose to couple up with Melanie, leaving Beatriz single and dumped from the villa.\nOn Day 14, the top four couples who received the most votes from America were granted safety. The four safe girls then had to decide which vulnerable boy to dump, choosing Gabriel, and the four safe boys had to decide which vulnerable girl to dump, choosing Sol.",
+    "flags": []
+   },
+   {
+    "id": "S1",
+    "kind": "wiki",
+    "title": "Love Island USA (Season 8) - Weekly Summary - Week 2",
+    "url": "https://loveisland.fandom.com/wiki/Love_Island_USA_(Season_8)",
+    "outlet": "fandom",
+    "published": "",
+    "text": "[Coupling]\n\nOn Day 10, it was revealed that America had been voting for islanders the bombshells would couple up with. Caleb was coupled with Kenzie, Jen with Gabriel, and Sol with Sincere. As a result, Beatriz, Corbin and Melanie were left single and vulnerable. Corbin was then given the power to save one girl to be in a couple with him. As he chose Melanie, Beatriz was dumped from the island.\nOn Day 13, the islanders recoupled by writing love letters to who they wanted to couple up with. As Aniya and KC, Jen and Gabriel, Kayda and Zach, and Trinity and Bryce mutually wrote letters to one another, they remained in their couples. Caleb and Corbin both wrote letters to Kenzie, while she only wrote one for Corbin, and as a result they coupled up. Similarly, Melanie and Sol both wrote letters for Sincere, while he only wrote one for Melanie, therefore they coupled up. As Caleb and Sol did not receive a letter, they were automatically coupled up.\n\n[Challenges]\n\nOn Day 10, the girls and boys went head-to-head in the \"Sweet as Pie\" challenge, where they had to answer a series of questions about the opposing team. During a \"nice\" round, they locked their answer by giving the islander a kiss. Meanwhile, during a \"naughty\" round, they locked their answer by giving the islander a pie to the face.\nOn Day 11, the couples competed in a soccer style team challenge. It involved moving a soccer ball without their hands, eating a hot dog controlled by their legs, collecting slime from an inflatable pool, and dumping it on an islander who the couple thought fit the description of the \"Red Card\" question.\n\n[Dates]\n\nOn Day 11, Kayda and Zach spent the night in the hideaway.\n\n[Exits]\n\nOn Day 10, Beatriz was dumped from the island after not being chosen by Corbin.\nOn Day 14, it was revealed that America had been voting for their favourite couple. As Caleb and Sol, Corbin and Kenzie, and Jen and Gabriel received the fewest votes, they became vulnerable. It was then up to the safe girls to decide which boy would be dumped from the island, and the safe boys to determine which girl. The girls chose to dump Gabriel, and the boys picked Sol.",
+    "flags": []
+   },
+   {
+    "id": "S4",
+    "kind": "news_headline",
+    "title": "‘Love Island USA’ Week 2 Recap: Fans Stirred the Pot But Islanders Kept the Drama Boiling - The Hollywood Reporter",
+    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQSGgyNWdQOVJGMU1ybExKQTQySmNiUUxXSURDQ3BZZnAwRHZnV2JfRlI3Z3UzM2h0MVdETDFnRnhMbzFZV05kOWhXM3FHaVVEbmczZ2NUX2haUlc2dFNPaDBKZS16bzZsdlh3UHZnNFJHamJOYW5OVlBrcl8wSHRXQnVlcm1McWFNVmg2Umx0VWFrNEQ1R0E?oc=5",
+    "outlet": "The Hollywood Reporter",
+    "published": "Wed, 17 Jun 2026 07:00:00 GMT",
+    "text": "‘Love Island USA’ Week 2 Recap: Fans Stirred the Pot But Islanders Kept the Drama Boiling - The Hollywood Reporter",
+    "flags": []
+   },
+   {
+    "id": "S3",
+    "kind": "news_headline",
+    "title": "Love Island USA Season 8 Week 2 Recap: Episodes 6-13 - Write Through the Night",
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOSmVJei1pdUp2VThEQXIwYUs2VkIycUNTMlFGd2syUERMT1RIVUJyTEhGX1F2TlEwTzY3M0ZUajh1ck1QaTE4WU9sWXBwTm15Qk1yd3YzUjZ0RXVtLUxtV1VMRkxBVFhMUDVDY3ZZdFNZZnRSMDZEN0F2amlIYlJCV1RXSzZKYWQyTG1CWGNn?oc=5",
+    "outlet": "Write Through the Night",
+    "published": "Wed, 17 Jun 2026 07:00:00 GMT",
+    "text": "Love Island USA Season 8 Week 2 Recap: Episodes 6-13 - Write Through the Night",
+    "flags": []
+   },
+   {
+    "id": "S7",
+    "kind": "news_headline",
+    "title": "‘Love Island USA’ Power Rankings: 2 Superfans Recap This Week’s Winners, Losers and Biggest Surpises - TODAY.com",
+    "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPbmdTX0VGanhpRUVUQ3J6NjM1aFFwVkpQa1BkSnRqbEo3X1FUTVhTenFXTWNGTG1Ma0wzRUlxS1lYbV9EcEY5MWlEdGFlazJfZ05fYVVwemYzeld6bFJkN1hlTF9FSVY5Z1I0bnRNOEtydGRzMDZ5a0tBM2dpb2N5QWxkSkpFU2d2WVlCSA?oc=5",
+    "outlet": "TODAY.com",
+    "published": "Wed, 17 Jun 2026 07:00:00 GMT",
+    "text": "‘Love Island USA’ Power Rankings: 2 Superfans Recap This Week’s Winners, Losers and Biggest Surpises - TODAY.com",
+    "flags": []
+   },
+   {
+    "id": "S5",
+    "kind": "news_headline",
+    "title": "Love Island USA Recap: Is It Time To Start Worrying About Melanie? - Vulture",
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPWlNjcE1JVG0wV0VLZjFOU1RHS1MxcEZXVzFLSDFDNlU3OE53TlktaXZYMnlDS3dPeFhlSUVfZV9mSEdIVG9OemxpVlIxN3pfTTVwdHIyTVdtSkZRV1Jtc1p3bTFkYVFmU1NkMFlwVjAtZm5sendCVjhobmFCaDloNkdLcEhXRERmTFFHWnRB?oc=5",
+    "outlet": "Vulture",
+    "published": "Wed, 10 Jun 2026 07:00:00 GMT",
+    "text": "Love Island USA Recap: Is It Time To Start Worrying About Melanie? - Vulture",
+    "flags": []
+   }
+  ],
+  "gaps": [],
+  "notes": "Both weekly-summary sources cover Week 2, and the news search found additional week recaps. No material coverage gaps identified.",
+  "rejected_ids": []
+ }
+}

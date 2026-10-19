@@ -1,0 +1,119 @@
+{
+ "run": {
+  "agent": "scout",
+  "season": "love_island_usa_s8",
+  "week": "Week 1",
+  "mode": "live",
+  "started": "2026-10-19T18:35:16+00:00",
+  "seconds": 33.6,
+  "usage": {
+   "scout_agent": {
+    "requests": 3,
+    "input_tokens": 5631,
+    "cached_input_tokens": 1675,
+    "cache_write_tokens": 2863,
+    "output_tokens": 456,
+    "reasoning_tokens": 230,
+    "web_searches": 0,
+    "cost_usd": 0.000712
+   },
+   "web_search_tool": {
+    "requests": 0,
+    "input_tokens": 0,
+    "cached_input_tokens": 0,
+    "cache_write_tokens": 0,
+    "output_tokens": 0,
+    "reasoning_tokens": 0,
+    "web_searches": 0,
+    "cost_usd": 0.0
+   },
+   "total_cost_usd": 0.000712
+  },
+  "sources_gathered": 10,
+  "sources_chosen": 3,
+  "steps": [
+   {
+    "tool": "episode_guide",
+    "arguments": {},
+    "result": "[{'episode': '1', 'week': 'Week 1', 'days': 'Days 1–2', 'aired': '2026-06-02'}, {'episode': '2', 'week': 'Week 1', 'days': 'Days 2–3', 'aired': '2026-06-03'}, {'episode': '3', 'week': 'Week 1', 'days': 'Days 3–4', 'aired': '2026-06-04'}, {'episode': '4', 'week': 'Week 1', 'days': 'Days 4–5', 'aired': '2026-06-05'}, {'episode': '5', 'week': 'Week 1', 'days': 'Days 5–6', 'aired': '2026-06-07'}, {'episode': '6', 'week': 'Week 1', 'days': 'Days 6–7', 'aired': '2026-06-08'}, {'episode': '7', 'week': 'Week 2', 'days': 'Days 7–8', 'aired': '2026-06-09'}, {'episode': '8', 'week': 'Week 2', 'days': 'Da"
+   },
+   {
+    "tool": "read_week",
+    "arguments": {
+     "wiki_name": "wikipedia",
+     "page": "Love Island USA season 8",
+     "section": "Weekly summary",
+     "week": "Week 1"
+    },
+    "result": "{'source_id': 'S2', 'chars': 2161, 'headings': ['Entrances', 'Coupling', 'Challenges', 'Dates', 'Exits'], 'days_mentioned': [1, 2, 3, 4, 5, 6, 7], 'preview': 'Entrances:\\nOn Day 1, Aniya, Beatriz, Bryce, KC, Kenzie, Melanie, Sean, Sincere, Trinity, and Zach entered the villa.\\nOn Day 2, Gabriel and Kayda entered the villa.\\nOn Day 5, Corbin entered the villa.\\nOn Day 7, Caleb, Jen, and Sol entered the villa.\\nCoupling:\\n On Day 1, the islanders coupled up for the first time with the girls standing behind the door of the boy they would like to couple up with. Trinity chose Bryce, Beatriz chose "
+   },
+   {
+    "tool": "read_week",
+    "arguments": {
+     "wiki_name": "fandom",
+     "page": "Love Island USA (Season 8)",
+     "section": "Weekly Summary",
+     "week": "Week 1"
+    },
+    "result": "{'source_id': 'S1', 'chars': 2344, 'headings': ['Coupling', 'Challenges', 'Dates', 'Exits'], 'days_mentioned': [1, 3, 4, 5, 6], 'preview': \"[Coupling]\\n\\nOn Day 1, the islanders coupled up for the first time with the girls standing behind the door of the boy they would like to couple up with. Trinity coupled up with Bryce, Beatriz chose Sean, and Kenzie picked Zach. As Aniya and Melanie both chose Sincere, he was given the power, to which he chose to pair up with Melanie. As no-one stood behind KC's door, he was automatically coupled up with Aniya.\\nOn Day 3, new islanders Gabriel and Kayda we"
+   },
+   {
+    "tool": "search_news",
+    "arguments": {
+     "query": "Love Island USA season 8",
+     "after": "2026-06-02",
+     "before": "2026-06-08"
+    },
+    "result": "[{'source_id': 'S3', 'title': \"'Love Island USA' airing schedule. What days do new episodes drop? - The Palm Beach Post\", 'outlet': 'The Palm Beach Post', 'published': 'Thu, 04 Jun 2026 07:00:00 GMT'}, {'source_id': 'S4', 'title': \"'Love Island USA' leaves 2 islanders vulnerable after bombshell recoupling - Lohud\", 'outlet': 'Lohud', 'published': 'Thu, 04 Jun 2026 07:00:00 GMT'}, {'source_id': 'S5', 'title': '‘Love Island USA’ Season 8: Who Was Eliminated and Left the Villa After Onscreen Breakups? - Yahoo', 'outlet': 'Yahoo', 'published': 'Sun, 07 Jun 2026 07:00:00 GMT'}, {'source_id': 'S6', "
+   }
+  ]
+ },
+ "bundle": {
+  "show": "Love Island USA",
+  "season": "8",
+  "week": "Week 1",
+  "episodes": [
+   "1",
+   "2",
+   "3",
+   "4",
+   "5",
+   "6"
+  ],
+  "sources": [
+   {
+    "id": "S2",
+    "kind": "wiki",
+    "title": "Love Island USA season 8 - Weekly summary - Week 1",
+    "url": "https://en.wikipedia.org/wiki/Love_Island_USA_season_8",
+    "outlet": "wikipedia",
+    "published": "",
+    "text": "Entrances:\nOn Day 1, Aniya, Beatriz, Bryce, KC, Kenzie, Melanie, Sean, Sincere, Trinity, and Zach entered the villa.\nOn Day 2, Gabriel and Kayda entered the villa.\nOn Day 5, Corbin entered the villa.\nOn Day 7, Caleb, Jen, and Sol entered the villa.\nCoupling:\n On Day 1, the islanders coupled up for the first time with the girls standing behind the door of the boy they would like to couple up with. Trinity chose Bryce, Beatriz chose Sean and Kenzie chose Zach. Melanie and Aniya both chose Sincere, leaving him to chose Melanie. This left Aniya and KC to couple up.\n On Day 3, Gabriel and Kayda had to couple up with one of the islanders who offered to be their partner. Gabriel decided to steal Beatriz and Kayda decided to steal Zach, leaving Sean and Kenzie single. As Trinity and Bryce were not chosen, they remained a couple.\n On Day 6, the islanders recoupled for the first time with the girls choosing who they would like to couple up with. However, as the newest islander, Corbin chose first. He chose to couple up with Kenzie. Aniya and KC, Melanie and Sincere, Trinity and Bryce, Beatriz and Gabriel, and Kayda and Zach all remained together. Sean was left single and dumped from the villa.\nChallenges:\n On Day 1, the islanders took part in a game in which Ariana asked them questions where they would stand in front of a door to lock in an answer. If any other gender was on the other side of the door, they would get to kiss one another.\n On Day 4, the islanders took part in a game in which they had to answer a series of facts relating to their fellow islanders. The islander the thought the question related to would be pushed into the pool.\n On Day 5, the islanders took part in a office style challenge where the girl islanders were tasked with selecting a boy not in their couple to kiss and then answer a question. The islander they chose would be thrown into a slime pit. The girl islanders would then go into a secret room and kiss the new bombshell, Corbin.\nDates:\nOn Day 3, bombshells Gabriel and Kayda got to take Beatriz and Zach on a date.\nExits:\nOn Day 6, following a recoupling, Sean was left single and was dumped from the island.",
+    "flags": []
+   },
+   {
+    "id": "S1",
+    "kind": "wiki",
+    "title": "Love Island USA (Season 8) - Weekly Summary - Week 1",
+    "url": "https://loveisland.fandom.com/wiki/Love_Island_USA_(Season_8)",
+    "outlet": "fandom",
+    "published": "",
+    "text": "[Coupling]\n\nOn Day 1, the islanders coupled up for the first time with the girls standing behind the door of the boy they would like to couple up with. Trinity coupled up with Bryce, Beatriz chose Sean, and Kenzie picked Zach. As Aniya and Melanie both chose Sincere, he was given the power, to which he chose to pair up with Melanie. As no-one stood behind KC's door, he was automatically coupled up with Aniya.\nOn Day 3, new islanders Gabriel and Kayda were given the chance to couple up. However, they were only allowed to choose islanders who offered to be their partner. Beatriz and Trinity both offered to couple up with Gabriel, while Bryce and Zach both offered to couple up with Kayda. Ultimately, Gabriel chose to couple up with Beatriz, and Kayda picked Zach. As a result, Trinity and Bryce remained in their couple, while Kenzie and Sean were left single.\nOn Day 6, the islanders re-coupled for the first time with the girls choosing who they wanted to couple up with. However, as the newest arrival, Corbin was given first pick, to which he chose Kenzie. Aniya and KC, Beatriz and Gabriel, Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all remained in their couples. As Sean remained single, he was dumped from the island.\n\n[Challenges]\n\nOn Day 1, the islanders took part in a game in which Ariana asked them questions where they would stand in front of a door to lock in an answer. If an islander of the opposite gender was on the other side of the door, they would get to kiss one another.\nOn Day 4, the islanders took part in a game in which they had to answer a series of facts relating to their fellow islanders. To lock in their answer, they had to push the islander they thought the question related to into the pool.\nOn Day 5, the islanders took part in a office style challenge where the female islanders were tasked with selecting a boy not in their couple to kiss, and then answer a question. The islander they chose would be thrown into a slime pit. The female islanders would then go into a secret room and kiss the new boy, Corbin.\n\n[Dates]\n\nOn Day 3, new islanders Kayda and Gabriel were given the chance to take two islanders of their choice on a date. Kayda chose Bryce and Zach, while Gabriel picked Beatriz and Trinity.\n\n[Exits]\n\nOn Day 6, Sean was dumped from the island after failing to couple up.",
+    "flags": []
+   },
+   {
+    "id": "S8",
+    "kind": "news_headline",
+    "title": "‘Love Island USA’ Week 1 Recap: The Islanders Get Sticky and Feisty as Relationships Blossom - The Hollywood Reporter",
+    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQX0VJc0FFRTZsQmROZTFES2lZZ0hTamhPR1poM0R4cVIwUmFad0RISjRVWG9TUzZyT20xZmw5R195SGZvMFRmaUtHLU45U2dxLWcxcGN0cnpRLVRnQUVsZGR4S1RkTVNDdEFCZXVFN2VJZVBMTjRvamk2NW9NaVh1Qm1CYk1lOEF6a0c3U1lYTGVKWVdLLWc?oc=5",
+    "outlet": "The Hollywood Reporter",
+    "published": "Wed, 10 Jun 2026 07:00:00 GMT",
+    "text": "‘Love Island USA’ Week 1 Recap: The Islanders Get Sticky and Feisty as Relationships Blossom - The Hollywood Reporter",
+    "flags": []
+   }
+  ],
+  "gaps": [],
+  "notes": "Both wiki weekly summaries cover Week 1; the Hollywood Reporter Week 1 recap may provide useful additional coverage.",
+  "rejected_ids": []
+ }
+}

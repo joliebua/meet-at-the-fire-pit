@@ -1,0 +1,19 @@
+{
+ "kind": "wiki",
+ "key": {
+  "wiki": "wikipedia",
+  "action": "parse",
+  "page": "Love Island USA season 8",
+  "prop": "wikitext",
+  "redirects": 1,
+  "section": "8"
+ },
+ "value": {
+  "parse": {
+   "title": "Love Island USA season 8",
+   "pageid": 83120112,
+   "redirects": [],
+   "wikitext": "== References ==\n\n{{Reflist}}\n\n{{Love Island USA}}\n{{Love Island (franchise)}}\n\n[[Category:Love Island USA|8]]\n[[Category:2026 American television seasons]]\n[[Category:Television shows shot in Fiji]]\n[[Category:Television shows set in Fiji]]"
+  }
+ }
+}

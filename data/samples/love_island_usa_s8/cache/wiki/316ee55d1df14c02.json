@@ -1,0 +1,19 @@
+{
+ "kind": "wiki",
+ "key": {
+  "wiki": "fandom",
+  "action": "parse",
+  "page": "Love Island USA (Season 8)",
+  "prop": "wikitext",
+  "redirects": 1,
+  "section": "7"
+ },
+ "value": {
+  "parse": {
+   "title": "Love Island USA (Season 8)",
+   "pageid": 4828,
+   "redirects": [],
+   "wikitext": "===Couple Status===\nOfficial couples from the show and their post-show status\n{| class=\"wikitable\" style=\"text-align:center;\"\n|-\n!Couple!!Status\n|-\n|Trinity and Bryce\n|style=\"background:lightgreen;\" | Together\n|-\n|Aniya and Carl\n|style=\"background:lightgreen;\" | Together\n|-\n|Melanie and Sincere\n|style=\"background:lightgreen;\" | Together\n|-\n|Kayda and Zach\n|style=\"background:lightgreen;\" | Together\n|-\n|Tierra and KC\n|style=\"background:lightgreen;\" | Together\n|-\n|Kenzie and Dylan\n|style=\"background:lightgreen;\" | Together\n|-\n|Parmida and Corbin\n|style=\"background:#FF496C;\" | Split\n|}"
+  }
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "kind": "wiki",
+ "key": {
+  "wiki": "fandom",
+  "action": "parse",
+  "page": "Love Island USA (Season 8)",
+  "prop": "wikitext",
+  "redirects": 1,
+  "section": "6"
+ },
+ "value": {
+  "parse": {
+   "title": "Love Island USA (Season 8)",
+   "pageid": 4828,
+   "redirects": [],
+   "wikitext": "===Controversies===\n*Just three days before the season was due to air, Vasana was pulled from the original line-up after videos of her saying a racial slur surfaced online.<ref>https://variety.com/2026/tv/news/love-island-usa-vasana-montgomery-n-word-1236763251/</ref> As a result, Gabriel entered as a bombshell instead due to uneven numbers.\n*Following the premiere of episode 17, evidence of Casa Amor islander Alannah using a racial slur surfaced online.<ref>https://pagesix.com/2026/06/22/entertainment/love-island-usa-bombshell-alannah-keyser-faces-backlash-for-using-n-word-in-resurfaced-video/</ref> She was subsequently edited out and removed from the villa.<ref>https://variety.com/2026/tv/news/love-island-usa-casa-amor-alannah-keyser-n-word-1236787570/</ref>"
+  }
+ }
+}

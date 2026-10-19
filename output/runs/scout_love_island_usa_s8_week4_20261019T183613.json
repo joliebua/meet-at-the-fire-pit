@@ -1,0 +1,136 @@
+{
+ "run": {
+  "agent": "scout",
+  "season": "love_island_usa_s8",
+  "week": "Week 4",
+  "mode": "live",
+  "started": "2026-10-19T18:36:13+00:00",
+  "seconds": 12.5,
+  "usage": {
+   "scout_agent": {
+    "requests": 3,
+    "input_tokens": 6456,
+    "cached_input_tokens": 1675,
+    "cache_write_tokens": 3688,
+    "output_tokens": 769,
+    "reasoning_tokens": 516,
+    "web_searches": 0,
+    "cost_usd": 0.000972
+   },
+   "web_search_tool": {
+    "requests": 0,
+    "input_tokens": 0,
+    "cached_input_tokens": 0,
+    "cache_write_tokens": 0,
+    "output_tokens": 0,
+    "reasoning_tokens": 0,
+    "web_searches": 0,
+    "cost_usd": 0.0
+   },
+   "total_cost_usd": 0.000972
+  },
+  "sources_gathered": 10,
+  "sources_chosen": 4,
+  "steps": [
+   {
+    "tool": "episode_guide",
+    "arguments": {},
+    "result": "[{'episode': '1', 'week': 'Week 1', 'days': 'Days 1–2', 'aired': '2026-06-02'}, {'episode': '2', 'week': 'Week 1', 'days': 'Days 2–3', 'aired': '2026-06-03'}, {'episode': '3', 'week': 'Week 1', 'days': 'Days 3–4', 'aired': '2026-06-04'}, {'episode': '4', 'week': 'Week 1', 'days': 'Days 4–5', 'aired': '2026-06-05'}, {'episode': '5', 'week': 'Week 1', 'days': 'Days 5–6', 'aired': '2026-06-07'}, {'episode': '6', 'week': 'Week 1', 'days': 'Days 6–7', 'aired': '2026-06-08'}, {'episode': '7', 'week': 'Week 2', 'days': 'Days 7–8', 'aired': '2026-06-09'}, {'episode': '8', 'week': 'Week 2', 'days': 'Da"
+   },
+   {
+    "tool": "episode_guide",
+    "arguments": {},
+    "result": "[{'episode': '1', 'week': 'Week 1', 'days': 'Days 1–2', 'aired': '2026-06-02'}, {'episode': '2', 'week': 'Week 1', 'days': 'Days 2–3', 'aired': '2026-06-03'}, {'episode': '3', 'week': 'Week 1', 'days': 'Days 3–4', 'aired': '2026-06-04'}, {'episode': '4', 'week': 'Week 1', 'days': 'Days 4–5', 'aired': '2026-06-05'}, {'episode': '5', 'week': 'Week 1', 'days': 'Days 5–6', 'aired': '2026-06-07'}, {'episode': '6', 'week': 'Week 1', 'days': 'Days 6–7', 'aired': '2026-06-08'}, {'episode': '7', 'week': 'Week 2', 'days': 'Days 7–8', 'aired': '2026-06-09'}, {'episode': '8', 'week': 'Week 2', 'days': 'Da"
+   },
+   {
+    "tool": "read_week",
+    "arguments": {
+     "wiki_name": "wikipedia",
+     "page": "Love Island USA season 8",
+     "section": "Weekly summary",
+     "week": "Week 4"
+    },
+    "result": "{'source_id': 'S1', 'chars': 891, 'headings': ['Coupling', 'Challenges', 'Dates', 'Exits'], 'days_mentioned': [22, 25, 26], 'preview': 'Coupling:\\nOn Day 25, the islanders recoupled with the boys choosing which girl they wanted to couple up with. Kayda and Zach, Kenzie and Dylan, Melanie and Sincere, Jaiden and Caleb, Parmida and Corbin, Tierra and KC and Trinity and Bryce remained together. Carl chose to couple up with Aniya, whilst Gal chose to recouple with Amora.\\nChallenges:\\nOn Day 26, the couples took part in a Karaoke Night Challenge. For winning, Kenzie & Dylan won safety from the nig"
+   },
+   {
+    "tool": "read_week",
+    "arguments": {
+     "wiki_name": "fandom",
+     "page": "Love Island USA (Season 8)",
+     "section": "Weekly Summary",
+     "week": "Week 4"
+    },
+    "result": "{'source_id': 'S2', 'chars': 1972, 'headings': ['Coupling', 'Challenges', 'Dates', 'Exits'], 'days_mentioned': [21, 22, 25, 26], 'preview': '[Coupling]\\n\\nOn Day 25, the islanders recoupled with the boys choosing which girl they wanted to couple up with. Kayda and Zach, Kenzie and Dylan, Melanie and Sincere, Parmida and Caleb, Tierra and KC, and Trinity and Bryce remained in their couples. Elsewhere, Carl picked Aniya, and Gal chose Amora. As Jen failed to couple up, she was dumped from the island.\\n\\n[Challenges]\\n\\nOn Day 21, Megan Thee Stallion hosted a girls vs boys challenge. In the first"
+   },
+   {
+    "tool": "search_news",
+    "arguments": {
+     "query": "Love Island USA season 8",
+     "after": "2026-06-29",
+     "before": "2026-07-07"
+    },
+    "result": "[{'source_id': 'S3', 'title': '‘Love Island USA’ Season 8 Cast Revealed - The Hollywood Reporter', 'outlet': 'The Hollywood Reporter', 'published': 'Tue, 30 Jun 2026 07:00:00 GMT'}, {'source_id': 'S4', 'title': '‘Love Island USA’ Season 8 Post-Casa Amor Recap: What Happened Between Trinity and Tierra? - Sports Illustrated Lifestyle', 'outlet': 'Sports Illustrated Lifestyle', 'published': 'Mon, 29 Jun 2026 07:00:00 GMT'}, {'source_id': 'S5', 'title': 'Love Island USA Season 8 Week 5 Recap: Episodes 26-31 - Write Through the Night', 'outlet': 'Write Through the Night', 'published': 'Wed, 08 Jul "
+   }
+  ]
+ },
+ "bundle": {
+  "show": "Love Island USA",
+  "season": "8",
+  "week": "Week 4",
+  "episodes": [
+   "24",
+   "25",
+   "26",
+   "27",
+   "28",
+   "29",
+   "30",
+   "31"
+  ],
+  "sources": [
+   {
+    "id": "S1",
+    "kind": "wiki",
+    "title": "Love Island USA season 8 - Weekly summary - Week 4",
+    "url": "https://en.wikipedia.org/wiki/Love_Island_USA_season_8",
+    "outlet": "wikipedia",
+    "published": "",
+    "text": "Coupling:\nOn Day 25, the islanders recoupled with the boys choosing which girl they wanted to couple up with. Kayda and Zach, Kenzie and Dylan, Melanie and Sincere, Jaiden and Caleb, Parmida and Corbin, Tierra and KC and Trinity and Bryce remained together. Carl chose to couple up with Aniya, whilst Gal chose to recouple with Amora.\nChallenges:\nOn Day 26, the couples took part in a Karaoke Night Challenge. For winning, Kenzie & Dylan won safety from the nights vote.\nDates:\nOn Day 22, Trinity and Bryce left the villa to go on their first date. \nExits:\nOn Day 25, following a recoupling, Jen was left single and was dumped from the island.\nOn Day 25, following a vote for least compatible couple, Amora and Gal and Jaiden and Caleb were dumped from the island.\nOn Day 26, as they received only one vote for save from their fellow islanders, Parmida and Corbin were dumped from the villa.",
+    "flags": []
+   },
+   {
+    "id": "S2",
+    "kind": "wiki",
+    "title": "Love Island USA (Season 8) - Weekly Summary - Week 4",
+    "url": "https://loveisland.fandom.com/wiki/Love_Island_USA_(Season_8)",
+    "outlet": "fandom",
+    "published": "",
+    "text": "[Coupling]\n\nOn Day 25, the islanders recoupled with the boys choosing which girl they wanted to couple up with. Kayda and Zach, Kenzie and Dylan, Melanie and Sincere, Parmida and Caleb, Tierra and KC, and Trinity and Bryce remained in their couples. Elsewhere, Carl picked Aniya, and Gal chose Amora. As Jen failed to couple up, she was dumped from the island.\n\n[Challenges]\n\nOn Day 21, Megan Thee Stallion hosted a girls vs boys challenge. In the first round, music would play and the islanders had to sit on a cake once it stopped. In the second round, each team got to throw a cake at the opposing team members. In the final round, each team had a representative eat a cake to find a heart in the middle. The girls won the first two rounds, while the boys won the final round.\nOn Day 26, the couples took part in a karaoke challenge. As Kenzie and Dylan were declared the winners, they were granted safety from the public vote.\n\n[Dates]\n\nOn Day 22, Trinity and Bryce left the villa to go on their first date.\n\n[Exits]\n\nOn Day 25, Jen was dumped from the island after failing to couple up.\nOn Day 25, the couples were each asked to vote for which two couples they deemed to be the least compatible. Parmida and Corbin received 1 vote, Melanie and Sincere received 2, Kenzie and Dylan received 3, Jaiden and Caleb received 4, and Amora and Gal received 8. As Amora and Gal, and Jaiden and Caleb received the most votes, they were dumped from the island.\nOn Day 26, it was revealed that the public had been voting for their favorite couple. As Kenzie and Dylan, Kayda and Zach, and Parmida and Corbin received the fewest votes, they were at risk of being dumped from the island. However, as Kenzie and Dylan won the karaoke challenge, they were granted safety. It was then up to the safe couples to decide which couple they wanted to save. As Parmida and Corbin only received one vote, while Kayda and Zach received 4 votes, Parmida and Corbin were dumped from the island.",
+    "flags": []
+   },
+   {
+    "id": "S7",
+    "kind": "news_headline",
+    "title": "‘Love Island USA’ Season 8: Movie night brings the receipts, two LA contestants dumped from Villa - Orange County Register",
+    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPdUZUMjRqQkRxc1dPeVhmT20wMk9LSDg5TmxfVFQxZzlqSDRWWFF1UDZPR0hVU05PQ2VsSkV2ai1nRi1UYS1uZm1SSGh4RFM0djFkUEpaU19CaGllVGxYTEZ6and1elVxbWN2MHZnUXMtTU8xNjdibzNKaEdBdWxROEFuVWxITHJtX1VSVFBFQ0czb1Njb01FX2RBR0h1TkZCc0VyeHl2cU5Qdm1VWV9KV2RlVXQtQVRydXk3TnduLVJ3alVqMXMyZGtPUmk?oc=5",
+    "outlet": "Orange County Register",
+    "published": "Mon, 06 Jul 2026 07:00:00 GMT",
+    "text": "‘Love Island USA’ Season 8: Movie night brings the receipts, two LA contestants dumped from Villa - Orange County Register",
+    "flags": []
+   },
+   {
+    "id": "S5",
+    "kind": "news_headline",
+    "title": "Love Island USA Season 8 Week 5 Recap: Episodes 26-31 - Write Through the Night",
+    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNQy02ZkZJZjIyQ3NrOEJybmVIOXJfWnd1NEh1QVRQNnRvRk80ZVdrMGR3eWQwQ2hwSTVEakN4ZWlXUFNGekdudVJmN2lhbkxhSHBBMkxYVjFtYlRpZzRTSWJpdVBiREUtZVNkVHRkNFlsclVIaHFjZFc1bnpYdXNlWTRxdlpLSTFVaG5iWWpyYw?oc=5",
+    "outlet": "Write Through the Night",
+    "published": "Wed, 08 Jul 2026 07:00:00 GMT",
+    "text": "Love Island USA Season 8 Week 5 Recap: Episodes 26-31 - Write Through the Night",
+    "flags": []
+   }
+  ],
+  "gaps": [],
+  "notes": "The weekly wiki summaries provide the core coverage; the news results add a contemporaneous episode recap and an additional recap overlapping episodes 26–31.",
+  "rejected_ids": []
+ }
+}

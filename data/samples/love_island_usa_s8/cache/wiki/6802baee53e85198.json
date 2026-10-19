@@ -1,0 +1,75 @@
+{
+ "kind": "wiki",
+ "key": {
+  "wiki": "fandom",
+  "action": "query",
+  "list": "search",
+  "srlimit": 6,
+  "srsearch": "Love Island USA (Season 8)"
+ },
+ "value": {
+  "batchcomplete": true,
+  "continue": {
+   "sroffset": 6,
+   "continue": "-||"
+  },
+  "query": {
+   "search": [
+    {
+     "ns": 0,
+     "title": "Love Island USA (Season 8)",
+     "pageid": 4828,
+     "size": 21921,
+     "wordcount": 3166,
+     "snippet": "",
+     "timestamp": "2026-09-21T21:42:52Z"
+    },
+    {
+     "ns": 0,
+     "title": "Love Island (Season 8)",
+     "pageid": 2651,
+     "size": 23976,
+     "wordcount": 3337,
+     "snippet": "",
+     "timestamp": "2026-09-21T21:42:41Z"
+    },
+    {
+     "ns": 0,
+     "title": "Love Island USA",
+     "pageid": 255,
+     "size": 7854,
+     "wordcount": 971,
+     "snippet": "",
+     "timestamp": "2026-09-12T00:16:18Z"
+    },
+    {
+     "ns": 0,
+     "title": "Aniya Harvey",
+     "pageid": 5453,
+     "size": 2199,
+     "wordcount": 282,
+     "snippet": "",
+     "timestamp": "2026-07-22T17:22:31Z"
+    },
+    {
+     "ns": 0,
+     "title": "Melanie Moreno",
+     "pageid": 5452,
+     "size": 2332,
+     "wordcount": 301,
+     "snippet": "",
+     "timestamp": "2026-08-24T05:22:59Z"
+    },
+    {
+     "ns": 0,
+     "title": "Love Island USA (Season 3)",
+     "pageid": 2383,
+     "size": 18695,
+     "wordcount": 2531,
+     "snippet": "",
+     "timestamp": "2026-09-21T21:42:58Z"
+    }
+   ]
+  }
+ }
+}

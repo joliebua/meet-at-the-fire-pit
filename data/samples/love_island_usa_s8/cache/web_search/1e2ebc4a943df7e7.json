@@ -1,0 +1,22 @@
+{
+ "kind": "web_search",
+ "key": {
+  "q": "Love Island USA season 8 July 9-12 2026 episode 32 33 34 35 challenge winner Check Me Out challenge results"
+ },
+ "value": {
+  "answer": "- **Episode 33 (July 10, 2026):** The Islanders competed in the “Check Me Out” food challenge. The challenge winner/results are **not found** in the sources. (https://www.youtube.com/watch?v=KsC8kPJdUTI)  \n- The episode recap describes it as a messy food-swapping challenge, but does not identify a winning couple. (https://entertainmentnow.com/reality-tv/love-island-usa-season-8-episode-33-recap/)",
+  "citations": [],
+  "usage": {
+   "input_tokens": 31465,
+   "input_tokens_details": {
+    "cache_write_tokens": 4320,
+    "cached_tokens": 0
+   },
+   "output_tokens": 960,
+   "output_tokens_details": {
+    "reasoning_tokens": 845
+   },
+   "total_tokens": 32425
+  }
+ }
+}
