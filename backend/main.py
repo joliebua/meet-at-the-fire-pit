@@ -196,10 +196,9 @@ def decide_dispute(key: str, dispute_id: str, decision: str):
 
 @app.get("/api/leagues/{key}/drops/{week}")
 def get_drop(key: str, week: int):
+    """The saved drop for a week, or null if none has been written yet."""
     path = config.OUTPUT / "drops" / f"{key}_week{week}.json"
-    if not path.exists():
-        raise HTTPException(404, f"No drop for week {week} yet")
-    return json.loads(path.read_text())
+    return json.loads(path.read_text()) if path.exists() else None
 
 
 @app.post("/api/leagues/{key}/drops/{week}")
