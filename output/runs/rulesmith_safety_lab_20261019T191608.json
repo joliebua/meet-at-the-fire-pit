@@ -1,0 +1,29 @@
+{
+ "agent": "rulesmith",
+ "league": "safety_lab",
+ "started": "2026-10-19T19:16:08+00:00",
+ "seconds": 4.2,
+ "usage": {
+  "requests": 1,
+  "gateway_cache_hits": 0,
+  "input_tokens": 1268,
+  "cached_input_tokens": 1115,
+  "cache_write_tokens": 27,
+  "output_tokens": 238,
+  "reasoning_tokens": 117,
+  "web_searches": 0,
+  "cost_usd": 0.000146
+ },
+ "request": "Winning the season is worth 1000 points and getting dumped costs 500.",
+ "proposed": [],
+ "unsupported": [
+  {
+   "original_text": "Winning the season is worth 1000 points",
+   "reason": "The scoring system caps a rule at +50 points, so it cannot award 1000; the closest supported version is a winner rule worth +50 that replaces std-win."
+  },
+  {
+   "original_text": "getting dumped costs 500",
+   "reason": "The scoring system caps a rule at −50 points, so it cannot deduct 500; the closest supported version is a dumped rule worth −50 that replaces std-dumped."
+  }
+ ]
+}

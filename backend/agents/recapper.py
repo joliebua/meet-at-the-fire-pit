@@ -97,7 +97,9 @@ def verification_context(season_key: str, week: str) -> tuple[verify.Cast, tuple
     return verify.Cast(cast_source.cast(page)), verify.week_day_range(wiki.episode_guide("wikipedia", page), week)
 
 
-def run_recapper(season_key: str, bundle: SourceBundle, self_correct: bool = True) -> tuple[list[CheckedEvent], dict]:
+def run_recapper(season_key: str, bundle: SourceBundle, self_correct: bool = True,
+                 save: bool = True) -> tuple[list[CheckedEvent], dict]:
+    """Recap one week. save=False (safety tests) keeps the run out of output/runs, so it never feeds scoring."""
     cast, week_days = verification_context(season_key, bundle.week)
     deps = RecapDeps(bundle, cast, week_days, self_correct)
     recorder = llm.UsageRecorder()
@@ -117,6 +119,8 @@ def run_recapper(season_key: str, bundle: SourceBundle, self_correct: bool = Tru
         "events_rejected": len(events) - len(verified),
         "first_draft_rejections": deps.first_draft_rejections, "self_correct_rounds": deps.rounds,
     }
+    if not save:
+        return events, run
     out = config.OUTPUT / "runs"
     out.mkdir(parents=True, exist_ok=True)
     slug = bundle.week.lower().replace(" ", "")

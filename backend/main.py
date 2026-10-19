@@ -16,7 +16,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 from pydantic_ai.exceptions import AgentRunError, ModelHTTPError, UsageLimitExceeded
 
-from backend import config, scoring
+from backend import config, scoring, usage_log
 from backend.agents import host, recapper, ref, rulesmith, scout
 
 app = FastAPI(title="Villa Commissioner", version="0.1")
@@ -215,26 +215,8 @@ def make_drop(key: str, week: int):
 
 @app.get("/api/usage")
 def usage():
-    """Measured cost of every agent run so far, from output/runs/*.json."""
-    per_agent = defaultdict(lambda: {"runs": 0, "cost_usd": 0.0, "input_tokens": 0, "cached_input_tokens": 0,
-                                     "output_tokens": 0, "seconds": 0.0, "gateway_cache_hits": 0})
-    for f in sorted((config.OUTPUT / "runs").glob("*.json")):
-        data = json.loads(f.read_text())
-        run = data.get("run", data)
-        u = run.get("usage", {})
-        parts = [u["scout_agent"], u["web_search_tool"]] if "scout_agent" in u else [u]
-        a = per_agent[run.get("agent", f.stem.split("_")[0])]
-        a["runs"] += 1
-        a["seconds"] += run.get("seconds", 0)
-        for part in parts:
-            a["cost_usd"] += part.get("cost_usd", 0)
-            for k in ("input_tokens", "cached_input_tokens", "output_tokens", "gateway_cache_hits"):
-                a[k] += part.get(k, 0)
-    for a in per_agent.values():
-        a["avg_cost_usd"] = round(a["cost_usd"] / a["runs"], 6)
-        a["avg_seconds"] = round(a["seconds"] / a["runs"], 1)
-        a["cost_usd"] = round(a["cost_usd"], 6)
-    return dict(per_agent)
+    """Measured cost of every billed agent run so far (see backend/usage_log.py for what counts as billed)."""
+    return usage_log.per_agent()
 
 
 # ---------- built frontend (optional) ----------

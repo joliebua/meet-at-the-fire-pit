@@ -2,13 +2,15 @@
 
 An evidence item is valid when its quote appears word-for-word in the cited source. An event is
 verified when at least one evidence item is valid, every name is a real islander, every scoring
-islander is named in the quoted sentence, the sentence uses words that fit the event type, and any
-day number is stated in the quote's paragraph and falls inside the week.
+islander is named in the quoted sentence and was in the villa at the time (cast table), the sentence
+uses words that fit the event type, and any day number is stated in the quote's paragraph and falls
+inside the week. Quotes from lines that look like instructions to an AI never count as evidence.
 """
 import re
 import unicodedata
 
 from backend.models import CheckedEvent, Event, Source
+from backend.sources.clean import INJECTION_HINTS
 
 MIN_QUOTE_CHARS = 12
 TRANSLATE = str.maketrans({"‘": "'", "’": "'", "“": '"', "”": '"', "–": "-", "—": "-", " ": " "})
@@ -73,6 +75,13 @@ class Cast:
     def names(self) -> list[str]:
         return [p["first_name"] for p in self.people]
 
+    def in_villa(self, first_name: str, start: int, end: int) -> bool:
+        """Was this islander in the villa at some point between these days? (±1 day for recap timing)"""
+        for p in self.people:
+            if p["first_name"] == first_name:
+                return any((s["entered"] or 0) - 1 <= end and (s["exited"] or 999) + 1 >= start for s in p["stints"])
+        return False
+
 
 def _mentions(paragraph: str, first_name: str) -> bool:
     return re.search(rf"\b{re.escape(norm(first_name))}\b", paragraph) is not None
@@ -103,6 +112,8 @@ def check(event: Event, sources: dict[str, Source], cast: Cast, week_days: tuple
             problems.append(f"quote from {ev.source_id} is too short to check")
         elif (para := _paragraph(src.text, quote_n)) is None:
             problems.append(f"quote not found word-for-word in {ev.source_id}: \"{ev.quote[:80]}\"")
+        elif INJECTION_HINTS.search(para):
+            problems.append(f"quote from {ev.source_id} comes from a line that reads like instructions to an AI")
         else:
             valid_paragraphs.append(para)
             valid_sentences.append(_sentence(para, quote_n))
@@ -112,6 +123,11 @@ def check(event: Event, sources: dict[str, Source], cast: Cast, week_days: tuple
     for name in event.islanders:
         if not any(_mentions(s, name) for s in valid_sentences):
             problems.append(f"{name} is not named in the quoted sentence")
+    window = (event.day, event.day) if event.day is not None else week_days
+    if window:
+        for name in event.islanders:
+            if not cast.in_villa(name, *window):
+                problems.append(f"{name} was not in the villa then (days {window[0]}-{window[1]})")
     words = TYPE_WORDS.get(event.type)
     if words and not any(re.search(words, s) for s in valid_sentences):
         problems.append(f"quoted sentence does not describe a '{event.type}' event")

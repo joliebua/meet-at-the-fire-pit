@@ -101,6 +101,10 @@ export type DropRecord = {
 
 export type AgentUsage = {
   runs: number;
+  free_runs: number;
+  avg_input_tokens: number;
+  avg_cached_input_tokens: number;
+  avg_output_tokens: number;
   cost_usd: number;
   avg_cost_usd: number;
   avg_seconds: number;

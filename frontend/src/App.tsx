@@ -20,12 +20,26 @@ const TABS = [
 ] as const;
 type Tab = (typeof TABS)[number]["id"];
 
+// Links like /#tab=disputes&week=3 open a tab directly (handy for sharing and for screenshots).
+function fromHash(): { tab?: Tab; week?: number } {
+  const h = new URLSearchParams(window.location.hash.slice(1));
+  const tab = TABS.find((t) => t.id === h.get("tab"))?.id;
+  const week = Number(h.get("week")) || undefined;
+  return { tab, week };
+}
+
 export default function App() {
+  const initial = fromHash();
   const [config, setConfig] = useState<AppConfig | null>(null);
   const [league, setLeague] = useState<League | null>(null);
   const [weeks, setWeeks] = useState<WeekInfo[]>([]);
-  const [watched, setWatched] = useState<number | null>(null);
-  const [tab, setTab] = useState<Tab>("board");
+  const [watched, setWatched] = useState<number | null>(initial.week ?? null);
+  const [tab, setTab] = useState<Tab>(initial.tab ?? "board");
+
+  useEffect(() => {
+    const h = new URLSearchParams({ tab, ...(watched ? { week: String(watched) } : {}) });
+    window.history.replaceState(null, "", `#${h}`);
+  }, [tab, watched]);
   const [version, setVersion] = useState(0); // bump to refetch after any change
   const [toast, setToast] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);

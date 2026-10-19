@@ -31,7 +31,7 @@ export default function Costs({ version, weeksScored, players }: Props) {
   return (
     <section>
       <h2 className="section">What it costs to run</h2>
-      <p className="hint">Measured from the token counts the API returned on every run (gpt-6-luna through Portkey). Calls answered from the gateway cache cost nothing and are counted separately.</p>
+      <p className="hint">Measured from the token counts the API returned on every billed run (gpt-6-luna through Portkey). Runs answered from Portkey's cache or blocked by the provider cost nothing and are listed as free.</p>
       <div className="grid2" style={{ marginBottom: 16 }}>
         <div className="card">
           <div className="small muted">One league, one week (Scout + Recapper + Host + one dispute, average measured runs)</div>
@@ -39,7 +39,7 @@ export default function Costs({ version, weeksScored, players }: Props) {
           <div className="small muted">≈ {fmtUsd(leagueWeek * weeksScored)} for a {weeksScored}-week season · {players} players → {fmtUsd((leagueWeek * weeksScored) / players)} each</div>
         </div>
         <div className="card">
-          <div className="small muted">Spent so far in this app ({weeksScored} weeks scored, including tests)</div>
+          <div className="small muted">Billed so far in this app ({weeksScored} weeks scored, including tests)</div>
           <div style={{ fontSize: "2.4rem", fontWeight: 800 }}>{fmtUsd(total)}</div>
           <div className="small muted">Scout + Recapper run once per episode week no matter how many leagues follow the show.</div>
         </div>
@@ -48,7 +48,7 @@ export default function Costs({ version, weeksScored, players }: Props) {
         <table className="tbl">
           <thead>
             <tr><th>Agent</th><th>Billed</th><th className="num">Runs</th><th className="num">Avg cost</th><th className="num">Avg time</th>
-              <th className="num">Input tok</th><th className="num">Cached</th><th className="num">Output tok</th><th className="num">Cache hits</th></tr>
+              <th className="num">Avg input tok</th><th className="num">Avg cached</th><th className="num">Avg output tok</th><th className="num">Free runs</th></tr>
           </thead>
           <tbody>
             {Object.entries(AGENTS).map(([k, a]) => {
@@ -60,10 +60,10 @@ export default function Costs({ version, weeksScored, players }: Props) {
                   <td className="num">{u?.runs ?? 0}</td>
                   <td className="num">{u ? fmtUsd(u.avg_cost_usd) : "–"}</td>
                   <td className="num">{u ? `${u.avg_seconds}s` : "–"}</td>
-                  <td className="num">{u?.input_tokens.toLocaleString() ?? "–"}</td>
-                  <td className="num">{u?.cached_input_tokens.toLocaleString() ?? "–"}</td>
-                  <td className="num">{u?.output_tokens.toLocaleString() ?? "–"}</td>
-                  <td className="num">{u?.gateway_cache_hits ?? 0}</td>
+                  <td className="num">{u?.avg_input_tokens.toLocaleString() ?? "–"}</td>
+                  <td className="num">{u?.avg_cached_input_tokens.toLocaleString() ?? "–"}</td>
+                  <td className="num">{u?.avg_output_tokens.toLocaleString() ?? "–"}</td>
+                  <td className="num">{u?.free_runs ?? 0}</td>
                 </tr>
               );
             })}
