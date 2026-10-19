@@ -10,6 +10,8 @@ MGT 409 final project · Jolie Bua · model: `gpt-6-luna` via Portkey · demo se
 
 ---
 
+> 🎬 **Demo video (2:42):** [`docs/demo/demo.mp4`](docs/demo/demo.mp4): leaderboard, receipts, house rules, a live safety test, the AI coach on autopilot, and the finale.
+>
 > ✅ **Verified from a fresh clone:** setup to a running app in under 30 seconds, every screen checked, 0 errors. Screenshots and the setup log are in [`docs/proof/`](docs/proof/README.md).
 
 ## Run it (about 3 minutes)
@@ -171,6 +173,7 @@ output/runs/        every agent run with exact token usage
 output/drops/       weekly drops
 output/eval_recaps.json  accuracy check against the Wikipedia cast table
 frontend/           React UI (src/) and the built app (dist/)
+docs/demo/demo.mp4  captioned 2:42 demo video (recorded with scripts/record_demo.py on a throwaway clone)
 docs/proof/         fresh-clone proof: setup log + 12 screenshots of every screen
 docs/screenshots/   screenshots used in the report and slides
 scripts/            snapshot builder, accuracy eval, safety tests, screenshots, report + slides builders (evidence.py = shared numbers)
