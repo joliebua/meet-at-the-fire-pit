@@ -50,7 +50,7 @@ Windows (PowerShell):
 .venv\Scripts\uvicorn backend.main:app --port 8000
 ```
 
-Then open **http://localhost:8000**. The API docs are at http://localhost:8000/docs.
+Then open **http://localhost:8000**. The API docs are at http://localhost:8000/docs. If port 8000 is busy, use `--port 8001` and open that port instead.
 
 ### Live data vs. the small test dataset
 
