@@ -1,0 +1,36 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_villa_demo",
+ "started": "2026-10-19T20:31:36+00:00",
+ "seconds": 6.1,
+ "usage": {
+  "requests": 1,
+  "gateway_cache_hits": 1,
+  "input_tokens": 1540,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 1414,
+  "output_tokens": 325,
+  "reasoning_tokens": 214,
+  "web_searches": 0,
+  "cost_usd": 0.000352
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules"
+ ],
+ "advice": {
+  "moves": [
+   {
+    "add": "Kenzie",
+    "drop": null,
+    "reason": "Add Kenzie to bring in an established couple while Gabriel and Kayda are currently unpaired; she chose Zach on Day 1.",
+    "evidence": [
+     "Kenzie picked Zach."
+    ]
+   }
+  ],
+  "summary": "Yes\u2014Jolie has room and one move left, so I\u2019d use it to add Kenzie and diversify the roster beyond two unpaired islanders. It\u2019s an early-season bet, but she\u2019s already coupled with Zach."
+ }
+}

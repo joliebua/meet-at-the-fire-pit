@@ -1,0 +1,38 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_autopilot_eval_2",
+ "started": "2026-10-19T20:38:48+00:00",
+ "seconds": 12.7,
+ "usage": {
+  "requests": 2,
+  "gateway_cache_hits": 1,
+  "input_tokens": 5654,
+  "cached_input_tokens": 2365,
+  "cache_write_tokens": 3037,
+  "output_tokens": 709,
+  "reasoning_tokens": 543,
+  "web_searches": 0,
+  "cost_usd": 0.000783
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules",
+  "islander_report"
+ ],
+ "advice": {
+  "moves": [
+   {
+    "add": "Gal",
+    "drop": null,
+    "reason": "Use the open roster spot on Gal: Jen chose him at the Week 3 recoupling, and adding him gives Coach a newly coupled option outside the Kenzie/Dylan and Corbin/Parmida pairings already represented on the roster.",
+    "evidence": [
+     "Jen chose Gal.",
+     "Gal entered the villa on Day 17."
+    ]
+   }
+  ],
+  "summary": "Yes\u2014I'd make one measured add and bring in Gal, while keeping the current roster intact. It\u2019s a fresh pairing, so there\u2019s some uncertainty, but it adds a separate couple rather than doubling up on one of Coach\u2019s existing pairs."
+ }
+}

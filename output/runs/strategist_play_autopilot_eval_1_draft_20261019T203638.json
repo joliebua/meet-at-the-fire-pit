@@ -1,0 +1,41 @@
+{
+ "agent": "strategist",
+ "kind": "draft",
+ "league": "play_autopilot_eval_1",
+ "started": "2026-10-19T20:36:38+00:00",
+ "seconds": 11.5,
+ "usage": {
+  "requests": 2,
+  "gateway_cache_hits": 0,
+  "input_tokens": 3070,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 2135,
+  "output_tokens": 570,
+  "reasoning_tokens": 318,
+  "web_searches": 0,
+  "cost_usd": 0.000645
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "standings",
+  "scoring_rules"
+ ],
+ "advice": {
+  "picks": [
+   {
+    "islander": "Melanie",
+    "reason": "She\u2019s in a couple with Sincere, who had the power to choose and selected her over Aniya, making this the clearest active vote of confidence in the pool."
+   },
+   {
+    "islander": "Beatriz",
+    "reason": "She has 4 points and chose Sean herself, so she starts in a deliberate couple rather than being paired by default."
+   },
+   {
+    "islander": "Kenzie",
+    "reason": "She has 4 points and picked Zach, giving her an intentional couple to build on; I\u2019d take that over either unpaired Day 2 bombshell."
+   }
+  ],
+  "summary": "Coach\u2019s roster is empty, so there\u2019s room to spread risk across promising couples. I\u2019d pass on Gabriel and Kayda for now: their 5 points are arrival bonuses, and neither has a partner yet."
+ }
+}

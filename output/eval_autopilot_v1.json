@@ -1,0 +1,353 @@
+{
+ "summary": {
+  "seasons": 3,
+  "avg_rank": 2.67,
+  "wins": 0,
+  "avg_total": 86.7,
+  "bot_avg_total": 112.1,
+  "cost_usd": null,
+  "note": "Per-season cost was mis-summed by the first version of eval_autopilot.py; use the Strategist's average cost per billed run from output/runs instead.",
+  "prompt": "v1: arrival bonus emphasised"
+ },
+ "seasons": [
+  {
+   "seed": 1,
+   "draft_picks": [
+    "Gabriel",
+    "Kayda"
+   ],
+   "final": [
+    {
+     "player": "Maya",
+     "total": 168
+    },
+    {
+     "player": "Dev",
+     "total": 129
+    },
+    {
+     "player": "Coach",
+     "total": 63
+    },
+    {
+     "player": "Priya",
+     "total": 55
+    }
+   ],
+   "rank": 3,
+   "weekly": [
+    {
+     "week": "Week 1",
+     "autopilot_moves": [
+      [
+       "Beatriz",
+       null
+      ]
+     ],
+     "rank": 1
+    },
+    {
+     "week": "Week 2",
+     "autopilot_moves": [
+      [
+       "Corbin",
+       null
+      ]
+     ],
+     "rank": 2
+    },
+    {
+     "week": "Week 3",
+     "autopilot_moves": [],
+     "rank": 2
+    },
+    {
+     "week": "Week 4",
+     "autopilot_moves": [
+      [
+       "Gal",
+       "Beatriz"
+      ]
+     ],
+     "rank": 3
+    },
+    {
+     "week": "Week 5",
+     "autopilot_moves": [
+      [
+       "Dylan",
+       "Gal"
+      ]
+     ],
+     "rank": 3
+    }
+   ],
+   "moves": [
+    {
+     "from_week": 1,
+     "player": "Coach",
+     "add": "Beatriz",
+     "drop": null,
+     "by": "autopilot",
+     "reason": "Add Beatriz to build a third scoring lane: she is already coupled with Sean, and she was chosen rather than being paired by default.",
+     "made_after": "Week 0"
+    },
+    {
+     "from_week": 2,
+     "player": "Coach",
+     "add": "Corbin",
+     "drop": null,
+     "by": "autopilot",
+     "reason": "Add Corbin to fill the open roster slot: he has 15 points, already coupled with Kenzie, and earned first pick, giving Coach exposure to a third couple beyond the Gabriel\u2013Beatriz and Kayda\u2013Zach pairs.",
+     "made_after": "Week 1"
+    },
+    {
+     "from_week": 4,
+     "player": "Coach",
+     "add": "Gal",
+     "drop": "Beatriz",
+     "by": "autopilot",
+     "reason": "Make the one available move: Beatriz is already out, while Gal is a fresh arrival who has coupled with Jen, giving her a live route to new-couple and in-villa points without doubling up on one of your roster's couples.",
+     "made_after": "Week 3"
+    },
+    {
+     "from_week": 5,
+     "player": "Coach",
+     "add": "Dylan",
+     "drop": "Gal",
+     "by": "autopilot",
+     "reason": "Make the available replacement: Gal has been dumped, while Dylan is still in the villa, remains coupled with Kenzie, and just won their couple safety from the night\u2019s vote.",
+     "made_after": "Week 4"
+    }
+   ],
+   "strategist_runs": 7,
+   "cost_usd": null
+  },
+  {
+   "seed": 2,
+   "draft_picks": [
+    "Gabriel",
+    "Kayda"
+   ],
+   "final": [
+    {
+     "player": "Maya",
+     "total": 184
+    },
+    {
+     "player": "Priya",
+     "total": 157
+    },
+    {
+     "player": "Coach",
+     "total": 64
+    },
+    {
+     "player": "Dev",
+     "total": 22
+    }
+   ],
+   "rank": 3,
+   "weekly": [
+    {
+     "week": "Week 1",
+     "autopilot_moves": [
+      [
+       "Beatriz",
+       null
+      ]
+     ],
+     "rank": 1
+    },
+    {
+     "week": "Week 2",
+     "autopilot_moves": [
+      [
+       "Corbin",
+       null
+      ]
+     ],
+     "rank": 3
+    },
+    {
+     "week": "Week 3",
+     "autopilot_moves": [],
+     "rank": 3
+    },
+    {
+     "week": "Week 4",
+     "autopilot_moves": [
+      [
+       "Tierra",
+       "Beatriz"
+      ]
+     ],
+     "rank": 3
+    },
+    {
+     "week": "Week 5",
+     "autopilot_moves": [
+      [
+       "Dylan",
+       "Corbin"
+      ]
+     ],
+     "rank": 3
+    }
+   ],
+   "moves": [
+    {
+     "from_week": 1,
+     "player": "Coach",
+     "add": "Beatriz",
+     "drop": null,
+     "by": "autopilot",
+     "reason": "Use the open roster slot to add someone already coupled up, diversifying away from Gabriel and Kayda, who have entered but are still unpaired.",
+     "made_after": "Week 0"
+    },
+    {
+     "from_week": 2,
+     "player": "Coach",
+     "add": "Corbin",
+     "drop": null,
+     "by": "autopilot",
+     "reason": "Add Corbin to diversify beyond your Gabriel\u2013Beatriz pair: he has already used first pick to couple with Kenzie and has 15 points, while the other available Islanders are unpaired newcomers at 7 points each.",
+     "made_after": "Week 1"
+    },
+    {
+     "from_week": 4,
+     "player": "Coach",
+     "add": "Tierra",
+     "drop": "Beatriz",
+     "by": "autopilot",
+     "reason": "Swap out dumped Beatriz for active Tierra: Tierra earned 11 points, is coupled with KC, and adds a live couple option while Coach already has two eliminated roster spots to clear over time.",
+     "made_after": "Week 3"
+    },
+    {
+     "from_week": 5,
+     "player": "Coach",
+     "add": "Dylan",
+     "drop": "Corbin",
+     "by": "autopilot",
+     "reason": "Use the available move to replace dumped Corbin with Dylan: he is coupled with Kenzie and they just won safety, while Corbin has left the villa.",
+     "made_after": "Week 4"
+    }
+   ],
+   "strategist_runs": 7,
+   "cost_usd": null
+  },
+  {
+   "seed": 3,
+   "draft_picks": [
+    "Gabriel",
+    "Kayda"
+   ],
+   "final": [
+    {
+     "player": "Maya",
+     "total": 165
+    },
+    {
+     "player": "Coach",
+     "total": 133
+    },
+    {
+     "player": "Priya",
+     "total": 71
+    },
+    {
+     "player": "Dev",
+     "total": 58
+    }
+   ],
+   "rank": 2,
+   "weekly": [
+    {
+     "week": "Week 1",
+     "autopilot_moves": [
+      [
+       "Bryce",
+       null
+      ]
+     ],
+     "rank": 1
+    },
+    {
+     "week": "Week 2",
+     "autopilot_moves": [
+      [
+       "Corbin",
+       null
+      ]
+     ],
+     "rank": 1
+    },
+    {
+     "week": "Week 3",
+     "autopilot_moves": [],
+     "rank": 2
+    },
+    {
+     "week": "Week 4",
+     "autopilot_moves": [
+      [
+       "Tierra",
+       "Gabriel"
+      ]
+     ],
+     "rank": 2
+    },
+    {
+     "week": "Week 5",
+     "autopilot_moves": [
+      [
+       "Dylan",
+       "Corbin"
+      ]
+     ],
+     "rank": 2
+    }
+   ],
+   "moves": [
+    {
+     "from_week": 1,
+     "player": "Coach",
+     "add": "Bryce",
+     "drop": null,
+     "by": "autopilot",
+     "reason": "Add Bryce to diversify Coach\u2019s roster: he has 4 points and is already coupled with Trinity, who chose him, while Gabriel and Kayda are currently unpaired.",
+     "made_after": "Week 0"
+    },
+    {
+     "from_week": 2,
+     "player": "Coach",
+     "add": "Corbin",
+     "drop": null,
+     "by": "autopilot",
+     "reason": "Add Corbin to fill Coach\u2019s open roster spot: he already has 15 points, received first pick as the newest arrival, and formed a couple with Kenzie, diversifying your current three couples.",
+     "made_after": "Week 1"
+    },
+    {
+     "from_week": 4,
+     "player": "Coach",
+     "add": "Tierra",
+     "drop": "Gabriel",
+     "by": "autopilot",
+     "reason": "Replace dumped Gabriel with Tierra: she is in the villa and newly coupled with KC, giving you a fresh scoring path outside your current Kayda\u2013Zach, Bryce\u2013Trinity, and Corbin\u2013Parmida pairs.",
+     "made_after": "Week 3"
+    },
+    {
+     "from_week": 5,
+     "player": "Coach",
+     "add": "Dylan",
+     "drop": "Corbin",
+     "by": "autopilot",
+     "reason": "Swap out Corbin, who has been dumped, for Dylan, who is still coupled with Kenzie and just won safety\u2014an active, protected spot with upside.",
+     "made_after": "Week 4"
+    }
+   ],
+   "strategist_runs": 6,
+   "cost_usd": null
+  }
+ ]
+}

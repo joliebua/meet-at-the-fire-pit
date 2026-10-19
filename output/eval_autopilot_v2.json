@@ -1,0 +1,381 @@
+{
+ "summary": {
+  "seasons": 3,
+  "avg_rank": 3.0,
+  "wins": 0,
+  "avg_total": 83.3,
+  "bot_avg_total": 110.6,
+  "cost_usd": null,
+  "note": "Per-season cost was mis-summed by the first version of eval_autopilot.py; use the Strategist's average cost per billed run from output/runs instead.",
+  "prompt": "v2: staying power over head start"
+ },
+ "seasons": [
+  {
+   "seed": 1,
+   "draft_picks": [
+    "Melanie",
+    "Beatriz"
+   ],
+   "final": [
+    {
+     "player": "Maya",
+     "total": 186
+    },
+    {
+     "player": "Dev",
+     "total": 118
+    },
+    {
+     "player": "Priya",
+     "total": 60
+    },
+    {
+     "player": "Coach",
+     "total": 46
+    }
+   ],
+   "rank": 4,
+   "weekly": [
+    {
+     "week": "Week 1",
+     "autopilot_moves": [],
+     "rank": 3
+    },
+    {
+     "week": "Week 2",
+     "autopilot_moves": [
+      [
+       "Corbin",
+       null
+      ]
+     ],
+     "rank": 3
+    },
+    {
+     "week": "Week 3",
+     "autopilot_moves": [
+      [
+       "Caleb",
+       "Beatriz"
+      ]
+     ],
+     "rank": 3
+    },
+    {
+     "week": "Week 4",
+     "autopilot_moves": [
+      [
+       "Gal",
+       "Corbin"
+      ]
+     ],
+     "rank": 3
+    },
+    {
+     "week": "Week 5",
+     "autopilot_moves": [
+      [
+       "Dylan",
+       "Caleb"
+      ]
+     ],
+     "rank": 4
+    }
+   ],
+   "moves": [
+    {
+     "from_week": 2,
+     "player": "Coach",
+     "add": "Corbin",
+     "drop": null,
+     "by": "autopilot",
+     "reason": "Add Corbin: he has formed a couple with Kenzie, and his first-pick power is a promising early sign; Coach has two open roster spots, so no drop is needed.",
+     "made_after": "Week 1"
+    },
+    {
+     "from_week": 3,
+     "player": "Coach",
+     "add": "Caleb",
+     "drop": "Beatriz",
+     "by": "autopilot",
+     "reason": "Swap out Beatriz, who has been dumped and can no longer score, for Caleb, who is still in the villa and secured a couple with Sol; the new pairing is shaky, but it gives you ongoing scoring potential instead of a dead roster slot.",
+     "made_after": "Week 2"
+    },
+    {
+     "from_week": 4,
+     "player": "Coach",
+     "add": "Gal",
+     "drop": "Corbin",
+     "by": "autopilot",
+     "reason": "I\u2019d swap out Corbin, whose pairings have shifted from Melanie to Kenzie to Parmida, for Gal, who has at least secured a couple after Jen chose him; it also spreads your roster across another couple.",
+     "made_after": "Week 3"
+    },
+    {
+     "from_week": 5,
+     "player": "Coach",
+     "add": "Dylan",
+     "drop": "Caleb",
+     "by": "autopilot",
+     "reason": "Add Dylan for dumped Caleb: Dylan and Kenzie stayed together at recoupling and then won the Karaoke Night Challenge, giving him a stronger in-villa path than holding a departed islander.",
+     "made_after": "Week 4"
+    }
+   ],
+   "strategist_runs": 7,
+   "cost_usd": null
+  },
+  {
+   "seed": 2,
+   "draft_picks": [
+    "Beatriz",
+    "Kenzie"
+   ],
+   "final": [
+    {
+     "player": "Priya",
+     "total": 157
+    },
+    {
+     "player": "Maya",
+     "total": 119
+    },
+    {
+     "player": "Coach",
+     "total": 92
+    },
+    {
+     "player": "Dev",
+     "total": 52
+    }
+   ],
+   "rank": 3,
+   "weekly": [
+    {
+     "week": "Week 1",
+     "autopilot_moves": [
+      [
+       "Trinity",
+       null
+      ]
+     ],
+     "rank": 3
+    },
+    {
+     "week": "Week 2",
+     "autopilot_moves": [
+      [
+       "Corbin",
+       null
+      ]
+     ],
+     "rank": 3
+    },
+    {
+     "week": "Week 3",
+     "autopilot_moves": [
+      [
+       null,
+       "Beatriz"
+      ]
+     ],
+     "rank": 3
+    },
+    {
+     "week": "Week 4",
+     "autopilot_moves": [
+      [
+       "Gal",
+       null
+      ]
+     ],
+     "rank": 2
+    },
+    {
+     "week": "Week 5",
+     "autopilot_moves": [
+      [
+       "Dylan",
+       "Corbin"
+      ]
+     ],
+     "rank": 3
+    }
+   ],
+   "moves": [
+    {
+     "from_week": 1,
+     "player": "Coach",
+     "add": "Trinity",
+     "drop": null,
+     "by": "autopilot",
+     "reason": "Add Trinity to diversify Coach\u2019s two established couples: she already coupled with Bryce on Day 1, while the Day 2 bombshells Gabriel and Kayda are still unpaired; Coach has two open roster spots.",
+     "made_after": "Week 0"
+    },
+    {
+     "from_week": 2,
+     "player": "Coach",
+     "add": "Corbin",
+     "drop": null,
+     "by": "autopilot",
+     "reason": "Use the open roster spot on Corbin: he has already paired with Kenzie and earned the power to choose, giving your vulnerable Kenzie a better shot at sticking around; there\u2019s no need to drop anyone with a fourth slot available.",
+     "made_after": "Week 1"
+    },
+    {
+     "from_week": 3,
+     "player": "Coach",
+     "add": null,
+     "drop": "Beatriz",
+     "by": "autopilot",
+     "reason": "Beatriz has been dumped, so she cannot score again; with no free agents returned, clear the dead roster spot rather than make a speculative add.",
+     "made_after": "Week 2"
+    },
+    {
+     "from_week": 4,
+     "player": "Coach",
+     "add": "Gal",
+     "drop": null,
+     "by": "autopilot",
+     "reason": "Use the open roster spot on Gal: Jen chose him at the Week 3 recoupling, and adding him gives Coach a newly coupled option outside the Kenzie/Dylan and Corbin/Parmida pairings already represented on the roster.",
+     "made_after": "Week 3"
+    },
+    {
+     "from_week": 5,
+     "player": "Coach",
+     "add": "Dylan",
+     "drop": "Corbin",
+     "by": "autopilot",
+     "reason": "Swap out Corbin, who was dumped, for Dylan: he\u2019s still in a mutual couple with your Kenzie, and they just won safety\u2014though this does stack your roster in one couple.",
+     "made_after": "Week 4"
+    }
+   ],
+   "strategist_runs": 7,
+   "cost_usd": null
+  },
+  {
+   "seed": 3,
+   "draft_picks": [
+    "Melanie",
+    "Beatriz"
+   ],
+   "final": [
+    {
+     "player": "Maya",
+     "total": 122
+    },
+    {
+     "player": "Coach",
+     "total": 112
+    },
+    {
+     "player": "Priya",
+     "total": 97
+    },
+    {
+     "player": "Dev",
+     "total": 84
+    }
+   ],
+   "rank": 2,
+   "weekly": [
+    {
+     "week": "Week 1",
+     "autopilot_moves": [
+      [
+       "Bryce",
+       null
+      ]
+     ],
+     "rank": 2
+    },
+    {
+     "week": "Week 2",
+     "autopilot_moves": [
+      [
+       "Corbin",
+       null
+      ]
+     ],
+     "rank": 3
+    },
+    {
+     "week": "Week 3",
+     "autopilot_moves": [
+      [
+       null,
+       "Beatriz"
+      ]
+     ],
+     "rank": 3
+    },
+    {
+     "week": "Week 4",
+     "autopilot_moves": [
+      [
+       "Gal",
+       null
+      ]
+     ],
+     "rank": 3
+    },
+    {
+     "week": "Week 5",
+     "autopilot_moves": [
+      [
+       "Dylan",
+       "Gal"
+      ]
+     ],
+     "rank": 2
+    }
+   ],
+   "moves": [
+    {
+     "from_week": 1,
+     "player": "Coach",
+     "add": "Bryce",
+     "drop": null,
+     "by": "autopilot",
+     "reason": "Make the available add: Bryce is already coupled with Trinity, adding a third couple to diversify Coach\u2019s roster beyond Melanie/Sincere and Beatriz/Sean; skip the unattached Day 2 arrivals for now.",
+     "made_after": "Week 0"
+    },
+    {
+     "from_week": 2,
+     "player": "Coach",
+     "add": "Corbin",
+     "drop": null,
+     "by": "autopilot",
+     "reason": "Use the open fourth slot on Corbin: he has 15 points, got first pick, and formed a couple with Kenzie, adding a separate pair to Coach\u2019s roster without dropping any of the three islanders who survived coupled up; the pairing is new, so it is a measured upside play rather than a proven lock.",
+     "made_after": "Week 1"
+    },
+    {
+     "from_week": 3,
+     "player": "Coach",
+     "add": null,
+     "drop": "Beatriz",
+     "by": "autopilot",
+     "reason": "Beatriz has been dumped, so she cannot earn future staying-power or recoupling points; release the dead roster spot rather than carry her into another week. The available free-agent list returned no names, so I can\u2019t responsibly name a replacement.",
+     "made_after": "Week 2"
+    },
+    {
+     "from_week": 4,
+     "player": "Coach",
+     "add": "Gal",
+     "drop": null,
+     "by": "autopilot",
+     "reason": "Use the open roster spot to diversify across couples: Jen chose Gal at the Week 3 recoupling, giving this newly arrived islander a clear couple foothold rather than adding another Casa arrival who was chosen by a partner your roster already connects to.",
+     "made_after": "Week 3"
+    },
+    {
+     "from_week": 5,
+     "player": "Coach",
+     "add": "Dylan",
+     "drop": "Gal",
+     "by": "autopilot",
+     "reason": "Swap out Gal, who was dumped, for Dylan: he stayed coupled with Kenzie at the recoupling and the pair won challenge safety, giving him a much stronger path to keep scoring.",
+     "made_after": "Week 4"
+    }
+   ],
+   "strategist_runs": 7,
+   "cost_usd": null
+  }
+ ]
+}

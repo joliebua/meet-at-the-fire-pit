@@ -1,0 +1,30 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_autopilot_eval_3",
+ "started": "2026-10-19T20:35:27+00:00",
+ "seconds": 13.0,
+ "usage": {
+  "requests": 3,
+  "gateway_cache_hits": 1,
+  "input_tokens": 5632,
+  "cached_input_tokens": 3318,
+  "cache_write_tokens": 1659,
+  "output_tokens": 503,
+  "reasoning_tokens": 388,
+  "web_searches": 0,
+  "cost_usd": 0.000558
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules",
+  "standings",
+  "free_agents",
+  "free_agents"
+ ],
+ "advice": {
+  "moves": [],
+  "summary": "Coach should replace dumped Gabriel if a viable free agent is available, but the free-agent tool returned no names, so I can\u2019t make a valid pickup recommendation yet. Kayda, Bryce, and Corbin are still in couples; Corbin also had power to choose and recoupled with Kenzie."
+ }
+}

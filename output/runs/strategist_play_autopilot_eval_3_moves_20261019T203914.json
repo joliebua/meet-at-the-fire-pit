@@ -1,0 +1,38 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_autopilot_eval_3",
+ "started": "2026-10-19T20:39:14+00:00",
+ "seconds": 7.8,
+ "usage": {
+  "requests": 1,
+  "gateway_cache_hits": 1,
+  "input_tokens": 1751,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 1625,
+  "output_tokens": 448,
+  "reasoning_tokens": 306,
+  "web_searches": 0,
+  "cost_usd": 0.00044
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules",
+  "standings"
+ ],
+ "advice": {
+  "moves": [
+   {
+    "add": "Bryce",
+    "drop": null,
+    "reason": "Make the available add: Bryce is already coupled with Trinity, adding a third couple to diversify Coach\u2019s roster beyond Melanie/Sincere and Beatriz/Sean; skip the unattached Day 2 arrivals for now.",
+    "evidence": [
+     "Trinity coupled up with Bryce,",
+     "On Day 2, Gabriel and Kayda entered the villa."
+    ]
+   }
+  ],
+  "summary": "Yes\u2014use the available move to add Bryce and spread your roster across three couples. Melanie and Beatriz are both coupled too, so there\u2019s no need to drop anyone or chase the unattached new arrivals yet."
+ }
+}

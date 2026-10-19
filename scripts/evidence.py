@@ -20,6 +20,8 @@ WEEKS_PER_MONTH = 4.3
 PLAYERS_PER_LEAGUE = 4          # the demo league
 DISPUTES_PER_LEAGUE_WEEK = 2    # assumption, stated in the report
 RULE_REQUESTS_PER_LEAGUE_MONTH = 2  # assumption, stated in the report
+STRATEGIST_PER_LEAGUE_WEEK = 1  # one coach call per league per week (asked for, or autopilot)
+DEMO_PLAY = "play_villa_demo"
 
 
 def usd(x: float, digits: int = 4) -> str:
@@ -54,7 +56,8 @@ search_scout = [s for _, s, _ in season_rows if s["web_searches"] > 0]
 host = agents["host"]["avg_cost_usd"]
 refc = agents["ref"]["avg_cost_usd"]
 rules = agents["rulesmith"]["avg_cost_usd"]
-league_week = host + DISPUTES_PER_LEAGUE_WEEK * refc
+coach = agents["strategist"]["avg_cost_usd"] if "strategist" in agents else 0.0
+league_week = host + DISPUTES_PER_LEAGUE_WEEK * refc + STRATEGIST_PER_LEAGUE_WEEK * coach
 league_month = WEEKS_PER_MONTH * league_week + RULE_REQUESTS_PER_LEAGUE_MONTH * rules
 pipeline_month = WEEKS_PER_MONTH * pipeline_week
 
@@ -92,7 +95,7 @@ example_line = f'{_line["islander"]} {_line["points"]:+d}, {_line["label"]}: “
 
 
 DIAGRAM = """
-<svg viewBox="0 0 860 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Agent diagram" style="width:100%;height:auto">
+<svg viewBox="0 0 860 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Agent diagram" style="width:100%;height:auto">
 <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#7a2a5a"/></marker></defs>
 <style>.b{fill:#fff;stroke:#c2185b;stroke-width:2;rx:12}.c{fill:#fff4d6;stroke:#b8860b;stroke-width:2}.h{fill:#e0fbf8;stroke:#0c8fa3;stroke-width:2}
 .t{font:600 14px Poppins,Arial,sans-serif;fill:#3a0d2e}.s{font:12px Poppins,Arial,sans-serif;fill:#6b4a60}.l{stroke:#7a2a5a;stroke-width:1.8;fill:none;marker-end:url(#a)}</style>
@@ -109,12 +112,36 @@ DIAGRAM = """
 <rect x="225" y="190" width="160" height="70" class="b" rx="12"/><text x="240" y="218" class="t">📜 Rulesmith</text><text x="240" y="240" class="s">plain English → rules</text>
 <rect x="225" y="300" width="160" height="70" class="b" rx="12"/><text x="240" y="328" class="t">⚖️ Ref</text><text x="240" y="350" class="s">disputes → event fixes</text>
 <rect x="420" y="245" width="140" height="70" class="c" rx="12"/><text x="434" y="273" class="t">👑 Commissioner</text><text x="434" y="295" class="s">approves / declines</text>
-<rect x="10" y="240" width="170" height="130" class="h" rx="12"/><text x="24" y="264" class="t">League members</text><text x="24" y="288" class="s">house rules (commish)</text><text x="24" y="308" class="s">disputes (any player)</text><text x="24" y="328" class="s">🙈 spoiler shield</text>
+<rect x="10" y="240" width="170" height="130" class="h" rx="12"/><text x="24" y="264" class="t">League members</text><text x="24" y="288" class="s">house rules (commish)</text><text x="24" y="308" class="s">disputes (any player)</text><text x="24" y="328" class="s">🙈 spoiler shield</text><text x="24" y="348" class="s">🎯 draft + weekly moves</text>
 <path class="l" d="M180,80 L223,80"/><path class="l" d="M365,80 L408,80"/><path class="l" d="M560,80 L603,80"/>
 <path class="l" d="M725,125 L725,168"/><path class="l" d="M725,240 L725,288"/>
 <path class="l" d="M180,280 L223,225"/><path class="l" d="M180,320 L223,330"/>
 <path class="l" d="M385,225 L418,270"/><path class="l" d="M385,335 L418,295"/><path class="l" d="M385,310 C395,190 520,140 640,127"/>
 <path class="l" d="M560,270 L603,215"/>
-<text x="200" y="395" class="s">Ref fixes go through verify.py too · nothing changes scores until the commissioner approves</text>
-<text x="200" y="415" class="s">Gold boxes are plain code; pink boxes are gpt-6-luna agents; teal boxes are inputs</text>
+<rect x="225" y="405" width="160" height="70" class="b" rx="12"/><text x="240" y="433" class="t">🎯 Strategist</text><text x="240" y="455" class="s">coach · or autopilot</text>
+<rect x="420" y="405" width="180" height="70" class="c" rx="12"/><text x="434" y="433" class="t">🗓️ Season engine (code)</text><text x="434" y="455" class="s">draft · moves checked · weeks</text>
+<path class="l" d="M180,355 L223,425"/><path class="l" d="M385,440 L418,440"/><path class="l" d="M598,405 C590,330 596,270 606,242"/>
+<text x="200" y="497" class="s">Ref fixes go through verify.py too · nothing changes scores until the commissioner approves · Strategist moves pass code checks</text>
+<text x="200" y="515" class="s">Gold boxes are plain code; pink boxes are gpt-6-luna agents; teal boxes are inputs</text>
 </svg>"""
+
+
+# Play-along mode: the committed demo league, plus the autopilot evaluations.
+from backend import scoring as _scoring  # noqa: E402
+
+demo_play = json.loads((config.DATA / "leagues" / f"{DEMO_PLAY}.json").read_text())
+demo_play_standings = _scoring.score_league(DEMO_PLAY, save=False, up_to_week=demo_play["current_week"])["standings"]
+autopilot_moves = [m for m in demo_play["moves"] if m["by"] == "autopilot"]
+coach_runs = [r for r in billed if r["agent"] == "strategist"]
+evals_autopilot = {v: json.loads((config.OUTPUT / f"eval_autopilot_{v}.json").read_text())
+                   for v in ("v1", "v2") if (config.OUTPUT / f"eval_autopilot_{v}.json").exists()}
+
+
+def _latest_coach_run(kind: str) -> dict:
+    files = sorted((config.OUTPUT / "runs").glob(f"strategist_{DEMO_PLAY}_{kind}_*.json"))
+    return json.loads(files[0].read_text()) if files else {}
+
+
+demo_draft_run = _latest_coach_run("draft")       # the first draft advice in the demo league
+demo_moves_run = json.loads(sorted((config.OUTPUT / "runs").glob(f"strategist_{DEMO_PLAY}_moves_*.json"))[-1].read_text()) \
+    if list((config.OUTPUT / "runs").glob(f"strategist_{DEMO_PLAY}_moves_*.json")) else {}

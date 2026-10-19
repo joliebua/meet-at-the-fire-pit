@@ -1,0 +1,40 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_autopilot_eval_1",
+ "started": "2026-10-19T20:37:15+00:00",
+ "seconds": 14.6,
+ "usage": {
+  "requests": 3,
+  "gateway_cache_hits": 0,
+  "input_tokens": 5085,
+  "cached_input_tokens": 1644,
+  "cache_write_tokens": 2359,
+  "output_tokens": 447,
+  "reasoning_tokens": 170,
+  "web_searches": 0,
+  "cost_usd": 0.000643
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "standings",
+  "scoring_rules",
+  "islander_report",
+  "islander_report"
+ ],
+ "advice": {
+  "moves": [
+   {
+    "add": "Caleb",
+    "drop": "Beatriz",
+    "reason": "Swap out Beatriz, who has been dumped and can no longer score, for Caleb, who is still in the villa and secured a couple with Sol; the new pairing is shaky, but it gives you ongoing scoring potential instead of a dead roster slot.",
+    "evidence": [
+     "\u201cleaving Beatriz single and dumped from the villa.\u201d",
+     "\u201cSol and Caleb became the final couple.\u201d"
+    ]
+   }
+  ],
+  "summary": "Yes\u2014make the one available move and replace Beatriz with Caleb. Caleb\u2019s match with Sol is not a proven strong couple yet, but he\u2019s active in the villa, while Beatriz\u2019s scoring is over."
+ }
+}

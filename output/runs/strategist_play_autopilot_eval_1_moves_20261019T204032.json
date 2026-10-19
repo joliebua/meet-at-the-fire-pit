@@ -1,0 +1,37 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_autopilot_eval_1",
+ "started": "2026-10-19T20:40:32+00:00",
+ "seconds": 0.5,
+ "usage": {
+  "requests": 0,
+  "gateway_cache_hits": 2,
+  "input_tokens": 0,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 0,
+  "output_tokens": 0,
+  "reasoning_tokens": 0,
+  "web_searches": 0,
+  "cost_usd": 0.0
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules"
+ ],
+ "advice": {
+  "moves": [
+   {
+    "add": "Gal",
+    "drop": "Corbin",
+    "reason": "I\u2019d swap out Corbin, whose pairings have shifted from Melanie to Kenzie to Parmida, for Gal, who has at least secured a couple after Jen chose him; it also spreads your roster across another couple.",
+    "evidence": [
+     "Corbin picked Parmida",
+     "Jen chose Gal"
+    ]
+   }
+  ],
+  "summary": "Yes\u2014make one move: add Gal and drop Corbin. Corbin\u2019s been through several pairings, while Gal enters next week coupled with Jen; it\u2019s a measured gamble, not a sure thing."
+ }
+}

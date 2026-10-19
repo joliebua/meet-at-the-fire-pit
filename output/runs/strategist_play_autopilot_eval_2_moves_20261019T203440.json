@@ -1,0 +1,32 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_autopilot_eval_2",
+ "started": "2026-10-19T20:34:40+00:00",
+ "seconds": 12.8,
+ "usage": {
+  "requests": 3,
+  "gateway_cache_hits": 1,
+  "input_tokens": 7030,
+  "cached_input_tokens": 3266,
+  "cache_write_tokens": 1633,
+  "output_tokens": 550,
+  "reasoning_tokens": 370,
+  "web_searches": 0,
+  "cost_usd": 0.000725
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules",
+  "standings",
+  "islander_report",
+  "islander_report",
+  "free_agents",
+  "free_agents"
+ ],
+ "advice": {
+  "moves": [],
+  "summary": "Coach should make a move: Gabriel and Beatriz have both been dumped, leaving two roster spots tied to islanders no longer in the villa. Kayda looks like a keeper after she and Zach stayed coupled and shared the hideaway, while Corbin and Kenzie recoupled; however, the free-agent list returned no candidates, so I can't safely name a valid add."
+ }
+}

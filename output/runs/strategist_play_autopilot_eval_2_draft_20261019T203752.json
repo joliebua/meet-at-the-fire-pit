@@ -1,0 +1,40 @@
+{
+ "agent": "strategist",
+ "kind": "draft",
+ "league": "play_autopilot_eval_2",
+ "started": "2026-10-19T20:37:52+00:00",
+ "seconds": 23.9,
+ "usage": {
+  "requests": 2,
+  "gateway_cache_hits": 0,
+  "input_tokens": 2755,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 1820,
+  "output_tokens": 583,
+  "reasoning_tokens": 329,
+  "web_searches": 0,
+  "cost_usd": 0.000612
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules"
+ ],
+ "advice": {
+  "picks": [
+   {
+    "islander": "Beatriz",
+    "reason": "She has 4 points and actively chose Sean on Day 1, giving her a clearer sign of agency in a couple than the unattached bombshells."
+   },
+   {
+    "islander": "Kenzie",
+    "reason": "She has 4 points and explicitly picked Zach on Day 1, so she starts in a formed couple rather than needing to find one."
+   },
+   {
+    "islander": "Trinity",
+    "reason": "She has 4 points and coupled up with Bryce on Day 1, making her a safer fallback than Gabriel or Kayda, who have no partner yet."
+   }
+  ],
+  "summary": "I\u2019d prioritize an established Day 1 couple over the fresh, unpaired arrivals; Beatriz and Kenzie have the strongest selection signals so far. Trinity is a solid third option, while there\u2019s not yet enough evidence to trust Gabriel or Kayda beyond their arrival points."
+ }
+}

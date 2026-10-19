@@ -1,0 +1,41 @@
+{
+ "agent": "strategist",
+ "kind": "draft",
+ "league": "play_autopilot_eval_3",
+ "started": "2026-10-19T20:35:07+00:00",
+ "seconds": 9.9,
+ "usage": {
+  "requests": 1,
+  "gateway_cache_hits": 1,
+  "input_tokens": 1731,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 1605,
+  "output_tokens": 681,
+  "reasoning_tokens": 490,
+  "web_searches": 0,
+  "cost_usd": 0.000554
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules",
+  "standings"
+ ],
+ "advice": {
+  "picks": [
+   {
+    "islander": "Kayda",
+    "reason": "She entered on Day 2 and already has 5 points, the highest available total; she also gives your roster a different risk profile from Gabriel, who arrived the same day."
+   },
+   {
+    "islander": "Beatriz",
+    "reason": "She has 4 points and actively chose Sean on Day 1, giving her a clearer couple starting point than the other 4-point options."
+   },
+   {
+    "islander": "Melanie",
+    "reason": "She has 4 points and Sincere used his power to choose her after both she and Aniya picked him, a strong sign she was specifically wanted."
+   }
+  ],
+  "summary": "Kayda is the best points-and-upside swing, while Beatriz and Melanie have the clearest couple-related reasons among the other available options. Either way, Coach can add someone outside Gabriel\u2019s current single status."
+ }
+}

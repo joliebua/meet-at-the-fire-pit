@@ -1,0 +1,259 @@
+{
+ "name": "Villa Demo",
+ "season": "love_island_usa_s8",
+ "commissioner": "Jolie",
+ "mode": "play",
+ "rules_file": "standard.json",
+ "house_rules": [],
+ "seed": 4535,
+ "you": "Jolie",
+ "settings": {
+  "draft_rounds": 2,
+  "roster_max": 4,
+  "moves_per_week": 1,
+  "draft_after_day": 2,
+  "autopilot": true
+ },
+ "current_week": 2,
+ "players": [
+  {
+   "name": "Jolie",
+   "bot": false,
+   "roster": [
+    {
+     "islander": "Gabriel",
+     "from_week": 1
+    },
+    {
+     "islander": "Kayda",
+     "from_week": 1
+    },
+    {
+     "islander": "Kenzie",
+     "from_week": 1
+    },
+    {
+     "islander": "Corbin",
+     "from_week": 2
+    }
+   ]
+  },
+  {
+   "name": "Maya",
+   "bot": true,
+   "roster": [
+    {
+     "islander": "Bryce",
+     "from_week": 1
+    },
+    {
+     "islander": "Beatriz",
+     "from_week": 1
+    },
+    {
+     "islander": "Sean",
+     "from_week": 1,
+     "until_week": 1
+    },
+    {
+     "islander": "Sol",
+     "from_week": 2
+    }
+   ]
+  },
+  {
+   "name": "Dev",
+   "bot": true,
+   "roster": [
+    {
+     "islander": "Sincere",
+     "from_week": 1
+    },
+    {
+     "islander": "Trinity",
+     "from_week": 1
+    },
+    {
+     "islander": "Melanie",
+     "from_week": 1
+    },
+    {
+     "islander": "Caleb",
+     "from_week": 2
+    }
+   ]
+  },
+  {
+   "name": "Priya",
+   "bot": true,
+   "roster": [
+    {
+     "islander": "Aniya",
+     "from_week": 1
+    },
+    {
+     "islander": "KC",
+     "from_week": 1
+    },
+    {
+     "islander": "Zach",
+     "from_week": 1
+    },
+    {
+     "islander": "Jen",
+     "from_week": 2
+    }
+   ]
+  }
+ ],
+ "draft": {
+  "order": [
+   "Dev",
+   "Priya",
+   "Jolie",
+   "Maya"
+  ],
+  "picks": [
+   {
+    "round": 1,
+    "pick": 1,
+    "player": "Dev",
+    "islander": "Sincere",
+    "by": "bot",
+    "reason": "8 pts so far, coupled with Melanie"
+   },
+   {
+    "round": 1,
+    "pick": 2,
+    "player": "Priya",
+    "islander": "Aniya",
+    "by": "bot",
+    "reason": "4 pts so far, coupled with KC"
+   },
+   {
+    "round": 1,
+    "pick": 3,
+    "player": "Jolie",
+    "islander": "Gabriel",
+    "by": "you",
+    "reason": ""
+   },
+   {
+    "round": 1,
+    "pick": 4,
+    "player": "Maya",
+    "islander": "Bryce",
+    "by": "bot",
+    "reason": "4 pts so far, coupled with Trinity"
+   },
+   {
+    "round": 2,
+    "pick": 5,
+    "player": "Maya",
+    "islander": "Beatriz",
+    "by": "bot",
+    "reason": "4 pts so far, coupled with Sean"
+   },
+   {
+    "round": 2,
+    "pick": 6,
+    "player": "Jolie",
+    "islander": "Kayda",
+    "by": "you",
+    "reason": ""
+   },
+   {
+    "round": 2,
+    "pick": 7,
+    "player": "Priya",
+    "islander": "KC",
+    "by": "bot",
+    "reason": "4 pts so far, coupled with Aniya"
+   },
+   {
+    "round": 2,
+    "pick": 8,
+    "player": "Dev",
+    "islander": "Trinity",
+    "by": "bot",
+    "reason": "4 pts so far, coupled with Bryce"
+   }
+  ],
+  "done": true
+ },
+ "moves": [
+  {
+   "from_week": 1,
+   "player": "Jolie",
+   "add": "Kenzie",
+   "drop": null,
+   "by": "autopilot",
+   "reason": "Add Kenzie to bring in an established couple while Gabriel and Kayda are currently unpaired; she chose Zach on Day 1.",
+   "made_after": "Week 0"
+  },
+  {
+   "from_week": 1,
+   "player": "Maya",
+   "add": "Sean",
+   "drop": null,
+   "by": "bot",
+   "reason": "Sean has 4 pts",
+   "made_after": "Week 0"
+  },
+  {
+   "from_week": 1,
+   "player": "Dev",
+   "add": "Melanie",
+   "drop": null,
+   "by": "bot",
+   "reason": "Melanie has 4 pts",
+   "made_after": "Week 0"
+  },
+  {
+   "from_week": 1,
+   "player": "Priya",
+   "add": "Zach",
+   "drop": null,
+   "by": "bot",
+   "reason": "Zach has 4 pts",
+   "made_after": "Week 0"
+  },
+  {
+   "from_week": 2,
+   "player": "Jolie",
+   "add": "Corbin",
+   "drop": null,
+   "by": "autopilot",
+   "reason": "Add Corbin while you have an open roster spot: he has 15 points already, and his first-pick power led to a new couple with Kenzie, giving him a promising foothold for next week.",
+   "made_after": "Week 1"
+  },
+  {
+   "from_week": 2,
+   "player": "Maya",
+   "add": "Sol",
+   "drop": "Sean",
+   "by": "bot",
+   "reason": "Sean left the villa; Sol has 7 pts",
+   "made_after": "Week 1"
+  },
+  {
+   "from_week": 2,
+   "player": "Dev",
+   "add": "Caleb",
+   "drop": null,
+   "by": "bot",
+   "reason": "Caleb has 7 pts",
+   "made_after": "Week 1"
+  },
+  {
+   "from_week": 2,
+   "player": "Priya",
+   "add": "Jen",
+   "drop": null,
+   "by": "bot",
+   "reason": "Jen has 7 pts",
+   "made_after": "Week 1"
+  }
+ ],
+ "created": "2026-10-19T20:31:18+00:00"
+}

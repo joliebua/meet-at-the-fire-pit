@@ -1,0 +1,37 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_autopilot_eval_3",
+ "started": "2026-10-19T20:40:01+00:00",
+ "seconds": 6.0,
+ "usage": {
+  "requests": 1,
+  "gateway_cache_hits": 1,
+  "input_tokens": 2306,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 2180,
+  "output_tokens": 254,
+  "reasoning_tokens": 124,
+  "web_searches": 0,
+  "cost_usd": 0.000412
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules"
+ ],
+ "advice": {
+  "moves": [
+   {
+    "add": "Dylan",
+    "drop": "Gal",
+    "reason": "Swap out Gal, who was dumped, for Dylan: he stayed coupled with Kenzie at the recoupling and the pair won challenge safety, giving him a much stronger path to keep scoring.",
+    "evidence": [
+     "Gal and Amora were dumped from the island.",
+     "Kenzie & Dylan won safety from the nights vote."
+    ]
+   }
+  ],
+  "summary": "Yes\u2014make the move and bring in Dylan for dumped Gal. Dylan has both a steady couple and immediate safety, while holding Gal leaves a dead roster spot."
+ }
+}

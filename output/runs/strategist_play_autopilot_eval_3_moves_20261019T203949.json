@@ -1,0 +1,40 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_autopilot_eval_3",
+ "started": "2026-10-19T20:39:49+00:00",
+ "seconds": 11.0,
+ "usage": {
+  "requests": 2,
+  "gateway_cache_hits": 1,
+  "input_tokens": 5776,
+  "cached_input_tokens": 2363,
+  "cache_write_tokens": 3161,
+  "output_tokens": 673,
+  "reasoning_tokens": 464,
+  "web_searches": 0,
+  "cost_usd": 0.00078
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules",
+  "islander_report",
+  "islander_report",
+  "islander_report"
+ ],
+ "advice": {
+  "moves": [
+   {
+    "add": "Gal",
+    "drop": null,
+    "reason": "Use the open roster spot to diversify across couples: Jen chose Gal at the Week 3 recoupling, giving this newly arrived islander a clear couple foothold rather than adding another Casa arrival who was chosen by a partner your roster already connects to.",
+    "evidence": [
+     "Jen chose Gal.",
+     "Gal entered the main villa on Day 17."
+    ]
+   }
+  ],
+  "summary": "Yes\u2014I'd use the open slot on Gal. Jen chose him at the recoupling, so he has a better immediate foothold than an unattached arrival, while spreading your roster across another couple."
+ }
+}

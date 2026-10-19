@@ -1,0 +1,36 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_villa_demo",
+ "started": "2026-10-19T20:31:44+00:00",
+ "seconds": 5.6,
+ "usage": {
+  "requests": 1,
+  "gateway_cache_hits": 1,
+  "input_tokens": 1740,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 1614,
+  "output_tokens": 316,
+  "reasoning_tokens": 157,
+  "web_searches": 0,
+  "cost_usd": 0.000372
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules"
+ ],
+ "advice": {
+  "moves": [
+   {
+    "add": "Corbin",
+    "drop": null,
+    "reason": "Add Corbin while you have an open roster spot: he has 15 points already, and his first-pick power led to a new couple with Kenzie, giving him a promising foothold for next week.",
+    "evidence": [
+     "\u201cas the newest arrival, Corbin was given first pick, to which he chose Kenzie.\u201d"
+    ]
+   }
+  ],
+  "summary": "I\u2019d use the open spot on Corbin rather than hold: he has a solid Week 1 total and is already coupled after getting the power to choose. That does put two roster spots on the Kenzie\u2013Corbin pairing, but Gabriel and Kayda give you two other couple pathways for balance."
+ }
+}

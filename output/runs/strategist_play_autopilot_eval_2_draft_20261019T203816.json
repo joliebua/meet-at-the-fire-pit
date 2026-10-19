@@ -1,0 +1,41 @@
+{
+ "agent": "strategist",
+ "kind": "draft",
+ "league": "play_autopilot_eval_2",
+ "started": "2026-10-19T20:38:16+00:00",
+ "seconds": 9.0,
+ "usage": {
+  "requests": 2,
+  "gateway_cache_hits": 0,
+  "input_tokens": 2823,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 1888,
+  "output_tokens": 471,
+  "reasoning_tokens": 213,
+  "web_searches": 0,
+  "cost_usd": 0.000565
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules",
+  "standings"
+ ],
+ "advice": {
+  "picks": [
+   {
+    "islander": "Kenzie",
+    "reason": "She has 4 points and a promising mutual-looking start: she picked Zach, giving you another couple separate from Beatriz and Sean."
+   },
+   {
+    "islander": "Trinity",
+    "reason": "She has 4 points and coupled up with Bryce, so she offers a second solid paired option rather than taking an unpartnered Day 2 bombshell."
+   },
+   {
+    "islander": "Aniya",
+    "reason": "She has 4 points and is coupled with KC, though the automatic match after nobody stood behind him makes this pairing riskier."
+   }
+  ],
+  "summary": "Kenzie is my pick: she has a partner and broadens your roster beyond Beatriz and Sean\u2019s couple. I\u2019d pass on Gabriel and Kayda for now\u2014both arrived on Day 2 without a partner, so their +5 arrival points don\u2019t yet offset the uncertainty."
+ }
+}

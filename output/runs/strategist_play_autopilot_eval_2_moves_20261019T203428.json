@@ -1,0 +1,36 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_autopilot_eval_2",
+ "started": "2026-10-19T20:34:28+00:00",
+ "seconds": 6.6,
+ "usage": {
+  "requests": 1,
+  "gateway_cache_hits": 1,
+  "input_tokens": 1517,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 1391,
+  "output_tokens": 406,
+  "reasoning_tokens": 295,
+  "web_searches": 0,
+  "cost_usd": 0.000389
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules"
+ ],
+ "advice": {
+  "moves": [
+   {
+    "add": "Beatriz",
+    "drop": null,
+    "reason": "Use the open roster slot to add someone already coupled up, diversifying away from Gabriel and Kayda, who have entered but are still unpaired.",
+    "evidence": [
+     "Beatriz chose Sean,"
+    ]
+   }
+  ],
+  "summary": "Yes\u2014make one move and add Beatriz. She\u2019s already coupled with Sean, while both of your current islanders are unpaired, so this gives Coach a little more relationship stability without dropping anyone."
+ }
+}

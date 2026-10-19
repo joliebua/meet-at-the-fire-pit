@@ -1,0 +1,36 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_autopilot_eval_1",
+ "started": "2026-10-19T20:33:24+00:00",
+ "seconds": 6.2,
+ "usage": {
+  "requests": 2,
+  "gateway_cache_hits": 0,
+  "input_tokens": 2285,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 1419,
+  "output_tokens": 306,
+  "reasoning_tokens": 149,
+  "web_searches": 0,
+  "cost_usd": 0.000417
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules"
+ ],
+ "advice": {
+  "moves": [
+   {
+    "add": "Beatriz",
+    "drop": null,
+    "reason": "Add Beatriz to build a third scoring lane: she is already coupled with Sean, and she was chosen rather than being paired by default.",
+    "evidence": [
+     "Beatriz chose Sean,"
+    ]
+   }
+  ],
+  "summary": "Yes\u2014make the available move and pick up Beatriz. She gives Coach another couple to root for alongside Gabriel and Kayda, with an early couple already in place."
+ }
+}

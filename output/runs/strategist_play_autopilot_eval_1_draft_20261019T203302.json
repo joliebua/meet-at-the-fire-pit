@@ -1,0 +1,41 @@
+{
+ "agent": "strategist",
+ "kind": "draft",
+ "league": "play_autopilot_eval_1",
+ "started": "2026-10-19T20:33:02+00:00",
+ "seconds": 11.9,
+ "usage": {
+  "requests": 2,
+  "gateway_cache_hits": 0,
+  "input_tokens": 2878,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 2039,
+  "output_tokens": 542,
+  "reasoning_tokens": 256,
+  "web_searches": 0,
+  "cost_usd": 0.00061
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules",
+  "standings"
+ ],
+ "advice": {
+  "picks": [
+   {
+    "islander": "Gabriel",
+    "reason": "He leads the pool at 5 points after his Day 2 bombshell arrival, and Coach\u2019s empty roster means he adds a fresh scoring path; the event says, \u201cGabriel and Kayda entered the villa.\u201d"
+   },
+   {
+    "islander": "Kayda",
+    "reason": "She also has 5 points from the Day 2 arrival bonus, matching the pool\u2019s top total and bringing the same fresh-start upside; the event says, \u201cGabriel and Kayda entered the villa.\u201d"
+   },
+   {
+    "islander": "Beatriz",
+    "reason": "She has 4 points and is already coupled with Sean after actively choosing him: \u201cBeatriz chose Sean,\u201d giving her a more intentional starting pairing than an automatic match."
+   }
+  ],
+  "summary": "With an empty roster, I\u2019d take the two new arrivals first: they\u2019re tied for the pool\u2019s best score and spread your exposure beyond the original couples. Beatriz is my steady fallback if you want an established, intentionally chosen couple."
+ }
+}

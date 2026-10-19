@@ -1,0 +1,221 @@
+{
+ "summary": {
+  "seasons": 1,
+  "avg_rank": 4.0,
+  "wins": 0,
+  "avg_total": 46.0,
+  "bot_avg_total": 121.3,
+  "cost_usd": null,
+  "note": "Seed-1 rerun of the v2 prompt with full rosters recorded. Cost was mis-summed (it included earlier runs); see output/runs."
+ },
+ "seasons": [
+  {
+   "seed": 1,
+   "draft_picks": [
+    "Melanie",
+    "Beatriz"
+   ],
+   "final": [
+    {
+     "player": "Maya",
+     "total": 186,
+     "by_islander": {
+      "Bryce": 72,
+      "Trinity": 72,
+      "Aniya": 36,
+      "KC": 6
+     }
+    },
+    {
+     "player": "Dev",
+     "total": 118,
+     "by_islander": {
+      "Kenzie": 23,
+      "Zach": 51,
+      "Kayda": 52,
+      "Jen": 2,
+      "Tierra": -10
+     }
+    },
+    {
+     "player": "Priya",
+     "total": 60,
+     "by_islander": {
+      "Sincere": 50,
+      "Sean": -12,
+      "Gabriel": 14,
+      "Sol": -2,
+      "Corbin": -7,
+      "Carl": 17
+     }
+    },
+    {
+     "player": "Coach",
+     "total": 46,
+     "by_islander": {
+      "Melanie": 43,
+      "Beatriz": 3,
+      "Corbin": 17,
+      "Caleb": -1,
+      "Gal": -6,
+      "Dylan": -10
+     }
+    }
+   ],
+   "draft": [
+    {
+     "round": 1,
+     "pick": 1,
+     "player": "Priya",
+     "islander": "Sincere",
+     "by": "bot",
+     "reason": "8 pts so far, coupled with Melanie"
+    },
+    {
+     "round": 1,
+     "pick": 2,
+     "player": "Coach",
+     "islander": "Melanie",
+     "by": "strategist",
+     "reason": "She\u2019s in a couple with Sincere, who had the power to choose and selected her over Aniya, making this the clearest active vote of confidence in the pool."
+    },
+    {
+     "round": 1,
+     "pick": 3,
+     "player": "Dev",
+     "islander": "Kenzie",
+     "by": "bot",
+     "reason": "4 pts so far, coupled with Zach"
+    },
+    {
+     "round": 1,
+     "pick": 4,
+     "player": "Maya",
+     "islander": "Bryce",
+     "by": "bot",
+     "reason": "4 pts so far, coupled with Trinity"
+    },
+    {
+     "round": 2,
+     "pick": 5,
+     "player": "Maya",
+     "islander": "Trinity",
+     "by": "bot",
+     "reason": "4 pts so far, coupled with Bryce"
+    },
+    {
+     "round": 2,
+     "pick": 6,
+     "player": "Dev",
+     "islander": "Zach",
+     "by": "bot",
+     "reason": "4 pts so far, coupled with Kenzie"
+    },
+    {
+     "round": 2,
+     "pick": 7,
+     "player": "Coach",
+     "islander": "Beatriz",
+     "by": "strategist",
+     "reason": "She is already in a couple with Sean and actively chose him, giving you a stronger early commitment signal than the default pairing available elsewhere."
+    },
+    {
+     "round": 2,
+     "pick": 8,
+     "player": "Priya",
+     "islander": "Sean",
+     "by": "bot",
+     "reason": "4 pts so far, coupled with Beatriz"
+    }
+   ],
+   "rank": 4,
+   "weekly": [
+    {
+     "week": "Week 1",
+     "autopilot_moves": [],
+     "rank": 3
+    },
+    {
+     "week": "Week 2",
+     "autopilot_moves": [
+      [
+       "Corbin",
+       null
+      ]
+     ],
+     "rank": 3
+    },
+    {
+     "week": "Week 3",
+     "autopilot_moves": [
+      [
+       "Caleb",
+       "Beatriz"
+      ]
+     ],
+     "rank": 3
+    },
+    {
+     "week": "Week 4",
+     "autopilot_moves": [
+      [
+       "Gal",
+       "Corbin"
+      ]
+     ],
+     "rank": 3
+    },
+    {
+     "week": "Week 5",
+     "autopilot_moves": [
+      [
+       "Dylan",
+       "Caleb"
+      ]
+     ],
+     "rank": 4
+    }
+   ],
+   "moves": [
+    {
+     "from_week": 2,
+     "player": "Coach",
+     "add": "Corbin",
+     "drop": null,
+     "by": "autopilot",
+     "reason": "Add Corbin: he has formed a couple with Kenzie, and his first-pick power is a promising early sign; Coach has two open roster spots, so no drop is needed.",
+     "made_after": "Week 1"
+    },
+    {
+     "from_week": 3,
+     "player": "Coach",
+     "add": "Caleb",
+     "drop": "Beatriz",
+     "by": "autopilot",
+     "reason": "Swap out Beatriz, who has been dumped and can no longer score, for Caleb, who is still in the villa and secured a couple with Sol; the new pairing is shaky, but it gives you ongoing scoring potential instead of a dead roster slot.",
+     "made_after": "Week 2"
+    },
+    {
+     "from_week": 4,
+     "player": "Coach",
+     "add": "Gal",
+     "drop": "Corbin",
+     "by": "autopilot",
+     "reason": "I\u2019d swap out Corbin, whose pairings have shifted from Melanie to Kenzie to Parmida, for Gal, who has at least secured a couple after Jen chose him; it also spreads your roster across another couple.",
+     "made_after": "Week 3"
+    },
+    {
+     "from_week": 5,
+     "player": "Coach",
+     "add": "Dylan",
+     "drop": "Caleb",
+     "by": "autopilot",
+     "reason": "Add Dylan for dumped Caleb: Dylan and Kenzie stayed together at recoupling and then won the Karaoke Night Challenge, giving him a stronger in-villa path than holding a departed islander.",
+     "made_after": "Week 4"
+    }
+   ],
+   "strategist_runs": null,
+   "cost_usd": null
+  }
+ ]
+}

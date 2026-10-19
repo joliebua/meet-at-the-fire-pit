@@ -1,0 +1,28 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_autopilot_eval_1",
+ "started": "2026-10-19T20:36:59+00:00",
+ "seconds": 8.3,
+ "usage": {
+  "requests": 2,
+  "gateway_cache_hits": 0,
+  "input_tokens": 2596,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 1634,
+  "output_tokens": 491,
+  "reasoning_tokens": 343,
+  "web_searches": 0,
+  "cost_usd": 0.000546
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules",
+  "standings"
+ ],
+ "advice": {
+  "moves": [],
+  "summary": "I\u2019d hold this week: Gabriel and Kayda are fresh arrivals with no couple yet, and Aniya\u2019s match with KC was automatic rather than a mutual choice. Melanie and Beatriz already have couples, so let the next recoupling give us a clearer, sturdier free-agent target."
+ }
+}

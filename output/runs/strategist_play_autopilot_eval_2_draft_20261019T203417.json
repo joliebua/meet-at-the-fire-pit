@@ -1,0 +1,40 @@
+{
+ "agent": "strategist",
+ "kind": "draft",
+ "league": "play_autopilot_eval_2",
+ "started": "2026-10-19T20:34:17+00:00",
+ "seconds": 10.4,
+ "usage": {
+  "requests": 2,
+  "gateway_cache_hits": 0,
+  "input_tokens": 2574,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 1735,
+  "output_tokens": 530,
+  "reasoning_tokens": 280,
+  "web_searches": 0,
+  "cost_usd": 0.000566
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules"
+ ],
+ "advice": {
+  "picks": [
+   {
+    "islander": "Kayda",
+    "reason": "She leads the available pool with 5 points, and like rostered Gabriel she entered on Day 2 and is currently unpartnered, giving Coach a chance to benefit if their paths connect."
+   },
+   {
+    "islander": "Beatriz",
+    "reason": "She has 4 points and is coupled with Sean after choosing him on Day 1, adding a different couple to Coach's roster."
+   },
+   {
+    "islander": "Trinity",
+    "reason": "She has 4 points and coupled up with Bryce on Day 1, another established couple that diversifies Coach's roster."
+   }
+  ],
+  "summary": "Kayda is my first pick: she tops the available pool on points, and her Day 2 arrival gives Coach an interesting unpartnered option alongside Gabriel. If she goes, Beatriz or Trinity adds a Day 1 couple to spread the risk."
+ }
+}

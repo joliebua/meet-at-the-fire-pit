@@ -1,0 +1,38 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_autopilot_eval_2",
+ "started": "2026-10-19T20:38:39+00:00",
+ "seconds": 8.6,
+ "usage": {
+  "requests": 1,
+  "gateway_cache_hits": 1,
+  "input_tokens": 1850,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 1724,
+  "output_tokens": 493,
+  "reasoning_tokens": 344,
+  "web_searches": 0,
+  "cost_usd": 0.000475
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "standings",
+  "scoring_rules"
+ ],
+ "advice": {
+  "moves": [
+   {
+    "add": null,
+    "drop": "Beatriz",
+    "reason": "Beatriz has been dumped, so she cannot score again; with no free agents returned, clear the dead roster spot rather than make a speculative add.",
+    "evidence": [
+     "\u201cThis left Corbin, Melanie, and Beatriz single and vulnerable.\u201d",
+     "\u201cleaving Beatriz single and dumped from the villa.\u201d"
+    ]
+   }
+  ],
+  "summary": "Yes\u2014drop Beatriz: she\u2019s out of the villa, while Kenzie and Corbin have reunited and Trinity and Bryce mutually stayed together. No free agents were listed to replace her right now, so don\u2019t force a pickup; reassess when an available islander appears."
+ }
+}

@@ -1,0 +1,41 @@
+{
+ "agent": "strategist",
+ "kind": "draft",
+ "league": "play_autopilot_eval_2",
+ "started": "2026-10-19T20:34:08+00:00",
+ "seconds": 8.8,
+ "usage": {
+  "requests": 2,
+  "gateway_cache_hits": 0,
+  "input_tokens": 2627,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 1788,
+  "output_tokens": 447,
+  "reasoning_tokens": 187,
+  "web_searches": 0,
+  "cost_usd": 0.000531
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules",
+  "standings"
+ ],
+ "advice": {
+  "picks": [
+   {
+    "islander": "Gabriel",
+    "reason": "He leads the available pool with 5 points after entering the villa on Day 2, and his unpartnered status leaves room for a new-couple scoring opportunity."
+   },
+   {
+    "islander": "Kayda",
+    "reason": "She also has 5 points from her Day 2 villa arrival and is still unpartnered, giving her the same early upside as Gabriel."
+   },
+   {
+    "islander": "Beatriz",
+    "reason": "She has 4 points and is already coupled with Sean after choosing him on Day 1, so she offers an established-couple alternative."
+   }
+  ],
+  "summary": "I\u2019d prioritize the fresh arrivals Gabriel and Kayda for their pool-leading 5 points, then take Beatriz as the steadier couple-based fallback. Coach\u2019s roster is empty, so this is a good moment to balance arrival upside with an existing couple."
+ }
+}

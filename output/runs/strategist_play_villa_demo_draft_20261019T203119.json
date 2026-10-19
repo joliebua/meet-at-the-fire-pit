@@ -1,0 +1,40 @@
+{
+ "agent": "strategist",
+ "kind": "draft",
+ "league": "play_villa_demo",
+ "started": "2026-10-19T20:31:19+00:00",
+ "seconds": 12.4,
+ "usage": {
+  "requests": 2,
+  "gateway_cache_hits": 1,
+  "input_tokens": 4400,
+  "cached_input_tokens": 1840,
+  "cache_write_tokens": 2308,
+  "output_tokens": 686,
+  "reasoning_tokens": 299,
+  "web_searches": 0,
+  "cost_usd": 0.000675
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules"
+ ],
+ "advice": {
+  "picks": [
+   {
+    "islander": "Gabriel",
+    "reason": "He leads the available pool with 5 points after entering as a Day 2 bombshell, and he is still unpartnered with potential to form a new couple."
+   },
+   {
+    "islander": "Kayda",
+    "reason": "She also has 5 points from her Day 2 bombshell arrival and is currently unpartnered, giving her the same fresh-arrival and coupling upside."
+   },
+   {
+    "islander": "Beatriz",
+    "reason": "She has 4 points and is coupled with Sean after choosing him on Day 1, so she has an established pair behind her."
+   }
+  ],
+  "summary": "With an empty roster, prioritize Gabriel and Kayda for their 5-point bombshell head start and potential new-couple upside. Beatriz is my third choice: she has already chosen Sean, giving her a clear early connection."
+ }
+}

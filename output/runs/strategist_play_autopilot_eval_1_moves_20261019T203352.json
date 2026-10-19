@@ -1,0 +1,38 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_autopilot_eval_1",
+ "started": "2026-10-19T20:33:52+00:00",
+ "seconds": 9.5,
+ "usage": {
+  "requests": 2,
+  "gateway_cache_hits": 0,
+  "input_tokens": 3393,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 2533,
+  "output_tokens": 588,
+  "reasoning_tokens": 354,
+  "web_searches": 0,
+  "cost_usd": 0.000697
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules",
+  "standings"
+ ],
+ "advice": {
+  "moves": [
+   {
+    "add": "Gal",
+    "drop": "Beatriz",
+    "reason": "Make the one available move: Beatriz is already out, while Gal is a fresh arrival who has coupled with Jen, giving her a live route to new-couple and in-villa points without doubling up on one of your roster's couples.",
+    "evidence": [
+     "Carl, Chandlar, Chay, Corey, Dylan, Gal, Keyon, Kyle, Ronnie, Ryan, Tino and Trae entered the main villa.",
+     "Jen chose Gal."
+    ]
+   }
+  ],
+  "summary": "Yes\u2014I'd use the move to replace dumped Beatriz with Gal. She entered this week and Jen chose her, so she's an active couple option; your other in-villa picks remain spread across different couples."
+ }
+}

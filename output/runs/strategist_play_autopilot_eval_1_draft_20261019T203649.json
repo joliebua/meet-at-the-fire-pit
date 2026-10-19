@@ -1,0 +1,40 @@
+{
+ "agent": "strategist",
+ "kind": "draft",
+ "league": "play_autopilot_eval_1",
+ "started": "2026-10-19T20:36:49+00:00",
+ "seconds": 9.4,
+ "usage": {
+  "requests": 2,
+  "gateway_cache_hits": 0,
+  "input_tokens": 2554,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 1619,
+  "output_tokens": 541,
+  "reasoning_tokens": 299,
+  "web_searches": 0,
+  "cost_usd": 0.000566
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules"
+ ],
+ "advice": {
+  "picks": [
+   {
+    "islander": "Beatriz",
+    "reason": "She is already in a couple with Sean and actively chose him, giving you a stronger early commitment signal than the default pairing available elsewhere."
+   },
+   {
+    "islander": "Sean",
+    "reason": "He is coupled with Beatriz, who chose him, so he offers a promising couple\u2014but he would stack Coach's roster in the same couple as Beatriz."
+   },
+   {
+    "islander": "Aniya",
+    "reason": "She has a partner in KC, though the pairing was automatic because nobody stood behind his door, so it carries more uncertainty."
+   }
+  ],
+  "summary": "Beatriz is my clear first choice: she adds a different couple from Melanie and Sincere, with the best sign of mutual interest among these options. Sean is a solid fallback if she goes, but remember that drafting both would concentrate your roster in one couple."
+ }
+}

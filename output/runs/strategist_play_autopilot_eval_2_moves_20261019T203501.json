@@ -1,0 +1,38 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_autopilot_eval_2",
+ "started": "2026-10-19T20:35:01+00:00",
+ "seconds": 5.4,
+ "usage": {
+  "requests": 1,
+  "gateway_cache_hits": 1,
+  "input_tokens": 2188,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 2062,
+  "output_tokens": 334,
+  "reasoning_tokens": 181,
+  "web_searches": 0,
+  "cost_usd": 0.000437
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules",
+  "standings"
+ ],
+ "advice": {
+  "moves": [
+   {
+    "add": "Dylan",
+    "drop": "Corbin",
+    "reason": "Use the available move to replace dumped Corbin with Dylan: he is coupled with Kenzie and they just won safety, while Corbin has left the villa.",
+    "evidence": [
+     "\u201cFor winning, Kenzie & Dylan won safety from the nights vote.\u201d",
+     "\u201cParmida and Corbin were dumped from the villa.\u201d"
+    ]
+   }
+  ],
+  "summary": "Yes\u2014Coach should make the move and bring in Dylan for Corbin. Dylan gives the roster an active, stable couple after Week 4\u2019s recoupling and a fresh challenge-safety boost; your other live pairing, Kayda and Zach, remains intact."
+ }
+}

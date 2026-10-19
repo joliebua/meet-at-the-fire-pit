@@ -1,0 +1,38 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_autopilot_eval_2",
+ "started": "2026-10-19T20:34:53+00:00",
+ "seconds": 8.1,
+ "usage": {
+  "requests": 1,
+  "gateway_cache_hits": 1,
+  "input_tokens": 2659,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 2533,
+  "output_tokens": 496,
+  "reasoning_tokens": 310,
+  "web_searches": 0,
+  "cost_usd": 0.000577
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules",
+  "standings"
+ ],
+ "advice": {
+  "moves": [
+   {
+    "add": "Tierra",
+    "drop": "Beatriz",
+    "reason": "Swap out dumped Beatriz for active Tierra: Tierra earned 11 points, is coupled with KC, and adds a live couple option while Coach already has two eliminated roster spots to clear over time.",
+    "evidence": [
+     "As Aniya decided to remain loyal to KC, but he chose to twist and couple up with Tierra, she remained in the villa as a single islander.",
+     "On Day 10, Corbin chose to couple up with Melanie, leaving Beatriz single and dumped from the villa."
+    ]
+   }
+  ],
+  "summary": "Yes\u2014make the available move and add Tierra for Beatriz. Tierra is in the villa and paired with KC, while Beatriz has been dumped; Coach is third in the standings at 64, so grabbing an active scorer is the right nudge."
+ }
+}

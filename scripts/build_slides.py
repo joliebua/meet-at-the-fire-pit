@@ -35,6 +35,9 @@ per_user_10k = scale_rows[2][3]
 month_10k = scale_rows[2][2]
 alone_10k = scale_rows[2][4]
 s = safety["summary"]
+_ev = list(evals_autopilot.values())
+coach_seasons = sum(v["summary"]["seasons"] for v in _ev)
+coach_rank = round(sum(v["summary"]["avg_rank"] * v["summary"]["seasons"] for v in _ev) / max(coach_seasons, 1), 2)
 
 CSS = """
 :root { --hot:#ff2e93; --sunset:#ff8a3d; --pool:#29e6d6; --gold:#ffd23f; --ink:#fff7fb; }
@@ -84,7 +87,7 @@ slides.append(f"""
 <section>
   <h1>Villa Commissioner 💖</h1>
   <p class="big">An AI agent team that runs your Love Island fantasy league</p>
-  <p class="sub">Live sources in · a receipt behind every point · disputes settled · the weekly drop written</p>
+  <p class="sub">Live sources in · a receipt behind every point · disputes settled · an AI coach that drafts and plays for you · a 3D villa</p>
   <p class="sub" style="margin-top:1.4em">Jolie Bua · MGT 409 AI Foundations for Managers · Fall 2026<br>{REPO.replace("https://", "")}</p>
   {notes("One sentence: it's the commissioner's job, done by agents, with proof for every point.")}
 </section>""")
@@ -121,7 +124,7 @@ slides.append(f"""
 <section>
   <h2>What's new</h2>
   <table class="cmp">
-    <thead><tr><th></th><th>Your own house rules</th><th>Receipt for every point</th><th>AI ref for disputes</th><th>Spoiler shield</th></tr></thead>
+    <thead><tr><th></th><th>Your own house rules</th><th>Receipt for every point</th><th>AI ref for disputes</th><th>AI coach / autopilot</th></tr></thead>
     <tbody>{cells}</tbody>
   </table>
   <p class="small" style="margin-top:14px">◐ custom scoring categories · – not described in the app's store listing (checked Oct 19, 2026).
@@ -132,10 +135,10 @@ slides.append(f"""
 # 4. Agent diagram
 slides.append(f"""
 <section>
-  <h2>Five agents, one code referee</h2>
+  <h2>Six agents, one code referee</h2>
   <div class="diagram">{DIAGRAM}</div>
   <p class="small" style="margin-top:10px">gpt-6-luna proposes · <span class="hl">plain code checks every quote and does all the math</span> · the commissioner approves every change</p>
-  {notes("Scout gathers, Recapper extracts with exact quotes, verify.py checks, Scorekeeper is code, Host writes the drop. Rulesmith and Ref only create pending items.")}
+  {notes("Scout gathers, Recapper extracts with exact quotes, verify.py checks, Scorekeeper is code, Host writes the drop. Rulesmith and Ref only create pending items. The Strategist coaches or plays a team; the season engine checks every move.")}
 </section>""")
 
 # 5. Demo: receipts + villa
@@ -149,15 +152,15 @@ slides.append(f"""
   {notes("Live demo here if time: open Week 2, show the America's-choice coupling quote.")}
 </section>""")
 
-# 6. Demo: disputes + drop
+# 6. Demo: the AI coach + 3D villa
 slides.append(f"""
 <section>
-  <h2>Disputes & the weekly drop</h2>
+  <h2>Your AI coach, in a 3D villa</h2>
   <div class="cols">
-    <div>{img("disputes", "Disputes")}<div class="cap">The Ref upheld Corbin's missed kiss with a verified quote. The commissioner approved it, and Priya went 90 → 91</div></div>
-    <div>{img("drop", "The weekly drop")}<div class="cap">The Host writes the group-chat drop. Every number is checked against the real standings</div></div>
+    <div>{img("draft", "Draft room with the Strategist")}<div class="cap">Draft room: the Villa Strategist ranks picks from what has aired so far ({usd(coach)} per call)</div></div>
+    <div>{img("season", "Play-along season in 3D")}<div class="cap">Play week by week: your team as neon pillars, 🤖 autopilot makes rule-checked moves before each week</div></div>
   </div>
-  {notes("The Ref can only add or remove events, never points.")}
+  {notes("Play-along mode: you + 3 bots draft after Day 2, then reveal one week at a time. Autopilot added Kenzie and Corbin before Weeks 1-2 with reasons; after Week 2 it held because nobody was free.")}
 </section>""")
 
 # 7. Cost
@@ -172,9 +175,10 @@ slides.append(f"""
   <ul class="small" style="margin-top:22px">
     <li>The recap pipeline runs <b>once per show-week, shared by every league</b>. Without sharing, 10,000 users would cost {alone_10k}/month</li>
     <li>Prompt caching: {ref_cached_pct}% of the Ref's input tokens cached · previews, not full pages, for the Scout</li>
+    <li>Villa Strategist: about {usd(coach)} per advice or autopilot week</li>
     <li>Self-correct round: +1 call ({usd(w2_with["cost_usd"] - w2_without["cost_usd"])}) recovered 3 of 19 Week 2 events. Kept</li>
   </ul>
-  <p class="sub small">Measured from API usage on every billed run · gpt-6-luna course prices · assumptions: {PLAYERS_PER_LEAGUE} players/league, {DISPUTES_PER_LEAGUE_WEEK} disputes/week</p>
+  <p class="sub small">Measured from API usage on every billed run · gpt-6-luna course prices · assumptions: {PLAYERS_PER_LEAGUE} players/league, {DISPUTES_PER_LEAGUE_WEEK} disputes/week, {STRATEGIST_PER_LEAGUE_WEEK} coach call/week</p>
   {notes("All numbers come from output/runs via scripts/evidence.py.")}
 </section>""")
 
@@ -190,6 +194,7 @@ slides.append(f"""
         <li><b>Injection in disputes:</b> fake "commissioner approved" denied, nothing changes without approval</li>
         <li><b>Invented events:</b> fake quotes, fake islanders, wrong days, an islander who wasn't in the villa: all rejected by code</li>
         <li><b>Overspending:</b> request, token, web-search and input-size caps</li>
+        <li><b>Autonomous coach:</b> sees only aired weeks; autopilot can't apply illegal moves</li>
       </ul>
       <p class="small"><span class="hl">Known limit:</span> a believable lie planted in a trusted source can pass. It shows as single-source and can be disputed.</p>
     </div>
@@ -208,6 +213,7 @@ slides.append(f"""
     <div class="card stat"><b>~{week_seconds}s</b><span>machine time per episode week (Scout + Recapper)</span></div>
   </div>
   <p class="small" style="margin-top:20px">Commissioner's job → approve or decline. Arguments end with a quote.</p>
+  <p class="small"><span class="hl">AI coach vs. simple bots:</span> average rank {coach_rank} of 4 over {coach_seasons} simulated seasons, 0 wins: no edge yet (draft luck likely dominates).</p>
   <p class="small"><span class="hl">User evidence so far:</span> my own experience as the target user. Next: a timed trial with a real friend group (manual scoring vs. approving the app).</p>
   {notes("Caveat: accuracy is graded against wiki tables; noisier sources are next.")}
 </section>""")
@@ -223,6 +229,7 @@ slides.append(f"""
         <li>A quote proves it's <i>in</i> a source, not that it's <i>true</i></li>
         <li>Wiki recaps lag a few days; X and Reddit need keys the course doesn't allow</li>
         <li>No outside users yet · one season tested · no logins</li>
+        <li>The AI coach doesn't beat simple bots yet</li>
       </ul>
     </div>
     <div class="card">
@@ -231,7 +238,7 @@ slides.append(f"""
         <li>Two-source rule for big events</li>
         <li>Live scoring during a season + push notifications for the drop</li>
         <li>Accounts, a draft room and invite links</li>
-        <li>A full-season trial with a real league</li>
+        <li>A full-season trial with a real league, and a much bigger autopilot evaluation</li>
       </ul>
     </div>
   </div>

@@ -1,0 +1,41 @@
+{
+ "agent": "strategist",
+ "kind": "draft",
+ "league": "play_autopilot_eval_1",
+ "started": "2026-10-19T20:33:14+00:00",
+ "seconds": 9.7,
+ "usage": {
+  "requests": 2,
+  "gateway_cache_hits": 0,
+  "input_tokens": 2432,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 1593,
+  "output_tokens": 406,
+  "reasoning_tokens": 164,
+  "web_searches": 0,
+  "cost_usd": 0.000486
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules",
+  "standings"
+ ],
+ "advice": {
+  "picks": [
+   {
+    "islander": "Kayda",
+    "reason": "She matches Gabriel as a Day 2 arrival and already has 5 points, while she is still unpartnered in the available pool."
+   },
+   {
+    "islander": "Beatriz",
+    "reason": "She has 4 points and chose Sean on Day 1, giving her an established couple rather than another unpaired pick."
+   },
+   {
+    "islander": "Aniya",
+    "reason": "She has 4 points and is coupled with KC after being automatically paired with him on Day 1."
+   }
+  ],
+  "summary": "Kayda is the clearest fit: you can pair your roster around two Day 2 arrivals, both currently worth 5 points. If she\u2019s gone, Beatriz or Aniya adds a Day 1 couple and spreads your exposure beyond Gabriel."
+ }
+}

@@ -110,7 +110,9 @@ A pipeline orchestrator runs Scout → Recapper → Scorekeeper → Host each we
   - **Full season played in the browser:** autopilot dropped dumped islanders and added bombshells; finished #2.
   - **3D (Three.js, lazy-loaded):** a sunset pool scene with neon pillars per player (or per islander on your team), plus a 3D heart burst on picks and moves.
   - **Safety suite:** E1–E4 added (illegal moves, no future events, spoiler names, autopilot can't apply illegal moves). Now 24 pass, 0 fail, 1 known limit.
-  - **Still to do:** the report and slides don't mention the Strategist, play-along mode or 3D yet.
+  - **Report and slides updated (10/19):** Strategist and season engine in the diagram and agent table, play-along trace with draft/season screenshots, Strategist cost in the tokenomics, E1–E4 in safety, and an autopilot evaluation in Impact. The report prints to 14 pages; the slides stay at 10.
+  - **Autopilot evaluation** (`scripts/eval_autopilot.py`): v1 prompt averaged rank 2.67, v2 ("staying power") averaged 3.0, 0 wins in 6 seasons against the simple bots. Reported honestly. In the detailed seed-1 run, a bot drafted the eventual winners on Day 2.
+  - **Demo play-along league** `data/leagues/play_villa_demo.json` (played through Week 2) is committed for graders.
 
 ## Safety ideas
 

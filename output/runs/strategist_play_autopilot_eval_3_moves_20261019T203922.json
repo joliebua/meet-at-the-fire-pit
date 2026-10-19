@@ -1,0 +1,41 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_autopilot_eval_3",
+ "started": "2026-10-19T20:39:22+00:00",
+ "seconds": 11.4,
+ "usage": {
+  "requests": 2,
+  "gateway_cache_hits": 1,
+  "input_tokens": 4897,
+  "cached_input_tokens": 1857,
+  "cache_write_tokens": 2788,
+  "output_tokens": 731,
+  "reasoning_tokens": 472,
+  "web_searches": 0,
+  "cost_usd": 0.000758
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules",
+  "standings",
+  "islander_report",
+  "islander_report",
+  "islander_report"
+ ],
+ "advice": {
+  "moves": [
+   {
+    "add": "Corbin",
+    "drop": null,
+    "reason": "Use the open fourth slot on Corbin: he has 15 points, got first pick, and formed a couple with Kenzie, adding a separate pair to Coach\u2019s roster without dropping any of the three islanders who survived coupled up; the pairing is new, so it is a measured upside play rather than a proven lock.",
+    "evidence": [
+     "\u201cas the newest arrival, Corbin was given first pick, to which he chose Kenzie.\u201d",
+     "\u201cMelanie and Sincere, and Trinity and Bryce all remained in their couples.\u201d"
+    ]
+   }
+  ],
+  "summary": "Yes\u2014add Corbin while the fourth roster spot is open, and keep your three established couples intact. His Kenzie pairing is brand-new, so there\u2019s some uncertainty, but the power pick and 15 points make him a worthwhile upside add."
+ }
+}

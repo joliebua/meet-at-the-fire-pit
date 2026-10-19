@@ -1,0 +1,39 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_autopilot_eval_1",
+ "started": "2026-10-19T20:37:07+00:00",
+ "seconds": 7.6,
+ "usage": {
+  "requests": 3,
+  "gateway_cache_hits": 0,
+  "input_tokens": 5002,
+  "cached_input_tokens": 1817,
+  "cache_write_tokens": 2103,
+  "output_tokens": 385,
+  "reasoning_tokens": 147,
+  "web_searches": 0,
+  "cost_usd": 0.000582
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules",
+  "standings",
+  "islander_report"
+ ],
+ "advice": {
+  "moves": [
+   {
+    "add": "Corbin",
+    "drop": null,
+    "reason": "Add Corbin: he has formed a couple with Kenzie, and his first-pick power is a promising early sign; Coach has two open roster spots, so no drop is needed.",
+    "evidence": [
+     "\u201cHowever, as the newest arrival, Corbin was given first pick, to which he chose Kenzie.\u201d",
+     "\u201cOn Day 6, Corbin was given first pick...\u201d"
+    ]
+   }
+  ],
+  "summary": "Yes\u2014make one move and add Corbin. Melanie and Beatriz both ended Week 1 in couples, so keep them; Corbin gives Coach a third couple to root for without dropping anyone."
+ }
+}
