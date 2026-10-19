@@ -129,7 +129,7 @@ A pipeline orchestrator runs Scout → Recapper → Scorekeeper → Host each we
 | Thu 10/22 | React UI ✅ (done 10/19) |
 | Fri 10/23 | Safety tests ✅ + accuracy eval ✅ (done 10/19); user trial(s) still needed |
 | Sat 10/24 | `report.html`: draft with screenshots ✅ (13 printed pages); needs user evidence (TODO boxes) |
-| Sun 10/25 | `slides.html` (GitHub repo + fresh-clone dry run ✅ done 10/19) |
+| Sun 10/25 | `slides.html` ✅ (10 slides, built 10/19) · GitHub repo + fresh-clone dry run ✅ |
 | Mon 10/26 | Buffer; submit by 6 PM |
 
 ## Open questions

@@ -128,6 +128,7 @@ npm run build                                   # refresh frontend/dist, which t
 .venv/bin/pip install -r requirements-dev.txt && .venv/bin/python -m playwright install chromium   # once
 .venv/bin/python scripts/capture_screenshots.py --url http://127.0.0.1:8000   # app must be running
 .venv/bin/python scripts/build_report.py              # → report.html (self-contained)
+.venv/bin/python scripts/build_slides.py              # → slides.html (reveal.js, 10 slides; arrows, F = full screen, S = notes)
 ```
 
 ---
@@ -144,7 +145,9 @@ output/runs/        every agent run with exact token usage
 output/drops/       weekly drops
 output/eval_recaps.json  accuracy check against the Wikipedia cast table
 frontend/           React UI (src/) and the built app (dist/)
-scripts/            snapshot builder, accuracy eval
+scripts/            snapshot builder, accuracy eval, safety tests, screenshots, report + slides builders (evidence.py = shared numbers)
+report.html         the written report (self-contained)
+slides.html         the slide deck (reveal.js from a CDN, screenshots embedded)
 ```
 
 No secrets are committed: `.env` is git-ignored, and `.env.example` lists the key name only.
