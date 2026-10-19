@@ -1,0 +1,235 @@
+{
+ "league": "play_don_t_mug_me_off",
+ "week": "Week 2",
+ "written": "2026-10-19T21:37:40+00:00",
+ "drop": {
+  "headline": "Dev Takes the Fire Pit Lead",
+  "opener": "Week 2 brings a proper recoupling shake-up: Dev climbs to the top, while Maya posts the biggest weekly score. Three Islanders are dumped, and the standings feel every last twist.",
+  "player_lines": [
+   {
+    "player": "Dev",
+    "line": "A 20-point week lifts Dev one place into first, with 54 total. The Sol–Sincere recoupling helped keep the fire pit warm."
+   },
+   {
+    "player": "Priya",
+    "line": "Priya adds 10 for 51 total, but slips one place to second. Beatriz’s dump was a costly parting gift."
+   },
+   {
+    "player": "Jolie",
+    "line": "A steady 10 points leaves Jolie third on 39, holding position. Gabriel’s dump, though, was no little villa inconvenience."
+   },
+   {
+    "player": "Maya",
+    "line": "Maya delivers the week’s biggest haul: 26 points, bringing the total to 30 and keeping fourth. Corbin and Kenzie’s recoupling gave her team a welcome spark."
+   }
+  ],
+  "moments": [
+   {
+    "event_id": "week2-e9",
+    "line": "Beatriz’s dump cost Priya 10 points, putting a sting in the recoupling drama."
+   },
+   {
+    "event_id": "week2-e18",
+    "line": "Gabriel’s dump took 10 points from Jolie, making this a rough fire-pit announcement for her team."
+   },
+   {
+    "event_id": "week2-e19",
+    "line": "Sol’s dump cost Dev 10 points, even as Dev rose to the lead."
+   },
+   {
+    "event_id": "week2-e3",
+    "line": "Sincere and Sol’s new couple brought Dev 8 points, a timely boost in the standings shake-up."
+   },
+   {
+    "event_id": "week2-e15",
+    "line": "Corbin and Kenzie’s new couple added 8 points for Maya, helping fuel her biggest weekly score."
+   }
+  ],
+  "closer": "The fire pit is glowing for now—next week, the standings get another chance to turn."
+ },
+ "facts": {
+  "league": "Don't mug me off",
+  "week": "Week 2",
+  "standings": [
+   {
+    "rank": 1,
+    "player": "Dev",
+    "total": 54,
+    "this_week": 20,
+    "rank_change": 1,
+    "team": [
+     "Sincere",
+     "Melanie",
+     "Trinity",
+     "Sol"
+    ]
+   },
+   {
+    "rank": 2,
+    "player": "Priya",
+    "total": 51,
+    "this_week": 10,
+    "rank_change": -1,
+    "team": [
+     "Aniya",
+     "Beatriz",
+     "Zach",
+     "Caleb"
+    ]
+   },
+   {
+    "rank": 3,
+    "player": "Jolie",
+    "total": 39,
+    "this_week": 10,
+    "rank_change": 0,
+    "team": [
+     "Bryce",
+     "Kayda",
+     "Gabriel"
+    ]
+   },
+   {
+    "rank": 4,
+    "player": "Maya",
+    "total": 30,
+    "this_week": 26,
+    "rank_change": 0,
+    "team": [
+     "KC",
+     "Kenzie",
+     "Corbin"
+    ]
+   }
+  ],
+  "moments": [
+   {
+    "event_id": "week2-e9",
+    "islanders": [
+     "Beatriz"
+    ],
+    "scored": [
+     "Dumped (-10)"
+    ],
+    "teams": [
+     "Priya"
+    ],
+    "points_for_teams": -10,
+    "quote": "Corbin chose to couple up with Melanie, leaving Beatriz single and dumped from the villa."
+   },
+   {
+    "event_id": "week2-e18",
+    "islanders": [
+     "Gabriel"
+    ],
+    "scored": [
+     "Dumped (-10)"
+    ],
+    "teams": [
+     "Jolie"
+    ],
+    "points_for_teams": -10,
+    "quote": "On Day 14, the top four couples who received the most votes from America were granted safety."
+   },
+   {
+    "event_id": "week2-e19",
+    "islanders": [
+     "Sol"
+    ],
+    "scored": [
+     "Dumped (-10)"
+    ],
+    "teams": [
+     "Dev"
+    ],
+    "points_for_teams": -10,
+    "quote": "On Day 14, the top four couples who received the most votes from America were granted safety."
+   },
+   {
+    "event_id": "week2-e1",
+    "islanders": [
+     "Caleb",
+     "Kenzie"
+    ],
+    "scored": [
+     "New couple (+4)"
+    ],
+    "teams": [
+     "Maya",
+     "Priya"
+    ],
+    "points_for_teams": 8,
+    "quote": "Caleb was coupled with Kenzie, Jen with Gabriel, and Sol with Sincere."
+   },
+   {
+    "event_id": "week2-e3",
+    "islanders": [
+     "Sincere",
+     "Sol"
+    ],
+    "scored": [
+     "New couple (+4)"
+    ],
+    "teams": [
+     "Dev"
+    ],
+    "points_for_teams": 8,
+    "quote": "Caleb was coupled with Kenzie, Jen with Gabriel, and Sol with Sincere."
+   },
+   {
+    "event_id": "week2-e8",
+    "islanders": [
+     "Corbin",
+     "Melanie"
+    ],
+    "scored": [
+     "New couple (+4)"
+    ],
+    "teams": [
+     "Dev",
+     "Maya"
+    ],
+    "points_for_teams": 8,
+    "quote": "Corbin chose to couple up with Melanie, leaving Beatriz single and dumped from the villa."
+   },
+   {
+    "event_id": "week2-e15",
+    "islanders": [
+     "Corbin",
+     "Kenzie"
+    ],
+    "scored": [
+     "New couple (+4)"
+    ],
+    "teams": [
+     "Maya"
+    ],
+    "points_for_teams": 8,
+    "quote": "Corbin and Caleb each wrote letters to Kenzie while Kenzie only wrote a letter for Corbin and they recoupled."
+   },
+   {
+    "event_id": "week2-e16",
+    "islanders": [
+     "Melanie",
+     "Sincere"
+    ],
+    "scored": [
+     "New couple (+4)"
+    ],
+    "teams": [
+     "Dev"
+    ],
+    "points_for_teams": 8,
+    "quote": "Sol and Melanie each wrote letters to Sincere while Sincere only wrote a letter to Melanie and they recoupled."
+   }
+  ],
+  "dumped_this_week": [
+   "Beatriz",
+   "Gabriel",
+   "Sol"
+  ],
+  "house_rules": [],
+  "final_week": false
+ },
+ "markdown": "# Dev Takes the Fire Pit Lead\n*Don't mug me off · Week 2*\n\nWeek 2 brings a proper recoupling shake-up: Dev climbs to the top, while Maya posts the biggest weekly score. Three Islanders are dumped, and the standings feel every last twist.\n\n| # | Player | Total | This week | Move |\n|---|---|---|---|---|\n| 1 | Dev | 54 | +20 | ▲1 |\n| 2 | Priya | 51 | +10 | ▼1 |\n| 3 | Jolie | 39 | +10 | – |\n| 4 | Maya | 30 | +26 | – |\n\n## The group chat report\n- **Dev:** A 20-point week lifts Dev one place into first, with 54 total. The Sol–Sincere recoupling helped keep the fire pit warm.\n- **Priya:** Priya adds 10 for 51 total, but slips one place to second. Beatriz’s dump was a costly parting gift.\n- **Jolie:** A steady 10 points leaves Jolie third on 39, holding position. Gabriel’s dump, though, was no little villa inconvenience.\n- **Maya:** Maya delivers the week’s biggest haul: 26 points, bringing the total to 30 and keeping fourth. Corbin and Kenzie’s recoupling gave her team a welcome spark.\n\n## Moments that moved the league\n- Beatriz’s dump cost Priya 10 points, putting a sting in the recoupling drama.  \n  <sub>Receipt: “Corbin chose to couple up with Melanie, leaving Beatriz single and dumped from the villa.” · Dumped (-10)</sub>\n- Gabriel’s dump took 10 points from Jolie, making this a rough fire-pit announcement for her team.  \n  <sub>Receipt: “On Day 14, the top four couples who received the most votes from America were granted safety.” · Dumped (-10)</sub>\n- Sol’s dump cost Dev 10 points, even as Dev rose to the lead.  \n  <sub>Receipt: “On Day 14, the top four couples who received the most votes from America were granted safety.” · Dumped (-10)</sub>\n- Sincere and Sol’s new couple brought Dev 8 points, a timely boost in the standings shake-up.  \n  <sub>Receipt: “Caleb was coupled with Kenzie, Jen with Gabriel, and Sol with Sincere.” · New couple (+4)</sub>\n- Corbin and Kenzie’s new couple added 8 points for Maya, helping fuel her biggest weekly score.  \n  <sub>Receipt: “Corbin and Caleb each wrote letters to Kenzie while Kenzie only wrote a letter for Corbin and they recoupled.” · New couple (+4)</sub>\n\n_The fire pit is glowing for now—next week, the standings get another chance to turn._\n"
+}

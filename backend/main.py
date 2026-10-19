@@ -16,7 +16,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 from pydantic_ai.exceptions import AgentRunError, ModelHTTPError, UsageLimitExceeded
 
-from backend import config, scoring, season_play, usage_log
+from backend import config, finale, scoring, season_play, usage_log
 from backend.agents import host, recapper, ref, rulesmith, scout, strategist
 
 app = FastAPI(title="Meet at the Fire Pit", version="0.1")
@@ -50,6 +50,15 @@ class AutopilotIn(BaseModel):
     on: bool
 
 
+class FinaleStartIn(BaseModel):
+    prize: int = Field(finale.DEFAULT_PRIZE, ge=1, le=1_000_000)
+
+
+class EnvelopeIn(BaseModel):
+    player: str
+    choice: str
+
+
 class DisputeIn(BaseModel):
     player: str
     text: str = Field(min_length=3, max_length=ref.MAX_DISPUTE_CHARS)
@@ -66,7 +75,7 @@ def _guard(fn, *args, **kwargs):
     try:
         with WRITE_LOCK:
             return fn(*args, **kwargs)
-    except season_play.MoveError as e:
+    except (season_play.MoveError, finale.FinaleError) as e:
         raise HTTPException(409, str(e))
     except KeyError as e:
         raise HTTPException(400, str(e.args[0]) if e.args else "Not found")
@@ -296,6 +305,44 @@ def make_drop(key: str, week: int):
         record, run = host.write_drop(key, week)
         return {**record, "cost_usd": run["usage"]["cost_usd"], "seconds": run["seconds"]}
     return _guard(run)
+
+
+# ---------- the finale: share or take it all ----------
+
+@app.get("/api/leagues/{key}/finale")
+def finale_state(key: str):
+    _league(key)
+    return finale.state(key)
+
+
+@app.post("/api/leagues/{key}/finale/start")
+def finale_start(key: str, body: FinaleStartIn):
+    _league(key)
+    return _guard(finale.start, key, body.prize)
+
+
+@app.post("/api/leagues/{key}/finale/envelope")
+def finale_envelope(key: str, body: EnvelopeIn):
+    _league(key)
+    return _guard(finale.choose, key, body.player, body.choice)
+
+
+@app.post("/api/leagues/{key}/finale/reveal")
+def finale_reveal(key: str):
+    _league(key)
+    return _guard(finale.reveal, key)
+
+
+@app.post("/api/leagues/{key}/finale/reset")
+def finale_reset(key: str):
+    _league(key)
+    return _guard(finale.reset, key)
+
+
+@app.post("/api/play/{key}/finale/advice")
+def finale_advice(key: str):
+    _league(key)
+    return _guard(strategist.advise_finale, key)
 
 
 # ---------- tokenomics ----------

@@ -1,0 +1,19 @@
+{
+ "agent": "host",
+ "league": "play_don_t_mug_me_off",
+ "week": "Week 2",
+ "started": "2026-10-19T21:37:40+00:00",
+ "seconds": 13.2,
+ "usage": {
+  "requests": 1,
+  "gateway_cache_hits": 0,
+  "input_tokens": 1656,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 1530,
+  "output_tokens": 1125,
+  "reasoning_tokens": 706,
+  "web_searches": 0,
+  "cost_usd": 0.000766
+ },
+ "model_requests": 1
+}

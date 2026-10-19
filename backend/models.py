@@ -193,3 +193,9 @@ class MoveAdvice(BaseModel):
     """What the Strategist returns between weeks."""
     moves: list[MoveIdea] = Field(default_factory=list, max_length=2)
     summary: str
+
+
+class FinaleAdvice(BaseModel):
+    """The Strategist's take on your sealed envelope."""
+    choice: Literal["share", "take"]
+    reason: str = Field(description="Two or three sentences: the trade-off, and what you know about your opponent")

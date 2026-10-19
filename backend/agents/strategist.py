@@ -19,7 +19,7 @@ from pydantic_ai.toolsets import FunctionToolset
 from pydantic_ai.usage import UsageLimits
 
 from backend import config, llm, scoring, season_play as sp
-from backend.models import DraftAdvice, MoveAdvice
+from backend.models import DraftAdvice, FinaleAdvice, MoveAdvice
 
 USAGE_LIMITS = UsageLimits(request_limit=8, tool_calls_limit=12, total_tokens_limit=80_000)
 MODEL_SETTINGS = OpenAIResponsesModelSettings(max_tokens=5_000, openai_prompt_cache_key="villa-strategist")
@@ -95,6 +95,66 @@ draft_agent = Agent(deps_type=CoachDeps, output_type=DraftAdvice, toolsets=[tool
                     model_settings=MODEL_SETTINGS, instructions=[(config.PROMPTS / "strategist.md").read_text(), _instructions])
 move_agent = Agent(deps_type=CoachDeps, output_type=MoveAdvice, toolsets=[tools], retries=2,
                    model_settings=MODEL_SETTINGS, instructions=[(config.PROMPTS / "strategist.md").read_text(), _instructions])
+
+
+FINALE_INSTRUCTIONS = """## The finale
+The season is over and the player is one of the two finalists at the fire pit. Each finalist seals an envelope:
+**share** the pot or **take it all**. Both share: 50/50. One takes: the taker gets everything. Both take: nobody gets anything.
+You can NOT see the other envelope; nobody can. Use `finale_info` for the pot and what the opponent did all season,
+then recommend share or take with an honest two-or-three-sentence reason (the trade-off, and your read on the opponent).
+It's a game between friends: be playful, never mean."""
+
+finale_tools = FunctionToolset()
+
+
+@finale_tools.tool
+def finale_info(ctx: RunContext[CoachDeps]) -> dict:
+    """The pot, the rules, the two finalists' totals, and the opponent's season (their moves). Never their envelope."""
+    d = ctx.deps
+    f = d.league.get("finale") or {}
+    opponent = next((p["player"] for p in f.get("finalists", []) if p["player"] != d.player), None)
+    moves = [m for m in d.league.get("moves", []) if m["player"] == opponent]
+    return {"pot": f.get("prize"), "finalists": f.get("finalists"), "you": d.player, "opponent": opponent,
+            "opponent_is_a_bot": any(p["name"] == opponent and p.get("bot") for p in d.league["players"]),
+            "opponent_moves_this_season": len(moves),
+            "opponent_recent_moves": [{"add": m["add"], "drop": m["drop"], "reason": m["reason"][:120]} for m in moves[-3:]]}
+
+
+finale_agent = Agent(deps_type=CoachDeps, output_type=FinaleAdvice, toolsets=[tools, finale_tools], retries=2,
+                     model_settings=MODEL_SETTINGS,
+                     instructions=[(config.PROMPTS / "strategist.md").read_text(), FINALE_INSTRUCTIONS, _instructions])
+
+
+def blind_copy(league: dict) -> dict:
+    """The league as the coach may see it: every sealed envelope removed, so it cannot peek."""
+    blind = json.loads(json.dumps(league))
+    if blind.get("finale"):
+        blind["finale"]["choices"] = {}
+        blind["finale"].pop("by", None)
+    return blind
+
+
+def advise_finale(key: str) -> dict:
+    """Share or take? Only for you, only while your envelope is still open."""
+    league = sp.load(key)
+    f = league.get("finale")
+    you = league["you"]
+    if not f or f.get("revealed"):
+        raise sp.MoveError("There's no envelope to decide on right now")
+    if you not in [p["player"] for p in f["finalists"]]:
+        raise sp.MoveError("You're not one of the finalists this time")
+    if you in f["choices"]:
+        raise sp.MoveError("Your envelope is already sealed")
+    blind = blind_copy(league)
+    deps = CoachDeps(key, blind, you, sp.islander_facts(blind), sp.future_names(blind))
+    recorder = llm.UsageRecorder()
+    started = datetime.now(timezone.utc)
+    result = finale_agent.run_sync(f"{you} is in the final. Share or take it all?", deps=deps,
+                                   model=llm.build_model(recorder), usage_limits=USAGE_LIMITS)
+    steps = [st["tool"] for st in llm.tool_trace(result.all_messages())]
+    run = _log("finale", key, recorder, started, {"steps": steps, "advice": result.output.model_dump()})
+    return {"kind": "finale", "advice": result.output.model_dump(), "cost_usd": run["usage"]["cost_usd"],
+            "seconds": run["seconds"], "steps": steps}
 
 
 def _spoilers(d: CoachDeps, texts: list[str]) -> list[str]:

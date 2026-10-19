@@ -165,6 +165,27 @@ export type AdvanceResult = {
   state: PlayState;
 };
 
+export type FinaleState = {
+  complete: boolean;
+  final_week: number;
+  you: string | null;
+  mode: "classic" | "play";
+  finale: null | {
+    prize: number;
+    finalists: { player: string; total: number }[];
+    round: number;
+    started: string;
+    revealed: boolean;
+    sealed: Record<string, boolean>;
+    bots: string[];
+    choices?: Record<string, "share" | "take">;
+    payout?: Record<string, number>;
+    host_line?: string;
+  };
+};
+
+export type FinaleAdvice = { advice: { choice: "share" | "take"; reason: string }; cost_usd: number; seconds: number; steps: string[] };
+
 export type LeagueSummary = { key: string; name: string; mode: "classic" | "play"; current_week: number | null };
 
 export type AppConfig = { source_mode: string; snapshot: string; model: string; seasons: Record<string, { show: string; season: string }> };
@@ -210,6 +231,12 @@ export const api = {
   drop: (key: string, week: number) => call<DropRecord | null>(`/leagues/${key}/drops/${week}`),
   makeDrop: (key: string, week: number) => post<DropRecord>(`/leagues/${key}/drops/${week}`),
   usage: () => call<Record<string, AgentUsage>>("/usage"),
+  finale: (key: string) => call<FinaleState>(`/leagues/${key}/finale`),
+  finaleStart: (key: string, prize: number) => post<FinaleState>(`/leagues/${key}/finale/start`, { prize }),
+  envelope: (key: string, player: string, choice: "share" | "take") => post<FinaleState>(`/leagues/${key}/finale/envelope`, { player, choice }),
+  finaleReveal: (key: string) => post<FinaleState>(`/leagues/${key}/finale/reveal`),
+  finaleReset: (key: string) => post<FinaleState>(`/leagues/${key}/finale/reset`),
+  finaleAdvice: (key: string) => post<FinaleAdvice>(`/play/${key}/finale/advice`),
 };
 
 export const weekNum = (w: string) => Number(w.split(" ").pop());

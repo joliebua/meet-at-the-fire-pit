@@ -21,7 +21,7 @@ from pydantic_ai.usage import UsageLimits  # noqa: E402
 from pydantic_ai.exceptions import UsageLimitExceeded  # noqa: E402
 
 from backend import config, llm, scoring, verify  # noqa: E402
-from backend import season_play as sp  # noqa: E402
+from backend import finale, season_play as sp  # noqa: E402
 from backend.agents import recapper, ref, rulesmith, scout, strategist  # noqa: E402
 from backend.models import Event, SourceBundle  # noqa: E402
 from backend.sources import clean, news  # noqa: E402
@@ -286,6 +286,51 @@ def test_strategist():
         scoring.league_path(key).unlink(missing_ok=True)
 
 
+# ---------------------------------------------------------------- F. the finale's sealed envelopes
+
+def test_finale():
+    key = sp.create("Safety Finale Lab", "Tester", seed=13)
+    try:
+        league = sp.load(key)
+        while sp.draft_turn(league):
+            if sp.draft_turn(league) == "Tester":
+                sp.make_pick(league, "Tester", sp.draft_pool(league)[0]["name"], by="test")
+            sp.run_bot_picks(league)
+        sp.save(key, league)
+        while sp.load(key)["current_week"] < sp.max_week(sp.load(key)):
+            sp.advance(key)
+        finale.start(key, 100)
+        league = scoring.load_league(key)
+        bot = next(p["player"] for p in league["finale"]["finalists"] if p["player"] != "Tester")
+        league["finale"]["finalists"] = [{"player": bot, "total": 1}, {"player": "Tester", "total": 0}]
+        scoring.save_league(key, league)
+        public = finale.choose(key, "Tester", "take")
+        blob = json.dumps(public)
+        record("F1", "Data leaks (finale)", "Peek at a sealed envelope before the reveal (API / screen)",
+               "The public finale state only says who has sealed, never what they chose",
+               "No choice visible before the reveal", passed="choices" not in (public["finale"] or {}) and '"take"' not in blob,
+               observed=f"public state keys: {sorted(public['finale'])}; sealed: {public['finale']['sealed']}")
+
+        league = scoring.load_league(key)
+        picks = set()
+        for mine in ("share", "take"):
+            league["finale"]["choices"] = {"Tester": mine}
+            picks.add(finale.bot_choice(league, bot))
+        record("F2", "Fairness (finale)", "Bot finalist reacts to your sealed choice",
+               "bot_choice() uses only the bot's personality and a seeded mood, never the other envelope",
+               "Same bot decision whatever you chose", passed=len(picks) == 1, observed=f"bot chose {picks} for both of your choices")
+
+        blind = strategist.blind_copy(scoring.load_league(key))
+        deps = strategist.CoachDeps(key, blind, "Tester", {}, [])
+        info = strategist.finale_info(SimpleNamespace(deps=deps))
+        record("F3", "Data leaks (finale)", "The coach advising you peeks at the other envelope",
+               "The Strategist gets a copy of the league with every sealed envelope removed",
+               "No envelopes in what the coach sees", passed=blind["finale"]["choices"] == {} and "choice" not in json.dumps(info),
+               observed=f"coach sees finale choices = {blind['finale']['choices']}; finale_info keys = {sorted(info)}")
+    finally:
+        scoring.league_path(key).unlink(missing_ok=True)
+
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--no-model", action="store_true", help="Only run the free code checks")
@@ -299,6 +344,7 @@ def main():
     try:
         test_invented_events()
         test_strategist()
+        test_finale()
         test_limits(use_model=not args.no_model)
         if not args.no_model:
             test_source_injection()

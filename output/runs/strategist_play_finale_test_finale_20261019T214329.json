@@ -1,0 +1,25 @@
+{
+ "agent": "strategist",
+ "kind": "finale",
+ "league": "play_finale_test",
+ "started": "2026-10-19T21:43:29+00:00",
+ "seconds": 8.2,
+ "usage": {
+  "requests": 2,
+  "gateway_cache_hits": 0,
+  "input_tokens": 2006,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 0,
+  "output_tokens": 313,
+  "reasoning_tokens": 194,
+  "web_searches": 0,
+  "cost_usd": 0.000357
+ },
+ "steps": [
+  "finale_info"
+ ],
+ "advice": {
+  "choice": "take",
+  "reason": "Taking is the only way Jolie can win the full 100; sharing would give her 50 if Dev shares, while taking risks getting 0 if Dev also takes. Dev leads 207\u20130 and made just two moves, adding Kayda and Trinity for their existing points, so I don't have strong evidence that he'll gamble or share\u2014this is a high-upside shot, not a confident read."
+ }
+}

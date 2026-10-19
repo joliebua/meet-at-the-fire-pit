@@ -6,6 +6,7 @@ const FirePitScene = lazy(() => import("./three/FirePitScene"));
 
 type Props = {
   leagueKey: string | null;
+  goToFinale?: () => void;
   onCreated: (key: string) => void;
   onChanged: (msg?: string) => void;
   celebrate: () => void;
@@ -78,7 +79,7 @@ function CoachCard({ advice, children }: { advice: Advice; children?: React.Reac
   );
 }
 
-export default function PlayView({ leagueKey, onCreated, onChanged, celebrate }: Props) {
+export default function PlayView({ leagueKey, onCreated, onChanged, celebrate, goToFinale }: Props) {
   const [state, setState] = useState<PlayState | null>(null);
   const [advice, setAdvice] = useState<Advice | null>(null);
   const [result, setResult] = useState<AdvanceResult | null>(null);
@@ -229,7 +230,7 @@ export default function PlayView({ leagueKey, onCreated, onChanged, celebrate }:
             <h2 className="section" style={{ margin: 0 }}>{over ? "🏆 Season complete" : state.current_week === 0 ? "Draft done: ready for Week 1" : `Week ${state.current_week} of ${state.max_week} played`}</h2>
             <p className="hint" style={{ margin: "4px 0 0" }}>
               {myRow && state.current_week > 0 ? <>You're <b>#{rank}</b> with <b>{myRow.total}</b> points. </> : null}
-              {over ? "That's the season. Start a new league to play again." :
+              {over ? <>That's the season. <button className="btn small" onClick={goToFinale}>🔥 To the finale: share or take it all?</button></> :
                 <>Moves you make now count from Week {next}. You have <b>{state.moves_left}</b> move left this week. Bots move when you press play.</>}
             </p>
           </div>

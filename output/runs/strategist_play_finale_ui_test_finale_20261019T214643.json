@@ -1,0 +1,25 @@
+{
+ "agent": "strategist",
+ "kind": "finale",
+ "league": "play_finale_ui_test",
+ "started": "2026-10-19T21:46:43+00:00",
+ "seconds": 9.2,
+ "usage": {
+  "requests": 1,
+  "gateway_cache_hits": 1,
+  "input_tokens": 1088,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 0,
+  "output_tokens": 485,
+  "reasoning_tokens": 379,
+  "web_searches": 0,
+  "cost_usd": 0.000351
+ },
+ "steps": [
+  "finale_info"
+ ],
+ "advice": {
+  "choice": "take",
+  "reason": "Taking is the higher-upside play: if Priya shares, Jolie takes the full $100 instead of $50; if Priya takes too, neither choice earns anything. Priya\u2019s three moves look practical and reactive\u2014adding on points and replacing Caleb after he left\u2014so I don\u2019t have evidence she\u2019ll choose either envelope, but I\u2019d take the shot rather than leave half the pot on the table."
+ }
+}

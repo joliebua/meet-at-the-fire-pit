@@ -20,6 +20,7 @@ export type Seat = {
 
 const R = 3.3; // couch radius around the fire
 const SAFE_SPOT = new THREE.Vector3(1.05, 0, 1.55); // where the "safe" islander stands, beside the fire
+const STAND_SPOTS = [SAFE_SPOT, new THREE.Vector3(-0.55, 0, 1.75)]; // finale: the two finalists, either side of the fire
 const ARC = (75 * Math.PI) / 180; // couch spans -75°..75° behind the fire
 const SKIN = [0xf2c9a8, 0xd9a07a, 0xb57650, 0x8a5434, 0x5e3a22, 0xf6d7bf];
 const HAIR = [0x1d1410, 0x3b2416, 0x6b4423, 0xc89b5a, 0xe8d18f, 0x2a1a2e];
@@ -180,8 +181,8 @@ function palm(track: <T extends { dispose: () => void }>(x: T) => T, x: number, 
   return { tree, top: new THREE.Vector3(x + px, y, z) };
 }
 
-export default function FirePitScene({ seats, height = 340, caption, mode = "standings" }:
-  { seats: Seat[]; height?: number; caption?: string; mode?: "standings" | "team" }) {
+export default function FirePitScene({ seats, height = 340, caption, mode = "standings", standers = 1, envelopes = false }:
+  { seats: Seat[]; height?: number; caption?: string; mode?: "standings" | "team"; standers?: number; envelopes?: boolean }) {
   const mount = useRef<HTMLDivElement>(null);
   const api = useRef<{ setSeats: (s: Seat[]) => void } | null>(null);
   const latest = useRef(seats);
@@ -336,21 +337,30 @@ export default function FirePitScene({ seats, height = 340, caption, mode = "sta
     hostLabel.position.set(0, 1.25, 0);
     hostFig.group.add(hostLabel);
 
-    // spotlight + ring for whoever is standing "safe"
+    // spotlight + rings for whoever is standing by the fire
     const spot = new THREE.SpotLight(0xffd6ec, 40, 12, 0.35, 0.6, 1.2);
     spot.position.set(0, 7, 2);
     scene.add(spot, spot.target);
-    const ring = new THREE.Mesh(track(new THREE.RingGeometry(0.35, 0.5, 32)), track(new THREE.MeshBasicMaterial({ color: PALETTE.hot, transparent: true, opacity: 0.8, side: THREE.DoubleSide })));
-    ring.rotation.x = -Math.PI / 2;
-    ring.visible = false;
-    scene.add(ring);
+    const ringGeo = track(new THREE.RingGeometry(0.35, 0.5, 32));
+    const ringMat = track(new THREE.MeshBasicMaterial({ color: PALETTE.hot, transparent: true, opacity: 0.8, side: THREE.DoubleSide }));
+    const rings = STAND_SPOTS.map(() => {
+      const r = new THREE.Mesh(ringGeo, ringMat);
+      r.rotation.x = -Math.PI / 2;
+      r.visible = false;
+      scene.add(r);
+      return r;
+    });
+    const envelopeGeo = track(new THREE.BoxGeometry(0.2, 0.13, 0.012));
+    const envelopeMat = track(new THREE.MeshStandardMaterial({ color: 0xfffaf2, emissive: 0xffe6f2, emissiveIntensity: 0.35 }));
+    const sealGeo = track(new THREE.CircleGeometry(0.03, 16));
+    const sealMat = track(new THREE.MeshBasicMaterial({ color: PALETTE.hot }));
     const heart = new THREE.Mesh(track(heartGeometry()), track(new THREE.MeshStandardMaterial({ color: PALETTE.hot, emissive: PALETTE.hot, emissiveIntensity: 0.9 })));
     heart.scale.setScalar(0.32);
     heart.visible = false;
     scene.add(heart);
 
     // seated people (rebuilt whenever the seats change)
-    let people: { fig?: Figure; label: CSS2DObject; extra: THREE.Object3D[]; home: THREE.Vector3; theta: number; leader: boolean }[] = [];
+    let people: { fig?: Figure; label: CSS2DObject; extra: THREE.Object3D[]; home: THREE.Vector3; theta: number; leader: boolean; standIdx: number }[] = [];
     const personBits: { dispose: () => void }[] = [];
     const trackPerson = <T extends { dispose: () => void }>(x: T) => (personBits.push(x), x);
 
@@ -385,7 +395,8 @@ export default function FirePitScene({ seats, height = 340, caption, mode = "sta
       }
       next.forEach((s, i) => {
         const theta = thetas[i];
-        const leader = mode === "standings" && i === 0;
+        const standIdx = mode === "standings" && i < Math.min(standers, STAND_SPOTS.length) ? i : -1;
+        const leader = standIdx === 0;
         const extra: THREE.Object3D[] = [];
         const home = onArc(theta, R).setY(0.4);
         let fig: Figure | undefined;
@@ -399,7 +410,16 @@ export default function FirePitScene({ seats, height = 340, caption, mode = "sta
           fig = makeFigure(s.label, trackPerson);
           fig.group.position.copy(home);
           fig.group.rotation.y = -theta; // face the fire
-          fig.standTarget = leader ? 1 : 0;
+          fig.standTarget = standIdx >= 0 ? 1 : 0;
+          if (envelopes && standIdx >= 0) {
+            const env = new THREE.Mesh(envelopeGeo, envelopeMat);
+            env.position.set(0.24, 0.3, 0.16);
+            env.rotation.set(-0.4, 0.3, 0.1);
+            const seal = new THREE.Mesh(sealGeo, sealMat);
+            seal.position.z = 0.007;
+            env.add(seal);
+            fig.group.add(env);
+          }
           scene.add(fig.group);
           if (mode === "team" && s.partner) {
             const pt = theta + step * 0.95 * (theta >= 0 ? 1 : -1);
@@ -412,16 +432,21 @@ export default function FirePitScene({ seats, height = 340, caption, mode = "sta
           }
         }
         const pts = s.value > 0 ? `+${s.value}` : `${s.value}`;
-        const lab = label(`<b>${s.label}${leader ? " 💖" : ""}</b><span>${mode === "team" ? pts : s.value}</span>${s.sub ? `<small>${s.sub}</small>` : ""}`,
-          `${s.highlight ? "you" : ""} ${leader ? "safe" : ""} ${s.left ? "gone" : ""}`);
+        const lab = label(`<b>${s.label}${leader && !envelopes ? " 💖" : envelopes && standIdx >= 0 ? " ✉️" : ""}</b><span>${mode === "team" ? pts : s.value}</span>${s.sub ? `<small>${s.sub}</small>` : ""}`,
+          `${s.highlight ? "you" : ""} ${standIdx >= 0 ? "safe" : ""} ${s.left ? "gone" : ""}`);
         scene.add(lab);
-        people.push({ fig, label: lab, extra, home, theta, leader });
+        people.push({ fig, label: lab, extra, home, theta, leader, standIdx });
       });
-      const lead = people.find((p) => p.leader && p.fig);
-      ring.visible = heart.visible = !!lead;
-      if (lead) {
-        ring.position.copy(SAFE_SPOT).setY(0.02);
-        spot.target.position.copy(SAFE_SPOT);
+      const standing = people.filter((p) => p.standIdx >= 0 && p.fig);
+      rings.forEach((r, k) => {
+        r.visible = standing.some((p) => p.standIdx === k);
+        r.position.copy(STAND_SPOTS[k]).setY(0.02);
+      });
+      heart.visible = !envelopes && standing.some((p) => p.leader);
+      if (standing.length) {
+        const mid = new THREE.Vector3();
+        standing.forEach((p) => mid.add(STAND_SPOTS[p.standIdx]));
+        spot.target.position.copy(mid.divideScalar(standing.length));
       } else {
         spot.target.position.set(0, 0, 0);
       }
@@ -461,9 +486,10 @@ export default function FirePitScene({ seats, height = 340, caption, mode = "sta
         const f = p.fig;
         f.stand += (f.standTarget - f.stand) * (reduce ? 1 : Math.min(1, dt * 2.2));
         // standing: the leader walks from the couch to the safe spot beside the fire, legs straighten, hips rise
-        const pos = p.leader ? p.home.clone().setY(0).lerp(SAFE_SPOT, f.stand) : onArc(p.theta, R);
+        const target = p.standIdx >= 0 ? STAND_SPOTS[p.standIdx] : null;
+        const pos = target ? p.home.clone().setY(0).lerp(target, f.stand) : onArc(p.theta, R);
         f.group.position.set(pos.x, 0.4 + 0.12 * f.stand, pos.z);
-        if (p.leader) f.group.rotation.y = -p.theta + (-0.35 + p.theta) * f.stand; // turn to face the group
+        if (target) f.group.rotation.y = -p.theta + ((p.standIdx === 0 ? -0.35 : 0.35) + p.theta) * f.stand; // turn to face the group
         f.legs.forEach((l) => (l.rotation.x = -Math.PI / 2 * (1 - f.stand)));
         f.torso.scale.y = 1 + (reduce ? 0 : Math.sin(t * 1.6 + f.phase) * 0.025);
         p.label.position.set(pos.x, 1.45 + 0.15 * f.stand, pos.z);
@@ -502,7 +528,7 @@ export default function FirePitScene({ seats, height = 340, caption, mode = "sta
       renderer.forceContextLoss(); // free the WebGL context now; browsers only allow a handful
       el.innerHTML = "";
     };
-  }, [height, mode]);
+  }, [height, mode, standers, envelopes]);
 
   useEffect(() => {
     api.current?.setSeats(seats);

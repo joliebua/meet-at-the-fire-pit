@@ -87,7 +87,7 @@ slides.append(f"""
 <section>
   <h1>Meet at the Fire Pit 🔥</h1>
   <p class="big">An AI agent team that runs your Love Island fantasy league</p>
-  <p class="sub">Live sources in · a receipt behind every point · disputes settled · an AI coach that drafts and plays for you · a 3D villa</p>
+  <p class="sub">Live sources in · a receipt behind every point · disputes settled · an AI coach that drafts and plays for you · a share-or-take finale · a 3D villa</p>
   <p class="sub" style="margin-top:1.4em">Jolie Bua · MGT 409 AI Foundations for Managers · Fall 2026<br>{REPO.replace("https://", "")}</p>
   {notes("One sentence: it's the commissioner's job, done by agents, with proof for every point.")}
 </section>""")

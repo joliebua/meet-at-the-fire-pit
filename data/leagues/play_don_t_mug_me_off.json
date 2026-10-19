@@ -1,0 +1,246 @@
+{
+ "name": "Don't mug me off",
+ "season": "love_island_usa_s8",
+ "commissioner": "Jolie",
+ "mode": "play",
+ "rules_file": "standard.json",
+ "house_rules": [],
+ "seed": 3271,
+ "you": "Jolie",
+ "settings": {
+  "draft_rounds": 2,
+  "roster_max": 4,
+  "moves_per_week": 1,
+  "draft_after_day": 2,
+  "autopilot": false
+ },
+ "current_week": 2,
+ "players": [
+  {
+   "name": "Jolie",
+   "bot": false,
+   "roster": [
+    {
+     "islander": "Bryce",
+     "from_week": 1
+    },
+    {
+     "islander": "Kayda",
+     "from_week": 1
+    },
+    {
+     "islander": "Gabriel",
+     "from_week": 2
+    }
+   ]
+  },
+  {
+   "name": "Maya",
+   "bot": true,
+   "roster": [
+    {
+     "islander": "KC",
+     "from_week": 1
+    },
+    {
+     "islander": "Kenzie",
+     "from_week": 1
+    },
+    {
+     "islander": "Sean",
+     "from_week": 1,
+     "until_week": 1
+    },
+    {
+     "islander": "Corbin",
+     "from_week": 2
+    }
+   ]
+  },
+  {
+   "name": "Dev",
+   "bot": true,
+   "roster": [
+    {
+     "islander": "Sincere",
+     "from_week": 1
+    },
+    {
+     "islander": "Melanie",
+     "from_week": 1
+    },
+    {
+     "islander": "Trinity",
+     "from_week": 1
+    },
+    {
+     "islander": "Sol",
+     "from_week": 2
+    }
+   ]
+  },
+  {
+   "name": "Priya",
+   "bot": true,
+   "roster": [
+    {
+     "islander": "Aniya",
+     "from_week": 1
+    },
+    {
+     "islander": "Beatriz",
+     "from_week": 1
+    },
+    {
+     "islander": "Zach",
+     "from_week": 1
+    },
+    {
+     "islander": "Caleb",
+     "from_week": 2
+    }
+   ]
+  }
+ ],
+ "draft": {
+  "order": [
+   "Dev",
+   "Jolie",
+   "Maya",
+   "Priya"
+  ],
+  "picks": [
+   {
+    "round": 1,
+    "pick": 1,
+    "player": "Dev",
+    "islander": "Sincere",
+    "by": "bot",
+    "reason": "8 pts so far, coupled with Melanie"
+   },
+   {
+    "round": 1,
+    "pick": 2,
+    "player": "Jolie",
+    "islander": "Bryce",
+    "by": "you",
+    "reason": ""
+   },
+   {
+    "round": 1,
+    "pick": 3,
+    "player": "Maya",
+    "islander": "KC",
+    "by": "bot",
+    "reason": "4 pts so far, coupled with Aniya"
+   },
+   {
+    "round": 1,
+    "pick": 4,
+    "player": "Priya",
+    "islander": "Aniya",
+    "by": "bot",
+    "reason": "4 pts so far, coupled with KC"
+   },
+   {
+    "round": 2,
+    "pick": 5,
+    "player": "Priya",
+    "islander": "Beatriz",
+    "by": "bot",
+    "reason": "4 pts so far, coupled with Sean"
+   },
+   {
+    "round": 2,
+    "pick": 6,
+    "player": "Maya",
+    "islander": "Kenzie",
+    "by": "bot",
+    "reason": "4 pts so far, coupled with Zach"
+   },
+   {
+    "round": 2,
+    "pick": 7,
+    "player": "Jolie",
+    "islander": "Kayda",
+    "by": "you",
+    "reason": ""
+   },
+   {
+    "round": 2,
+    "pick": 8,
+    "player": "Dev",
+    "islander": "Melanie",
+    "by": "bot",
+    "reason": "4 pts so far, coupled with Sincere"
+   }
+  ],
+  "done": true
+ },
+ "moves": [
+  {
+   "from_week": 1,
+   "player": "Maya",
+   "add": "Sean",
+   "drop": null,
+   "by": "bot",
+   "reason": "Sean has 4 pts",
+   "made_after": "Week 0"
+  },
+  {
+   "from_week": 1,
+   "player": "Dev",
+   "add": "Trinity",
+   "drop": null,
+   "by": "bot",
+   "reason": "Trinity has 4 pts",
+   "made_after": "Week 0"
+  },
+  {
+   "from_week": 1,
+   "player": "Priya",
+   "add": "Zach",
+   "drop": null,
+   "by": "bot",
+   "reason": "Zach has 4 pts",
+   "made_after": "Week 0"
+  },
+  {
+   "from_week": 2,
+   "player": "Jolie",
+   "add": "Gabriel",
+   "drop": null,
+   "by": "you",
+   "reason": "Add him to diversify Jolie’s roster across a third couple: he has 17 points and stayed paired with Beatriz through the week, while your current two are already split across Bryce–Trinity and Kayda–Zach.",
+   "made_after": "Week 1"
+  },
+  {
+   "from_week": 2,
+   "player": "Maya",
+   "add": "Corbin",
+   "drop": "Sean",
+   "by": "bot",
+   "reason": "Sean left the villa; Corbin has 15 pts",
+   "made_after": "Week 1"
+  },
+  {
+   "from_week": 2,
+   "player": "Dev",
+   "add": "Sol",
+   "drop": null,
+   "by": "bot",
+   "reason": "Sol has 7 pts",
+   "made_after": "Week 1"
+  },
+  {
+   "from_week": 2,
+   "player": "Priya",
+   "add": "Caleb",
+   "drop": null,
+   "by": "bot",
+   "reason": "Caleb has 7 pts",
+   "made_after": "Week 1"
+  }
+ ],
+ "created": "2026-10-19T21:34:18+00:00"
+}

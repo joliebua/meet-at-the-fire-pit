@@ -8,6 +8,7 @@ import Disputes from "./components/Disputes";
 import DropView from "./components/Drop";
 import Costs from "./components/Costs";
 import PlayView from "./components/PlayView";
+import Finale from "./components/Finale";
 
 const HeartBurst = lazy(() => import("./components/three/HeartBurst"));
 
@@ -157,11 +158,12 @@ export default function App() {
           {needsWeek && <div className="card muted">Nothing has aired in this league yet. Finish the draft and play Week 1 in 🎯 Draft & Moves.</div>}
           {tab === "board" && <Leaderboard leagueKey={leagueKey} league={league} week={week} version={version} highlight={highlight} />}
           {tab === "play" && (
-            <PlayView leagueKey={newLeague || !isPlay ? null : leagueKey} celebrate={celebrate}
+            <PlayView leagueKey={newLeague || !isPlay ? null : leagueKey} celebrate={celebrate} goToFinale={() => setTab("drop")}
               onChanged={changed}
               onCreated={(key) => { setNewLeague(false); setLeague(null); setLeagueKey(key); changed("Welcome to the villa 🌴"); }} />
           )}
           {tab === "villa" && !needsWeek && <Villa league={league} weeks={weeks} watched={week} version={version} onChanged={changed} />}
+          {tab === "drop" && !needsWeek && <Finale key={`${leagueKey}-${version}`} leagueKey={leagueKey} onChanged={changed} celebrate={celebrate} />}
           {tab === "drop" && !needsWeek && <DropView leagueKey={leagueKey} week={week} version={version} onChanged={changed} />}
           {tab === "rules" && !isPlay && <HouseRules leagueKey={leagueKey} league={league} onChanged={changed} />}
           {tab === "disputes" && !isPlay && <Disputes leagueKey={leagueKey} league={league} onChanged={changed} />}

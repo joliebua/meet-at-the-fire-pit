@@ -159,6 +159,7 @@ html = f"""<!doctype html>
 <li><b>House rules in plain English.</b> "Steals are worth 5 extra" becomes a rule, with a preview of how it would change the standings before you approve it.</li>
 <li><b>An AI Ref for disputes.</b> It investigates the sources and can only fix events, never hand out points.</li>
 <li><b>An AI coach that can play for you.</b> In play-along mode the Villa Strategist ranks draft picks and weekly pickups, or runs your team on autopilot. It only sees what has aired so far, and every move goes through the league's rules in code.</li>
+<li><b>A finale like the show's.</b> When the season ends, the top two each seal an envelope to share the pot or take it all (both share: split it; one takes: they get it all; both take: nobody gets anything). Sealed envelopes never show before the reveal, and the bot and the coach can't see yours (tests F1–F3).</li>
 <li><b>A spoiler shield and a 3D fire pit.</b> Everything can be limited to the weeks you've watched. The standings play out as a night-time 3D fire pit (Three.js): league players sit on the curved couches, the leader stands up \"safe\" by the fire while the host announces, and a dumped islander leaves a suitcase on their seat.</li>
 <li><b>Shared cost.</b> One recap pipeline per show-week serves every league.</li>
 </ol>

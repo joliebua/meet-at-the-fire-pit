@@ -1,0 +1,38 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_don_t_mug_me_off",
+ "started": "2026-10-19T21:35:37+00:00",
+ "seconds": 5.8,
+ "usage": {
+  "requests": 1,
+  "gateway_cache_hits": 1,
+  "input_tokens": 1922,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 1796,
+  "output_tokens": 277,
+  "reasoning_tokens": 136,
+  "web_searches": 0,
+  "cost_usd": 0.000376
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules",
+  "standings"
+ ],
+ "advice": {
+  "moves": [
+   {
+    "add": "Gabriel",
+    "drop": null,
+    "reason": "Add him to diversify Jolie\u2019s roster across a third couple: he has 17 points and stayed paired with Beatriz through the week, while your current two are already split across Bryce\u2013Trinity and Kayda\u2013Zach.",
+    "evidence": [
+     "Beatriz and Gabriel ... all remained in their couples.",
+     "Ultimately, Gabriel chose to couple up with Beatriz."
+    ]
+   }
+  ],
+  "summary": "Yes\u2014use the available move to pick up Gabriel. He adds a third stable couple to Jolie\u2019s coverage without needing to drop anyone, and his 17-point start matches Kayda\u2019s."
+ }
+}
