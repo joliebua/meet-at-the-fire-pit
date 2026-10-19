@@ -1,0 +1,15 @@
+date: 2026-10-19 23:35 UTC · macOS 26.6.2 · Python 3.14.7
+$ git clone https://github.com/joliebua/meet-at-the-fire-pit.git
+commit: 6ba7f92 Add privacy redaction, an app-wide AI budget and rate limit, and hidden-text stripping
+no .env in clone: yes · course .env one folder up: yes
+$ python3 -m venv .venv
+$ .venv/bin/pip install -r requirements.txt
+installed after 15s
+$ .venv/bin/uvicorn backend.main:app --port 8001    # port 8000 was busy on this Mac, as the README allows
+INFO:     Started server process [37767]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)
+app running 27s after the clone started
+GET /api/config → {"source_mode":"live","snapshot":"love_island_usa_s8","model":"gpt-6-luna","seasons":{"love_island_usa_s8":{"show":"Love Island USA","season":"8"}}}
+GET /api/budget → {"spent_today_usd":0.09315,"daily_budget_usd":1.0,"max_agent_runs":30,"window_seconds":600}

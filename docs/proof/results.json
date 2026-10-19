@@ -1,0 +1,66 @@
+{
+ "steps": [
+  {
+   "step": "Leaderboard (demo league)",
+   "check": "3D fire pit loaded; labels: ['🎙️ Host “Islanders…”', 'Dev 💖 126 #1 · safe', 'Jolie 119 #2', 'Priya 91 #3', 'Maya 85 #4']",
+   "screenshot": "01_leaderboard.jpg"
+  },
+  {
+   "step": "Receipts for a player",
+   "check": "49 points, each with its source sentence",
+   "screenshot": "02_receipts.jpg"
+  },
+  {
+   "step": "This Week in the Villa",
+   "check": "5 weeks; 7 events with quotes on the open week",
+   "screenshot": "03_villa.jpg"
+  },
+  {
+   "step": "Fire Pit tab: finale ready + weekly drop",
+   "check": "finale card shown; drop headline: The Final Fire Pit: One Last Table Shake-Up",
+   "screenshot": "04_fire_pit.jpg"
+  },
+  {
+   "step": "House Rules",
+   "check": "3 approved, 2 declined house rules listed",
+   "screenshot": "05_house_rules.jpg"
+  },
+  {
+   "step": "Disputes (past rulings)",
+   "check": "3 rulings; 2 manipulation attempts blocked",
+   "screenshot": "06_disputes.jpg"
+  },
+  {
+   "step": "Safety live: sneaky dispute with a phone number",
+   "check": "verdict: Denied 🙅; phone redacted: True; injection flagged: True; 11.3s",
+   "screenshot": "07_safety_dispute.jpg"
+  },
+  {
+   "step": "Cost to Run",
+   "check": "6 agents with measured tokens and cost",
+   "screenshot": "08_costs.jpg"
+  },
+  {
+   "step": "Finale: share or take it all",
+   "check": "before reveal the card only said sealed (True); host: 🎙️ Dev chose to share… but Jolie took it all. The whole 100 goes to Jolie. The villa is speechless.",
+   "screenshot": "09_finale.jpg"
+  },
+  {
+   "step": "Play-along: play Week 3 on autopilot",
+   "check": "Week 2 of 5 played → Week 3 of 5 played in 10.1s; 🤖 Autopilot: added Jen dropped Gabriel. Swap out Gabriel, who was dumped on Day 14 and can no longer earn points, for Jen: she is the only l",
+   "screenshot": "10_play_week3.jpg"
+  },
+  {
+   "step": "report.html opened from the clone",
+   "check": "6/6 embedded screenshots load; prints to 14 pages",
+   "screenshot": "11_report.jpg"
+  },
+  {
+   "step": "slides.html opened from the clone",
+   "check": "reveal.js ready; 10 slides; → arrow went to slide 2",
+   "screenshot": "12_slides.jpg"
+  }
+ ],
+ "errors": [],
+ "failed_requests": []
+}

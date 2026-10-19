@@ -137,7 +137,7 @@ html = f"""<!doctype html>
   <p><i>Islanders, meet me at the fire pit.</i></p>
   <p><b>An AI agent team that runs a Love Island fantasy league for a group of friends: it reads what happened in the villa from live sources, scores it with a receipt behind every point, settles disputes, coaches your draft and weekly moves (or plays them for you on autopilot) and writes the weekly group-chat drop, with the standings shown in a 3D villa.</b></p>
   <p>Jolie Bua · MGT 409 AI Foundations for Managers · Fall 2026</p>
-  <p>Repo: <a href="{REPO}">{REPO}</a> · App: runs locally from the README (one Python command) · Model: gpt-6-luna via Portkey</p>
+  <p>Repo: <a href="{REPO}">{REPO}</a> · App: runs locally from the README (one Python command; fresh-clone proof with screenshots in <code>docs/proof/</code>) · Model: gpt-6-luna via Portkey</p>
 </section>
 
 <h2>1. Motivation</h2>

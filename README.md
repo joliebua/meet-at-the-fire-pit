@@ -10,6 +10,8 @@ MGT 409 final project · Jolie Bua · model: `gpt-6-luna` via Portkey · demo se
 
 ---
 
+> ✅ **Verified from a fresh clone:** setup to a running app in under 30 seconds, every screen checked, 0 errors. Screenshots and the setup log are in [`docs/proof/`](docs/proof/README.md).
+
 ## Run it (about 3 minutes)
 
 You need **Python 3** (built and tested on 3.14) and an internet connection. Node is **not** needed: the built web app is in `frontend/dist` and the Python server serves it.
@@ -168,6 +170,8 @@ output/runs/        every agent run with exact token usage
 output/drops/       weekly drops
 output/eval_recaps.json  accuracy check against the Wikipedia cast table
 frontend/           React UI (src/) and the built app (dist/)
+docs/proof/         fresh-clone proof: setup log + 12 screenshots of every screen
+docs/screenshots/   screenshots used in the report and slides
 scripts/            snapshot builder, accuracy eval, safety tests, screenshots, report + slides builders (evidence.py = shared numbers)
 report.html         the written report (self-contained)
 slides.html         the slide deck (reveal.js from a CDN, screenshots embedded)
