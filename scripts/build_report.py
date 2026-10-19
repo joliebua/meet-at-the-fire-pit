@@ -124,15 +124,15 @@ ref_steps = " → ".join(s["tool"] for s in ref_trace.get("steps", []))
 
 
 html = f"""<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><title>Fire Pit · MGT 409 final report</title>
+<html lang="en"><head><meta charset="utf-8"><title>Meet at the Fire Pit · MGT 409 final report</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <style>{CSS}</style></head>
 <body><div class="wrap">
 
 <section class="cover">
-  <h1>Fire Pit 🔥</h1>
-  <p><i>Meet me at the fire pit.</i></p>
+  <h1>Meet at the Fire Pit 🔥</h1>
+  <p><i>Islanders, meet me at the fire pit.</i></p>
   <p><b>An AI agent team that runs a Love Island fantasy league for a group of friends: it reads what happened in the villa from live sources, scores it with a receipt behind every point, settles disputes, coaches your draft and weekly moves (or plays them for you on autopilot) and writes the weekly group-chat drop, with the standings shown in a 3D villa.</b></p>
   <p>Jolie Bua · MGT 409 AI Foundations for Managers · Fall 2026</p>
   <p>Repo: <a href="{REPO}">{REPO}</a> · App: runs locally from the README (one Python command) · Model: gpt-6-luna via Portkey</p>
@@ -153,13 +153,13 @@ html = f"""<!doctype html>
     ["Reality Draft Picks", "A Love Island draft app with commissioner draft settings", "No plain-English house rules or evidence-backed disputes described"],
 ])}
 <p class="small">Sources: App Store / AppGoblin listings for RealTVFantasy (id1513607707), Bracketology (id6463115555), Make Your Picks (id1566429228) and Reality Draft Picks (6777785407), checked Oct 19, 2026. Features may have changed.</p>
-<p><b>What Fire Pit does differently:</b></p>
+<p><b>What Meet at the Fire Pit does differently:</b></p>
 <ol>
 <li><b>A receipt behind every point.</b> Each point links to the exact sentence from a source, checked word-for-word by code.</li>
 <li><b>House rules in plain English.</b> "Steals are worth 5 extra" becomes a rule, with a preview of how it would change the standings before you approve it.</li>
 <li><b>An AI Ref for disputes.</b> It investigates the sources and can only fix events, never hand out points.</li>
 <li><b>An AI coach that can play for you.</b> In play-along mode the Villa Strategist ranks draft picks and weekly pickups, or runs your team on autopilot. It only sees what has aired so far, and every move goes through the league's rules in code.</li>
-<li><b>A spoiler shield and a 3D villa.</b> Everything can be limited to the weeks you've watched, and the standings rise as neon pillars in a 3D pool scene with a flickering fire pit, where the Host "announces" each week's drop (Three.js).</li>
+<li><b>A spoiler shield and a 3D fire pit.</b> Everything can be limited to the weeks you've watched. The standings play out as a night-time 3D fire pit (Three.js): league players sit on the curved couches, the leader stands up \"safe\" by the fire while the host announces, and a dumped islander leaves a suitcase on their seat.</li>
 <li><b>Shared cost.</b> One recap pipeline per show-week serves every league.</li>
 </ol>
 <p><b>Why it matters:</b> the commissioner's job shrinks to approving things, and arguments end with a quote instead of a vibe.</p>
@@ -186,7 +186,7 @@ It kept {len(scout_w2["bundle"]["sources"])} sources (two wiki week summaries + 
 <li><b>Ref</b>, later. Priya disputed "Corbin got kissed by all the girls on Day 5 but got zero kiss points". The Ref's steps: {escape(ref_steps)}. It upheld the claim with the quote “{escape(corbin["ruling"]["add_events"][0]["evidence"][0]["quote"])}”. Code verified it, and Priya went 90 → 91 after commissioner approval.</li>
 </ol>
 {shots2("villa", "This Week in the Villa: sources and events, each with its quotes and a verification badge",
-        "receipts", "3D leaderboard with one player's receipts open: every point shows its rule and source sentence")}
+        "receipts", "3D fire pit leaderboard with one player's receipts open: every point shows its rule and source sentence")}
 {shot("disputes", "Disputes: the Ref's ruling with its verified event, and a blocked manipulation attempt")}
 
 <h3>Play-along: the Strategist at work</h3>
@@ -196,7 +196,7 @@ It kept {len(scout_w2["bundle"]["sources"])} sources (two wiki week summaries + 
 <li><b>Holding.</b> After Week 2 every islander in the villa was on a team. It said so and held, rather than inventing a move: <i>“{escape(demo_moves_run.get("advice", {}).get("summary", ""))}”</i></li>
 </ol>
 {shots2("draft", "Draft room: the Strategist's ranked picks with one-click draft buttons",
-        "season", "Play-along season: your team as 3D pillars, autopilot switch and the next week's play button")}
+        "season", "Play-along season: your islanders on the fire pit couches next to their partners, autopilot switch and the next week's play button")}
 
 <h2>4. Tokenomics</h2>
 <p>All numbers are measured from the <code>usage</code> object the API returned on each run (<code>output/runs/*.json</code>), priced at the course rates in <code>data/prices.json</code>. A run counts as billed only if it reached the model and took at least {usage_log.MIN_BILLED_SECONDS:.0f}s. Runs answered from Portkey's response cache (or blocked by the provider) cost nothing and are listed as free.</p>

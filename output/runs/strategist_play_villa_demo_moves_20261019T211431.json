@@ -1,0 +1,31 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_villa_demo",
+ "started": "2026-10-19T21:14:31+00:00",
+ "seconds": 18.8,
+ "usage": {
+  "requests": 4,
+  "gateway_cache_hits": 1,
+  "input_tokens": 6777,
+  "cached_input_tokens": 3460,
+  "cache_write_tokens": 2804,
+  "output_tokens": 578,
+  "reasoning_tokens": 406,
+  "web_searches": 0,
+  "cost_usd": 0.000725
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules",
+  "standings",
+  "free_agents",
+  "islander_report",
+  "islander_report"
+ ],
+ "advice": {
+  "moves": [],
+  "summary": "Jolie should be ready to replace Beatriz and Gabriel, who were both dumped, but the free-agent list returned no available islanders, so there isn\u2019t a legal add to make right now. Hold for this week; Zach looks secure with Kayda, and Corbin and Kenzie both chose each other at the latest recoupling, so the two active roster spots have promising couple stability."
+ }
+}

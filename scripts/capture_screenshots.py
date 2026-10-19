@@ -49,7 +49,7 @@ def main():
             print("saved", path.relative_to(OUT.parent.parent))
 
         go("board", wait_for=".player")
-        page.wait_for_timeout(2500)  # let the 3D pillars rise
+        page.wait_for_timeout(3500)  # let the leader stand up by the fire
         save("leaderboard")
         page.locator(".player", has_text="Priya").first.click()
         page.wait_for_selector(".ledger .line")
@@ -108,7 +108,7 @@ def play_demo(page, url: str, save):
         page.wait_for_selector(f"text=Week {week} results", timeout=180_000)
         page.wait_for_timeout(800)
     page.evaluate("window.scrollTo(0, 0)")
-    page.wait_for_timeout(2500)  # 3D pillars rise
+    page.wait_for_timeout(3500)  # let the 3D fire pit settle
     save("season")
     save("week_results", ".card:has(h3:text('Week 2 results'))")
     page.get_by_role("button", name="🎯 Ask the Strategist").click()

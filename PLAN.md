@@ -1,4 +1,4 @@
-# Fire Pit (formerly Villa Commissioner): working plan
+# Meet at the Fire Pit (formerly Villa Commissioner): working plan
 
 An AI agent team that runs a **Love Island fantasy league** for a friend group. It gathers what happened in each episode from live online sources, turns that into scored events with receipts, settles disputes, and writes the weekly standings drop.
 
@@ -88,7 +88,7 @@ A pipeline orchestrator runs Scout → Recapper → Scorekeeper → Host each we
 
   A "🙈 I've watched through Week N" spoiler shield limits every view to watched weeks. Verified in the browser preview: all tabs load, writing a drop from the UI works, and the shield works.
 
-- **Repo:** https://github.com/joliebua/villa-commissioner (public). The built web app is committed, so staff only need Python.
+- **Repo:** https://github.com/joliebua/meet-at-the-fire-pit (public; renamed from villa-commissioner, which redirects). The built web app is committed, so staff only need Python.
 - **Fresh-clone dry run (10/19):**
   - Cloned next to the course `.env` and followed the README: install took 14s, and the server started with the README command.
   - Live mode, standings matched, and a Week 3 live re-scout worked.
@@ -146,4 +146,4 @@ A pipeline orchestrator runs Scout → Recapper → Scorekeeper → Host each we
 
 - An outside user for a timed trial (optional; it would strengthen Impact and Tier 3)
 - Look and feel: the class default is a Harry Styles-inspired style. Blend it with a villa vibe, or go pure Love Island?
-- App name: **Fire Pit** (renamed from "Villa Commissioner" on 10/19). The GitHub repo is still `villa-commissioner`.
+- App name: **Meet at the Fire Pit** (renamed from "Villa Commissioner" on 10/19). The GitHub repo is `meet-at-the-fire-pit`.

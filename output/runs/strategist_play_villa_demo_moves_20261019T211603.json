@@ -1,0 +1,38 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_villa_demo",
+ "started": "2026-10-19T21:16:03+00:00",
+ "seconds": 9.2,
+ "usage": {
+  "requests": 1,
+  "gateway_cache_hits": 1,
+  "input_tokens": 1967,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 1841,
+  "output_tokens": 456,
+  "reasoning_tokens": 280,
+  "web_searches": 0,
+  "cost_usd": 0.000471
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules",
+  "standings"
+ ],
+ "advice": {
+  "moves": [
+   {
+    "add": "Corbin",
+    "drop": "Beatriz",
+    "reason": "Add Corbin to diversify Jolie\u2019s roster away from having two slots in the same Beatriz\u2013Gabriel couple; Corbin has paired with Kenzie and was given first pick, while Beatriz and Gabriel are the more redundant pair on the roster.",
+    "evidence": [
+     "\u201cCorbin was given first pick, to which he chose Kenzie.\u201d",
+     "\u201cBeatriz and Gabriel ... all remained in their couples.\u201d"
+    ]
+   }
+  ],
+  "summary": "Yes\u2014use the move to add Corbin and drop Beatriz, keeping Gabriel while spreading your roster across more couples. Corbin\u2019s new pairing is still early, but his first-pick power and choice of Kenzie make him a more promising diversification play than an unpaired bombshell."
+ }
+}

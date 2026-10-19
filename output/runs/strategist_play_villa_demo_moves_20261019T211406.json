@@ -1,0 +1,38 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_villa_demo",
+ "started": "2026-10-19T21:14:06+00:00",
+ "seconds": 9.8,
+ "usage": {
+  "requests": 1,
+  "gateway_cache_hits": 1,
+  "input_tokens": 1745,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 1619,
+  "output_tokens": 510,
+  "reasoning_tokens": 352,
+  "web_searches": 0,
+  "cost_usd": 0.00047
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules",
+  "standings"
+ ],
+ "advice": {
+  "moves": [
+   {
+    "add": "Zach",
+    "drop": null,
+    "reason": "Add Zach rather than holding: he has an established couple with Kenzie, who picked him, while Gabriel is still unpaired after arriving on Day 2; Zach gives Jolie a better staying-power bet and a different couple from Beatriz/Sean.",
+    "evidence": [
+     "Kenzie picked Zach.",
+     "On Day 2, Gabriel and Kayda entered the villa."
+    ]
+   }
+  ],
+  "summary": "I\u2019d use the move to add Zach and keep Gabriel for now\u2014your roster has room, and Zach\u2019s couple is the clearest available foothold. Gabriel and Kayda are both still unpaired, so I\u2019d wait for them to form real connections before swapping anyone in."
+ }
+}

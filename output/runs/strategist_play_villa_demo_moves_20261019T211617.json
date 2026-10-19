@@ -1,0 +1,39 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_villa_demo",
+ "started": "2026-10-19T21:16:17+00:00",
+ "seconds": 13.8,
+ "usage": {
+  "requests": 2,
+  "gateway_cache_hits": 1,
+  "input_tokens": 4547,
+  "cached_input_tokens": 1709,
+  "cache_write_tokens": 2586,
+  "output_tokens": 911,
+  "reasoning_tokens": 739,
+  "web_searches": 0,
+  "cost_usd": 0.000821
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules",
+  "standings",
+  "islander_report"
+ ],
+ "advice": {
+  "moves": [
+   {
+    "add": "Jen",
+    "drop": "Gabriel",
+    "reason": "Replace dumped Gabriel with the only available free agent: Jen had a mutual couple and survived a recoupling before Gabriel was dumped, so she has some demonstrated connection\u2014but she is now a risk without a partner.",
+    "evidence": [
+     "\u201cJen and Gabriel ... mutually wrote letters to one another and remained in their couples.\u201d",
+     "\u201cchoosing Gabriel\u201d"
+    ]
+   }
+  ],
+  "summary": "Yes\u2014use the open roster spot to swap Gabriel for Jen. It\u2019s not a lock, since Gabriel\u2019s exit leaves her exposed, but she has shown she can form a mutual connection and there are no other free agents to target."
+ }
+}

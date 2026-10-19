@@ -1,0 +1,42 @@
+{
+ "agent": "strategist",
+ "kind": "draft",
+ "league": "play_villa_demo",
+ "started": "2026-10-19T21:15:36+00:00",
+ "seconds": 14.7,
+ "usage": {
+  "requests": 2,
+  "gateway_cache_hits": 1,
+  "input_tokens": 4543,
+  "cached_input_tokens": 1716,
+  "cache_write_tokens": 2575,
+  "output_tokens": 876,
+  "reasoning_tokens": 595,
+  "web_searches": 0,
+  "cost_usd": 0.000802
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "islander_report",
+  "islander_report",
+  "islander_report"
+ ],
+ "advice": {
+  "picks": [
+   {
+    "islander": "Beatriz",
+    "reason": "My top pick: she has 4 points, is coupled with Sean, and the clearest sign of agency in this pool is that \u201cBeatriz chose Sean,\u201d rather than being paired by default."
+   },
+   {
+    "islander": "Trinity",
+    "reason": "She has 4 points and is coupled with Bryce; the event says \u201cTrinity coupled up with Bryce,\u201d giving her a partner rather than leaving her single."
+   },
+   {
+    "islander": "Bryce",
+    "reason": "He also has 4 points and is coupled with Trinity, so he\u2019s a safer early pick than the unpaired Day 2 arrivals Gabriel and Kayda, who have no partner yet."
+   }
+  ],
+  "summary": "Jolie\u2019s roster is empty, so this pick can add a coupled islander without stacking risk on an existing pair. I\u2019d take Beatriz first for the strongest choice signal; Trinity and Bryce are sensible backups, though they\u2019re the same couple."
+ }
+}

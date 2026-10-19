@@ -1,0 +1,38 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_villa_demo",
+ "started": "2026-10-19T21:15:56+00:00",
+ "seconds": 5.3,
+ "usage": {
+  "requests": 1,
+  "gateway_cache_hits": 1,
+  "input_tokens": 1779,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 1653,
+  "output_tokens": 287,
+  "reasoning_tokens": 153,
+  "web_searches": 0,
+  "cost_usd": 0.000363
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules",
+  "standings"
+ ],
+ "advice": {
+  "moves": [
+   {
+    "add": "Bryce",
+    "drop": null,
+    "reason": "Add Bryce while Jolie has open roster spots: his couple with Trinity was a mutual choice, giving him a better staying-power signal than uncoupled bombshell Gabriel; no drop is needed.",
+    "evidence": [
+     "Trinity coupled up with Bryce,",
+     "Beatriz chose Sean,"
+    ]
+   }
+  ],
+  "summary": "Yes\u2014make one low-risk add, but keep Gabriel for now rather than cutting him this early. Bryce gives Jolie exposure to a second couple, and his mutual pairing with Trinity looks steadier than a brand-new islander with no partner."
+ }
+}

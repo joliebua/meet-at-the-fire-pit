@@ -1,4 +1,4 @@
-"""Fire Pit API.
+"""Meet at the Fire Pit API.
 
 Run from the repo folder:
     .venv/bin/uvicorn backend.main:app --reload --port 8000
@@ -19,7 +19,7 @@ from pydantic_ai.exceptions import AgentRunError, ModelHTTPError, UsageLimitExce
 from backend import config, scoring, season_play, usage_log
 from backend.agents import host, recapper, ref, rulesmith, scout, strategist
 
-app = FastAPI(title="Fire Pit", version="0.1")
+app = FastAPI(title="Meet at the Fire Pit", version="0.1")
 app.add_middleware(CORSMiddleware, allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
                    allow_methods=["*"], allow_headers=["*"])
 

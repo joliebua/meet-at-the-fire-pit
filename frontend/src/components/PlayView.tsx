@@ -2,7 +2,7 @@ import { lazy, Suspense, useEffect, useMemo, useState } from "react";
 import { api, fmtPts, fmtUsd, type AdvanceResult, type Advice, type IslanderFacts, type PlayState } from "../api";
 import { ErrorBox, EVENT_ICONS, EVENT_LABELS, Loading, Points } from "./common";
 
-const Villa3D = lazy(() => import("./three/Villa3D"));
+const FirePitScene = lazy(() => import("./three/FirePitScene"));
 
 type Props = {
   leagueKey: string | null;
@@ -94,8 +94,11 @@ export default function PlayView({ leagueKey, onCreated, onChanged, celebrate }:
     if (leagueKey) api.play(leagueKey).then(setState).catch((e) => setError(e.message));
   }, [leagueKey]);
 
-  const bars = useMemo(
-    () => (state?.your_roster ?? []).map((f) => ({ label: f.name, value: f.points, sub: f.in_villa ? (f.partner ? `💞 ${f.partner}` : "single") : "left", highlight: true })),
+  const seats = useMemo(
+    () => [...(state?.your_roster ?? [])].sort((a, b) => b.points - a.points).map((f) => ({
+      label: f.name, value: f.points, highlight: true, partner: f.in_villa ? f.partner : null, left: !f.in_villa,
+      sub: f.in_villa ? (f.partner ? `💞 ${f.partner}` : "single") : "🧳 left the villa",
+    })),
     [state],
   );
 
@@ -215,8 +218,9 @@ export default function PlayView({ leagueKey, onCreated, onChanged, celebrate }:
 
   return (
     <section>
-      <Suspense fallback={<div style={{ height: 300 }}><Loading /></div>}>
-        <Villa3D bars={bars} height={300} caption={`Your team in the villa · points so far (through Week ${state.current_week})`} />
+      <Suspense fallback={<div style={{ height: 320 }}><Loading /></div>}>
+        <FirePitScene seats={seats} height={320} mode="team"
+          caption={`Your team on the fire pit couches, each next to their partner · points so far (through Week ${state.current_week})`} />
       </Suspense>
 
       <div className="card" style={{ marginTop: 16 }}>

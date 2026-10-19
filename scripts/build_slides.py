@@ -85,8 +85,8 @@ slides = []
 # 1. Title
 slides.append(f"""
 <section>
-  <h1>Fire Pit 🔥</h1>
-  <p class="big">An AI agent team that runs your Love Island fantasy league. Meet me at the fire pit.</p>
+  <h1>Meet at the Fire Pit 🔥</h1>
+  <p class="big">An AI agent team that runs your Love Island fantasy league</p>
   <p class="sub">Live sources in · a receipt behind every point · disputes settled · an AI coach that drafts and plays for you · a 3D villa</p>
   <p class="sub" style="margin-top:1.4em">Jolie Bua · MGT 409 AI Foundations for Managers · Fall 2026<br>{REPO.replace("https://", "")}</p>
   {notes("One sentence: it's the commissioner's job, done by agents, with proof for every point.")}
@@ -116,7 +116,7 @@ rows = [("Spreadsheet + group chat", "y", "n", "n", "n"),
         ("Bracketology", "n", "n", "n", "n"),
         ("Make Your Picks", "n", "n", "n", "n"),
         ("Reality Draft Picks", "n", "n", "n", "n"),
-        ("Fire Pit", "y", "y", "y", "y")]
+        ("Meet at the Fire Pit", "y", "y", "y", "y")]
 MARK = {"y": "✓", "p": "◐", "n": "–"}
 cells = "".join(f"<tr><td>{n}</td>" + "".join(f'<td class="{c}">{MARK[c]}</td>' for c in cs) + "</tr>"
                 for n, *cs in rows)
@@ -158,7 +158,7 @@ slides.append(f"""
   <h2>Your AI coach, by the fire pit</h2>
   <div class="cols">
     <div>{img("draft", "Draft room with the Strategist")}<div class="cap">Draft room: the Villa Strategist ranks picks from what has aired so far ({usd(coach)} per call)</div></div>
-    <div>{img("season", "Play-along season in 3D")}<div class="cap">Play week by week: your team as neon pillars by the fire pit, 🤖 autopilot makes rule-checked moves before each week</div></div>
+    <div>{img("season", "Play-along season in 3D")}<div class="cap">Play week by week: your islanders on the fire pit couches with their partners (🧳 = dumped), 🤖 autopilot makes rule-checked moves before each week</div></div>
   </div>
   {notes("Play-along mode: you + 3 bots draft after Day 2, then reveal one week at a time. Autopilot added Kenzie and Corbin before Weeks 1-2 with reasons; after Week 2 it held because nobody was free.")}
 </section>""")
@@ -250,7 +250,7 @@ assert len(slides) <= 10, "the deck must have 10 slides or fewer"
 
 html = f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
-<title>Fire Pit · slides</title>
+<title>Meet at the Fire Pit · slides</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="{REVEAL}/reset.css">
 <link rel="stylesheet" href="{REVEAL}/reveal.css">

@@ -1,0 +1,39 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_villa_demo",
+ "started": "2026-10-19T21:14:17+00:00",
+ "seconds": 8.3,
+ "usage": {
+  "requests": 2,
+  "gateway_cache_hits": 1,
+  "input_tokens": 4330,
+  "cached_input_tokens": 1855,
+  "cache_write_tokens": 2223,
+  "output_tokens": 395,
+  "reasoning_tokens": 210,
+  "web_searches": 0,
+  "cost_usd": 0.000519
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules",
+  "standings",
+  "islander_report"
+ ],
+ "advice": {
+  "moves": [
+   {
+    "add": "Corbin",
+    "drop": null,
+    "reason": "Add Corbin to use Jolie\u2019s open roster spot and diversify beyond her Beatriz\u2013Gabriel and Zach\u2013Kayda couples: he got first pick and chose Kenzie, giving him a promising couple start.",
+    "evidence": [
+     "\u201cas the newest arrival, Corbin was given first pick, to which he chose Kenzie.\u201d",
+     "\u201cBeatriz and Gabriel, Kayda and Zach ... all remained in their couples.\u201d"
+    ]
+   }
+  ],
+  "summary": "Yes\u2014make one measured move and add Corbin, rather than disrupting Jolie\u2019s three stable couples. His couple is new, so it\u2019s not a sure thing, but first pick is a better sign than adding an unpaired bombshell."
+ }
+}

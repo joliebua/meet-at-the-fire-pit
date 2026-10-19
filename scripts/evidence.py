@@ -14,7 +14,7 @@ from backend.agents.recapper import latest_events  # noqa: E402
 
 ROOT = config.ROOT
 SHOTS = ROOT / "docs" / "screenshots"
-REPO = "https://github.com/joliebua/villa-commissioner"
+REPO = "https://github.com/joliebua/meet-at-the-fire-pit"
 SEASON = "love_island_usa_s8"
 WEEKS_PER_MONTH = 4.3
 PLAYERS_PER_LEAGUE = 4          # the demo league

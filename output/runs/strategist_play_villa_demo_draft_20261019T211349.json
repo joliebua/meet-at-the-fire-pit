@@ -1,0 +1,39 @@
+{
+ "agent": "strategist",
+ "kind": "draft",
+ "league": "play_villa_demo",
+ "started": "2026-10-19T21:13:49+00:00",
+ "seconds": 11.7,
+ "usage": {
+  "requests": 2,
+  "gateway_cache_hits": 0,
+  "input_tokens": 2673,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 1738,
+  "output_tokens": 546,
+  "reasoning_tokens": 336,
+  "web_searches": 0,
+  "cost_usd": 0.000584
+ },
+ "steps": [
+  "my_team",
+  "free_agents"
+ ],
+ "advice": {
+  "picks": [
+   {
+    "islander": "Beatriz",
+    "reason": "She has 4 points and actively chose Sean, giving her a stronger start than an automatic or unpaired match."
+   },
+   {
+    "islander": "Kenzie",
+    "reason": "She has 4 points and picked Zach herself, so she enters Week 1 in a deliberately formed couple."
+   },
+   {
+    "islander": "Melanie",
+    "reason": "She has 4 points and Sincere chose her when he had the power to decide between her and Aniya."
+   }
+  ],
+  "summary": "Jolie\u2019s roster is empty, so any of these adds gives her a couple-based start without stacking risk on one partner pairing. I\u2019d lead with Beatriz, then Kenzie, and keep Melanie as a solid third option."
+ }
+}

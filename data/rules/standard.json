@@ -1,5 +1,5 @@
 {
- "name": "Fire Pit standard table",
+ "name": "Meet at the Fire Pit standard table",
  "notes": "Points go to each islander in an event's `islanders` list. 'survived_week' is worked out by code: every islander still in the villa at the end of a week.",
  "rules": [
   {"id": "std-bombshell", "label": "Bombshell arrival", "event_type": "entered_villa", "points": 5, "min_day": 2},

@@ -108,7 +108,7 @@ export default function App() {
   return (
     <div className="app">
       <header className="topbar">
-        <h1 className="logo" title="Meet me at the fire pit">Fire Pit <span className="flame" aria-hidden="true">🔥</span></h1>
+        <h1 className="logo" title="Islanders, meet me at the fire pit">Meet at the Fire Pit <span className="flame" aria-hidden="true">🔥</span></h1>
         <label className="league-name row" style={{ gap: 8 }}>
           <select value={newLeague ? NEW : leagueKey} onChange={(e) => switchLeague(e.target.value)} title="Switch league">
             {leagues.map((l) => (
@@ -172,7 +172,7 @@ export default function App() {
       {burst > 0 && <Suspense fallback={null}><HeartBurst burst={burst} /></Suspense>}
       {toast && <div className="toast">{toast}</div>}
       <footer className="foot">
-        Meet me at the fire pit 🔥 · fan-made fantasy league tool · not affiliated with Love Island, ITV or Peacock · every point has a receipt
+        Islanders, meet me at the fire pit 🔥 · fan-made fantasy league tool · not affiliated with Love Island, ITV or Peacock · every point has a receipt
         {config && <> · model {config.model}</>}
       </footer>
     </div>

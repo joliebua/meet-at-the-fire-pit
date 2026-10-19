@@ -2,7 +2,7 @@ import { lazy, Suspense, useEffect, useMemo, useState } from "react";
 import { api, weekNum, type LedgerLine, type League, type Standings } from "../api";
 import { ErrorBox, EVENT_ICONS, Loading, Points } from "./common";
 
-const Villa3D = lazy(() => import("./three/Villa3D"));
+const FirePitScene = lazy(() => import("./three/FirePitScene"));
 
 type Props = { leagueKey: string; league: League; week: number; version: number; highlight?: string };
 
@@ -29,8 +29,8 @@ export default function Leaderboard({ leagueKey, league, week, version, highligh
     [ledger, week],
   );
 
-  const bars = useMemo(
-    () => (data?.standings ?? []).map((r, i) => ({ label: r.player, value: r.total, sub: `#${i + 1}`, highlight: r.player === highlight })),
+  const seats = useMemo(
+    () => (data?.standings ?? []).map((r, i) => ({ label: r.player, value: r.total, sub: i === 0 ? "#1 · safe" : `#${i + 1}`, highlight: r.player === highlight })),
     [data, highlight],
   );
 
@@ -43,8 +43,9 @@ export default function Leaderboard({ leagueKey, league, week, version, highligh
   return (
     <div className="grid-side" style={{ gridTemplateColumns: selected ? "1fr 420px" : "1fr" }}>
       <section>
-        <Suspense fallback={<div style={{ height: 320 }} />}>
-          <Villa3D bars={bars} height={320} />
+        <Suspense fallback={<div style={{ height: 340 }} />}>
+          <FirePitScene seats={seats} height={340} mode="standings"
+            caption={seats.length ? `Islanders, meet me at the fire pit: ${seats[0].label} is safe on ${seats[0].value} points` : undefined} />
         </Suspense>
         <h2 className="section" style={{ marginTop: 16 }}>The leaderboard</h2>
         <p className="hint">{data.weeks.length ? `Through ${data.weeks[data.weeks.length - 1]}.` : "Nothing has aired yet."} Tap a player to see every point and the receipt behind it.</p>
