@@ -139,6 +139,23 @@ npm run build                                   # refresh frontend/dist, which t
 
 ---
 
+## Safety measures
+
+The app follows the defense layers from the course: defenses in **code** first, then **design** (the model proposes, code decides, people approve), then **prompt** rules (HW5/HW6), plus spending caps (HW5, Lecture 11) and hidden-text stripping (Lecture 12). `scripts/safety_tests.py` attacks the app and saves the evidence to `output/safety/` (latest: **32 pass, 0 fail, 1 known limit**).
+
+| Risk | Guardrails | Tests |
+|---|---|---|
+| **Loops and overspending** | Every agent has hard per-run limits on model requests, tool calls and tokens, plus a cap on each reply. The Scout gets 1 web search and 4 articles per run. Disputes and house rules have length limits. An **app-wide daily AI budget** (`VILLA_DAILY_BUDGET_USD`, default $1) and a **rate limit** (`VILLA_MAX_AGENT_RUNS` per `VILLA_RATE_WINDOW_SECONDS`, default 30 per 10 min) are checked before any agent runs from the web app. | D1, D3, D4, G2, G3 |
+| **Making things up** | No point scores without a receipt. `verify.py` checks that each quote is word-for-word in its source, the islander is real, they were in the villa that day, they're named in the quoted sentence, the wording fits the event, and the day falls in the week. The Host's numbers must all appear in the real standings, and the Ref's fixes go through the same check. | C0–C8, A2 |
+| **Prompt injection** | Invisible characters and HTML comments are stripped, and lines that talk to an AI are flagged and can never be used as evidence. Hidden page elements (zero-size, white, `display:none`, `hidden`) are removed before an article is read. Models only propose; code scores. Every prompt says that tool results are data, not instructions. The model provider's content filter is a final backstop. | A1, C7, G4, B1–B3 |
+| **Private information** | Emails, phone numbers, card numbers, SSNs, IP addresses and key-like strings that users type are **redacted before they reach the model or the logs**. There are no accounts and all data stays local. The API key lives only in `.env` on the server (git-ignored) and never reaches the browser. | G1, G5 |
+| **Data leaks / bad URLs** | The Scout may only open URLs a tool already returned, and only public internet addresses (no localhost or private network). | D2 |
+| **Spoilers / future knowledge** | Play-along agents and bots only see weeks that have aired in the league. Advice and drops are checked for islanders who haven't entered yet and for winner talk. | E2, E3 |
+| **AI acting on its own** | House rules and Ref rulings wait for the commissioner. Autopilot can only make moves that pass the league rules in code. Finale envelopes stay sealed: the bot and the coach never see yours. | B4, E1, E4, F1–F3 |
+| **Accountability** | Every agent run is logged with its tool calls, token counts and cost in `output/runs/`. | — |
+
+**Known limit (A3):** a believable fake fact planted in a trusted source can still pass, because code can prove a quote is *in* a source, not that the source is *true*. It shows up as single-source, and players can dispute it.
+
 ## Repo map
 
 ```

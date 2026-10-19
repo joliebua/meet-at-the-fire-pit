@@ -16,7 +16,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 from pydantic_ai.exceptions import AgentRunError, ModelHTTPError, UsageLimitExceeded
 
-from backend import config, finale, scoring, season_play, usage_log
+from backend import budget, config, finale, scoring, season_play, usage_log
 from backend.agents import host, recapper, ref, rulesmith, scout, strategist
 
 app = FastAPI(title="Meet at the Fire Pit", version="0.1")
@@ -70,9 +70,11 @@ def _league(key: str) -> dict:
     return scoring.load_league(key)
 
 
-def _guard(fn, *args, **kwargs):
-    """Run an agent step with clean HTTP errors instead of stack traces."""
+def _guard(fn, *args, agent: bool = False, **kwargs):
+    """Run a step with clean HTTP errors instead of stack traces. agent=True also applies the app-wide budget."""
     try:
+        if agent:
+            budget.check()
         with WRITE_LOCK:
             return fn(*args, **kwargs)
     except (season_play.MoveError, finale.FinaleError) as e:
@@ -81,6 +83,8 @@ def _guard(fn, *args, **kwargs):
         raise HTTPException(400, str(e.args[0]) if e.args else "Not found")
     except (ValueError, FileNotFoundError) as e:
         raise HTTPException(400, str(e))
+    except budget.BudgetExceeded as e:
+        raise HTTPException(429, str(e))
     except UsageLimitExceeded as e:
         raise HTTPException(429, f"Stopped by the run's safety limits: {e}")
     except (ModelHTTPError, AgentRunError) as e:
@@ -141,7 +145,7 @@ def refresh_week(season: str, n: int):
                 "verified_events": recap_run["events_verified"], "rejected_events": recap_run["events_rejected"],
                 "cost_usd": round(scout_run["usage"]["total_cost_usd"] + recap_run["usage"]["cost_usd"], 6),
                 "seconds": round(scout_run["seconds"] + recap_run["seconds"], 1)}
-    return _guard(run)
+    return _guard(run, agent=True)
 
 
 # ---------- leagues ----------
@@ -186,7 +190,7 @@ def play_pick(key: str, body: PickIn):
 @app.post("/api/play/{key}/advice")
 def play_advice(key: str):
     _league(key)
-    return _guard(strategist.advise, key)
+    return _guard(strategist.advise, key, agent=True)
 
 
 @app.post("/api/play/{key}/move")
@@ -209,7 +213,7 @@ def play_advance(key: str):
     def run():
         result = season_play.advance(key, autopilot_fn=strategist.autopilot)
         return {**result, "state": season_play.state(key)}
-    return _guard(run)
+    return _guard(run, agent=True)
 
 
 @app.post("/api/play/{key}/autopilot")
@@ -249,7 +253,7 @@ def propose_house_rules(key: str, body: HouseRulesIn):
         rows, matches = rulesmith.impact(key, [r.id for r in new]) if new else ([], {})
         return {"rules": [r.model_dump() for r in new], "unsupported": [u.model_dump() for u in proposal.unsupported],
                 "impact": rows, "matches": matches, "cost_usd": run["usage"]["cost_usd"], "seconds": run["seconds"]}
-    return _guard(run)
+    return _guard(run, agent=True)
 
 
 @app.post("/api/leagues/{key}/house-rules/{rule_id}/{decision}")
@@ -277,7 +281,7 @@ def file_dispute(key: str, body: DisputeIn):
         impact = ref.impact(key, record) if record["adjustments"] else []
         return {"dispute": record, "impact": impact, "steps": [s["tool"] for s in run["steps"]],
                 "cost_usd": run["usage"]["cost_usd"], "seconds": run["seconds"]}
-    return _guard(run)
+    return _guard(run, agent=True)
 
 
 @app.post("/api/leagues/{key}/disputes/{dispute_id}/{decision}")
@@ -304,7 +308,7 @@ def make_drop(key: str, week: int):
     def run():
         record, run = host.write_drop(key, week)
         return {**record, "cost_usd": run["usage"]["cost_usd"], "seconds": run["seconds"]}
-    return _guard(run)
+    return _guard(run, agent=True)
 
 
 # ---------- the finale: share or take it all ----------
@@ -342,10 +346,16 @@ def finale_reset(key: str):
 @app.post("/api/play/{key}/finale/advice")
 def finale_advice(key: str):
     _league(key)
-    return _guard(strategist.advise_finale, key)
+    return _guard(strategist.advise_finale, key, agent=True)
 
 
 # ---------- tokenomics ----------
+
+@app.get("/api/budget")
+def budget_status():
+    """Today's billed AI spend against the app-wide daily budget and rate limit."""
+    return budget.status()
+
 
 @app.get("/api/usage")
 def usage():

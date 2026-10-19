@@ -13,7 +13,7 @@ import json
 import random
 import re
 
-from backend import config, scoring, verify
+from backend import config, privacy, scoring, verify
 from backend.agents.recapper import latest_events
 from backend.agents.scout import seasons
 from backend.models import CheckedEvent
@@ -137,7 +137,8 @@ def create(name: str, you: str = "You", season_key: str = "love_island_usa_s8", 
     """Create a play-along league (you + 3 bot friends), pick a draft order, and let bots pick until your turn."""
     if season_key not in seasons():
         raise MoveError(f"Unknown season '{season_key}'")
-    you = you.strip()[:20] or "You"
+    name = privacy.redact(name)[0]
+    you = privacy.redact(you.strip())[0][:20] or "You"
     if you in BOT_NAMES:
         raise MoveError(f"Pick a name other than {', '.join(BOT_NAMES)}")
     key = slug(name)

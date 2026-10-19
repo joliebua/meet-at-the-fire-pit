@@ -19,6 +19,7 @@ from pydantic_ai.usage import UsageLimits
 from backend import config, llm, scoring, verify
 from backend.agents.recapper import latest_bundle, latest_events, verification_context
 from backend.models import CheckedEvent, Event, Ruling
+from backend import privacy
 from backend.sources import clean
 
 USAGE_LIMITS = UsageLimits(request_limit=10, tool_calls_limit=16, total_tokens_limit=120_000)
@@ -128,6 +129,7 @@ def file_dispute(league_key: str, player: str, text: str) -> tuple[dict, dict]:
     if len(text) > MAX_DISPUTE_CHARS:
         raise ValueError(f"Dispute is too long (max {MAX_DISPUTE_CHARS} characters)")
     text, report = clean.clean_text(text)
+    text, redacted = privacy.redact(text)  # private details never reach the model or the logs
     standings = scoring.score_league(league_key, save=False)
     deps = RefDeps(league_key, league["season"], player, standings["weeks"], standings)
     recorder = llm.UsageRecorder()
@@ -165,6 +167,7 @@ def file_dispute(league_key: str, player: str, text: str) -> tuple[dict, dict]:
         adj_ids.append(adj["id"])
     record = {"id": dispute_id, "player": player, "text": text, "filed": started.isoformat(timespec="seconds"),
               "ruling": ruling.model_dump(), "adjustments": adj_ids, "input_flags": report["flagged_lines"],
+              "redacted": redacted,
               "status": "pending" if adj_ids else "closed"}
     disputes.append(record)
     scoring.save_league(league_key, league)

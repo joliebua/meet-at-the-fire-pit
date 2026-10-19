@@ -2,11 +2,13 @@
 from datetime import date
 from urllib.parse import quote_plus, urlparse
 import ipaddress
+import re
 import socket
 
 import feedparser
 import httpx
 import trafilatura
+import lxml.html
 
 from backend import config
 from backend.sources.store import cached_call
@@ -41,6 +43,29 @@ def _public_http_url(url: str) -> bool:
     return all(ipaddress.ip_address(info[4][0]).is_global for info in infos)
 
 
+HIDDEN_STYLE = re.compile(
+    r"display\s*:\s*none|visibility\s*:\s*hidden|opacity\s*:\s*0(\.0+)?\s*(;|$)|font-size\s*:\s*0(px|pt|em|rem)?\s*(;|$)"
+    r"|color\s*:\s*(transparent|#fff\b|#ffffff\b|white\b|rgba\([^)]*,\s*0\s*\))|(height|width)\s*:\s*0(px)?\s*(;|$)", re.I)
+
+
+def visible_html(html: str) -> tuple[str, int]:
+    """Drop what a reader can't see (hidden attributes, display:none, zero-size or white/transparent text)."""
+    try:
+        doc = lxml.html.fromstring(html)
+    except (ValueError, lxml.etree.ParserError):
+        return html, 0
+    removed = 0
+    for el in list(doc.iter()):
+        if not isinstance(el.tag, str):
+            continue
+        style = el.get("style", "")
+        if el.get("hidden") is not None or el.get("aria-hidden") == "true" or (style and HIDDEN_STYLE.search(style)):
+            if el.getparent() is not None:
+                el.drop_tree()
+                removed += 1
+    return lxml.html.tostring(doc, encoding="unicode"), removed
+
+
 def fetch_article(url: str) -> dict:
     """Main text of one article. Never recorded to the snapshot (articles are copyrighted)."""
     def live():
@@ -55,11 +80,11 @@ def fetch_article(url: str) -> dict:
                 if len(body) > MAX_ARTICLE_BYTES:
                     break
             final_url = str(r.url)
-        html = body.decode("utf-8", errors="replace")
+        html, hidden = visible_html(body.decode("utf-8", errors="replace"))
         text = trafilatura.extract(html, include_comments=False, include_tables=False) or ""
         if not text.strip():
             raise ValueError("No readable article text (page needs JavaScript or blocks readers)")
         meta = trafilatura.extract_metadata(html)
         return {"url": final_url, "title": (meta.title if meta else "") or "",
-                "published": (meta.date if meta else "") or "", "text": text[:MAX_ARTICLE_CHARS]}
+                "published": (meta.date if meta else "") or "", "text": text[:MAX_ARTICLE_CHARS], "hidden_removed": hidden}
     return cached_call("article", {"url": url}, live, recordable=False)

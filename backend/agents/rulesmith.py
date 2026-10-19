@@ -15,7 +15,7 @@ from pydantic_ai import Agent, ModelRetry, RunContext
 from pydantic_ai.models.openai import OpenAIResponsesModelSettings
 from pydantic_ai.usage import UsageLimits
 
-from backend import config, llm, scoring
+from backend import config, llm, privacy, scoring
 from backend.models import Rule, RuleProposal
 
 USAGE_LIMITS = UsageLimits(request_limit=3, total_tokens_limit=40_000)
@@ -64,6 +64,7 @@ def propose(league_key: str, text: str) -> tuple[list[Rule], RuleProposal, dict]
     """Draft rules from the commissioner's text and save them as *pending*. Returns (new rules, raw proposal, run log)."""
     if len(text) > MAX_REQUEST_CHARS:
         raise ValueError(f"House rules request is too long (max {MAX_REQUEST_CHARS} characters).")
+    text, redacted = privacy.redact(text)  # private details never reach the model or the logs
     league = scoring.load_league(league_key)
     standard = [Rule(**r) for r in json.loads((config.DATA / "rules" / league["rules_file"]).read_text())["rules"]]
     recorder = llm.UsageRecorder()
@@ -80,7 +81,7 @@ def propose(league_key: str, text: str) -> tuple[list[Rule], RuleProposal, dict]
     scoring.save_league(league_key, league)
     run = {"agent": "rulesmith", "league": league_key, "started": started.isoformat(timespec="seconds"),
            "seconds": round((datetime.now(timezone.utc) - started).total_seconds(), 1),
-           "usage": llm.recorder_totals(recorder), "request": text,
+           "usage": llm.recorder_totals(recorder), "request": text, "redacted": redacted,
            "proposed": [r.id for r in new], "unsupported": [u.model_dump() for u in result.output.unsupported]}
     out = config.OUTPUT / "runs"
     out.mkdir(parents=True, exist_ok=True)
