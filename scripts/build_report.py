@@ -126,10 +126,10 @@ html = f"""<!doctype html>
 </section>
 
 <h2>1. Motivation</h2>
-<p><b>Who has the problem.</b> Groups of friends who watch Love Island together often run a fantasy league: everyone drafts islanders and earns points when they couple up, win challenges or survive a dumping. One person (the commissioner) keeps score.</p>
-<p><b>How they handle it today.</b> The commissioner rewatches episodes or reads recaps, decides which events count, updates a shared spreadsheet, posts standings in the group chat, and settles the arguments ("that wasn't a real date!"). The rules are usually house rules that no app supports.</p>
-{todo("Add the real person behind this: who you interviewed (role, how many leagues/seasons), how many minutes per week they spend scoring, how many disputes per week, and one direct quote.")}
-<p><b>What it costs them.</b> Time every episode week, scoring mistakes, and arguments with no shared source of truth.</p>
+<p><b>Who has the problem.</b> Love Island fans who would enjoy a fantasy league the way fantasy football fans enjoy theirs: everyone drafts islanders and earns points when they couple up, win challenges or survive a dumping. Somebody would also have to be the commissioner who keeps score.</p>
+<p><b>The person behind it.</b> I'm the target user. I watch Love Island religiously and play fantasy football. In my words: <i>“I watch Love Island religiously but have never seen a fantasy league for it. I play fantasy football, which is a lot of effort to prep for the draft, and I've seen brackets for The Bachelor but nothing else.”</i> This is my own experience as a fan, not an independent interview.</p>
+<p><b>How it's handled today.</b> Mostly, it isn't. The closest things I've seen are Bachelor brackets, which are prediction games. Running a Love Island points league by hand would mean one person rewatching episodes or reading recaps, deciding which events count, updating a spreadsheet, posting standings and settling arguments ("that wasn't a real date!"), every week of the season. Fantasy football is fun despite heavy draft prep because the platform does all the scoring. For Love Island, the one draft app I found (Reality Draft Picks) doesn't describe a group's own house rules or proof for each point (see section 2).</p>
+<p><b>What it costs them.</b> The league never gets started. If one does start, one friend gives up their time every episode week, makes scoring mistakes, and has no shared source of truth when people argue.</p>
 
 <h2>2. What is new</h2>
 {table(["Option", "What it does (per its store listing)", "What's missing for a Love Island friend league"], [
@@ -228,13 +228,14 @@ It kept {len(scout_w2["bundle"]["sources"])} sources (two wiki week summaries + 
 <p>Caveat: for these event types, the input text and the answer key both come from wiki pages, so this mainly proves the extraction and the checks are right. Noisier sources are the next test.</p>
 {table(["Event type", "In the table", "Predicted", "Correct"], acc_rows, {1, 2, 3})}
 <p><b>Time.</b> Scout + Recapper take about {round(sum(s["seconds"] + r["seconds"] for _, s, r in season_rows) / len(season_rows))} seconds of machine time per episode week. A dispute takes about {agents["ref"]["avg_seconds"]}s, and a drop about {agents["host"]["avg_seconds"]}s.</p>
-{todo("Compare with the commissioner's real manual time per week (from the interview), and add a before/after or a quote from a real user trying the app (screenshot of their reaction or league standings).")}
+<p><b>User evidence so far.</b> The evidence so far is my own experience as the target user, not an independent trial. The part of fantasy football I'd never want to do by hand is the scoring, and that's exactly the part the app takes over, at about {round(sum(s["seconds"] + r["seconds"] for _, s, r in season_rows) / len(season_rows))} seconds of machine time and about {usd(pipeline_week, 3)} per episode week. A timed trial with a real friend group is the next step: how long manual scoring takes compared with approving the app's results (see Limits).</p>
 <p><b>Reach.</b> The pipeline cost doesn't grow with the number of leagues, so one show-week recap can serve any number of friend groups. At 10,000 users it's {scale_rows[2][3]} per user per month.</p>
 
 <h2>7. Limits and next steps</h2>
 <ul>
 <li><b>Truth vs. quotes (A3).</b> Require two independent sources for high-value events, and down-weight single-source news.</li>
 <li><b>Source lag and coverage.</b> Wiki weekly summaries appear days after airing and rarely name challenge winners or kisses, so those score less often than they happen. X/Twitter and Reddit, where fans react live, need paid or extra API keys the course rules don't allow.</li>
+<li><b>No outside users yet.</b> Only I have used the app. Next: a timed trial with a friend group over a few episode weeks, measuring manual vs. app time and dispute counts.</li>
 <li><b>One season tested.</b> Love Island USA S8 only. UK and other formats need their own page/section names in <code>data/seasons.json</code>.</li>
 <li><b>Single commissioner, no logins.</b> League data lives in JSON files on one machine. Next: accounts, a database, and invite links for players.</li>
 <li><b>Next to build:</b>

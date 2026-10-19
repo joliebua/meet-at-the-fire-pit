@@ -92,19 +92,19 @@ slides.append(f"""
 # 2. Problem + audience
 slides.append(f"""
 <section>
-  <h2>The commissioner's weekly grind</h2>
+  <h2>Why nobody runs a Love Island league</h2>
   <div class="cols">
     <div class="card">
-      <p><b>Who:</b> friend groups running a Love Island fantasy league. Everyone drafts islanders; one person keeps score.</p>
-      <p><b>Today:</b> rewatch or read recaps → decide what counts → update a spreadsheet → post standings → settle "that wasn't a real date!"</p>
+      <p><b>Who:</b> Love Island fans who'd play a fantasy league the way fantasy football fans do.</p>
+      <p><b>Today:</b> Bachelor brackets (prediction games) exist, but a points league means one friend rewatching, scoring a spreadsheet and settling "that wasn't a real date!" every week.</p>
     </div>
     <div class="card">
-      <p><b>The cost:</b> hours every episode week, scoring mistakes, and arguments with no shared source of truth.</p>
-      <p><b>House rules</b> are the fun part, and no app supports them.</p>
+      <p class="big" style="font-size:.95em">“I watch Love Island religiously but have never seen a fantasy league for it. I play fantasy football, which is a lot of effort to prep for the draft.”</p>
+      <p class="small">Me, the target user (my own experience, not an outside interview)</p>
     </div>
   </div>
-  <div class="todo" style="margin-top:18px">TODO (Jolie): one real commissioner quote + their minutes per week</div>
-  {notes("Name the real person interviewed and their numbers once you have them.")}
+  <p class="small" style="margin-top:16px">Fantasy football works because the platform does the scoring. For Love Island, the one draft app I found doesn't describe your own house rules or proof for each point.</p>
+  {notes("Be upfront that the quote is my own experience as a fan; the outside-user trial is a next step.")}
 </section>""")
 
 # 3. What is new
@@ -208,7 +208,7 @@ slides.append(f"""
     <div class="card stat"><b>~{week_seconds}s</b><span>machine time per episode week (Scout + Recapper)</span></div>
   </div>
   <p class="small" style="margin-top:20px">Commissioner's job → approve or decline. Arguments end with a quote.</p>
-  <div class="todo">TODO (Jolie): real user before/after: manual minutes per week vs. the app, plus a quote or reaction</div>
+  <p class="small"><span class="hl">User evidence so far:</span> my own experience as the target user. Next: a timed trial with a real friend group (manual scoring vs. approving the app).</p>
   {notes("Caveat: accuracy is graded against wiki tables; noisier sources are next.")}
 </section>""")
 
@@ -222,7 +222,7 @@ slides.append(f"""
       <ul class="small">
         <li>A quote proves it's <i>in</i> a source, not that it's <i>true</i></li>
         <li>Wiki recaps lag a few days; X and Reddit need keys the course doesn't allow</li>
-        <li>One season tested; single commissioner, no logins</li>
+        <li>No outside users yet · one season tested · no logins</li>
       </ul>
     </div>
     <div class="card">

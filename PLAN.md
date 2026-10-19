@@ -114,7 +114,7 @@ A pipeline orchestrator runs Scout → Recapper → Scorekeeper → Host each we
 
 ## Evidence to collect (Tier 3)
 
-- Find someone who ran a Love Island fantasy league this summer. Ask how long scoring took each week and how many arguments it caused.
+- User evidence so far: the author's own experience as the target user (watches religiously, plays fantasy football, has only seen Bachelor brackets, never a Love Island league). It's labelled as such in the report and slides. Still worth doing: a timed trial with a friend group (manual vs. app time, disputes).
 - **Accuracy:** compare agent-scored S8 events against the Wikipedia coupling and elimination table.
 - **Time:** commissioner's manual time per week compared with an app run.
 - **Cost:** measured tokens per weekly run, then per league per season, then at 100 and 10,000 leagues.
@@ -134,6 +134,6 @@ A pipeline orchestrator runs Scout → Recapper → Scorekeeper → Host each we
 
 ## Open questions
 
-- Is there a real league or person we can interview or test with?
+- An outside user for a timed trial (optional; it would strengthen Impact and Tier 3)
 - Look and feel: the class default is a Harry Styles-inspired style. Blend it with a villa vibe, or go pure Love Island?
 - App name: "Villa Commissioner" is a placeholder.
