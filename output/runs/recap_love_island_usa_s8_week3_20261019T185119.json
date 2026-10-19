@@ -1,0 +1,1081 @@
+{
+ "run": {
+  "agent": "recapper",
+  "season": "love_island_usa_s8",
+  "week": "Week 3",
+  "mode": "snapshot",
+  "self_correct": true,
+  "started": "2026-10-19T18:51:19+00:00",
+  "seconds": 36.9,
+  "usage": {
+   "requests": 1,
+   "gateway_cache_hits": 0,
+   "input_tokens": 2053,
+   "cached_input_tokens": 0,
+   "cache_write_tokens": 1927,
+   "output_tokens": 5924,
+   "reasoning_tokens": 1256,
+   "web_searches": 0,
+   "cost_usd": 0.003215
+  },
+  "events_proposed": 48,
+  "events_verified": 48,
+  "events_rejected": 0,
+  "first_draft_rejections": 0,
+  "self_correct_rounds": 0
+ },
+ "events": [
+  {
+   "type": "entered_villa",
+   "islanders": [
+    "Alannah"
+   ],
+   "others": [],
+   "day": 16,
+   "detail": "Casa Amor",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 16, Alannah, Amora, Jaiden, Parmida, Sydney, and Tierra entered Casa Amor."
+    }
+   ],
+   "id": "week3-e1",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "entered_villa",
+   "islanders": [
+    "Amora"
+   ],
+   "others": [],
+   "day": 16,
+   "detail": "Casa Amor",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 16, Alannah, Amora, Jaiden, Parmida, Sydney, and Tierra entered Casa Amor."
+    }
+   ],
+   "id": "week3-e2",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "entered_villa",
+   "islanders": [
+    "Jaiden"
+   ],
+   "others": [],
+   "day": 16,
+   "detail": "Casa Amor",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 16, Alannah, Amora, Jaiden, Parmida, Sydney, and Tierra entered Casa Amor."
+    }
+   ],
+   "id": "week3-e3",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "entered_villa",
+   "islanders": [
+    "Parmida"
+   ],
+   "others": [],
+   "day": 16,
+   "detail": "Casa Amor",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 16, Alannah, Amora, Jaiden, Parmida, Sydney, and Tierra entered Casa Amor."
+    }
+   ],
+   "id": "week3-e4",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "entered_villa",
+   "islanders": [
+    "Sydney"
+   ],
+   "others": [],
+   "day": 16,
+   "detail": "Casa Amor",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 16, Alannah, Amora, Jaiden, Parmida, Sydney, and Tierra entered Casa Amor."
+    }
+   ],
+   "id": "week3-e5",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "entered_villa",
+   "islanders": [
+    "Tierra"
+   ],
+   "others": [],
+   "day": 16,
+   "detail": "Casa Amor",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 16, Alannah, Amora, Jaiden, Parmida, Sydney, and Tierra entered Casa Amor."
+    }
+   ],
+   "id": "week3-e6",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "entered_villa",
+   "islanders": [
+    "Carl"
+   ],
+   "others": [],
+   "day": 17,
+   "detail": "main villa",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 17, Carl, Chandlar, Chay, Corey, Dylan, Gal, Keyon, Kyle, Ronnie, Ryan, Tino and Trae entered the main villa."
+    }
+   ],
+   "id": "week3-e7",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "entered_villa",
+   "islanders": [
+    "Chandlar"
+   ],
+   "others": [],
+   "day": 17,
+   "detail": "main villa",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 17, Carl, Chandlar, Chay, Corey, Dylan, Gal, Keyon, Kyle, Ronnie, Ryan, Tino and Trae entered the main villa."
+    }
+   ],
+   "id": "week3-e8",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "entered_villa",
+   "islanders": [
+    "Chay"
+   ],
+   "others": [],
+   "day": 17,
+   "detail": "main villa",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 17, Carl, Chandlar, Chay, Corey, Dylan, Gal, Keyon, Kyle, Ronnie, Ryan, Tino and Trae entered the main villa."
+    }
+   ],
+   "id": "week3-e9",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "entered_villa",
+   "islanders": [
+    "Corey"
+   ],
+   "others": [],
+   "day": 17,
+   "detail": "main villa",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 17, Carl, Chandlar, Chay, Corey, Dylan, Gal, Keyon, Kyle, Ronnie, Ryan, Tino and Trae entered the main villa."
+    }
+   ],
+   "id": "week3-e10",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "entered_villa",
+   "islanders": [
+    "Dylan"
+   ],
+   "others": [],
+   "day": 17,
+   "detail": "main villa",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 17, Carl, Chandlar, Chay, Corey, Dylan, Gal, Keyon, Kyle, Ronnie, Ryan, Tino and Trae entered the main villa."
+    }
+   ],
+   "id": "week3-e11",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "entered_villa",
+   "islanders": [
+    "Gal"
+   ],
+   "others": [],
+   "day": 17,
+   "detail": "main villa",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 17, Carl, Chandlar, Chay, Corey, Dylan, Gal, Keyon, Kyle, Ronnie, Ryan, Tino and Trae entered the main villa."
+    }
+   ],
+   "id": "week3-e12",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "entered_villa",
+   "islanders": [
+    "Keyon"
+   ],
+   "others": [],
+   "day": 17,
+   "detail": "main villa",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 17, Carl, Chandlar, Chay, Corey, Dylan, Gal, Keyon, Kyle, Ronnie, Ryan, Tino and Trae entered the main villa."
+    }
+   ],
+   "id": "week3-e13",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "entered_villa",
+   "islanders": [
+    "Kyle"
+   ],
+   "others": [],
+   "day": 17,
+   "detail": "main villa",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 17, Carl, Chandlar, Chay, Corey, Dylan, Gal, Keyon, Kyle, Ronnie, Ryan, Tino and Trae entered the main villa."
+    }
+   ],
+   "id": "week3-e14",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "entered_villa",
+   "islanders": [
+    "Ronnie"
+   ],
+   "others": [],
+   "day": 17,
+   "detail": "main villa",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 17, Carl, Chandlar, Chay, Corey, Dylan, Gal, Keyon, Kyle, Ronnie, Ryan, Tino and Trae entered the main villa."
+    }
+   ],
+   "id": "week3-e15",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "entered_villa",
+   "islanders": [
+    "Ryan"
+   ],
+   "others": [],
+   "day": 17,
+   "detail": "main villa",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 17, Carl, Chandlar, Chay, Corey, Dylan, Gal, Keyon, Kyle, Ronnie, Ryan, Tino and Trae entered the main villa."
+    }
+   ],
+   "id": "week3-e16",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "entered_villa",
+   "islanders": [
+    "Tino"
+   ],
+   "others": [],
+   "day": 17,
+   "detail": "main villa",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 17, Carl, Chandlar, Chay, Corey, Dylan, Gal, Keyon, Kyle, Ronnie, Ryan, Tino and Trae entered the main villa."
+    }
+   ],
+   "id": "week3-e17",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "entered_villa",
+   "islanders": [
+    "Trae"
+   ],
+   "others": [],
+   "day": 17,
+   "detail": "main villa",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 17, Carl, Chandlar, Chay, Corey, Dylan, Gal, Keyon, Kyle, Ronnie, Ryan, Tino and Trae entered the main villa."
+    }
+   ],
+   "id": "week3-e18",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "re_entered",
+   "islanders": [
+    "Amora"
+   ],
+   "others": [],
+   "day": 21,
+   "detail": "public vote",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 21, Amora and Carl re-entered the villa after the public voted them back in."
+    }
+   ],
+   "id": "week3-e19",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "re_entered",
+   "islanders": [
+    "Carl"
+   ],
+   "others": [],
+   "day": 21,
+   "detail": "public vote",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 21, Amora and Carl re-entered the villa after the public voted them back in."
+    }
+   ],
+   "id": "week3-e20",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "stayed_coupled",
+   "islanders": [
+    "Kayda",
+    "Zach"
+   ],
+   "others": [],
+   "day": 20,
+   "detail": "Casa Amor recoupling",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all chose to remain in their couples."
+    },
+    {
+     "source_id": "S2",
+     "quote": "On Day 20, as the final part for the Casa Amor twist, Casa Amor and the villa held two separate re-coupling ceremonies for the original islanders to choose whether to return to their previous partner or pick any new partner. Kayda and Zach, Melanie and Sincere and Trinity and Bryce all remained loyal to one another."
+    }
+   ],
+   "id": "week3-e21",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "stayed_coupled",
+   "islanders": [
+    "Melanie",
+    "Sincere"
+   ],
+   "others": [],
+   "day": 20,
+   "detail": "Casa Amor recoupling",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all chose to remain in their couples."
+    },
+    {
+     "source_id": "S2",
+     "quote": "On Day 20, as the final part for the Casa Amor twist, Casa Amor and the villa held two separate re-coupling ceremonies for the original islanders to choose whether to return to their previous partner or pick any new partner. Kayda and Zach, Melanie and Sincere and Trinity and Bryce all remained loyal to one another."
+    }
+   ],
+   "id": "week3-e22",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "stayed_coupled",
+   "islanders": [
+    "Trinity",
+    "Bryce"
+   ],
+   "others": [],
+   "day": 20,
+   "detail": "Casa Amor recoupling",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all chose to remain in their couples."
+    },
+    {
+     "source_id": "S2",
+     "quote": "On Day 20, as the final part for the Casa Amor twist, Casa Amor and the villa held two separate re-coupling ceremonies for the original islanders to choose whether to return to their previous partner or pick any new partner. Kayda and Zach, Melanie and Sincere and Trinity and Bryce all remained loyal to one another."
+    }
+   ],
+   "id": "week3-e23",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "coupled_up",
+   "islanders": [
+    "Caleb",
+    "Jaiden"
+   ],
+   "others": [],
+   "day": 20,
+   "detail": "Casa Amor recoupling",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "Elsewhere, Caleb chose to couple up with Jaiden, Corbin picked Parmida, Kenzie went with Dylan, and Jen chose Gal."
+    },
+    {
+     "source_id": "S2",
+     "quote": "Caleb brought Jaiden to the main villa, Corbin brought Parmida and KC brought Tierra."
+    }
+   ],
+   "id": "week3-e24",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "coupled_up",
+   "islanders": [
+    "Corbin",
+    "Parmida"
+   ],
+   "others": [],
+   "day": 20,
+   "detail": "Casa Amor recoupling",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "Elsewhere, Caleb chose to couple up with Jaiden, Corbin picked Parmida, Kenzie went with Dylan, and Jen chose Gal."
+    },
+    {
+     "source_id": "S2",
+     "quote": "Caleb brought Jaiden to the main villa, Corbin brought Parmida and KC brought Tierra."
+    }
+   ],
+   "id": "week3-e25",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "coupled_up",
+   "islanders": [
+    "Kenzie",
+    "Dylan"
+   ],
+   "others": [],
+   "day": 20,
+   "detail": "Casa Amor recoupling",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "Elsewhere, Caleb chose to couple up with Jaiden, Corbin picked Parmida, Kenzie went with Dylan, and Jen chose Gal."
+    },
+    {
+     "source_id": "S2",
+     "quote": "Jen chose to recouple with Gal and Kenzie chose Dylan."
+    }
+   ],
+   "id": "week3-e26",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "coupled_up",
+   "islanders": [
+    "Jen",
+    "Gal"
+   ],
+   "others": [],
+   "day": 20,
+   "detail": "Casa Amor recoupling",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "Elsewhere, Caleb chose to couple up with Jaiden, Corbin picked Parmida, Kenzie went with Dylan, and Jen chose Gal."
+    },
+    {
+     "source_id": "S2",
+     "quote": "Jen chose to recouple with Gal and Kenzie chose Dylan."
+    }
+   ],
+   "id": "week3-e27",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "coupled_up",
+   "islanders": [
+    "KC",
+    "Tierra"
+   ],
+   "others": [],
+   "day": 20,
+   "detail": "Casa Amor recoupling",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "As Aniya decided to remain loyal to KC, but he chose to twist and couple up with Tierra, she remained in the villa as a single islander."
+    },
+    {
+     "source_id": "S2",
+     "quote": "Caleb brought Jaiden to the main villa, Corbin brought Parmida and KC brought Tierra."
+    }
+   ],
+   "id": "week3-e28",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "left_single",
+   "islanders": [
+    "Aniya"
+   ],
+   "others": [],
+   "day": 20,
+   "detail": "Casa Amor recoupling",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "As Aniya decided to remain loyal to KC, but he chose to twist and couple up with Tierra, she remained in the villa as a single islander."
+    }
+   ],
+   "id": "week3-e29",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "left_single",
+   "islanders": [
+    "Amora"
+   ],
+   "others": [],
+   "day": 20,
+   "detail": "Casa Amor recoupling",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 20, Casa Amor islanders, Amora, Carl, Chay, Corey, Ronnie, and Sydney, remained single at the end the night, and were all dumped from the villa."
+    }
+   ],
+   "id": "week3-e30",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "left_single",
+   "islanders": [
+    "Carl"
+   ],
+   "others": [],
+   "day": 20,
+   "detail": "Casa Amor recoupling",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 20, Casa Amor islanders, Amora, Carl, Chay, Corey, Ronnie, and Sydney, remained single at the end the night, and were all dumped from the villa."
+    }
+   ],
+   "id": "week3-e31",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "left_single",
+   "islanders": [
+    "Chay"
+   ],
+   "others": [],
+   "day": 20,
+   "detail": "Casa Amor recoupling",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 20, Casa Amor islanders, Amora, Carl, Chay, Corey, Ronnie, and Sydney, remained single at the end the night, and were all dumped from the villa."
+    }
+   ],
+   "id": "week3-e32",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "left_single",
+   "islanders": [
+    "Corey"
+   ],
+   "others": [],
+   "day": 20,
+   "detail": "Casa Amor recoupling",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 20, Casa Amor islanders, Amora, Carl, Chay, Corey, Ronnie, and Sydney, remained single at the end the night, and were all dumped from the villa."
+    }
+   ],
+   "id": "week3-e33",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "left_single",
+   "islanders": [
+    "Ronnie"
+   ],
+   "others": [],
+   "day": 20,
+   "detail": "Casa Amor recoupling",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 20, Casa Amor islanders, Amora, Carl, Chay, Corey, Ronnie, and Sydney, remained single at the end the night, and were all dumped from the villa."
+    }
+   ],
+   "id": "week3-e34",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "left_single",
+   "islanders": [
+    "Sydney"
+   ],
+   "others": [],
+   "day": 20,
+   "detail": "Casa Amor recoupling",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 20, Casa Amor islanders, Amora, Carl, Chay, Corey, Ronnie, and Sydney, remained single at the end the night, and were all dumped from the villa."
+    }
+   ],
+   "id": "week3-e35",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "dumped",
+   "islanders": [
+    "Chandlar"
+   ],
+   "others": [],
+   "day": 17,
+   "detail": "Casa Amor boys selection",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "On Day 17, the original girls had to choose which 6 of the 12 Casa Amor boys would remain in the villa. They ultimately chose to dump Chandlar, Keyon, Kyle, Ryan, Tino and Trae."
+    },
+    {
+     "source_id": "S2",
+     "quote": "On Day 17, the original girl islanders had to decided which six Casa Amor boys they wanted to stay in the villa. The original girls chose Carl, Chay, Corey, Dylan, Gal and Ronnie to remain in the villa. This meant that Chandlar, Keyon, Kyle, Ryan, Tino and Trae were dumped from the villa."
+    }
+   ],
+   "id": "week3-e36",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "dumped",
+   "islanders": [
+    "Keyon"
+   ],
+   "others": [],
+   "day": 17,
+   "detail": "Casa Amor boys selection",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "On Day 17, the original girls had to choose which 6 of the 12 Casa Amor boys would remain in the villa. They ultimately chose to dump Chandlar, Keyon, Kyle, Ryan, Tino and Trae."
+    },
+    {
+     "source_id": "S2",
+     "quote": "On Day 17, the original girl islanders had to decided which six Casa Amor boys they wanted to stay in the villa. The original girls chose Carl, Chay, Corey, Dylan, Gal and Ronnie to remain in the villa. This meant that Chandlar, Keyon, Kyle, Ryan, Tino and Trae were dumped from the villa."
+    }
+   ],
+   "id": "week3-e37",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "dumped",
+   "islanders": [
+    "Kyle"
+   ],
+   "others": [],
+   "day": 17,
+   "detail": "Casa Amor boys selection",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "On Day 17, the original girls had to choose which 6 of the 12 Casa Amor boys would remain in the villa. They ultimately chose to dump Chandlar, Keyon, Kyle, Ryan, Tino and Trae."
+    },
+    {
+     "source_id": "S2",
+     "quote": "On Day 17, the original girl islanders had to decided which six Casa Amor boys they wanted to stay in the villa. The original girls chose Carl, Chay, Corey, Dylan, Gal and Ronnie to remain in the villa. This meant that Chandlar, Keyon, Kyle, Ryan, Tino and Trae were dumped from the villa."
+    }
+   ],
+   "id": "week3-e38",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "dumped",
+   "islanders": [
+    "Ryan"
+   ],
+   "others": [],
+   "day": 17,
+   "detail": "Casa Amor boys selection",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "On Day 17, the original girls had to choose which 6 of the 12 Casa Amor boys would remain in the villa. They ultimately chose to dump Chandlar, Keyon, Kyle, Ryan, Tino and Trae."
+    },
+    {
+     "source_id": "S2",
+     "quote": "On Day 17, the original girl islanders had to decided which six Casa Amor boys they wanted to stay in the villa. The original girls chose Carl, Chay, Corey, Dylan, Gal and Ronnie to remain in the villa. This meant that Chandlar, Keyon, Kyle, Ryan, Tino and Trae were dumped from the villa."
+    }
+   ],
+   "id": "week3-e39",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "dumped",
+   "islanders": [
+    "Tino"
+   ],
+   "others": [],
+   "day": 17,
+   "detail": "Casa Amor boys selection",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "On Day 17, the original girls had to choose which 6 of the 12 Casa Amor boys would remain in the villa. They ultimately chose to dump Chandlar, Keyon, Kyle, Ryan, Tino and Trae."
+    },
+    {
+     "source_id": "S2",
+     "quote": "On Day 17, the original girl islanders had to decided which six Casa Amor boys they wanted to stay in the villa. The original girls chose Carl, Chay, Corey, Dylan, Gal and Ronnie to remain in the villa. This meant that Chandlar, Keyon, Kyle, Ryan, Tino and Trae were dumped from the villa."
+    }
+   ],
+   "id": "week3-e40",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "dumped",
+   "islanders": [
+    "Trae"
+   ],
+   "others": [],
+   "day": 17,
+   "detail": "Casa Amor boys selection",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "On Day 17, the original girls had to choose which 6 of the 12 Casa Amor boys would remain in the villa. They ultimately chose to dump Chandlar, Keyon, Kyle, Ryan, Tino and Trae."
+    },
+    {
+     "source_id": "S2",
+     "quote": "On Day 17, the original girl islanders had to decided which six Casa Amor boys they wanted to stay in the villa. The original girls chose Carl, Chay, Corey, Dylan, Gal and Ronnie to remain in the villa. This meant that Chandlar, Keyon, Kyle, Ryan, Tino and Trae were dumped from the villa."
+    }
+   ],
+   "id": "week3-e41",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "left_villa",
+   "islanders": [
+    "Alannah"
+   ],
+   "others": [],
+   "day": 19,
+   "detail": "removed from villa",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "On Day 19, Alannah was removed from the villa due to evidence surfacing of her using a racial slur."
+    },
+    {
+     "source_id": "S2",
+     "quote": "On Day 19, Alannah was removed from the villa due to a resurfaced video of her using racist language."
+    }
+   ],
+   "id": "week3-e42",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "dumped",
+   "islanders": [
+    "Amora"
+   ],
+   "others": [],
+   "day": 20,
+   "detail": "single after recoupling",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "On Day 20, Casa Amor islanders Amora, Carl, Chay, Corey, Ronnie, and Sydney were dumped from the island after failing to couple up."
+    },
+    {
+     "source_id": "S2",
+     "quote": "On Day 20, Casa Amor islanders, Amora, Carl, Chay, Corey, Ronnie, and Sydney, remained single at the end the night, and were all dumped from the villa."
+    }
+   ],
+   "id": "week3-e43",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "dumped",
+   "islanders": [
+    "Carl"
+   ],
+   "others": [],
+   "day": 20,
+   "detail": "single after recoupling",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "On Day 20, Casa Amor islanders Amora, Carl, Chay, Corey, Ronnie, and Sydney were dumped from the island after failing to couple up."
+    },
+    {
+     "source_id": "S2",
+     "quote": "On Day 20, Casa Amor islanders, Amora, Carl, Chay, Corey, Ronnie, and Sydney, remained single at the end the night, and were all dumped from the villa."
+    }
+   ],
+   "id": "week3-e44",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "dumped",
+   "islanders": [
+    "Chay"
+   ],
+   "others": [],
+   "day": 20,
+   "detail": "single after recoupling",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "On Day 20, Casa Amor islanders Amora, Carl, Chay, Corey, Ronnie, and Sydney were dumped from the island after failing to couple up."
+    },
+    {
+     "source_id": "S2",
+     "quote": "On Day 20, Casa Amor islanders, Amora, Carl, Chay, Corey, Ronnie, and Sydney, remained single at the end the night, and were all dumped from the villa."
+    }
+   ],
+   "id": "week3-e45",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "dumped",
+   "islanders": [
+    "Corey"
+   ],
+   "others": [],
+   "day": 20,
+   "detail": "single after recoupling",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "On Day 20, Casa Amor islanders Amora, Carl, Chay, Corey, Ronnie, and Sydney were dumped from the island after failing to couple up."
+    },
+    {
+     "source_id": "S2",
+     "quote": "On Day 20, Casa Amor islanders, Amora, Carl, Chay, Corey, Ronnie, and Sydney, remained single at the end the night, and were all dumped from the villa."
+    }
+   ],
+   "id": "week3-e46",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "dumped",
+   "islanders": [
+    "Ronnie"
+   ],
+   "others": [],
+   "day": 20,
+   "detail": "single after recoupling",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "On Day 20, Casa Amor islanders Amora, Carl, Chay, Corey, Ronnie, and Sydney were dumped from the island after failing to couple up."
+    },
+    {
+     "source_id": "S2",
+     "quote": "On Day 20, Casa Amor islanders, Amora, Carl, Chay, Corey, Ronnie, and Sydney, remained single at the end the night, and were all dumped from the villa."
+    }
+   ],
+   "id": "week3-e47",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "dumped",
+   "islanders": [
+    "Sydney"
+   ],
+   "others": [],
+   "day": 20,
+   "detail": "single after recoupling",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "On Day 20, Casa Amor islanders Amora, Carl, Chay, Corey, Ronnie, and Sydney were dumped from the island after failing to couple up."
+    },
+    {
+     "source_id": "S2",
+     "quote": "On Day 20, Casa Amor islanders, Amora, Carl, Chay, Corey, Ronnie, and Sydney, remained single at the end the night, and were all dumped from the villa."
+    }
+   ],
+   "id": "week3-e48",
+   "week": "Week 3",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  }
+ ]
+}

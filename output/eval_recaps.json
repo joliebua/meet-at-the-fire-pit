@@ -9,7 +9,7 @@
  ],
  "precision": 1.0,
  "recall": 1.0,
- "day_within_1": "65/65",
+ "day_within_1": "63/63",
  "by_type": {
   "dumped": {
    "truth": 26,

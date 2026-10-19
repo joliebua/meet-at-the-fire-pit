@@ -1,0 +1,21 @@
+{
+ "name": "Villa Commissioner standard table",
+ "notes": "Points go to each islander in an event's `islanders` list. 'survived_week' is worked out by code: every islander still in the villa at the end of a week.",
+ "rules": [
+  {"id": "std-bombshell", "label": "Bombshell arrival", "event_type": "entered_villa", "points": 5, "min_day": 2},
+  {"id": "std-return", "label": "Re-entered the villa", "event_type": "re_entered", "points": 10},
+  {"id": "std-couple", "label": "New couple", "event_type": "coupled_up", "points": 4},
+  {"id": "std-stay", "label": "Survived a recoupling together", "event_type": "stayed_coupled", "points": 3},
+  {"id": "std-single", "label": "Left single / vulnerable", "event_type": "left_single", "points": -3},
+  {"id": "std-power", "label": "Given the power to choose", "event_type": "given_power", "points": 4},
+  {"id": "std-challenge", "label": "Won a challenge", "event_type": "won_challenge", "points": 5},
+  {"id": "std-date", "label": "Went on a date", "event_type": "date", "points": 3},
+  {"id": "std-kiss", "label": "Kiss", "event_type": "kiss", "points": 1},
+  {"id": "std-drama", "label": "Argument / drama", "event_type": "argument", "points": 2},
+  {"id": "std-dumped", "label": "Dumped", "event_type": "dumped", "points": -10},
+  {"id": "std-left", "label": "Walked or removed", "event_type": "left_villa", "points": -15},
+  {"id": "std-survive", "label": "Still in the villa at week's end", "event_type": "survived_week", "points": 2},
+  {"id": "std-final", "label": "Made the final", "event_type": "finalist", "points": 15},
+  {"id": "std-win", "label": "Won the season", "event_type": "winner", "points": 25}
+ ]
+}

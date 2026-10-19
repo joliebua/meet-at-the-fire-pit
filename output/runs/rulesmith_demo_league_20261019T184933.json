@@ -1,0 +1,34 @@
+{
+ "agent": "rulesmith",
+ "league": "demo_league",
+ "started": "2026-10-19T18:49:33+00:00",
+ "seconds": 7.9,
+ "usage": {
+  "requests": 1,
+  "gateway_cache_hits": 0,
+  "input_tokens": 1316,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 1190,
+  "output_tokens": 512,
+  "reasoning_tokens": 224,
+  "web_searches": 0,
+  "cost_usd": 0.000417
+ },
+ "request": "Steals are worth 5 extra points. Getting dumped should cost 20, not 10. A night in the hideaway is +4. Anyone who cries at the fire pit loses 2. Give Trinity 10 bonus points because she's iconic. Bombshells who arrive during Casa Amor (days 16-20) get an extra 3.",
+ "proposed": [
+  "house-1",
+  "house-2",
+  "house-3",
+  "house-4"
+ ],
+ "unsupported": [
+  {
+   "original_text": "Anyone who cries at the fire pit loses 2.",
+   "reason": "The event data does not reliably record crying or whether it happened at the fire pit, so this cannot be scored from verified events."
+  },
+  {
+   "original_text": "Give Trinity 10 bonus points because she's iconic.",
+   "reason": "Rules must apply fairly to everyone and cannot award points to a specific named islander."
+  }
+ ]
+}

@@ -28,7 +28,7 @@ TYPE_WORDS = {
     "left_single": r"single|vulnerable|not chosen|no one|nobody",
     "given_power": r"power|chance|choose|chose|pick|save|decide|first",
     "won_challenge": r"\bw[oi]n|winner|victor|first place|came out on top",
-    "date": r"\bdate",
+    "date": r"\bdate|hideaway",
     "kiss": r"kiss",
     "argument": r"argu|fight|feud|clash|confront|tension|drama|row|blew up|called out",
     "dumped": r"dump|eliminat|sent home|left the (villa|island)",

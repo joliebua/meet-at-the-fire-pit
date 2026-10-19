@@ -55,6 +55,8 @@ EventType = Literal[
     "finalist",        # reached the final
     "winner",          # won the season
 ]
+# Event types the Scorekeeper can score: the Recapper's, plus ones code works out itself.
+ScoreType = Literal[EventType, Literal["survived_week"]]
 
 
 class Evidence(BaseModel):
@@ -78,8 +80,60 @@ class RecapDraft(BaseModel):
 
 class CheckedEvent(Event):
     """An event after code checked it. Only status 'verified' events can score."""
+    type: ScoreType
     id: str
     week: str
     status: Literal["verified", "rejected"]
     problems: list[str] = Field(default_factory=list)
     corroborated_by: int = Field(1, description="How many sources back this event")
+
+
+class Rule(BaseModel):
+    """One line of the point table. Scoring is plain code over these; no model touches the math."""
+    id: str
+    label: str
+    event_type: ScoreType
+    points: int = Field(ge=-50, le=50)
+    applies_to: Literal["islanders", "others", "both"] = "islanders"
+    min_day: int | None = None
+    max_day: int | None = None
+    quote_keywords: list[str] = Field(default_factory=list,
+                                      description="Only score if an evidence quote contains one of these words")
+    source: Literal["standard", "house"] = "standard"
+    status: Literal["approved", "pending", "declined"] = "approved"
+    replaces: str | None = Field(None, description="ID of a standard rule this house rule overrides")
+    original_text: str = ""
+
+
+class LedgerLine(BaseModel):
+    week: str
+    event_id: str
+    islander: str
+    rule_id: str
+    label: str
+    points: int
+    quote: str = ""
+    source_id: str = ""
+
+
+class ProposedRule(BaseModel):
+    """A house rule as the Rulesmith model drafts it (code assigns id, source and status)."""
+    original_text: str = Field(description="The commissioner's words this rule comes from")
+    label: str = Field(description="Short name shown in the ledger")
+    event_type: ScoreType
+    points: int = Field(ge=-50, le=50)
+    applies_to: Literal["islanders", "others", "both"] = "islanders"
+    min_day: int | None = None
+    max_day: int | None = None
+    quote_keywords: list[str] = Field(default_factory=list, max_length=6)
+    replaces: str | None = None
+
+
+class Unsupported(BaseModel):
+    original_text: str
+    reason: str = Field(description="Why the event data cannot score this, in one sentence")
+
+
+class RuleProposal(BaseModel):
+    rules: list[ProposedRule] = Field(max_length=10)
+    unsupported: list[Unsupported] = Field(default_factory=list)

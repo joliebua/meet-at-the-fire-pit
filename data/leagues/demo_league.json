@@ -1,0 +1,143 @@
+{
+ "name": "Casa Amor-igos (demo league)",
+ "season": "love_island_usa_s8",
+ "commissioner": "Jolie",
+ "rules_file": "standard.json",
+ "house_rules": [
+  {
+   "id": "house-1",
+   "label": "Steal coupling bonus",
+   "event_type": "coupled_up",
+   "points": 5,
+   "applies_to": "islanders",
+   "min_day": null,
+   "max_day": null,
+   "quote_keywords": [
+    "steal",
+    "stole"
+   ],
+   "source": "house",
+   "status": "approved",
+   "replaces": null,
+   "original_text": "Steals are worth 5 extra points."
+  },
+  {
+   "id": "house-2",
+   "label": "Dumped penalty",
+   "event_type": "dumped",
+   "points": -20,
+   "applies_to": "islanders",
+   "min_day": null,
+   "max_day": null,
+   "quote_keywords": [],
+   "source": "house",
+   "status": "approved",
+   "replaces": "std-dumped",
+   "original_text": "Getting dumped should cost 20, not 10."
+  },
+  {
+   "id": "house-3",
+   "label": "Hideaway date bonus",
+   "event_type": "date",
+   "points": 4,
+   "applies_to": "islanders",
+   "min_day": null,
+   "max_day": null,
+   "quote_keywords": [
+    "hideaway"
+   ],
+   "source": "house",
+   "status": "approved",
+   "replaces": null,
+   "original_text": "A night in the hideaway is +4."
+  },
+  {
+   "id": "house-4",
+   "label": "Casa Amor bombshell bonus",
+   "event_type": "entered_villa",
+   "points": 3,
+   "applies_to": "islanders",
+   "min_day": 16,
+   "max_day": 20,
+   "quote_keywords": [],
+   "source": "house",
+   "status": "declined",
+   "replaces": null,
+   "original_text": "Bombshells who arrive during Casa Amor (days 16-20) get an extra 3."
+  }
+ ],
+ "players": [
+  {
+   "name": "Jolie",
+   "roster": [
+    {
+     "islander": "Trinity"
+    },
+    {
+     "islander": "Sincere"
+    },
+    {
+     "islander": "Beatriz"
+    },
+    {
+     "islander": "Caleb",
+     "from_week": 2
+    }
+   ]
+  },
+  {
+   "name": "Maya",
+   "roster": [
+    {
+     "islander": "Bryce"
+    },
+    {
+     "islander": "Melanie"
+    },
+    {
+     "islander": "Sean"
+    },
+    {
+     "islander": "Jen",
+     "from_week": 2
+    }
+   ]
+  },
+  {
+   "name": "Dev",
+   "roster": [
+    {
+     "islander": "Aniya"
+    },
+    {
+     "islander": "Zach"
+    },
+    {
+     "islander": "Kenzie"
+    },
+    {
+     "islander": "Carl",
+     "from_week": 3
+    }
+   ]
+  },
+  {
+   "name": "Priya",
+   "roster": [
+    {
+     "islander": "KC"
+    },
+    {
+     "islander": "Kayda"
+    },
+    {
+     "islander": "Gabriel"
+    },
+    {
+     "islander": "Corbin",
+     "from_week": 2
+    }
+   ]
+  }
+ ]
+}

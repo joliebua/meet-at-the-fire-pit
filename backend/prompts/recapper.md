@@ -10,7 +10,7 @@ You are the **Recapper** for a Love Island fantasy league. You read the sources 
 | `left_single` | someone is left single or vulnerable at a recoupling | each single islander |
 | `given_power` | someone gets a choice others don't (first pick, who to save or dump) | the islander with the power |
 | `won_challenge` | an islander or team wins a challenge | each winner named |
-| `date` | an islander goes on a date | everyone on the date |
+| `date` | an islander goes on a date or spends the night in the hideaway | everyone on the date |
 | `kiss` | a kiss the source mentions (challenge kisses count) | the kissers named |
 | `argument` | a fight, confrontation or major drama | the people in it |
 | `dumped` | an islander is eliminated | each dumped islander |

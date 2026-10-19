@@ -1,0 +1,2797 @@
+{
+ "league": "Casa Amor-igos (demo league)",
+ "weeks": [
+  "Week 1",
+  "Week 2",
+  "Week 3",
+  "Week 4",
+  "Week 5"
+ ],
+ "rules": [
+  {
+   "id": "std-bombshell",
+   "label": "Bombshell arrival",
+   "event_type": "entered_villa",
+   "points": 5,
+   "applies_to": "islanders",
+   "min_day": 2,
+   "max_day": null,
+   "quote_keywords": [],
+   "source": "standard",
+   "status": "approved",
+   "replaces": null,
+   "original_text": ""
+  },
+  {
+   "id": "std-return",
+   "label": "Re-entered the villa",
+   "event_type": "re_entered",
+   "points": 10,
+   "applies_to": "islanders",
+   "min_day": null,
+   "max_day": null,
+   "quote_keywords": [],
+   "source": "standard",
+   "status": "approved",
+   "replaces": null,
+   "original_text": ""
+  },
+  {
+   "id": "std-couple",
+   "label": "New couple",
+   "event_type": "coupled_up",
+   "points": 4,
+   "applies_to": "islanders",
+   "min_day": null,
+   "max_day": null,
+   "quote_keywords": [],
+   "source": "standard",
+   "status": "approved",
+   "replaces": null,
+   "original_text": ""
+  },
+  {
+   "id": "std-stay",
+   "label": "Survived a recoupling together",
+   "event_type": "stayed_coupled",
+   "points": 3,
+   "applies_to": "islanders",
+   "min_day": null,
+   "max_day": null,
+   "quote_keywords": [],
+   "source": "standard",
+   "status": "approved",
+   "replaces": null,
+   "original_text": ""
+  },
+  {
+   "id": "std-single",
+   "label": "Left single / vulnerable",
+   "event_type": "left_single",
+   "points": -3,
+   "applies_to": "islanders",
+   "min_day": null,
+   "max_day": null,
+   "quote_keywords": [],
+   "source": "standard",
+   "status": "approved",
+   "replaces": null,
+   "original_text": ""
+  },
+  {
+   "id": "std-power",
+   "label": "Given the power to choose",
+   "event_type": "given_power",
+   "points": 4,
+   "applies_to": "islanders",
+   "min_day": null,
+   "max_day": null,
+   "quote_keywords": [],
+   "source": "standard",
+   "status": "approved",
+   "replaces": null,
+   "original_text": ""
+  },
+  {
+   "id": "std-challenge",
+   "label": "Won a challenge",
+   "event_type": "won_challenge",
+   "points": 5,
+   "applies_to": "islanders",
+   "min_day": null,
+   "max_day": null,
+   "quote_keywords": [],
+   "source": "standard",
+   "status": "approved",
+   "replaces": null,
+   "original_text": ""
+  },
+  {
+   "id": "std-date",
+   "label": "Went on a date",
+   "event_type": "date",
+   "points": 3,
+   "applies_to": "islanders",
+   "min_day": null,
+   "max_day": null,
+   "quote_keywords": [],
+   "source": "standard",
+   "status": "approved",
+   "replaces": null,
+   "original_text": ""
+  },
+  {
+   "id": "std-kiss",
+   "label": "Kiss",
+   "event_type": "kiss",
+   "points": 1,
+   "applies_to": "islanders",
+   "min_day": null,
+   "max_day": null,
+   "quote_keywords": [],
+   "source": "standard",
+   "status": "approved",
+   "replaces": null,
+   "original_text": ""
+  },
+  {
+   "id": "std-drama",
+   "label": "Argument / drama",
+   "event_type": "argument",
+   "points": 2,
+   "applies_to": "islanders",
+   "min_day": null,
+   "max_day": null,
+   "quote_keywords": [],
+   "source": "standard",
+   "status": "approved",
+   "replaces": null,
+   "original_text": ""
+  },
+  {
+   "id": "std-left",
+   "label": "Walked or removed",
+   "event_type": "left_villa",
+   "points": -15,
+   "applies_to": "islanders",
+   "min_day": null,
+   "max_day": null,
+   "quote_keywords": [],
+   "source": "standard",
+   "status": "approved",
+   "replaces": null,
+   "original_text": ""
+  },
+  {
+   "id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "event_type": "survived_week",
+   "points": 2,
+   "applies_to": "islanders",
+   "min_day": null,
+   "max_day": null,
+   "quote_keywords": [],
+   "source": "standard",
+   "status": "approved",
+   "replaces": null,
+   "original_text": ""
+  },
+  {
+   "id": "std-final",
+   "label": "Made the final",
+   "event_type": "finalist",
+   "points": 15,
+   "applies_to": "islanders",
+   "min_day": null,
+   "max_day": null,
+   "quote_keywords": [],
+   "source": "standard",
+   "status": "approved",
+   "replaces": null,
+   "original_text": ""
+  },
+  {
+   "id": "std-win",
+   "label": "Won the season",
+   "event_type": "winner",
+   "points": 25,
+   "applies_to": "islanders",
+   "min_day": null,
+   "max_day": null,
+   "quote_keywords": [],
+   "source": "standard",
+   "status": "approved",
+   "replaces": null,
+   "original_text": ""
+  },
+  {
+   "id": "house-1",
+   "label": "Steal coupling bonus",
+   "event_type": "coupled_up",
+   "points": 5,
+   "applies_to": "islanders",
+   "min_day": null,
+   "max_day": null,
+   "quote_keywords": [
+    "steal",
+    "stole"
+   ],
+   "source": "house",
+   "status": "approved",
+   "replaces": null,
+   "original_text": "Steals are worth 5 extra points."
+  },
+  {
+   "id": "house-2",
+   "label": "Dumped penalty",
+   "event_type": "dumped",
+   "points": -20,
+   "applies_to": "islanders",
+   "min_day": null,
+   "max_day": null,
+   "quote_keywords": [],
+   "source": "house",
+   "status": "approved",
+   "replaces": "std-dumped",
+   "original_text": "Getting dumped should cost 20, not 10."
+  },
+  {
+   "id": "house-3",
+   "label": "Hideaway date bonus",
+   "event_type": "date",
+   "points": 4,
+   "applies_to": "islanders",
+   "min_day": null,
+   "max_day": null,
+   "quote_keywords": [
+    "hideaway"
+   ],
+   "source": "house",
+   "status": "approved",
+   "replaces": null,
+   "original_text": "A night in the hideaway is +4."
+  }
+ ],
+ "standings": [
+  {
+   "player": "Dev",
+   "total": 126,
+   "by_week": {
+    "Week 1": 37,
+    "Week 2": 27,
+    "Week 3": 4,
+    "Week 4": 27,
+    "Week 5": 31
+   },
+   "by_islander": {
+    "Aniya": 36,
+    "Zach": 60,
+    "Kenzie": 13,
+    "Carl": 17
+   }
+  },
+  {
+   "player": "Jolie",
+   "total": 119,
+   "by_week": {
+    "Week 1": 46,
+    "Week 2": 2,
+    "Week 3": 16,
+    "Week 4": -4,
+    "Week 5": 59
+   },
+   "by_islander": {
+    "Trinity": 72,
+    "Sincere": 50,
+    "Beatriz": -2,
+    "Caleb": -1
+   }
+  },
+  {
+   "player": "Maya",
+   "total": 85,
+   "by_week": {
+    "Week 1": -1,
+    "Week 2": 21,
+    "Week 3": 16,
+    "Week 4": -10,
+    "Week 5": 59
+   },
+   "by_islander": {
+    "Bryce": 72,
+    "Melanie": 43,
+    "Sean": -22,
+    "Jen": -8
+   }
+  },
+  {
+   "player": "Priya",
+   "total": 75,
+   "by_week": {
+    "Week 1": 53,
+    "Week 2": 15,
+    "Week 3": 17,
+    "Week 4": -7,
+    "Week 5": -3
+   },
+   "by_islander": {
+    "KC": 5,
+    "Kayda": 61,
+    "Gabriel": 9,
+    "Corbin": 0
+   }
+  }
+ ],
+ "ledger": [
+  {
+   "week": "Week 1",
+   "event_id": "week1-e11",
+   "islander": "Gabriel",
+   "rule_id": "std-bombshell",
+   "label": "Bombshell arrival",
+   "points": 5,
+   "quote": "On Day 2, Gabriel and Kayda entered the villa.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e12",
+   "islander": "Kayda",
+   "rule_id": "std-bombshell",
+   "label": "Bombshell arrival",
+   "points": 5,
+   "quote": "On Day 2, Gabriel and Kayda entered the villa.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e13",
+   "islander": "Corbin",
+   "rule_id": "std-bombshell",
+   "label": "Bombshell arrival",
+   "points": 5,
+   "quote": "On Day 5, Corbin entered the villa.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e14",
+   "islander": "Caleb",
+   "rule_id": "std-bombshell",
+   "label": "Bombshell arrival",
+   "points": 5,
+   "quote": "On Day 7, Caleb, Jen, and Sol entered the villa.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e15",
+   "islander": "Jen",
+   "rule_id": "std-bombshell",
+   "label": "Bombshell arrival",
+   "points": 5,
+   "quote": "On Day 7, Caleb, Jen, and Sol entered the villa.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e16",
+   "islander": "Sol",
+   "rule_id": "std-bombshell",
+   "label": "Bombshell arrival",
+   "points": 5,
+   "quote": "On Day 7, Caleb, Jen, and Sol entered the villa.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e17",
+   "islander": "Trinity",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "Trinity coupled up with Bryce,",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e17",
+   "islander": "Bryce",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "Trinity coupled up with Bryce,",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e18",
+   "islander": "Beatriz",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "Beatriz chose Sean,",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e18",
+   "islander": "Sean",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "Beatriz chose Sean,",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e19",
+   "islander": "Kenzie",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "Kenzie picked Zach.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e19",
+   "islander": "Zach",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "Kenzie picked Zach.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e20",
+   "islander": "Sincere",
+   "rule_id": "std-power",
+   "label": "Given the power to choose",
+   "points": 4,
+   "quote": "As Aniya and Melanie both chose Sincere, he was given the power, to which he chose to pair up with Melanie.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e21",
+   "islander": "Melanie",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "As Aniya and Melanie both chose Sincere, he was given the power, to which he chose to pair up with Melanie.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e21",
+   "islander": "Sincere",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "As Aniya and Melanie both chose Sincere, he was given the power, to which he chose to pair up with Melanie.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e22",
+   "islander": "Aniya",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "As no-one stood behind KC's door, he was automatically coupled up with Aniya.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e22",
+   "islander": "KC",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "As no-one stood behind KC's door, he was automatically coupled up with Aniya.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e23",
+   "islander": "Gabriel",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "Ultimately, Gabriel chose to couple up with Beatriz, and Kayda picked Zach.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e23",
+   "islander": "Beatriz",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "Ultimately, Gabriel chose to couple up with Beatriz, and Kayda picked Zach.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e23",
+   "islander": "Gabriel",
+   "rule_id": "house-1",
+   "label": "Steal coupling bonus",
+   "points": 5,
+   "quote": "Gabriel decided to steal Beatriz and Kayda decided to steal Zach,",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e23",
+   "islander": "Beatriz",
+   "rule_id": "house-1",
+   "label": "Steal coupling bonus",
+   "points": 5,
+   "quote": "Gabriel decided to steal Beatriz and Kayda decided to steal Zach,",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e24",
+   "islander": "Kayda",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "Ultimately, Gabriel chose to couple up with Beatriz, and Kayda picked Zach.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e24",
+   "islander": "Zach",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "Ultimately, Gabriel chose to couple up with Beatriz, and Kayda picked Zach.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e24",
+   "islander": "Kayda",
+   "rule_id": "house-1",
+   "label": "Steal coupling bonus",
+   "points": 5,
+   "quote": "Gabriel decided to steal Beatriz and Kayda decided to steal Zach,",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e24",
+   "islander": "Zach",
+   "rule_id": "house-1",
+   "label": "Steal coupling bonus",
+   "points": 5,
+   "quote": "Gabriel decided to steal Beatriz and Kayda decided to steal Zach,",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e25",
+   "islander": "Trinity",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "As a result, Trinity and Bryce remained in their couple, while Kenzie and Sean were left single.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e25",
+   "islander": "Bryce",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "As a result, Trinity and Bryce remained in their couple, while Kenzie and Sean were left single.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e26",
+   "islander": "Kenzie",
+   "rule_id": "std-single",
+   "label": "Left single / vulnerable",
+   "points": -3,
+   "quote": "As a result, Trinity and Bryce remained in their couple, while Kenzie and Sean were left single.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e27",
+   "islander": "Sean",
+   "rule_id": "std-single",
+   "label": "Left single / vulnerable",
+   "points": -3,
+   "quote": "As a result, Trinity and Bryce remained in their couple, while Kenzie and Sean were left single.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e28",
+   "islander": "Gabriel",
+   "rule_id": "std-date",
+   "label": "Went on a date",
+   "points": 3,
+   "quote": "On Day 3, bombshells Gabriel and Kayda got to take Beatriz and Zach on a date.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e28",
+   "islander": "Kayda",
+   "rule_id": "std-date",
+   "label": "Went on a date",
+   "points": 3,
+   "quote": "On Day 3, bombshells Gabriel and Kayda got to take Beatriz and Zach on a date.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e28",
+   "islander": "Beatriz",
+   "rule_id": "std-date",
+   "label": "Went on a date",
+   "points": 3,
+   "quote": "On Day 3, bombshells Gabriel and Kayda got to take Beatriz and Zach on a date.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e28",
+   "islander": "Zach",
+   "rule_id": "std-date",
+   "label": "Went on a date",
+   "points": 3,
+   "quote": "On Day 3, bombshells Gabriel and Kayda got to take Beatriz and Zach on a date.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e29",
+   "islander": "Corbin",
+   "rule_id": "std-power",
+   "label": "Given the power to choose",
+   "points": 4,
+   "quote": "However, as the newest arrival, Corbin was given first pick, to which he chose Kenzie.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e30",
+   "islander": "Corbin",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "However, as the newest arrival, Corbin was given first pick, to which he chose Kenzie.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e30",
+   "islander": "Kenzie",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "However, as the newest arrival, Corbin was given first pick, to which he chose Kenzie.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e31",
+   "islander": "Aniya",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "Aniya and KC, Beatriz and Gabriel, Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all remained in their couples.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e31",
+   "islander": "KC",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "Aniya and KC, Beatriz and Gabriel, Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all remained in their couples.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e32",
+   "islander": "Beatriz",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "Aniya and KC, Beatriz and Gabriel, Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all remained in their couples.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e32",
+   "islander": "Gabriel",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "Aniya and KC, Beatriz and Gabriel, Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all remained in their couples.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e33",
+   "islander": "Kayda",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "Aniya and KC, Beatriz and Gabriel, Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all remained in their couples.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e33",
+   "islander": "Zach",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "Aniya and KC, Beatriz and Gabriel, Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all remained in their couples.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e34",
+   "islander": "Melanie",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "Aniya and KC, Beatriz and Gabriel, Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all remained in their couples.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e34",
+   "islander": "Sincere",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "Aniya and KC, Beatriz and Gabriel, Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all remained in their couples.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e35",
+   "islander": "Trinity",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "Aniya and KC, Beatriz and Gabriel, Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all remained in their couples.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e35",
+   "islander": "Bryce",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "Aniya and KC, Beatriz and Gabriel, Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all remained in their couples.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e36",
+   "islander": "Sean",
+   "rule_id": "std-single",
+   "label": "Left single / vulnerable",
+   "points": -3,
+   "quote": "As Sean remained single, he was dumped from the island.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "week1-e37",
+   "islander": "Sean",
+   "rule_id": "house-2",
+   "label": "Dumped penalty",
+   "points": -20,
+   "quote": "As Sean remained single, he was dumped from the island.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "Week 1-survived-Aniya",
+   "islander": "Aniya",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "Week 1-survived-Beatriz",
+   "islander": "Beatriz",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "Week 1-survived-Bryce",
+   "islander": "Bryce",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "Week 1-survived-Caleb",
+   "islander": "Caleb",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "Week 1-survived-Corbin",
+   "islander": "Corbin",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "Week 1-survived-Gabriel",
+   "islander": "Gabriel",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "Week 1-survived-Jen",
+   "islander": "Jen",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "Week 1-survived-KC",
+   "islander": "KC",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "Week 1-survived-Kayda",
+   "islander": "Kayda",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "Week 1-survived-Kenzie",
+   "islander": "Kenzie",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "Week 1-survived-Melanie",
+   "islander": "Melanie",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "Week 1-survived-Sincere",
+   "islander": "Sincere",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "Week 1-survived-Sol",
+   "islander": "Sol",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "Week 1-survived-Trinity",
+   "islander": "Trinity",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "Week 1-survived-Zach",
+   "islander": "Zach",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "week2-e1",
+   "islander": "Caleb",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "America chose Caleb to couple up with Kenzie, Sol to couple up with Sincere and Jen to couple up with Gabriel.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "week2-e1",
+   "islander": "Kenzie",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "America chose Caleb to couple up with Kenzie, Sol to couple up with Sincere and Jen to couple up with Gabriel.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "week2-e2",
+   "islander": "Sol",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "America chose Caleb to couple up with Kenzie, Sol to couple up with Sincere and Jen to couple up with Gabriel.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "week2-e2",
+   "islander": "Sincere",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "America chose Caleb to couple up with Kenzie, Sol to couple up with Sincere and Jen to couple up with Gabriel.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "week2-e3",
+   "islander": "Jen",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "America chose Caleb to couple up with Kenzie, Sol to couple up with Sincere and Jen to couple up with Gabriel.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "week2-e3",
+   "islander": "Gabriel",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "America chose Caleb to couple up with Kenzie, Sol to couple up with Sincere and Jen to couple up with Gabriel.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "week2-e4",
+   "islander": "Corbin",
+   "rule_id": "std-single",
+   "label": "Left single / vulnerable",
+   "points": -3,
+   "quote": "This left Corbin, Melanie, and Beatriz single and vulnerable.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "week2-e5",
+   "islander": "Melanie",
+   "rule_id": "std-single",
+   "label": "Left single / vulnerable",
+   "points": -3,
+   "quote": "This left Corbin, Melanie, and Beatriz single and vulnerable.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "week2-e6",
+   "islander": "Beatriz",
+   "rule_id": "std-single",
+   "label": "Left single / vulnerable",
+   "points": -3,
+   "quote": "This left Corbin, Melanie, and Beatriz single and vulnerable.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "week2-e7",
+   "islander": "Corbin",
+   "rule_id": "std-power",
+   "label": "Given the power to choose",
+   "points": 4,
+   "quote": "Corbin was then given the power to save one girl to be in a couple with him.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "week2-e8",
+   "islander": "Corbin",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "On Day 10, Corbin chose to couple up with Melanie, leaving Beatriz single and dumped from the villa.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "week2-e8",
+   "islander": "Melanie",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "On Day 10, Corbin chose to couple up with Melanie, leaving Beatriz single and dumped from the villa.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "week2-e9",
+   "islander": "Beatriz",
+   "rule_id": "house-2",
+   "label": "Dumped penalty",
+   "points": -20,
+   "quote": "On Day 10, Corbin chose to couple up with Melanie, leaving Beatriz single and dumped from the villa.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "week2-e10",
+   "islander": "Trinity",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "Trinity and Bryce, Aniya and KC, Jen and Gabriel and Kayda and Zach mutually wrote letters to one another and remained in their couples.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "week2-e10",
+   "islander": "Bryce",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "Trinity and Bryce, Aniya and KC, Jen and Gabriel and Kayda and Zach mutually wrote letters to one another and remained in their couples.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "week2-e11",
+   "islander": "Aniya",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "Trinity and Bryce, Aniya and KC, Jen and Gabriel and Kayda and Zach mutually wrote letters to one another and remained in their couples.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "week2-e11",
+   "islander": "KC",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "Trinity and Bryce, Aniya and KC, Jen and Gabriel and Kayda and Zach mutually wrote letters to one another and remained in their couples.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "week2-e12",
+   "islander": "Jen",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "Trinity and Bryce, Aniya and KC, Jen and Gabriel and Kayda and Zach mutually wrote letters to one another and remained in their couples.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "week2-e12",
+   "islander": "Gabriel",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "Trinity and Bryce, Aniya and KC, Jen and Gabriel and Kayda and Zach mutually wrote letters to one another and remained in their couples.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "week2-e13",
+   "islander": "Kayda",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "Trinity and Bryce, Aniya and KC, Jen and Gabriel and Kayda and Zach mutually wrote letters to one another and remained in their couples.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "week2-e13",
+   "islander": "Zach",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "Trinity and Bryce, Aniya and KC, Jen and Gabriel and Kayda and Zach mutually wrote letters to one another and remained in their couples.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "week2-e14",
+   "islander": "Corbin",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "Corbin and Caleb each wrote letters to Kenzie while Kenzie only wrote a letter for Corbin and they recoupled.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "week2-e14",
+   "islander": "Kenzie",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "Corbin and Caleb each wrote letters to Kenzie while Kenzie only wrote a letter for Corbin and they recoupled.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "week2-e15",
+   "islander": "Melanie",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "Sol and Melanie each wrote letters to Sincere while Sincere only wrote a letter to Melanie and they recoupled.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "week2-e15",
+   "islander": "Sincere",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "Sol and Melanie each wrote letters to Sincere while Sincere only wrote a letter to Melanie and they recoupled.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "week2-e16",
+   "islander": "Sol",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "As the only two islanders to not receive love letters, Sol and Caleb became the final couple.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "week2-e16",
+   "islander": "Caleb",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "As the only two islanders to not receive love letters, Sol and Caleb became the final couple.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "week2-e17",
+   "islander": "Kayda",
+   "rule_id": "std-date",
+   "label": "Went on a date",
+   "points": 3,
+   "quote": "On Day 11, Kayda and Zach spent the night in the hideaway.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "week2-e17",
+   "islander": "Zach",
+   "rule_id": "std-date",
+   "label": "Went on a date",
+   "points": 3,
+   "quote": "On Day 11, Kayda and Zach spent the night in the hideaway.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "week2-e17",
+   "islander": "Kayda",
+   "rule_id": "house-3",
+   "label": "Hideaway date bonus",
+   "points": 4,
+   "quote": "On Day 11, Kayda and Zach spent the night in the hideaway.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "week2-e17",
+   "islander": "Zach",
+   "rule_id": "house-3",
+   "label": "Hideaway date bonus",
+   "points": 4,
+   "quote": "On Day 11, Kayda and Zach spent the night in the hideaway.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "week2-e18",
+   "islander": "Gabriel",
+   "rule_id": "house-2",
+   "label": "Dumped penalty",
+   "points": -20,
+   "quote": "The four safe girls then had to decide which vulnerable boy to dump, choosing Gabriel, and the four safe boys had to decide which vulnerable girl to dump, choosing Sol.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "week2-e19",
+   "islander": "Sol",
+   "rule_id": "house-2",
+   "label": "Dumped penalty",
+   "points": -20,
+   "quote": "The four safe girls then had to decide which vulnerable boy to dump, choosing Gabriel, and the four safe boys had to decide which vulnerable girl to dump, choosing Sol.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "Week 2-survived-Aniya",
+   "islander": "Aniya",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "Week 2-survived-Bryce",
+   "islander": "Bryce",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "Week 2-survived-Caleb",
+   "islander": "Caleb",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "Week 2-survived-Corbin",
+   "islander": "Corbin",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "Week 2-survived-Jen",
+   "islander": "Jen",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "Week 2-survived-KC",
+   "islander": "KC",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "Week 2-survived-Kayda",
+   "islander": "Kayda",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "Week 2-survived-Kenzie",
+   "islander": "Kenzie",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "Week 2-survived-Melanie",
+   "islander": "Melanie",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "Week 2-survived-Sincere",
+   "islander": "Sincere",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "Week 2-survived-Trinity",
+   "islander": "Trinity",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 2",
+   "event_id": "Week 2-survived-Zach",
+   "islander": "Zach",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e1",
+   "islander": "Alannah",
+   "rule_id": "std-bombshell",
+   "label": "Bombshell arrival",
+   "points": 5,
+   "quote": "On Day 16, Alannah, Amora, Jaiden, Parmida, Sydney, and Tierra entered Casa Amor.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e2",
+   "islander": "Amora",
+   "rule_id": "std-bombshell",
+   "label": "Bombshell arrival",
+   "points": 5,
+   "quote": "On Day 16, Alannah, Amora, Jaiden, Parmida, Sydney, and Tierra entered Casa Amor.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e3",
+   "islander": "Jaiden",
+   "rule_id": "std-bombshell",
+   "label": "Bombshell arrival",
+   "points": 5,
+   "quote": "On Day 16, Alannah, Amora, Jaiden, Parmida, Sydney, and Tierra entered Casa Amor.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e4",
+   "islander": "Parmida",
+   "rule_id": "std-bombshell",
+   "label": "Bombshell arrival",
+   "points": 5,
+   "quote": "On Day 16, Alannah, Amora, Jaiden, Parmida, Sydney, and Tierra entered Casa Amor.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e5",
+   "islander": "Sydney",
+   "rule_id": "std-bombshell",
+   "label": "Bombshell arrival",
+   "points": 5,
+   "quote": "On Day 16, Alannah, Amora, Jaiden, Parmida, Sydney, and Tierra entered Casa Amor.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e6",
+   "islander": "Tierra",
+   "rule_id": "std-bombshell",
+   "label": "Bombshell arrival",
+   "points": 5,
+   "quote": "On Day 16, Alannah, Amora, Jaiden, Parmida, Sydney, and Tierra entered Casa Amor.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e7",
+   "islander": "Carl",
+   "rule_id": "std-bombshell",
+   "label": "Bombshell arrival",
+   "points": 5,
+   "quote": "On Day 17, Carl, Chandlar, Chay, Corey, Dylan, Gal, Keyon, Kyle, Ronnie, Ryan, Tino and Trae entered the main villa.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e8",
+   "islander": "Chandlar",
+   "rule_id": "std-bombshell",
+   "label": "Bombshell arrival",
+   "points": 5,
+   "quote": "On Day 17, Carl, Chandlar, Chay, Corey, Dylan, Gal, Keyon, Kyle, Ronnie, Ryan, Tino and Trae entered the main villa.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e9",
+   "islander": "Chay",
+   "rule_id": "std-bombshell",
+   "label": "Bombshell arrival",
+   "points": 5,
+   "quote": "On Day 17, Carl, Chandlar, Chay, Corey, Dylan, Gal, Keyon, Kyle, Ronnie, Ryan, Tino and Trae entered the main villa.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e10",
+   "islander": "Corey",
+   "rule_id": "std-bombshell",
+   "label": "Bombshell arrival",
+   "points": 5,
+   "quote": "On Day 17, Carl, Chandlar, Chay, Corey, Dylan, Gal, Keyon, Kyle, Ronnie, Ryan, Tino and Trae entered the main villa.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e11",
+   "islander": "Dylan",
+   "rule_id": "std-bombshell",
+   "label": "Bombshell arrival",
+   "points": 5,
+   "quote": "On Day 17, Carl, Chandlar, Chay, Corey, Dylan, Gal, Keyon, Kyle, Ronnie, Ryan, Tino and Trae entered the main villa.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e12",
+   "islander": "Gal",
+   "rule_id": "std-bombshell",
+   "label": "Bombshell arrival",
+   "points": 5,
+   "quote": "On Day 17, Carl, Chandlar, Chay, Corey, Dylan, Gal, Keyon, Kyle, Ronnie, Ryan, Tino and Trae entered the main villa.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e13",
+   "islander": "Keyon",
+   "rule_id": "std-bombshell",
+   "label": "Bombshell arrival",
+   "points": 5,
+   "quote": "On Day 17, Carl, Chandlar, Chay, Corey, Dylan, Gal, Keyon, Kyle, Ronnie, Ryan, Tino and Trae entered the main villa.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e14",
+   "islander": "Kyle",
+   "rule_id": "std-bombshell",
+   "label": "Bombshell arrival",
+   "points": 5,
+   "quote": "On Day 17, Carl, Chandlar, Chay, Corey, Dylan, Gal, Keyon, Kyle, Ronnie, Ryan, Tino and Trae entered the main villa.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e15",
+   "islander": "Ronnie",
+   "rule_id": "std-bombshell",
+   "label": "Bombshell arrival",
+   "points": 5,
+   "quote": "On Day 17, Carl, Chandlar, Chay, Corey, Dylan, Gal, Keyon, Kyle, Ronnie, Ryan, Tino and Trae entered the main villa.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e16",
+   "islander": "Ryan",
+   "rule_id": "std-bombshell",
+   "label": "Bombshell arrival",
+   "points": 5,
+   "quote": "On Day 17, Carl, Chandlar, Chay, Corey, Dylan, Gal, Keyon, Kyle, Ronnie, Ryan, Tino and Trae entered the main villa.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e17",
+   "islander": "Tino",
+   "rule_id": "std-bombshell",
+   "label": "Bombshell arrival",
+   "points": 5,
+   "quote": "On Day 17, Carl, Chandlar, Chay, Corey, Dylan, Gal, Keyon, Kyle, Ronnie, Ryan, Tino and Trae entered the main villa.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e18",
+   "islander": "Trae",
+   "rule_id": "std-bombshell",
+   "label": "Bombshell arrival",
+   "points": 5,
+   "quote": "On Day 17, Carl, Chandlar, Chay, Corey, Dylan, Gal, Keyon, Kyle, Ronnie, Ryan, Tino and Trae entered the main villa.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e19",
+   "islander": "Amora",
+   "rule_id": "std-return",
+   "label": "Re-entered the villa",
+   "points": 10,
+   "quote": "On Day 21, Amora and Carl re-entered the villa after the public voted them back in.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e20",
+   "islander": "Carl",
+   "rule_id": "std-return",
+   "label": "Re-entered the villa",
+   "points": 10,
+   "quote": "On Day 21, Amora and Carl re-entered the villa after the public voted them back in.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e21",
+   "islander": "Kayda",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all chose to remain in their couples.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e21",
+   "islander": "Zach",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all chose to remain in their couples.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e22",
+   "islander": "Melanie",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all chose to remain in their couples.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e22",
+   "islander": "Sincere",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all chose to remain in their couples.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e23",
+   "islander": "Trinity",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all chose to remain in their couples.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e23",
+   "islander": "Bryce",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all chose to remain in their couples.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e24",
+   "islander": "Caleb",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "Elsewhere, Caleb chose to couple up with Jaiden, Corbin picked Parmida, Kenzie went with Dylan, and Jen chose Gal.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e24",
+   "islander": "Jaiden",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "Elsewhere, Caleb chose to couple up with Jaiden, Corbin picked Parmida, Kenzie went with Dylan, and Jen chose Gal.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e25",
+   "islander": "Corbin",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "Elsewhere, Caleb chose to couple up with Jaiden, Corbin picked Parmida, Kenzie went with Dylan, and Jen chose Gal.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e25",
+   "islander": "Parmida",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "Elsewhere, Caleb chose to couple up with Jaiden, Corbin picked Parmida, Kenzie went with Dylan, and Jen chose Gal.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e26",
+   "islander": "Kenzie",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "Elsewhere, Caleb chose to couple up with Jaiden, Corbin picked Parmida, Kenzie went with Dylan, and Jen chose Gal.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e26",
+   "islander": "Dylan",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "Elsewhere, Caleb chose to couple up with Jaiden, Corbin picked Parmida, Kenzie went with Dylan, and Jen chose Gal.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e27",
+   "islander": "Jen",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "Elsewhere, Caleb chose to couple up with Jaiden, Corbin picked Parmida, Kenzie went with Dylan, and Jen chose Gal.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e27",
+   "islander": "Gal",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "Elsewhere, Caleb chose to couple up with Jaiden, Corbin picked Parmida, Kenzie went with Dylan, and Jen chose Gal.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e28",
+   "islander": "KC",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "As Aniya decided to remain loyal to KC, but he chose to twist and couple up with Tierra, she remained in the villa as a single islander.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e28",
+   "islander": "Tierra",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "As Aniya decided to remain loyal to KC, but he chose to twist and couple up with Tierra, she remained in the villa as a single islander.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e29",
+   "islander": "Aniya",
+   "rule_id": "std-single",
+   "label": "Left single / vulnerable",
+   "points": -3,
+   "quote": "As Aniya decided to remain loyal to KC, but he chose to twist and couple up with Tierra, she remained in the villa as a single islander.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e30",
+   "islander": "Amora",
+   "rule_id": "std-single",
+   "label": "Left single / vulnerable",
+   "points": -3,
+   "quote": "On Day 20, Casa Amor islanders, Amora, Carl, Chay, Corey, Ronnie, and Sydney, remained single at the end the night, and were all dumped from the villa.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e31",
+   "islander": "Carl",
+   "rule_id": "std-single",
+   "label": "Left single / vulnerable",
+   "points": -3,
+   "quote": "On Day 20, Casa Amor islanders, Amora, Carl, Chay, Corey, Ronnie, and Sydney, remained single at the end the night, and were all dumped from the villa.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e32",
+   "islander": "Chay",
+   "rule_id": "std-single",
+   "label": "Left single / vulnerable",
+   "points": -3,
+   "quote": "On Day 20, Casa Amor islanders, Amora, Carl, Chay, Corey, Ronnie, and Sydney, remained single at the end the night, and were all dumped from the villa.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e33",
+   "islander": "Corey",
+   "rule_id": "std-single",
+   "label": "Left single / vulnerable",
+   "points": -3,
+   "quote": "On Day 20, Casa Amor islanders, Amora, Carl, Chay, Corey, Ronnie, and Sydney, remained single at the end the night, and were all dumped from the villa.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e34",
+   "islander": "Ronnie",
+   "rule_id": "std-single",
+   "label": "Left single / vulnerable",
+   "points": -3,
+   "quote": "On Day 20, Casa Amor islanders, Amora, Carl, Chay, Corey, Ronnie, and Sydney, remained single at the end the night, and were all dumped from the villa.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e35",
+   "islander": "Sydney",
+   "rule_id": "std-single",
+   "label": "Left single / vulnerable",
+   "points": -3,
+   "quote": "On Day 20, Casa Amor islanders, Amora, Carl, Chay, Corey, Ronnie, and Sydney, remained single at the end the night, and were all dumped from the villa.",
+   "source_id": "S2"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e36",
+   "islander": "Chandlar",
+   "rule_id": "house-2",
+   "label": "Dumped penalty",
+   "points": -20,
+   "quote": "On Day 17, the original girls had to choose which 6 of the 12 Casa Amor boys would remain in the villa. They ultimately chose to dump Chandlar, Keyon, Kyle, Ryan, Tino and Trae.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e37",
+   "islander": "Keyon",
+   "rule_id": "house-2",
+   "label": "Dumped penalty",
+   "points": -20,
+   "quote": "On Day 17, the original girls had to choose which 6 of the 12 Casa Amor boys would remain in the villa. They ultimately chose to dump Chandlar, Keyon, Kyle, Ryan, Tino and Trae.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e38",
+   "islander": "Kyle",
+   "rule_id": "house-2",
+   "label": "Dumped penalty",
+   "points": -20,
+   "quote": "On Day 17, the original girls had to choose which 6 of the 12 Casa Amor boys would remain in the villa. They ultimately chose to dump Chandlar, Keyon, Kyle, Ryan, Tino and Trae.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e39",
+   "islander": "Ryan",
+   "rule_id": "house-2",
+   "label": "Dumped penalty",
+   "points": -20,
+   "quote": "On Day 17, the original girls had to choose which 6 of the 12 Casa Amor boys would remain in the villa. They ultimately chose to dump Chandlar, Keyon, Kyle, Ryan, Tino and Trae.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e40",
+   "islander": "Tino",
+   "rule_id": "house-2",
+   "label": "Dumped penalty",
+   "points": -20,
+   "quote": "On Day 17, the original girls had to choose which 6 of the 12 Casa Amor boys would remain in the villa. They ultimately chose to dump Chandlar, Keyon, Kyle, Ryan, Tino and Trae.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e41",
+   "islander": "Trae",
+   "rule_id": "house-2",
+   "label": "Dumped penalty",
+   "points": -20,
+   "quote": "On Day 17, the original girls had to choose which 6 of the 12 Casa Amor boys would remain in the villa. They ultimately chose to dump Chandlar, Keyon, Kyle, Ryan, Tino and Trae.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e42",
+   "islander": "Alannah",
+   "rule_id": "std-left",
+   "label": "Walked or removed",
+   "points": -15,
+   "quote": "On Day 19, Alannah was removed from the villa due to evidence surfacing of her using a racial slur.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e43",
+   "islander": "Amora",
+   "rule_id": "house-2",
+   "label": "Dumped penalty",
+   "points": -20,
+   "quote": "On Day 20, Casa Amor islanders Amora, Carl, Chay, Corey, Ronnie, and Sydney were dumped from the island after failing to couple up.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e44",
+   "islander": "Carl",
+   "rule_id": "house-2",
+   "label": "Dumped penalty",
+   "points": -20,
+   "quote": "On Day 20, Casa Amor islanders Amora, Carl, Chay, Corey, Ronnie, and Sydney were dumped from the island after failing to couple up.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e45",
+   "islander": "Chay",
+   "rule_id": "house-2",
+   "label": "Dumped penalty",
+   "points": -20,
+   "quote": "On Day 20, Casa Amor islanders Amora, Carl, Chay, Corey, Ronnie, and Sydney were dumped from the island after failing to couple up.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e46",
+   "islander": "Corey",
+   "rule_id": "house-2",
+   "label": "Dumped penalty",
+   "points": -20,
+   "quote": "On Day 20, Casa Amor islanders Amora, Carl, Chay, Corey, Ronnie, and Sydney were dumped from the island after failing to couple up.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e47",
+   "islander": "Ronnie",
+   "rule_id": "house-2",
+   "label": "Dumped penalty",
+   "points": -20,
+   "quote": "On Day 20, Casa Amor islanders Amora, Carl, Chay, Corey, Ronnie, and Sydney were dumped from the island after failing to couple up.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "week3-e48",
+   "islander": "Sydney",
+   "rule_id": "house-2",
+   "label": "Dumped penalty",
+   "points": -20,
+   "quote": "On Day 20, Casa Amor islanders Amora, Carl, Chay, Corey, Ronnie, and Sydney were dumped from the island after failing to couple up.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "Week 3-survived-Amora",
+   "islander": "Amora",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "Week 3-survived-Aniya",
+   "islander": "Aniya",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "Week 3-survived-Bryce",
+   "islander": "Bryce",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "Week 3-survived-Caleb",
+   "islander": "Caleb",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "Week 3-survived-Carl",
+   "islander": "Carl",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "Week 3-survived-Corbin",
+   "islander": "Corbin",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "Week 3-survived-Dylan",
+   "islander": "Dylan",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "Week 3-survived-Gal",
+   "islander": "Gal",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "Week 3-survived-Jaiden",
+   "islander": "Jaiden",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "Week 3-survived-Jen",
+   "islander": "Jen",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "Week 3-survived-KC",
+   "islander": "KC",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "Week 3-survived-Kayda",
+   "islander": "Kayda",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "Week 3-survived-Kenzie",
+   "islander": "Kenzie",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "Week 3-survived-Melanie",
+   "islander": "Melanie",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "Week 3-survived-Parmida",
+   "islander": "Parmida",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "Week 3-survived-Sincere",
+   "islander": "Sincere",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "Week 3-survived-Tierra",
+   "islander": "Tierra",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "Week 3-survived-Trinity",
+   "islander": "Trinity",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 3",
+   "event_id": "Week 3-survived-Zach",
+   "islander": "Zach",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "week4-e1",
+   "islander": "Kayda",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "On Day 25, the islanders recoupled with the boys choosing which girl they wanted to couple up with. Kayda and Zach, Kenzie and Dylan, Melanie and Sincere, Jaiden and Caleb, Parmida and Corbin, Tierra and KC and Trinity and Bryce remained together.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "week4-e1",
+   "islander": "Zach",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "On Day 25, the islanders recoupled with the boys choosing which girl they wanted to couple up with. Kayda and Zach, Kenzie and Dylan, Melanie and Sincere, Jaiden and Caleb, Parmida and Corbin, Tierra and KC and Trinity and Bryce remained together.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "week4-e2",
+   "islander": "Kenzie",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "On Day 25, the islanders recoupled with the boys choosing which girl they wanted to couple up with. Kayda and Zach, Kenzie and Dylan, Melanie and Sincere, Jaiden and Caleb, Parmida and Corbin, Tierra and KC and Trinity and Bryce remained together.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "week4-e2",
+   "islander": "Dylan",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "On Day 25, the islanders recoupled with the boys choosing which girl they wanted to couple up with. Kayda and Zach, Kenzie and Dylan, Melanie and Sincere, Jaiden and Caleb, Parmida and Corbin, Tierra and KC and Trinity and Bryce remained together.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "week4-e3",
+   "islander": "Melanie",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "On Day 25, the islanders recoupled with the boys choosing which girl they wanted to couple up with. Kayda and Zach, Kenzie and Dylan, Melanie and Sincere, Jaiden and Caleb, Parmida and Corbin, Tierra and KC and Trinity and Bryce remained together.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "week4-e3",
+   "islander": "Sincere",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "On Day 25, the islanders recoupled with the boys choosing which girl they wanted to couple up with. Kayda and Zach, Kenzie and Dylan, Melanie and Sincere, Jaiden and Caleb, Parmida and Corbin, Tierra and KC and Trinity and Bryce remained together.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "week4-e4",
+   "islander": "Jaiden",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "On Day 25, the islanders recoupled with the boys choosing which girl they wanted to couple up with. Kayda and Zach, Kenzie and Dylan, Melanie and Sincere, Jaiden and Caleb, Parmida and Corbin, Tierra and KC and Trinity and Bryce remained together.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "week4-e4",
+   "islander": "Caleb",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "On Day 25, the islanders recoupled with the boys choosing which girl they wanted to couple up with. Kayda and Zach, Kenzie and Dylan, Melanie and Sincere, Jaiden and Caleb, Parmida and Corbin, Tierra and KC and Trinity and Bryce remained together.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "week4-e5",
+   "islander": "Parmida",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "On Day 25, the islanders recoupled with the boys choosing which girl they wanted to couple up with. Kayda and Zach, Kenzie and Dylan, Melanie and Sincere, Jaiden and Caleb, Parmida and Corbin, Tierra and KC and Trinity and Bryce remained together.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "week4-e5",
+   "islander": "Corbin",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "On Day 25, the islanders recoupled with the boys choosing which girl they wanted to couple up with. Kayda and Zach, Kenzie and Dylan, Melanie and Sincere, Jaiden and Caleb, Parmida and Corbin, Tierra and KC and Trinity and Bryce remained together.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "week4-e6",
+   "islander": "Tierra",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "On Day 25, the islanders recoupled with the boys choosing which girl they wanted to couple up with. Kayda and Zach, Kenzie and Dylan, Melanie and Sincere, Jaiden and Caleb, Parmida and Corbin, Tierra and KC and Trinity and Bryce remained together.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "week4-e6",
+   "islander": "KC",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "On Day 25, the islanders recoupled with the boys choosing which girl they wanted to couple up with. Kayda and Zach, Kenzie and Dylan, Melanie and Sincere, Jaiden and Caleb, Parmida and Corbin, Tierra and KC and Trinity and Bryce remained together.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "week4-e7",
+   "islander": "Trinity",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "On Day 25, the islanders recoupled with the boys choosing which girl they wanted to couple up with. Kayda and Zach, Kenzie and Dylan, Melanie and Sincere, Jaiden and Caleb, Parmida and Corbin, Tierra and KC and Trinity and Bryce remained together.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "week4-e7",
+   "islander": "Bryce",
+   "rule_id": "std-stay",
+   "label": "Survived a recoupling together",
+   "points": 3,
+   "quote": "On Day 25, the islanders recoupled with the boys choosing which girl they wanted to couple up with. Kayda and Zach, Kenzie and Dylan, Melanie and Sincere, Jaiden and Caleb, Parmida and Corbin, Tierra and KC and Trinity and Bryce remained together.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "week4-e8",
+   "islander": "Carl",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "Carl chose to couple up with Aniya, whilst Gal chose to recouple with Amora.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "week4-e8",
+   "islander": "Aniya",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "Carl chose to couple up with Aniya, whilst Gal chose to recouple with Amora.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "week4-e9",
+   "islander": "Gal",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "Carl chose to couple up with Aniya, whilst Gal chose to recouple with Amora.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "week4-e9",
+   "islander": "Amora",
+   "rule_id": "std-couple",
+   "label": "New couple",
+   "points": 4,
+   "quote": "Carl chose to couple up with Aniya, whilst Gal chose to recouple with Amora.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "week4-e10",
+   "islander": "Jen",
+   "rule_id": "std-single",
+   "label": "Left single / vulnerable",
+   "points": -3,
+   "quote": "On Day 25, following a recoupling, Jen was left single and was dumped from the island.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "week4-e11",
+   "islander": "Jen",
+   "rule_id": "house-2",
+   "label": "Dumped penalty",
+   "points": -20,
+   "quote": "On Day 25, following a recoupling, Jen was left single and was dumped from the island.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "week4-e12",
+   "islander": "Amora",
+   "rule_id": "house-2",
+   "label": "Dumped penalty",
+   "points": -20,
+   "quote": "On Day 25, following a vote for least compatible couple, Amora and Gal and Jaiden and Caleb were dumped from the island.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "week4-e12",
+   "islander": "Gal",
+   "rule_id": "house-2",
+   "label": "Dumped penalty",
+   "points": -20,
+   "quote": "On Day 25, following a vote for least compatible couple, Amora and Gal and Jaiden and Caleb were dumped from the island.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "week4-e13",
+   "islander": "Jaiden",
+   "rule_id": "house-2",
+   "label": "Dumped penalty",
+   "points": -20,
+   "quote": "On Day 25, following a vote for least compatible couple, Amora and Gal and Jaiden and Caleb were dumped from the island.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "week4-e13",
+   "islander": "Caleb",
+   "rule_id": "house-2",
+   "label": "Dumped penalty",
+   "points": -20,
+   "quote": "On Day 25, following a vote for least compatible couple, Amora and Gal and Jaiden and Caleb were dumped from the island.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "week4-e14",
+   "islander": "Trinity",
+   "rule_id": "std-date",
+   "label": "Went on a date",
+   "points": 3,
+   "quote": "On Day 22, Trinity and Bryce left the villa to go on their first date.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "week4-e14",
+   "islander": "Bryce",
+   "rule_id": "std-date",
+   "label": "Went on a date",
+   "points": 3,
+   "quote": "On Day 22, Trinity and Bryce left the villa to go on their first date.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "week4-e15",
+   "islander": "Kenzie",
+   "rule_id": "std-challenge",
+   "label": "Won a challenge",
+   "points": 5,
+   "quote": "On Day 26, the couples took part in a Karaoke Night Challenge. For winning, Kenzie & Dylan won safety from the nights vote.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "week4-e15",
+   "islander": "Dylan",
+   "rule_id": "std-challenge",
+   "label": "Won a challenge",
+   "points": 5,
+   "quote": "On Day 26, the couples took part in a Karaoke Night Challenge. For winning, Kenzie & Dylan won safety from the nights vote.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "week4-e16",
+   "islander": "Parmida",
+   "rule_id": "house-2",
+   "label": "Dumped penalty",
+   "points": -20,
+   "quote": "On Day 26, as they received only one vote for save from their fellow islanders, Parmida and Corbin were dumped from the villa.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "week4-e16",
+   "islander": "Corbin",
+   "rule_id": "house-2",
+   "label": "Dumped penalty",
+   "points": -20,
+   "quote": "On Day 26, as they received only one vote for save from their fellow islanders, Parmida and Corbin were dumped from the villa.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "Week 4-survived-Aniya",
+   "islander": "Aniya",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "Week 4-survived-Bryce",
+   "islander": "Bryce",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "Week 4-survived-Carl",
+   "islander": "Carl",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "Week 4-survived-Dylan",
+   "islander": "Dylan",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "Week 4-survived-KC",
+   "islander": "KC",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "Week 4-survived-Kayda",
+   "islander": "Kayda",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "Week 4-survived-Kenzie",
+   "islander": "Kenzie",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "Week 4-survived-Melanie",
+   "islander": "Melanie",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "Week 4-survived-Sincere",
+   "islander": "Sincere",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "Week 4-survived-Tierra",
+   "islander": "Tierra",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "Week 4-survived-Trinity",
+   "islander": "Trinity",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 4",
+   "event_id": "Week 4-survived-Zach",
+   "islander": "Zach",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 5",
+   "event_id": "week5-e1",
+   "islander": "Kenzie",
+   "rule_id": "house-2",
+   "label": "Dumped penalty",
+   "points": -20,
+   "quote": "As Kenzie and Dylan, and KC and Tierra received the fewest votes, they were dumped from the island.",
+   "source_id": "S10"
+  },
+  {
+   "week": "Week 5",
+   "event_id": "week5-e1",
+   "islander": "Dylan",
+   "rule_id": "house-2",
+   "label": "Dumped penalty",
+   "points": -20,
+   "quote": "As Kenzie and Dylan, and KC and Tierra received the fewest votes, they were dumped from the island.",
+   "source_id": "S10"
+  },
+  {
+   "week": "Week 5",
+   "event_id": "week5-e2",
+   "islander": "KC",
+   "rule_id": "house-2",
+   "label": "Dumped penalty",
+   "points": -20,
+   "quote": "As Kenzie and Dylan, and KC and Tierra received the fewest votes, they were dumped from the island.",
+   "source_id": "S10"
+  },
+  {
+   "week": "Week 5",
+   "event_id": "week5-e2",
+   "islander": "Tierra",
+   "rule_id": "house-2",
+   "label": "Dumped penalty",
+   "points": -20,
+   "quote": "As Kenzie and Dylan, and KC and Tierra received the fewest votes, they were dumped from the island.",
+   "source_id": "S10"
+  },
+  {
+   "week": "Week 5",
+   "event_id": "week5-e3",
+   "islander": "Kayda",
+   "rule_id": "std-final",
+   "label": "Made the final",
+   "points": 15,
+   "quote": "On Day 32, Kayda and Zach finished in fourth place",
+   "source_id": "S9"
+  },
+  {
+   "week": "Week 5",
+   "event_id": "week5-e3",
+   "islander": "Zach",
+   "rule_id": "std-final",
+   "label": "Made the final",
+   "points": 15,
+   "quote": "On Day 32, Kayda and Zach finished in fourth place",
+   "source_id": "S9"
+  },
+  {
+   "week": "Week 5",
+   "event_id": "week5-e4",
+   "islander": "Melanie",
+   "rule_id": "std-final",
+   "label": "Made the final",
+   "points": 15,
+   "quote": "Melanie and Sincere finished third.",
+   "source_id": "S9"
+  },
+  {
+   "week": "Week 5",
+   "event_id": "week5-e4",
+   "islander": "Sincere",
+   "rule_id": "std-final",
+   "label": "Made the final",
+   "points": 15,
+   "quote": "Melanie and Sincere finished third.",
+   "source_id": "S9"
+  },
+  {
+   "week": "Week 5",
+   "event_id": "week5-e5",
+   "islander": "Bryce",
+   "rule_id": "std-final",
+   "label": "Made the final",
+   "points": 15,
+   "quote": "Bryce and Trinity were then announced as the winners",
+   "source_id": "S9"
+  },
+  {
+   "week": "Week 5",
+   "event_id": "week5-e5",
+   "islander": "Trinity",
+   "rule_id": "std-final",
+   "label": "Made the final",
+   "points": 15,
+   "quote": "Bryce and Trinity were then announced as the winners",
+   "source_id": "S9"
+  },
+  {
+   "week": "Week 5",
+   "event_id": "week5-e6",
+   "islander": "Aniya",
+   "rule_id": "std-final",
+   "label": "Made the final",
+   "points": 15,
+   "quote": "leaving Aniya and Carl as runners-up.",
+   "source_id": "S9"
+  },
+  {
+   "week": "Week 5",
+   "event_id": "week5-e6",
+   "islander": "Carl",
+   "rule_id": "std-final",
+   "label": "Made the final",
+   "points": 15,
+   "quote": "leaving Aniya and Carl as runners-up.",
+   "source_id": "S9"
+  },
+  {
+   "week": "Week 5",
+   "event_id": "week5-e7",
+   "islander": "Bryce",
+   "rule_id": "std-win",
+   "label": "Won the season",
+   "points": 25,
+   "quote": "Bryce and Trinity were then announced as the winners",
+   "source_id": "S9"
+  },
+  {
+   "week": "Week 5",
+   "event_id": "week5-e7",
+   "islander": "Trinity",
+   "rule_id": "std-win",
+   "label": "Won the season",
+   "points": 25,
+   "quote": "Bryce and Trinity were then announced as the winners",
+   "source_id": "S9"
+  },
+  {
+   "week": "Week 5",
+   "event_id": "Week 5-survived-Aniya",
+   "islander": "Aniya",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 5",
+   "event_id": "Week 5-survived-Bryce",
+   "islander": "Bryce",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 5",
+   "event_id": "Week 5-survived-Carl",
+   "islander": "Carl",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 5",
+   "event_id": "Week 5-survived-Kayda",
+   "islander": "Kayda",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 5",
+   "event_id": "Week 5-survived-Melanie",
+   "islander": "Melanie",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 5",
+   "event_id": "Week 5-survived-Sincere",
+   "islander": "Sincere",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 5",
+   "event_id": "Week 5-survived-Trinity",
+   "islander": "Trinity",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  },
+  {
+   "week": "Week 5",
+   "event_id": "Week 5-survived-Zach",
+   "islander": "Zach",
+   "rule_id": "std-survive",
+   "label": "Still in the villa at week's end",
+   "points": 2,
+   "quote": "still in the villa at the end of the week",
+   "source_id": "code"
+  }
+ ]
+}

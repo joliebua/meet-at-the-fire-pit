@@ -81,6 +81,16 @@ def latest_bundle(season_key: str, week: str) -> SourceBundle:
     return SourceBundle(**json.loads(runs[-1].read_text())["bundle"])
 
 
+def latest_events(season_key: str) -> dict[str, list[CheckedEvent]]:
+    """{week: events} from the newest self-corrected Recapper run of each week, in week order."""
+    by_week = {}
+    for f in sorted((config.OUTPUT / "runs").glob(f"recap_{season_key}_*.json")):
+        data = json.loads(f.read_text())
+        if data["run"]["self_correct"]:
+            by_week[data["run"]["week"]] = [CheckedEvent(**e) for e in data["events"]]
+    return {w: by_week[w] for w in sorted(by_week, key=lambda w: int(w.split()[-1]))}
+
+
 def run_recapper(season_key: str, bundle: SourceBundle, self_correct: bool = True) -> tuple[list[CheckedEvent], dict]:
     season = seasons()[season_key]
     cast = verify.Cast(cast_source.cast(season["pages"]["wikipedia"]))
