@@ -128,7 +128,7 @@ A pipeline orchestrator runs Scout → Recapper → Scorekeeper → Host each we
 | Wed 10/21 | Ref + Host, FastAPI routes, token logging ✅ (done 10/19) |
 | Thu 10/22 | React UI ✅ (done 10/19) |
 | Fri 10/23 | Safety tests ✅ + accuracy eval ✅ (done 10/19); user trial(s) still needed |
-| Sat 10/24 | `report.html` (draft generated 10/19 by `scripts/build_report.py`; needs screenshots + user evidence) |
+| Sat 10/24 | `report.html`: draft with screenshots ✅ (13 printed pages); needs user evidence (TODO boxes) |
 | Sun 10/25 | `slides.html` (GitHub repo + fresh-clone dry run ✅ done 10/19) |
 | Mon 10/26 | Buffer; submit by 6 PM |
 

@@ -120,6 +120,16 @@ npm run build                                   # refresh frontend/dist, which t
 
 (Start the API on port 8040 for dev: `.venv/bin/uvicorn backend.main:app --port 8040`.)
 
+### Rebuilding the report and screenshots
+
+```bash
+.venv/bin/python scripts/safety_tests.py              # safety evidence → output/safety/
+.venv/bin/python scripts/eval_recaps.py               # accuracy → output/eval_recaps.json
+.venv/bin/pip install -r requirements-dev.txt && .venv/bin/python -m playwright install chromium   # once
+.venv/bin/python scripts/capture_screenshots.py --url http://127.0.0.1:8000   # app must be running
+.venv/bin/python scripts/build_report.py              # → report.html (self-contained)
+```
+
 ---
 
 ## Repo map

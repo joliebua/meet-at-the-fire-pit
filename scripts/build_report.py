@@ -164,7 +164,7 @@ th { text-align: left; background: #fff0f7; color: #7a2a5a; font-weight: 600; pa
 td { padding: 5px 7px; border-bottom: 1px solid #f3dbe7; vertical-align: top; }
 .num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
 figure { margin: 10px 0 14px; break-inside: avoid; text-align: center; }
-figure img { max-width: 100%; border-radius: 10px; border: 1px solid #f0c6dc; }
+figure img { max-width: 100%; max-height: 3.4in; width: auto; border-radius: 10px; border: 1px solid #f0c6dc; }
 figcaption { font-size: 8.5pt; color: #6b4a60; margin-top: 4px; }
 .placeholder { border: 2px dashed #e7a3c6; border-radius: 10px; padding: 34px 10px; color: #a0527c; background: #fff7fb; }
 .todo { background: #fff6d6; border-left: 4px solid #e0a800; padding: 8px 12px; margin: 8px 0; font-size: 9.5pt; }
@@ -260,7 +260,7 @@ html = f"""<!doctype html>
 </ol>
 <p><b>Why it matters:</b> the commissioner's job shrinks to approving things, and arguments end with a quote instead of a vibe.</p>
 
-<h2 class="pb">3. The agents</h2>
+<h2>3. The agents</h2>
 {DIAGRAM}
 {table(["Agent", "Role", "Tools", "Guardrails"], agent_rows)}
 <p><b>Model and why.</b> Every agent uses <code>gpt-6-luna</code> through Portkey. The course key only allows that model, and it fits the job: the hard parts (math, checking quotes, applying rules) are plain code, so the model only needs to read and extract, which a small fast model does well. It costs ${prices["input_per_1m"]}/M input tokens, ${prices["cached_input_per_1m"]}/M cached and ${prices["output_per_1m"]}/M output. The design keeps the model away from anything that must be exact: it proposes, and code checks and decides.</p>
@@ -285,7 +285,7 @@ It kept {len(scout_w2["bundle"]["sources"])} sources (two wiki week summaries + 
 {shot("receipts", "Leaderboard with one player's receipts open: every point shows its rule and source sentence")}
 {shot("disputes", "Disputes: the Ref's ruling with its verified event, and a blocked manipulation attempt")}
 
-<h2 class="pb">4. Tokenomics</h2>
+<h2>4. Tokenomics</h2>
 <p>All numbers are measured from the <code>usage</code> object the API returned on each run (<code>output/runs/*.json</code>), priced at the course rates in <code>data/prices.json</code>. A run counts as billed only if it reached the model and took at least {usage_log.MIN_BILLED_SECONDS:.0f}s. Runs answered from Portkey's response cache (or blocked by the provider) cost nothing and are listed as free.</p>
 {table(["Agent", "Billed runs", "Avg input tok", "Avg cached", "Avg output tok", "Avg cost / run", "Avg time", "Free runs"], token_rows, {1, 2, 3, 4, 5, 6, 7})}
 <h3>Recapping the whole season once (Love Island USA S8, live sources)</h3>
@@ -305,7 +305,7 @@ It kept {len(scout_w2["bundle"]["sources"])} sources (two wiki week summaries + 
 </ul>
 {shot("costs", "Cost to Run tab: measured per-agent tokens and cost")}
 
-<h2 class="pb">5. Safety</h2>
+<h2>5. Safety</h2>
 <p>The main risks for this app:</p>
 <ol>
 <li><b>Prompt injection</b> through fan and news text, and through players' disputes.</li>
