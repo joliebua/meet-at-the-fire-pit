@@ -1,4 +1,4 @@
-/* Villa Commissioner: hot pink neon over a poolside sunset. */
+/* Fire Pit: hot pink neon over a poolside sunset, lit by the fire pit. */
 :root {
   --night: #1d0730;
   --plum: #4a0f4f;
@@ -62,8 +62,11 @@ body::after {
   text-shadow: var(--neon);
   letter-spacing: 0.5px;
 }
-.logo .heart { color: var(--hot); display: inline-block; animation: beat 1.6s ease-in-out infinite; }
-@keyframes beat { 0%, 100% { transform: scale(1); } 15% { transform: scale(1.25); } 30% { transform: scale(1); } }
+.logo .flame { display: inline-block; transform-origin: 50% 90%; text-shadow: 0 0 18px rgba(255, 138, 61, 0.9);
+  animation: flicker 1.3s ease-in-out infinite; }
+@keyframes flicker { 0%, 100% { transform: scale(1) rotate(-2deg); } 25% { transform: scale(1.08, 1.14) rotate(2deg); }
+  50% { transform: scale(0.96, 1.04) rotate(-1deg); } 75% { transform: scale(1.06, 1.1) rotate(1.5deg); } }
+@media (prefers-reduced-motion: reduce) { .logo .flame { animation: none; } }
 .league-name { color: var(--ink-dim); font-size: 0.95rem; }
 .league-name strong { color: var(--ink); }
 .spacer { flex: 1; }

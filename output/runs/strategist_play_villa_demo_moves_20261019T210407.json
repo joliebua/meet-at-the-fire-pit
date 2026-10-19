@@ -1,0 +1,29 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_villa_demo",
+ "started": "2026-10-19T21:04:07+00:00",
+ "seconds": 23.6,
+ "usage": {
+  "requests": 4,
+  "gateway_cache_hits": 0,
+  "input_tokens": 4590,
+  "cached_input_tokens": 1712,
+  "cache_write_tokens": 1712,
+  "output_tokens": 624,
+  "reasoning_tokens": 446,
+  "web_searches": 0,
+  "cost_usd": 0.00066
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules",
+  "standings",
+  "free_agents"
+ ],
+ "advice": {
+  "moves": [],
+  "summary": "Jolie should be looking to make a move: Beatriz and Gabriel have both been dumped, so those roster spots no longer have staying-power upside. But the available free-agent list came back empty, so I can't responsibly name a valid replacement; hold only until there is a confirmed free agent to swap in, then prioritize someone already in a mutual, stable couple."
+ }
+}

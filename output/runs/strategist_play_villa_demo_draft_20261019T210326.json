@@ -1,0 +1,40 @@
+{
+ "agent": "strategist",
+ "kind": "draft",
+ "league": "play_villa_demo",
+ "started": "2026-10-19T21:03:26+00:00",
+ "seconds": 11.5,
+ "usage": {
+  "requests": 2,
+  "gateway_cache_hits": 0,
+  "input_tokens": 2899,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 1964,
+  "output_tokens": 713,
+  "reasoning_tokens": 471,
+  "web_searches": 0,
+  "cost_usd": 0.000696
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules"
+ ],
+ "advice": {
+  "picks": [
+   {
+    "islander": "Beatriz",
+    "reason": "She already has a clear couple with Sean because she chose him on Day 1, giving her a stronger staying-power signal than an unpaired Day 2 arrival."
+   },
+   {
+    "islander": "Kenzie",
+    "reason": "Kenzie picked Zach on Day 1, so she starts with an intentional couple rather than the uncertainty of a fresh bombshell."
+   },
+   {
+    "islander": "Melanie",
+    "reason": "Sincere chose Melanie after both she and Aniya picked him, so she has a partner who actively selected her and a promising early couple."
+   }
+  ],
+  "summary": "Jolie's roster is empty, so these three give you a strong foundation across three different couples. I\u2019m prioritizing Islanders with an established Day 1 pairing over Gabriel and Kayda, who have just entered and are still unpaired."
+ }
+}

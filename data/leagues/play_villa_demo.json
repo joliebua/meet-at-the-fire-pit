@@ -5,7 +5,7 @@
  "mode": "play",
  "rules_file": "standard.json",
  "house_rules": [],
- "seed": 4535,
+ "seed": 7616,
  "you": "Jolie",
  "settings": {
   "draft_rounds": 2,
@@ -21,15 +21,15 @@
    "bot": false,
    "roster": [
     {
+     "islander": "Beatriz",
+     "from_week": 1
+    },
+    {
      "islander": "Gabriel",
      "from_week": 1
     },
     {
-     "islander": "Kayda",
-     "from_week": 1
-    },
-    {
-     "islander": "Kenzie",
+     "islander": "Melanie",
      "from_week": 1
     },
     {
@@ -43,11 +43,11 @@
    "bot": true,
    "roster": [
     {
-     "islander": "Bryce",
+     "islander": "Sincere",
      "from_week": 1
     },
     {
-     "islander": "Beatriz",
+     "islander": "KC",
      "from_week": 1
     },
     {
@@ -56,7 +56,7 @@
      "until_week": 1
     },
     {
-     "islander": "Sol",
+     "islander": "Caleb",
      "from_week": 2
     }
    ]
@@ -66,7 +66,11 @@
    "bot": true,
    "roster": [
     {
-     "islander": "Sincere",
+     "islander": "Aniya",
+     "from_week": 1
+    },
+    {
+     "islander": "Zach",
      "from_week": 1
     },
     {
@@ -74,11 +78,7 @@
      "from_week": 1
     },
     {
-     "islander": "Melanie",
-     "from_week": 1
-    },
-    {
-     "islander": "Caleb",
+     "islander": "Sol",
      "from_week": 2
     }
    ]
@@ -88,15 +88,15 @@
    "bot": true,
    "roster": [
     {
-     "islander": "Aniya",
+     "islander": "Kenzie",
      "from_week": 1
     },
     {
-     "islander": "KC",
+     "islander": "Bryce",
      "from_week": 1
     },
     {
-     "islander": "Zach",
+     "islander": "Kayda",
      "from_week": 1
     },
     {
@@ -108,16 +108,16 @@
  ],
  "draft": {
   "order": [
+   "Maya",
    "Dev",
-   "Priya",
    "Jolie",
-   "Maya"
+   "Priya"
   ],
   "picks": [
    {
     "round": 1,
     "pick": 1,
-    "player": "Dev",
+    "player": "Maya",
     "islander": "Sincere",
     "by": "bot",
     "reason": "8 pts so far, coupled with Melanie"
@@ -125,7 +125,7 @@
    {
     "round": 1,
     "pick": 2,
-    "player": "Priya",
+    "player": "Dev",
     "islander": "Aniya",
     "by": "bot",
     "reason": "4 pts so far, coupled with KC"
@@ -134,49 +134,49 @@
     "round": 1,
     "pick": 3,
     "player": "Jolie",
-    "islander": "Gabriel",
+    "islander": "Beatriz",
     "by": "you",
     "reason": ""
    },
    {
     "round": 1,
     "pick": 4,
-    "player": "Maya",
+    "player": "Priya",
+    "islander": "Kenzie",
+    "by": "bot",
+    "reason": "4 pts so far, coupled with Zach"
+   },
+   {
+    "round": 2,
+    "pick": 5,
+    "player": "Priya",
     "islander": "Bryce",
     "by": "bot",
     "reason": "4 pts so far, coupled with Trinity"
    },
    {
     "round": 2,
-    "pick": 5,
-    "player": "Maya",
-    "islander": "Beatriz",
-    "by": "bot",
-    "reason": "4 pts so far, coupled with Sean"
-   },
-   {
-    "round": 2,
     "pick": 6,
     "player": "Jolie",
-    "islander": "Kayda",
+    "islander": "Gabriel",
     "by": "you",
     "reason": ""
    },
    {
     "round": 2,
     "pick": 7,
-    "player": "Priya",
-    "islander": "KC",
+    "player": "Dev",
+    "islander": "Zach",
     "by": "bot",
-    "reason": "4 pts so far, coupled with Aniya"
+    "reason": "4 pts so far, coupled with Kenzie"
    },
    {
     "round": 2,
     "pick": 8,
-    "player": "Dev",
-    "islander": "Trinity",
+    "player": "Maya",
+    "islander": "KC",
     "by": "bot",
-    "reason": "4 pts so far, coupled with Bryce"
+    "reason": "4 pts so far, coupled with Aniya"
    }
   ],
   "done": true
@@ -185,10 +185,10 @@
   {
    "from_week": 1,
    "player": "Jolie",
-   "add": "Kenzie",
+   "add": "Melanie",
    "drop": null,
    "by": "autopilot",
-   "reason": "Add Kenzie to bring in an established couple while Gabriel and Kayda are currently unpaired; she chose Zach on Day 1.",
+   "reason": "Add Melanie to diversify Jolie’s roster away from Beatriz and Sean’s couple; Melanie at least has a current pairing, and Sincere chose her when he had the power to pick, while Gabriel and Kayda are both still unpaired.",
    "made_after": "Week 0"
   },
   {
@@ -203,19 +203,19 @@
   {
    "from_week": 1,
    "player": "Dev",
-   "add": "Melanie",
+   "add": "Trinity",
    "drop": null,
    "by": "bot",
-   "reason": "Melanie has 4 pts",
+   "reason": "Trinity has 4 pts",
    "made_after": "Week 0"
   },
   {
    "from_week": 1,
    "player": "Priya",
-   "add": "Zach",
+   "add": "Kayda",
    "drop": null,
    "by": "bot",
-   "reason": "Zach has 4 pts",
+   "reason": "Kayda has 5 pts",
    "made_after": "Week 0"
   },
   {
@@ -224,25 +224,25 @@
    "add": "Corbin",
    "drop": null,
    "by": "autopilot",
-   "reason": "Add Corbin while you have an open roster spot: he has 15 points already, and his first-pick power led to a new couple with Kenzie, giving him a promising foothold for next week.",
+   "reason": "Add Corbin as your fourth islander: he has the strongest available foothold, got first pick and chose Kenzie, diversifying you beyond the Beatriz–Gabriel pair; his new couple is still early, so this is a measured upside play rather than a sure thing.",
    "made_after": "Week 1"
   },
   {
    "from_week": 2,
    "player": "Maya",
-   "add": "Sol",
+   "add": "Caleb",
    "drop": "Sean",
    "by": "bot",
-   "reason": "Sean left the villa; Sol has 7 pts",
+   "reason": "Sean left the villa; Caleb has 7 pts",
    "made_after": "Week 1"
   },
   {
    "from_week": 2,
    "player": "Dev",
-   "add": "Caleb",
+   "add": "Sol",
    "drop": null,
    "by": "bot",
-   "reason": "Caleb has 7 pts",
+   "reason": "Sol has 7 pts",
    "made_after": "Week 1"
   },
   {
@@ -255,5 +255,5 @@
    "made_after": "Week 1"
   }
  ],
- "created": "2026-10-19T20:31:18+00:00"
+ "created": "2026-10-19T21:03:26+00:00"
 }

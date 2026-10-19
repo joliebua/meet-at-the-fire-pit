@@ -23,7 +23,7 @@ PORTKEY_BASE_URL = "https://api.portkey.ai/v1"
 SOURCE_MODE = os.getenv("VILLA_SOURCE_MODE", "live")
 SNAPSHOT = os.getenv("VILLA_SNAPSHOT", "love_island_usa_s8")
 
-USER_AGENT = "villa-commissioner/0.1 (MGT 409 student project; Love Island fantasy league)"
+USER_AGENT = "fire-pit/0.1 (MGT 409 student project; Love Island fantasy league)"
 
 
 def portkey_key() -> str:

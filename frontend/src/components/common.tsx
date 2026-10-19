@@ -41,7 +41,7 @@ const QUIPS: Record<string, string[]> = {
   scout: ["Scouting the villa gossip…", "Reading the wiki before the islanders do…", "Pulling this week's headlines…"],
   ref: ["The Ref is rewatching the tape…", "Checking the receipts…", "Consulting the villa rulebook…"],
   rules: ["Turning vibes into rules…", "Running the numbers by the pool…"],
-  host: ["Your host is getting their microphone…", "Writing this week's drop…", "Adding a dramatic pause…"],
+  host: ["Lighting the fire pit…", "Islanders, gather round…", "Adding a dramatic pause…"],
   coach: ["The Strategist is studying the couples…", "Reading the villa's body language…", "Checking who's at risk at the fire pit…"],
 };
 

@@ -1,51 +1,51 @@
 {
  "league": "demo_league",
  "week": "Week 3",
- "written": "2026-10-19T18:59:11+00:00",
+ "written": "2026-10-19T21:02:49+00:00",
  "drop": {
-  "headline": "Carl’s Villa Whiplash, Priya’s Steady Crown",
-  "opener": "Week 3 brought dumped-islander drama, a public-vote return and couples choosing to stick or switch. Priya kept her place at the top, while the points made for a lively little reshuffle of fortunes beneath her.",
+  "headline": "Priya Holds the Flame as Carl Brings the Whiplash",
+  "opener": "Week 3 brings a dramatic fire-pit roll call: Priya stays at the top, while the rest of the standings hold their places too. Carl’s arrival, return, and dump gave Dev a proper scoring roller coaster.",
   "player_lines": [
    {
     "player": "Priya",
-    "line": "Rank 1 is still yours: 101 total after a strong 17 this week. The crown stays put, and the villa can take notes."
+    "line": "First place with 101 total points, and 17 this week—still holding the villa’s brightest flame. Corbin’s new couple added a little extra sparkle."
    },
    {
     "player": "Dev",
-    "line": "You held rank 2 with 68 total, but just 4 this week. Carl’s departure and return made for a full-on points rollercoaster."
+    "line": "Still in second with 68 total, but just 4 this week. Carl’s arrival and return brought points, then that dumped penalty slammed the brakes on the party."
    },
    {
     "player": "Jolie",
-    "line": "Rank 3 remains yours, with 64 total after 16 this week. A solid week—no dramatic climb needed to keep your spot."
+    "line": "Third place with 64 total and a lively 16 this week. Melanie and Sincere, plus Bryce and Trinity, each banked recoupling points for your team."
    },
    {
     "player": "Maya",
-    "line": "You’re still at rank 4, on 36 total after matching Jolie’s 16 this week. A lively points haul, even if the table didn’t budge."
+    "line": "Fourth with 36 total, matching Jolie’s 16 this week. Melanie and Sincere stayed coupled up and kept your week moving."
    }
   ],
   "moments": [
    {
     "event_id": "week3-e44",
-    "line": "Carl’s dumped penalty cost Dev 20 points, making it the week’s biggest sting."
+    "line": "Carl’s dumped penalty cost Dev 20 points—the week’s biggest swing, and a serious blow to the scoreboard."
    },
    {
     "event_id": "week3-e20",
-    "line": "Carl’s public-vote return brought Dev 10 points back and softened the blow."
+    "line": "Carl’s return earned Dev 10 points back, giving that roller coaster a welcome lift."
+   },
+   {
+    "event_id": "week3-e7",
+    "line": "Carl’s bombshell arrival added 5 points for Dev before the week’s later twists."
    },
    {
     "event_id": "week3-e21",
-    "line": "Kayda and Zach staying together added 6 points across Dev and Priya’s teams."
+    "line": "Kayda and Zach staying together paid 3 points apiece to Priya and Dev, rewarding both teams at the recoupling."
    },
    {
     "event_id": "week3-e22",
-    "line": "Melanie and Sincere sticking together added 6 points across Jolie and Maya’s teams."
-   },
-   {
-    "event_id": "week3-e23",
-    "line": "Trinity and Bryce stayed coupled, bringing another 6 points across Jolie and Maya’s teams."
+    "line": "Melanie and Sincere’s decision to stay together delivered 3 points apiece to Jolie and Maya."
    }
   ],
-  "closer": "Next week, every point and every pairing stays in play—keep those group-chat receipts ready."
+  "closer": "Next week, the fire pit will reveal whether anyone can turn the standings into a new story."
  },
  "facts": {
   "league": "Casa Amor-igos (demo league)",
@@ -244,7 +244,8 @@
    "Steal coupling bonus +5",
    "Dumped penalty -20",
    "Hideaway date bonus +4"
-  ]
+  ],
+  "final_week": false
  },
- "markdown": "# Carl’s Villa Whiplash, Priya’s Steady Crown\n*Casa Amor-igos (demo league) · Week 3*\n\nWeek 3 brought dumped-islander drama, a public-vote return and couples choosing to stick or switch. Priya kept her place at the top, while the points made for a lively little reshuffle of fortunes beneath her.\n\n| # | Player | Total | This week | Move |\n|---|---|---|---|---|\n| 1 | Priya | 101 | +17 | – |\n| 2 | Dev | 68 | +4 | – |\n| 3 | Jolie | 64 | +16 | – |\n| 4 | Maya | 36 | +16 | – |\n\n## The group chat report\n- **Priya:** Rank 1 is still yours: 101 total after a strong 17 this week. The crown stays put, and the villa can take notes.\n- **Dev:** You held rank 2 with 68 total, but just 4 this week. Carl’s departure and return made for a full-on points rollercoaster.\n- **Jolie:** Rank 3 remains yours, with 64 total after 16 this week. A solid week—no dramatic climb needed to keep your spot.\n- **Maya:** You’re still at rank 4, on 36 total after matching Jolie’s 16 this week. A lively points haul, even if the table didn’t budge.\n\n## Moments that moved the league\n- Carl’s dumped penalty cost Dev 20 points, making it the week’s biggest sting.  \n  <sub>Receipt: “On Day 20, Casa Amor islanders Amora, Carl, Chay, Corey, Ronnie, and Sydney were dumped from the island after failing to couple up.” · Dumped penalty (-20)</sub>\n- Carl’s public-vote return brought Dev 10 points back and softened the blow.  \n  <sub>Receipt: “On Day 21, Amora and Carl re-entered the villa after the public voted them back in.” · Re-entered the villa (+10)</sub>\n- Kayda and Zach staying together added 6 points across Dev and Priya’s teams.  \n  <sub>Receipt: “Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all chose to remain in their couples.” · Survived a recoupling together (+3)</sub>\n- Melanie and Sincere sticking together added 6 points across Jolie and Maya’s teams.  \n  <sub>Receipt: “Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all chose to remain in their couples.” · Survived a recoupling together (+3)</sub>\n- Trinity and Bryce stayed coupled, bringing another 6 points across Jolie and Maya’s teams.  \n  <sub>Receipt: “Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all chose to remain in their couples.” · Survived a recoupling together (+3)</sub>\n\n_Next week, every point and every pairing stays in play—keep those group-chat receipts ready._\n"
+ "markdown": "# Priya Holds the Flame as Carl Brings the Whiplash\n*Casa Amor-igos (demo league) · Week 3*\n\nWeek 3 brings a dramatic fire-pit roll call: Priya stays at the top, while the rest of the standings hold their places too. Carl’s arrival, return, and dump gave Dev a proper scoring roller coaster.\n\n| # | Player | Total | This week | Move |\n|---|---|---|---|---|\n| 1 | Priya | 101 | +17 | – |\n| 2 | Dev | 68 | +4 | – |\n| 3 | Jolie | 64 | +16 | – |\n| 4 | Maya | 36 | +16 | – |\n\n## The group chat report\n- **Priya:** First place with 101 total points, and 17 this week—still holding the villa’s brightest flame. Corbin’s new couple added a little extra sparkle.\n- **Dev:** Still in second with 68 total, but just 4 this week. Carl’s arrival and return brought points, then that dumped penalty slammed the brakes on the party.\n- **Jolie:** Third place with 64 total and a lively 16 this week. Melanie and Sincere, plus Bryce and Trinity, each banked recoupling points for your team.\n- **Maya:** Fourth with 36 total, matching Jolie’s 16 this week. Melanie and Sincere stayed coupled up and kept your week moving.\n\n## Moments that moved the league\n- Carl’s dumped penalty cost Dev 20 points—the week’s biggest swing, and a serious blow to the scoreboard.  \n  <sub>Receipt: “On Day 20, Casa Amor islanders Amora, Carl, Chay, Corey, Ronnie, and Sydney were dumped from the island after failing to couple up.” · Dumped penalty (-20)</sub>\n- Carl’s return earned Dev 10 points back, giving that roller coaster a welcome lift.  \n  <sub>Receipt: “On Day 21, Amora and Carl re-entered the villa after the public voted them back in.” · Re-entered the villa (+10)</sub>\n- Carl’s bombshell arrival added 5 points for Dev before the week’s later twists.  \n  <sub>Receipt: “On Day 17, Carl, Chandlar, Chay, Corey, Dylan, Gal, Keyon, Kyle, Ronnie, Ryan, Tino and Trae entered the main villa.” · Bombshell arrival (+5)</sub>\n- Kayda and Zach staying together paid 3 points apiece to Priya and Dev, rewarding both teams at the recoupling.  \n  <sub>Receipt: “Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all chose to remain in their couples.” · Survived a recoupling together (+3)</sub>\n- Melanie and Sincere’s decision to stay together delivered 3 points apiece to Jolie and Maya.  \n  <sub>Receipt: “Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all chose to remain in their couples.” · Survived a recoupling together (+3)</sub>\n\n_Next week, the fire pit will reveal whether anyone can turn the standings into a new story._\n"
 }

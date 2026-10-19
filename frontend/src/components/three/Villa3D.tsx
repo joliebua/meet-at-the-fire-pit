@@ -73,6 +73,62 @@ function palm(x: number, z: number, lean: number) {
   return tree;
 }
 
+type FirePit = { group: THREE.Group; flames: THREE.Mesh[]; light: THREE.PointLight; embers: THREE.Points; seeds: number[] };
+
+/** The villa fire pit: a ring of stones, crossed logs, flickering flames, rising embers and a warm light. */
+function firePit(track: <T extends { dispose: () => void }>(x: T) => T, glow: THREE.Texture): FirePit {
+  const group = new THREE.Group();
+  const stoneMat = track(new THREE.MeshStandardMaterial({ color: 0x6b4a6e, roughness: 0.95, flatShading: true }));
+  const stoneGeo = track(new THREE.DodecahedronGeometry(0.2, 0));
+  for (let i = 0; i < 11; i++) {
+    const a = (i / 11) * Math.PI * 2;
+    const stone = new THREE.Mesh(stoneGeo, stoneMat);
+    stone.position.set(Math.cos(a) * 0.62, 0.12, Math.sin(a) * 0.62);
+    stone.rotation.set(a, a * 2, 0);
+    stone.scale.set(1.1, 0.75, 1);
+    group.add(stone);
+  }
+  const logMat = track(new THREE.MeshStandardMaterial({ color: PALETTE.trunk, roughness: 0.9, flatShading: true }));
+  const logGeo = track(new THREE.CylinderGeometry(0.07, 0.08, 0.9, 6));
+  for (const a of [0, Math.PI / 3, (2 * Math.PI) / 3]) {
+    const log = new THREE.Mesh(logGeo, logMat);
+    log.rotation.set(Math.PI / 2, 0, a);
+    log.position.y = 0.14;
+    group.add(log);
+  }
+  const flames: THREE.Mesh[] = [];
+  const colors = [0xff3d00, 0xff8a3d, 0xffb02e, 0xffd23f, 0xff6a1f];
+  for (let i = 0; i < 5; i++) {
+    const h = 0.75 + (i % 3) * 0.2;
+    const geo = track(new THREE.ConeGeometry(0.16 + (i % 2) * 0.06, h, 7, 1, true));
+    geo.translate(0, h / 2, 0);
+    const mat = track(new THREE.MeshBasicMaterial({ color: colors[i], transparent: true, opacity: 0.85,
+      blending: THREE.AdditiveBlending, depthWrite: false, side: THREE.DoubleSide }));
+    const flame = new THREE.Mesh(geo, mat);
+    const a = (i / 5) * Math.PI * 2;
+    flame.position.set(Math.cos(a) * 0.16, 0.18, Math.sin(a) * 0.16);
+    group.add(flame);
+    flames.push(flame);
+  }
+  const halo = new THREE.Sprite(track(new THREE.SpriteMaterial({ map: glow, color: 0xff8a3d, transparent: true,
+    depthWrite: false, blending: THREE.AdditiveBlending })));
+  halo.scale.set(3.4, 3.4, 1);
+  halo.position.y = 0.7;
+  group.add(halo);
+  const light = new THREE.PointLight(0xff8a3d, 22, 9);
+  light.position.y = 0.9;
+  group.add(light);
+  const count = 26;
+  const positions = new Float32Array(count * 3);
+  const seeds = Array.from({ length: count }, () => Math.random());
+  const emberGeo = track(new THREE.BufferGeometry());
+  emberGeo.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+  const embers = new THREE.Points(emberGeo, track(new THREE.PointsMaterial({ color: 0xffb02e, size: 0.07, transparent: true,
+    opacity: 0.9, blending: THREE.AdditiveBlending, depthWrite: false })));
+  group.add(embers);
+  return { group, flames, light, embers, seeds };
+}
+
 export default function Villa3D({ bars, height = 320, caption }: { bars: Bar[]; height?: number; caption?: string }) {
   const mount = useRef<HTMLDivElement>(null);
   const api = useRef<{ setBars: (b: Bar[]) => void } | null>(null);
@@ -141,6 +197,10 @@ export default function Villa3D({ bars, height = 320, caption }: { bars: Bar[]; 
     ground.position.y = -0.05;
     scene.add(ground);
     for (const [x, z, lean] of [[-8.2, -2.4, 1], [-7.4, 1.6, 0.6], [8.3, -1.8, -1], [7.6, 2.2, -0.5]]) scene.add(palm(x, z, lean));
+    const pit = firePit(track, track(glowTexture("rgba(255,170,80,0.9)")));
+    pit.group.position.set(-5.2, 0.05, 4.5);
+    pit.group.scale.setScalar(1.3);
+    scene.add(pit.group);
 
     // pillars
     const heartGeo = track(heartGeometry());
@@ -215,6 +275,20 @@ export default function Villa3D({ bars, height = 320, caption }: { bars: Bar[]; 
         p.heart.position.y = p.current + 0.6 + (reduce ? 0 : Math.sin(t * 2 + p.x) * 0.08);
         p.heart.rotation.y = reduce ? 0.4 : t * 1.2 + p.x;
         p.label.position.y = p.current + 1.6;
+      }
+      if (!reduce) {
+        pit.flames.forEach((f, i) => {
+          const k = Math.sin(t * (7 + i) + i * 1.7) * 0.5 + Math.sin(t * 13.3 + i) * 0.25;
+          f.scale.set(1 + k * 0.12, 1 + k * 0.28, 1 + k * 0.12);
+          f.rotation.y = t * (0.6 + i * 0.2);
+        });
+        pit.light.intensity = 20 + Math.sin(t * 11) * 4 + Math.sin(t * 17.7) * 3;
+        const ep = pit.embers.geometry.attributes.position as THREE.BufferAttribute;
+        pit.seeds.forEach((sd, i) => {
+          const life = (t * (0.35 + sd * 0.4) + sd) % 1;
+          ep.setXYZ(i, Math.sin(sd * 40 + t * 2) * 0.25 * life, 0.3 + life * 2.2, Math.cos(sd * 30 + t * 1.6) * 0.25 * life);
+        });
+        ep.needsUpdate = true;
       }
       const a = reduce ? 0 : Math.sin(t * 0.12) * 0.32;
       camera.position.set(Math.sin(a) * 12, 4.6, Math.cos(a) * 12);

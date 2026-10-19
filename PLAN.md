@@ -1,4 +1,4 @@
-# Villa Commissioner: working plan
+# Fire Pit (formerly Villa Commissioner): working plan
 
 An AI agent team that runs a **Love Island fantasy league** for a friend group. It gathers what happened in each episode from live online sources, turns that into scored events with receipts, settles disputes, and writes the weekly standings drop.
 
@@ -146,4 +146,4 @@ A pipeline orchestrator runs Scout → Recapper → Scorekeeper → Host each we
 
 - An outside user for a timed trial (optional; it would strengthen Impact and Tier 3)
 - Look and feel: the class default is a Harry Styles-inspired style. Blend it with a villa vibe, or go pure Love Island?
-- App name: "Villa Commissioner" is a placeholder.
+- App name: **Fire Pit** (renamed from "Villa Commissioner" on 10/19). The GitHub repo is still `villa-commissioner`.

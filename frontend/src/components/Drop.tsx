@@ -27,7 +27,7 @@ export default function DropView({ leagueKey, week, version, onChanged }: Props)
       const r = await api.makeDrop(leagueKey, week);
       setRecord(r);
       setMissing(false);
-      onChanged(`Week ${week} drop written (${fmtUsd(r.cost_usd ?? 0)})`);
+      onChanged(`Islanders, meet me at the fire pit 🔥 Week ${week} drop is in (${fmtUsd(r.cost_usd ?? 0)})`);
     } catch (e) {
       setError((e as Error).message);
     } finally {
@@ -39,7 +39,7 @@ export default function DropView({ leagueKey, week, version, onChanged }: Props)
     if (!record) return;
     const d = record.drop;
     const table = record.facts.standings.map((r) => `${r.rank}. ${r.player} ${r.total} (${r.this_week >= 0 ? "+" : ""}${r.this_week})`).join("\n");
-    const text = [`💖 ${d.headline}`, "", d.opener, "", table, "", ...d.player_lines.map((p) => `• ${p.player}: ${p.line}`), "", d.closer].join("\n");
+    const text = [`🔥 ${d.headline}`, "", d.opener, "", table, "", ...d.player_lines.map((p) => `• ${p.player}: ${p.line}`), "", d.closer].join("\n");
     navigator.clipboard.writeText(text).then(() => {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
@@ -53,12 +53,12 @@ export default function DropView({ leagueKey, week, version, onChanged }: Props)
       <div className="card">
         <div className="row" style={{ justifyContent: "space-between" }}>
           <div>
-            <h2 className="section" style={{ margin: 0 }}>The Week {week} drop</h2>
-            <p className="hint" style={{ margin: "4px 0 0" }}>The Host writes the group-chat recap. Code checks every number and name against the real standings, and nothing past Week {week} can sneak in.</p>
+            <h2 className="section" style={{ margin: 0 }}>🔥 Week {week} at the fire pit</h2>
+            <p className="hint" style={{ margin: "4px 0 0" }}>Everyone gathers round: the Host announces the week's standings for the group chat. Code checks every number and name against the real standings, and nothing past Week {week} can sneak in.</p>
           </div>
           <div className="row">
             {record && <button className="btn ghost" onClick={copyForChat}>{copied ? "Copied! 📋" : "📋 Copy for the group chat"}</button>}
-            <button className="btn" onClick={write} disabled={busy}>{record ? "🎙️ Rewrite" : "🎙️ Write the drop"}</button>
+            <button className="btn" onClick={write} disabled={busy}>{record ? "🔥 Re-announce" : "🔥 Gather at the fire pit"}</button>
           </div>
         </div>
         {busy && <Loading kind="host" />}
@@ -66,7 +66,7 @@ export default function DropView({ leagueKey, week, version, onChanged }: Props)
       </div>
 
       {!record && !missing && !busy && <Loading />}
-      {missing && !busy && <div className="card muted">No drop for Week {week} yet. Your host is ready when you are.</div>}
+      {missing && !busy && <div className="card muted">The fire pit is quiet for Week {week}. Your host is ready when you are.</div>}
 
       {record && (
         <article className="card drop">

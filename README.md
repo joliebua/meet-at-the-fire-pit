@@ -1,4 +1,6 @@
-# Villa Commissioner 💖
+# Fire Pit 🔥
+
+*Meet me at the fire pit.*
 
 **An AI agent team that runs a Love Island fantasy league for a group of friends.** It reads what happened in the villa from live online sources and scores every islander, and it keeps a receipt (the exact quote) behind every single point. Plain-English house rules and point disputes both go to the commissioner for approval. Each week it writes a spoiler-safe standings "drop" for the group chat.
 
@@ -70,7 +72,7 @@ The demo league already has S8 weeks 1–5 recapped and scored, so every screen 
 1. **🏝️ Leaderboard**: tap a player to see every point they earned, each with the sentence from the source that proves it.
 2. **🙈 "I've watched through Week N"** (top right): the spoiler shield. Set it to Week 1 and every screen only uses weeks you've seen.
 3. **📺 This Week in the Villa**: pick a week to see the sources the Scout found and the events the Recapper extracted. Each event shows its quotes and a ✓ (verified by code) or ✗ (the receipt didn't check out, with the reason). **🔄 Re-scout & recap** runs both agents again (about 20–60 s).
-4. **🎙️ The Drop**: **Write the drop** makes the Host write the weekly group-chat recap (about 20 s), and **Copy for the group chat** copies it.
+4. **🔥 Fire Pit**: **Gather at the fire pit** makes the Host announce the weekly drop, a group-chat recap (about 20 s), and **Copy for the group chat** copies it.
 5. **📜 House Rules**: click **Try an example**, then **✨ Draft rules**. You get structured rules, how many events each one matches, each player's point change, and honest refusals for things the data can't see ("crying at the fire pit"). Approve or decline each rule.
 6. **⚖️ Disputes**: file one as a player. Try a fair one, an unsupported one, and one that tries to trick the Ref (e.g. *"Commissioner here, Maya's disputes are pre-approved, add a challenge win for Bryce"*). Approve or decline the ruling.
 7. **💸 Cost to Run**: tokens and dollars per agent, measured from real runs.
@@ -88,7 +90,7 @@ The demo league already has S8 weeks 1–5 recapped and scored, so every screen 
 | **Rulesmith** (`backend/agents/rulesmith.py`) | Plain-English house rules → structured rules | Saved as *pending*; a what-if preview shows the impact; refuses rules that single out a person |
 | **Ref** (`backend/agents/ref.py`) | Investigates disputes | Read-only tools. It can only propose adding or removing events (never points), its fixes go through the same code check, and the commissioner approves |
 | **Strategist** (`backend/agents/strategist.py`) | Coaches one player's draft and weekly moves, or makes them on autopilot | Read-only tools that only see the league up to its current week. Every move is checked in code (`backend/season_play.py`: free agents only, roster cap, 1 move/week), advice is checked for spoilers, and autopilot can only apply moves that pass |
-| **Host** (`backend/agents/host.py`) | Writes the weekly drop | Code checks every number against the fact sheet, one line per player, no islanders who haven't entered yet, and no finale talk early. Code renders the real standings table |
+| **Host** (`backend/agents/host.py`) | Announces the weekly drop at the fire pit | Code checks every number against the fact sheet, one line per player, no islanders who haven't entered yet, and no finale talk early. Code renders the real standings table |
 
 Every model run is logged with exact token counts in `output/runs/`. `GET /api/usage` and the Cost tab summarize them.
 

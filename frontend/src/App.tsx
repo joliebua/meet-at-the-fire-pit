@@ -18,7 +18,7 @@ const TABS = [
   { id: "board", label: "🏝️ Leaderboard", play: true, classic: true },
   { id: "play", label: "🎯 Draft & Moves", play: true, classic: true },
   { id: "villa", label: "📺 This Week in the Villa", play: true, classic: true },
-  { id: "drop", label: "🎙️ The Drop", play: true, classic: true },
+  { id: "drop", label: "🔥 Fire Pit", play: true, classic: true },
   { id: "rules", label: "📜 House Rules", play: false, classic: true },
   { id: "disputes", label: "⚖️ Disputes", play: false, classic: true },
   { id: "costs", label: "💸 Cost to Run", play: true, classic: true },
@@ -108,7 +108,7 @@ export default function App() {
   return (
     <div className="app">
       <header className="topbar">
-        <h1 className="logo">Villa Commissioner <span className="heart">♥</span></h1>
+        <h1 className="logo" title="Meet me at the fire pit">Fire Pit <span className="flame" aria-hidden="true">🔥</span></h1>
         <label className="league-name row" style={{ gap: 8 }}>
           <select value={newLeague ? NEW : leagueKey} onChange={(e) => switchLeague(e.target.value)} title="Switch league">
             {leagues.map((l) => (
@@ -172,7 +172,7 @@ export default function App() {
       {burst > 0 && <Suspense fallback={null}><HeartBurst burst={burst} /></Suspense>}
       {toast && <div className="toast">{toast}</div>}
       <footer className="foot">
-        Fan-made fantasy league tool · not affiliated with Love Island, ITV or Peacock · every point has a receipt
+        Meet me at the fire pit 🔥 · fan-made fantasy league tool · not affiliated with Love Island, ITV or Peacock · every point has a receipt
         {config && <> · model {config.model}</>}
       </footer>
     </div>

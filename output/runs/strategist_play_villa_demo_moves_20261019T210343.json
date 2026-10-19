@@ -1,0 +1,37 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_villa_demo",
+ "started": "2026-10-19T21:03:43+00:00",
+ "seconds": 7.4,
+ "usage": {
+  "requests": 2,
+  "gateway_cache_hits": 0,
+  "input_tokens": 2575,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 1613,
+  "output_tokens": 353,
+  "reasoning_tokens": 123,
+  "web_searches": 0,
+  "cost_usd": 0.000474
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules",
+  "standings"
+ ],
+ "advice": {
+  "moves": [
+   {
+    "add": "Melanie",
+    "drop": null,
+    "reason": "Add Melanie to diversify Jolie\u2019s roster away from Beatriz and Sean\u2019s couple; Melanie at least has a current pairing, and Sincere chose her when he had the power to pick, while Gabriel and Kayda are both still unpaired.",
+    "evidence": [
+     "As Aniya and Melanie both chose Sincere, he was given the power, to which he chose to pair up with Melanie."
+    ]
+   }
+  ],
+  "summary": "Yes\u2014use the available move on Melanie, but skip the unpaired bombshells for now. Jolie keeps both current picks and adds coverage from a separate couple; it\u2019s early, so this is a measured move rather than a reason to overhaul the roster."
+ }
+}

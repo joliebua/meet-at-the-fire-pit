@@ -91,6 +91,7 @@ def build_facts(league_key: str, week: int) -> tuple[dict, dict]:
     people = cast_source.cast(season["pages"]["wikipedia"])
     future = [p["first_name"] for p in people if (p["stints"][0]["entered"] or 0) > week_end]
     final = any(l["week"] == wk and l["rule_id"] in ("std-win",) for l in now["ledger"])
+    facts["final_week"] = final
     ctx = {"future_islanders": future, "final_week": final, "standings_table": standings}
     return facts, ctx
 

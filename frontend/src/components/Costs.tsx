@@ -7,7 +7,7 @@ type Props = { version: number; weeksScored: number; players: number };
 const AGENTS: Record<string, { name: string; role: string; per: string }> = {
   scout: { name: "🔎 Scout", role: "Gathers wiki, news and web sources for a week", per: "per show-week (shared by every league)" },
   recapper: { name: "📝 Recapper", role: "Turns sources into events with exact quotes", per: "per show-week (shared by every league)" },
-  host: { name: "🎙️ Host", role: "Writes the weekly drop", per: "per league-week" },
+  host: { name: "🎙️ Host", role: "Announces the weekly drop at the fire pit", per: "per league-week" },
   ref: { name: "⚖️ Ref", role: "Investigates a dispute", per: "per dispute" },
   rulesmith: { name: "📜 Rulesmith", role: "Drafts house rules", per: "per request" },
   strategist: { name: "🎯 Strategist", role: "Coaches your draft and weekly moves (or autopilot)", per: "per advice / autopilot week" },

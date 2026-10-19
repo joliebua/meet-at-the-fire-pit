@@ -1,0 +1,37 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_villa_demo",
+ "started": "2026-10-19T21:03:52+00:00",
+ "seconds": 10.8,
+ "usage": {
+  "requests": 2,
+  "gateway_cache_hits": 0,
+  "input_tokens": 2828,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 1872,
+  "output_tokens": 611,
+  "reasoning_tokens": 385,
+  "web_searches": 0,
+  "cost_usd": 0.000635
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules",
+  "standings"
+ ],
+ "advice": {
+  "moves": [
+   {
+    "add": "Corbin",
+    "drop": null,
+    "reason": "Add Corbin as your fourth islander: he has the strongest available foothold, got first pick and chose Kenzie, diversifying you beyond the Beatriz\u2013Gabriel pair; his new couple is still early, so this is a measured upside play rather than a sure thing.",
+    "evidence": [
+     "\u201cas the newest arrival, Corbin was given first pick, to which he chose Kenzie.\u201d"
+    ]
+   }
+  ],
+  "summary": "Yes\u2014use your open roster spot on Corbin, without dropping anyone. Beatriz and Gabriel have stayed together and Melanie is paired with Sincere, so Corbin adds another couple path while his new match with Kenzie develops."
+ }
+}

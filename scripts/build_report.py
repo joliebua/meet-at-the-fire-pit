@@ -91,7 +91,7 @@ agent_rows = [
     ["📜 Rulesmith", "Plain-English house rules → structured rules", "none", "Rules saved as pending; ±50 point bound; refuses rules that name a person; what-if preview"],
     ["⚖️ Ref", "Investigates a player's dispute", "view_ledger, view_events, list_sources, read_source (all read-only)",
      "Can only propose adding/removing events, never points; fixes re-checked by verify.py; commissioner approves"],
-    ["🎙️ Host", "Writes the weekly standings drop", "none (gets a code-built fact sheet)",
+    ["🎙️ Host", "Announces the weekly standings drop \"at the fire pit\"", "none (gets a code-built fact sheet)",
      "Every number must be in the fact sheet; one line per player; no future islanders; no finale talk early"],
     ["🎯 Strategist", "Coaches one player's draft and weekly moves, or acts on autopilot", "my_team, free_agents, islander_report, standings, scoring_rules (read-only, cut at the current week)",
      "Moves checked by the season engine (free agents only, roster max 4, 1 move a week); advice checked for spoilers; 8 requests · 80k tokens"],
@@ -124,14 +124,15 @@ ref_steps = " → ".join(s["tool"] for s in ref_trace.get("steps", []))
 
 
 html = f"""<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><title>Villa Commissioner · MGT 409 final report</title>
+<html lang="en"><head><meta charset="utf-8"><title>Fire Pit · MGT 409 final report</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <style>{CSS}</style></head>
 <body><div class="wrap">
 
 <section class="cover">
-  <h1>Villa Commissioner 💖</h1>
+  <h1>Fire Pit 🔥</h1>
+  <p><i>Meet me at the fire pit.</i></p>
   <p><b>An AI agent team that runs a Love Island fantasy league for a group of friends: it reads what happened in the villa from live sources, scores it with a receipt behind every point, settles disputes, coaches your draft and weekly moves (or plays them for you on autopilot) and writes the weekly group-chat drop, with the standings shown in a 3D villa.</b></p>
   <p>Jolie Bua · MGT 409 AI Foundations for Managers · Fall 2026</p>
   <p>Repo: <a href="{REPO}">{REPO}</a> · App: runs locally from the README (one Python command) · Model: gpt-6-luna via Portkey</p>
@@ -152,13 +153,13 @@ html = f"""<!doctype html>
     ["Reality Draft Picks", "A Love Island draft app with commissioner draft settings", "No plain-English house rules or evidence-backed disputes described"],
 ])}
 <p class="small">Sources: App Store / AppGoblin listings for RealTVFantasy (id1513607707), Bracketology (id6463115555), Make Your Picks (id1566429228) and Reality Draft Picks (6777785407), checked Oct 19, 2026. Features may have changed.</p>
-<p><b>What Villa Commissioner does differently:</b></p>
+<p><b>What Fire Pit does differently:</b></p>
 <ol>
 <li><b>A receipt behind every point.</b> Each point links to the exact sentence from a source, checked word-for-word by code.</li>
 <li><b>House rules in plain English.</b> "Steals are worth 5 extra" becomes a rule, with a preview of how it would change the standings before you approve it.</li>
 <li><b>An AI Ref for disputes.</b> It investigates the sources and can only fix events, never hand out points.</li>
 <li><b>An AI coach that can play for you.</b> In play-along mode the Villa Strategist ranks draft picks and weekly pickups, or runs your team on autopilot. It only sees what has aired so far, and every move goes through the league's rules in code.</li>
-<li><b>A spoiler shield and a 3D villa.</b> Everything can be limited to the weeks you've watched, and the standings rise as neon pillars in a 3D pool scene (Three.js).</li>
+<li><b>A spoiler shield and a 3D villa.</b> Everything can be limited to the weeks you've watched, and the standings rise as neon pillars in a 3D pool scene with a flickering fire pit, where the Host "announces" each week's drop (Three.js).</li>
 <li><b>Shared cost.</b> One recap pipeline per show-week serves every league.</li>
 </ol>
 <p><b>Why it matters:</b> the commissioner's job shrinks to approving things, and arguments end with a quote instead of a vibe.</p>
