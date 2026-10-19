@@ -1,0 +1,325 @@
+{
+ "run": {
+  "agent": "recapper",
+  "season": "love_island_usa_s8",
+  "week": "Week 5",
+  "mode": "snapshot",
+  "self_correct": true,
+  "started": "2026-10-19T18:45:58+00:00",
+  "seconds": 1.7,
+  "usage": {
+   "requests": 0,
+   "gateway_cache_hits": 1,
+   "input_tokens": 0,
+   "cached_input_tokens": 0,
+   "cache_write_tokens": 0,
+   "output_tokens": 0,
+   "reasoning_tokens": 0,
+   "web_searches": 0,
+   "cost_usd": 0.0
+  },
+  "events_proposed": 14,
+  "events_verified": 14,
+  "events_rejected": 0,
+  "first_draft_rejections": 0,
+  "self_correct_rounds": 0
+ },
+ "events": [
+  {
+   "type": "dumped",
+   "islanders": [
+    "Kenzie"
+   ],
+   "others": [],
+   "day": 30,
+   "detail": "fewest public votes",
+   "evidence": [
+    {
+     "source_id": "S10",
+     "quote": "As Kenzie and Dylan, and KC and Tierra received the fewest votes, they were dumped from the island."
+    },
+    {
+     "source_id": "S9",
+     "quote": "On Day 30, America voted for the four couples they would like to see in the finale. Kenzie & Dylan and KC & Tierra received the fewest amount of votes and therefore were dumped from the island."
+    }
+   ],
+   "id": "week5-e1",
+   "week": "Week 5",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "dumped",
+   "islanders": [
+    "Dylan"
+   ],
+   "others": [],
+   "day": 30,
+   "detail": "fewest public votes",
+   "evidence": [
+    {
+     "source_id": "S10",
+     "quote": "As Kenzie and Dylan, and KC and Tierra received the fewest votes, they were dumped from the island."
+    },
+    {
+     "source_id": "S9",
+     "quote": "On Day 30, America voted for the four couples they would like to see in the finale. Kenzie & Dylan and KC & Tierra received the fewest amount of votes and therefore were dumped from the island."
+    }
+   ],
+   "id": "week5-e2",
+   "week": "Week 5",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "dumped",
+   "islanders": [
+    "KC"
+   ],
+   "others": [],
+   "day": 30,
+   "detail": "fewest public votes",
+   "evidence": [
+    {
+     "source_id": "S10",
+     "quote": "As Kenzie and Dylan, and KC and Tierra received the fewest votes, they were dumped from the island."
+    },
+    {
+     "source_id": "S9",
+     "quote": "On Day 30, America voted for the four couples they would like to see in the finale. Kenzie & Dylan and KC & Tierra received the fewest amount of votes and therefore were dumped from the island."
+    }
+   ],
+   "id": "week5-e3",
+   "week": "Week 5",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "dumped",
+   "islanders": [
+    "Tierra"
+   ],
+   "others": [],
+   "day": 30,
+   "detail": "fewest public votes",
+   "evidence": [
+    {
+     "source_id": "S10",
+     "quote": "As Kenzie and Dylan, and KC and Tierra received the fewest votes, they were dumped from the island."
+    },
+    {
+     "source_id": "S9",
+     "quote": "On Day 30, America voted for the four couples they would like to see in the finale. Kenzie & Dylan and KC & Tierra received the fewest amount of votes and therefore were dumped from the island."
+    }
+   ],
+   "id": "week5-e4",
+   "week": "Week 5",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "finalist",
+   "islanders": [
+    "Kayda"
+   ],
+   "others": [],
+   "day": 32,
+   "detail": "fourth place",
+   "evidence": [
+    {
+     "source_id": "S9",
+     "quote": "On Day 32, Kayda and Zach finished in fourth place and Melanie and Sincere finished third."
+    }
+   ],
+   "id": "week5-e5",
+   "week": "Week 5",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "finalist",
+   "islanders": [
+    "Zach"
+   ],
+   "others": [],
+   "day": 32,
+   "detail": "fourth place",
+   "evidence": [
+    {
+     "source_id": "S9",
+     "quote": "On Day 32, Kayda and Zach finished in fourth place and Melanie and Sincere finished third."
+    }
+   ],
+   "id": "week5-e6",
+   "week": "Week 5",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "finalist",
+   "islanders": [
+    "Melanie"
+   ],
+   "others": [],
+   "day": 32,
+   "detail": "third place",
+   "evidence": [
+    {
+     "source_id": "S9",
+     "quote": "On Day 32, Kayda and Zach finished in fourth place and Melanie and Sincere finished third."
+    }
+   ],
+   "id": "week5-e7",
+   "week": "Week 5",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "finalist",
+   "islanders": [
+    "Sincere"
+   ],
+   "others": [],
+   "day": 32,
+   "detail": "third place",
+   "evidence": [
+    {
+     "source_id": "S9",
+     "quote": "On Day 32, Kayda and Zach finished in fourth place and Melanie and Sincere finished third."
+    }
+   ],
+   "id": "week5-e8",
+   "week": "Week 5",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "finalist",
+   "islanders": [
+    "Bryce"
+   ],
+   "others": [],
+   "day": 32,
+   "detail": "winner",
+   "evidence": [
+    {
+     "source_id": "S9",
+     "quote": "Bryce and Trinity were then announced as the winners, leaving Aniya and Carl as runners-up."
+    }
+   ],
+   "id": "week5-e9",
+   "week": "Week 5",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "finalist",
+   "islanders": [
+    "Trinity"
+   ],
+   "others": [],
+   "day": 32,
+   "detail": "winner",
+   "evidence": [
+    {
+     "source_id": "S9",
+     "quote": "Bryce and Trinity were then announced as the winners, leaving Aniya and Carl as runners-up."
+    }
+   ],
+   "id": "week5-e10",
+   "week": "Week 5",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "finalist",
+   "islanders": [
+    "Aniya"
+   ],
+   "others": [],
+   "day": 32,
+   "detail": "runner-up",
+   "evidence": [
+    {
+     "source_id": "S9",
+     "quote": "Bryce and Trinity were then announced as the winners, leaving Aniya and Carl as runners-up."
+    }
+   ],
+   "id": "week5-e11",
+   "week": "Week 5",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "finalist",
+   "islanders": [
+    "Carl"
+   ],
+   "others": [],
+   "day": 32,
+   "detail": "runner-up",
+   "evidence": [
+    {
+     "source_id": "S9",
+     "quote": "Bryce and Trinity were then announced as the winners, leaving Aniya and Carl as runners-up."
+    }
+   ],
+   "id": "week5-e12",
+   "week": "Week 5",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "winner",
+   "islanders": [
+    "Bryce"
+   ],
+   "others": [],
+   "day": 32,
+   "detail": "season winner",
+   "evidence": [
+    {
+     "source_id": "S9",
+     "quote": "Bryce and Trinity were then announced as the winners, leaving Aniya and Carl as runners-up."
+    }
+   ],
+   "id": "week5-e13",
+   "week": "Week 5",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "winner",
+   "islanders": [
+    "Trinity"
+   ],
+   "others": [],
+   "day": 32,
+   "detail": "season winner",
+   "evidence": [
+    {
+     "source_id": "S9",
+     "quote": "Bryce and Trinity were then announced as the winners, leaving Aniya and Carl as runners-up."
+    }
+   ],
+   "id": "week5-e14",
+   "week": "Week 5",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  }
+ ]
+}

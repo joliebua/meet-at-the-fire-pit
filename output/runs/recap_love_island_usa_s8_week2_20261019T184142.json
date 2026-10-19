@@ -1,0 +1,435 @@
+{
+ "run": {
+  "agent": "recapper",
+  "season": "love_island_usa_s8",
+  "week": "Week 2",
+  "mode": "snapshot",
+  "self_correct": true,
+  "started": "2026-10-19T18:41:42+00:00",
+  "seconds": 46.5,
+  "usage": {
+   "requests": 2,
+   "input_tokens": 8747,
+   "cached_input_tokens": 2234,
+   "cache_write_tokens": 6261,
+   "output_tokens": 5848,
+   "reasoning_tokens": 2826,
+   "web_searches": 0,
+   "cost_usd": 0.003754
+  },
+  "events_proposed": 18,
+  "events_verified": 18,
+  "events_rejected": 0,
+  "first_draft_rejections": 3,
+  "self_correct_rounds": 1
+ },
+ "events": [
+  {
+   "type": "coupled_up",
+   "islanders": [
+    "Caleb",
+    "Kenzie"
+   ],
+   "others": [],
+   "day": 10,
+   "detail": "America's choice",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "America chose Caleb to couple up with Kenzie, Sol to couple up with Sincere and Jen to couple up with Gabriel."
+    },
+    {
+     "source_id": "S1",
+     "quote": "Caleb was coupled with Kenzie, Jen with Gabriel, and Sol with Sincere."
+    }
+   ],
+   "id": "week2-e1",
+   "week": "Week 2",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "coupled_up",
+   "islanders": [
+    "Sol",
+    "Sincere"
+   ],
+   "others": [],
+   "day": 10,
+   "detail": "America's choice",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "America chose Caleb to couple up with Kenzie, Sol to couple up with Sincere and Jen to couple up with Gabriel."
+    },
+    {
+     "source_id": "S1",
+     "quote": "Caleb was coupled with Kenzie, Jen with Gabriel, and Sol with Sincere."
+    }
+   ],
+   "id": "week2-e2",
+   "week": "Week 2",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "coupled_up",
+   "islanders": [
+    "Jen",
+    "Gabriel"
+   ],
+   "others": [],
+   "day": 10,
+   "detail": "America's choice",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "America chose Caleb to couple up with Kenzie, Sol to couple up with Sincere and Jen to couple up with Gabriel."
+    },
+    {
+     "source_id": "S1",
+     "quote": "Caleb was coupled with Kenzie, Jen with Gabriel, and Sol with Sincere."
+    }
+   ],
+   "id": "week2-e3",
+   "week": "Week 2",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "left_single",
+   "islanders": [
+    "Corbin"
+   ],
+   "others": [],
+   "day": 10,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "This left Corbin, Melanie, and Beatriz single and vulnerable."
+    },
+    {
+     "source_id": "S1",
+     "quote": "As a result, Beatriz, Corbin and Melanie were left single and vulnerable."
+    }
+   ],
+   "id": "week2-e4",
+   "week": "Week 2",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "left_single",
+   "islanders": [
+    "Melanie"
+   ],
+   "others": [],
+   "day": 10,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "This left Corbin, Melanie, and Beatriz single and vulnerable."
+    },
+    {
+     "source_id": "S1",
+     "quote": "As a result, Beatriz, Corbin and Melanie were left single and vulnerable."
+    }
+   ],
+   "id": "week2-e5",
+   "week": "Week 2",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "left_single",
+   "islanders": [
+    "Beatriz"
+   ],
+   "others": [],
+   "day": 10,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "This left Corbin, Melanie, and Beatriz single and vulnerable."
+    },
+    {
+     "source_id": "S1",
+     "quote": "As a result, Beatriz, Corbin and Melanie were left single and vulnerable."
+    }
+   ],
+   "id": "week2-e6",
+   "week": "Week 2",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "given_power",
+   "islanders": [
+    "Corbin"
+   ],
+   "others": [],
+   "day": 10,
+   "detail": "choose a girl to save",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "Corbin was then given the power to save one girl to be in a couple with him."
+    }
+   ],
+   "id": "week2-e7",
+   "week": "Week 2",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "coupled_up",
+   "islanders": [
+    "Corbin",
+    "Melanie"
+   ],
+   "others": [],
+   "day": 10,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 10, Corbin chose to couple up with Melanie, leaving Beatriz single and dumped from the villa."
+    }
+   ],
+   "id": "week2-e8",
+   "week": "Week 2",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "dumped",
+   "islanders": [
+    "Beatriz"
+   ],
+   "others": [],
+   "day": 10,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 10, Corbin chose to couple up with Melanie, leaving Beatriz single and dumped from the villa."
+    }
+   ],
+   "id": "week2-e9",
+   "week": "Week 2",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "stayed_coupled",
+   "islanders": [
+    "Trinity",
+    "Bryce"
+   ],
+   "others": [],
+   "day": 13,
+   "detail": "love-letter recoupling",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "Trinity and Bryce, Aniya and KC, Jen and Gabriel and Kayda and Zach mutually wrote letters to one another and remained in their couples."
+    }
+   ],
+   "id": "week2-e10",
+   "week": "Week 2",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "stayed_coupled",
+   "islanders": [
+    "Aniya",
+    "KC"
+   ],
+   "others": [],
+   "day": 13,
+   "detail": "love-letter recoupling",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "Trinity and Bryce, Aniya and KC, Jen and Gabriel and Kayda and Zach mutually wrote letters to one another and remained in their couples."
+    }
+   ],
+   "id": "week2-e11",
+   "week": "Week 2",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "stayed_coupled",
+   "islanders": [
+    "Jen",
+    "Gabriel"
+   ],
+   "others": [],
+   "day": 13,
+   "detail": "love-letter recoupling",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "Trinity and Bryce, Aniya and KC, Jen and Gabriel and Kayda and Zach mutually wrote letters to one another and remained in their couples."
+    }
+   ],
+   "id": "week2-e12",
+   "week": "Week 2",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "stayed_coupled",
+   "islanders": [
+    "Kayda",
+    "Zach"
+   ],
+   "others": [],
+   "day": 13,
+   "detail": "love-letter recoupling",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "Trinity and Bryce, Aniya and KC, Jen and Gabriel and Kayda and Zach mutually wrote letters to one another and remained in their couples."
+    }
+   ],
+   "id": "week2-e13",
+   "week": "Week 2",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "coupled_up",
+   "islanders": [
+    "Corbin",
+    "Kenzie"
+   ],
+   "others": [],
+   "day": 13,
+   "detail": "love-letter recoupling",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "Corbin and Caleb each wrote letters to Kenzie while Kenzie only wrote a letter for Corbin and they recoupled."
+    },
+    {
+     "source_id": "S1",
+     "quote": "Caleb and Corbin both wrote letters to Kenzie, while she only wrote one for Corbin, and as a result they coupled up."
+    }
+   ],
+   "id": "week2-e14",
+   "week": "Week 2",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "coupled_up",
+   "islanders": [
+    "Melanie",
+    "Sincere"
+   ],
+   "others": [],
+   "day": 13,
+   "detail": "love-letter recoupling",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "Sol and Melanie each wrote letters to Sincere while Sincere only wrote a letter to Melanie and they recoupled."
+    },
+    {
+     "source_id": "S1",
+     "quote": "Similarly, Melanie and Sol both wrote letters for Sincere, while he only wrote one for Melanie, therefore they coupled up."
+    }
+   ],
+   "id": "week2-e15",
+   "week": "Week 2",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "coupled_up",
+   "islanders": [
+    "Sol",
+    "Caleb"
+   ],
+   "others": [],
+   "day": 13,
+   "detail": "love-letter recoupling",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "As the only two islanders to not receive love letters, Sol and Caleb became the final couple."
+    },
+    {
+     "source_id": "S1",
+     "quote": "As Caleb and Sol did not receive a letter, they were automatically coupled up."
+    }
+   ],
+   "id": "week2-e16",
+   "week": "Week 2",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "dumped",
+   "islanders": [
+    "Gabriel"
+   ],
+   "others": [],
+   "day": 14,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "The four safe girls then had to decide which vulnerable boy to dump, choosing Gabriel, and the four safe boys had to decide which vulnerable girl to dump, choosing Sol."
+    }
+   ],
+   "id": "week2-e17",
+   "week": "Week 2",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "dumped",
+   "islanders": [
+    "Sol"
+   ],
+   "others": [],
+   "day": 14,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "The four safe girls then had to decide which vulnerable boy to dump, choosing Gabriel, and the four safe boys had to decide which vulnerable girl to dump, choosing Sol."
+    }
+   ],
+   "id": "week2-e18",
+   "week": "Week 2",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  }
+ ]
+}

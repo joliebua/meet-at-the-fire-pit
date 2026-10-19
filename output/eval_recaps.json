@@ -1,0 +1,48 @@
+{
+ "season": "love_island_usa_s8",
+ "weeks": [
+  "Week 1",
+  "Week 2",
+  "Week 3",
+  "Week 4",
+  "Week 5"
+ ],
+ "precision": 1.0,
+ "recall": 1.0,
+ "day_within_1": "65/65",
+ "by_type": {
+  "dumped": {
+   "truth": 26,
+   "predicted": 26,
+   "correct": 26
+  },
+  "entered_villa": {
+   "truth": 34,
+   "predicted": 34,
+   "correct": 34
+  },
+  "finalist": {
+   "truth": 8,
+   "predicted": 8,
+   "correct": 8
+  },
+  "left_villa": {
+   "truth": 1,
+   "predicted": 1,
+   "correct": 1
+  },
+  "re_entered": {
+   "truth": 2,
+   "predicted": 2,
+   "correct": 2
+  },
+  "winner": {
+   "truth": 2,
+   "predicted": 2,
+   "correct": 2
+  }
+ },
+ "false_positives": [],
+ "missed": [],
+ "day_mismatches": []
+}

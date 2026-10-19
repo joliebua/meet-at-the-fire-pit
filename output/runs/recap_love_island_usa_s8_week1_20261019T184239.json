@@ -1,0 +1,785 @@
+{
+ "run": {
+  "agent": "recapper",
+  "season": "love_island_usa_s8",
+  "week": "Week 1",
+  "mode": "snapshot",
+  "self_correct": true,
+  "started": "2026-10-19T18:42:39+00:00",
+  "seconds": 27.3,
+  "usage": {
+   "requests": 1,
+   "input_tokens": 2223,
+   "cached_input_tokens": 0,
+   "cache_write_tokens": 2097,
+   "output_tokens": 3671,
+   "reasoning_tokens": 1570,
+   "web_searches": 0,
+   "cost_usd": 0.00211
+  },
+  "events_proposed": 37,
+  "events_verified": 37,
+  "events_rejected": 0,
+  "first_draft_rejections": 0,
+  "self_correct_rounds": 0
+ },
+ "events": [
+  {
+   "type": "entered_villa",
+   "islanders": [
+    "Aniya"
+   ],
+   "others": [],
+   "day": 1,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 1, Aniya, Beatriz, Bryce, KC, Kenzie, Melanie, Sean, Sincere, Trinity, and Zach entered the villa."
+    }
+   ],
+   "id": "week1-e1",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "entered_villa",
+   "islanders": [
+    "Beatriz"
+   ],
+   "others": [],
+   "day": 1,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 1, Aniya, Beatriz, Bryce, KC, Kenzie, Melanie, Sean, Sincere, Trinity, and Zach entered the villa."
+    }
+   ],
+   "id": "week1-e2",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "entered_villa",
+   "islanders": [
+    "Bryce"
+   ],
+   "others": [],
+   "day": 1,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 1, Aniya, Beatriz, Bryce, KC, Kenzie, Melanie, Sean, Sincere, Trinity, and Zach entered the villa."
+    }
+   ],
+   "id": "week1-e3",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "entered_villa",
+   "islanders": [
+    "KC"
+   ],
+   "others": [],
+   "day": 1,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 1, Aniya, Beatriz, Bryce, KC, Kenzie, Melanie, Sean, Sincere, Trinity, and Zach entered the villa."
+    }
+   ],
+   "id": "week1-e4",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "entered_villa",
+   "islanders": [
+    "Kenzie"
+   ],
+   "others": [],
+   "day": 1,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 1, Aniya, Beatriz, Bryce, KC, Kenzie, Melanie, Sean, Sincere, Trinity, and Zach entered the villa."
+    }
+   ],
+   "id": "week1-e5",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "entered_villa",
+   "islanders": [
+    "Melanie"
+   ],
+   "others": [],
+   "day": 1,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 1, Aniya, Beatriz, Bryce, KC, Kenzie, Melanie, Sean, Sincere, Trinity, and Zach entered the villa."
+    }
+   ],
+   "id": "week1-e6",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "entered_villa",
+   "islanders": [
+    "Sean"
+   ],
+   "others": [],
+   "day": 1,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 1, Aniya, Beatriz, Bryce, KC, Kenzie, Melanie, Sean, Sincere, Trinity, and Zach entered the villa."
+    }
+   ],
+   "id": "week1-e7",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "entered_villa",
+   "islanders": [
+    "Sincere"
+   ],
+   "others": [],
+   "day": 1,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 1, Aniya, Beatriz, Bryce, KC, Kenzie, Melanie, Sean, Sincere, Trinity, and Zach entered the villa."
+    }
+   ],
+   "id": "week1-e8",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "entered_villa",
+   "islanders": [
+    "Trinity"
+   ],
+   "others": [],
+   "day": 1,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 1, Aniya, Beatriz, Bryce, KC, Kenzie, Melanie, Sean, Sincere, Trinity, and Zach entered the villa."
+    }
+   ],
+   "id": "week1-e9",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "entered_villa",
+   "islanders": [
+    "Zach"
+   ],
+   "others": [],
+   "day": 1,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 1, Aniya, Beatriz, Bryce, KC, Kenzie, Melanie, Sean, Sincere, Trinity, and Zach entered the villa."
+    }
+   ],
+   "id": "week1-e10",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "entered_villa",
+   "islanders": [
+    "Gabriel"
+   ],
+   "others": [],
+   "day": 2,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 2, Gabriel and Kayda entered the villa."
+    }
+   ],
+   "id": "week1-e11",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "entered_villa",
+   "islanders": [
+    "Kayda"
+   ],
+   "others": [],
+   "day": 2,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 2, Gabriel and Kayda entered the villa."
+    }
+   ],
+   "id": "week1-e12",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "entered_villa",
+   "islanders": [
+    "Corbin"
+   ],
+   "others": [],
+   "day": 5,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 5, Corbin entered the villa."
+    }
+   ],
+   "id": "week1-e13",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "entered_villa",
+   "islanders": [
+    "Caleb"
+   ],
+   "others": [],
+   "day": 7,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 7, Caleb, Jen, and Sol entered the villa."
+    }
+   ],
+   "id": "week1-e14",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "entered_villa",
+   "islanders": [
+    "Jen"
+   ],
+   "others": [],
+   "day": 7,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 7, Caleb, Jen, and Sol entered the villa."
+    }
+   ],
+   "id": "week1-e15",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "entered_villa",
+   "islanders": [
+    "Sol"
+   ],
+   "others": [],
+   "day": 7,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 7, Caleb, Jen, and Sol entered the villa."
+    }
+   ],
+   "id": "week1-e16",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "coupled_up",
+   "islanders": [
+    "Trinity",
+    "Bryce"
+   ],
+   "others": [],
+   "day": 1,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "Trinity coupled up with Bryce, Beatriz chose Sean, and Kenzie picked Zach."
+    }
+   ],
+   "id": "week1-e17",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "coupled_up",
+   "islanders": [
+    "Beatriz",
+    "Sean"
+   ],
+   "others": [],
+   "day": 1,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "Trinity coupled up with Bryce, Beatriz chose Sean, and Kenzie picked Zach."
+    }
+   ],
+   "id": "week1-e18",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "coupled_up",
+   "islanders": [
+    "Kenzie",
+    "Zach"
+   ],
+   "others": [],
+   "day": 1,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "Trinity coupled up with Bryce, Beatriz chose Sean, and Kenzie picked Zach."
+    }
+   ],
+   "id": "week1-e19",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "given_power",
+   "islanders": [
+    "Sincere"
+   ],
+   "others": [],
+   "day": 1,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "As Aniya and Melanie both chose Sincere, he was given the power, to which he chose to pair up with Melanie."
+    }
+   ],
+   "id": "week1-e20",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "coupled_up",
+   "islanders": [
+    "Melanie",
+    "Sincere"
+   ],
+   "others": [],
+   "day": 1,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "As Aniya and Melanie both chose Sincere, he was given the power, to which he chose to pair up with Melanie."
+    }
+   ],
+   "id": "week1-e21",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "coupled_up",
+   "islanders": [
+    "Aniya",
+    "KC"
+   ],
+   "others": [],
+   "day": 1,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "As no-one stood behind KC's door, he was automatically coupled up with Aniya."
+    }
+   ],
+   "id": "week1-e22",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "coupled_up",
+   "islanders": [
+    "Gabriel",
+    "Beatriz"
+   ],
+   "others": [],
+   "day": 3,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "Ultimately, Gabriel chose to couple up with Beatriz, and Kayda picked Zach."
+    }
+   ],
+   "id": "week1-e23",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "coupled_up",
+   "islanders": [
+    "Kayda",
+    "Zach"
+   ],
+   "others": [],
+   "day": 3,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "Ultimately, Gabriel chose to couple up with Beatriz, and Kayda picked Zach."
+    }
+   ],
+   "id": "week1-e24",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "stayed_coupled",
+   "islanders": [
+    "Trinity",
+    "Bryce"
+   ],
+   "others": [],
+   "day": 3,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "As a result, Trinity and Bryce remained in their couple, while Kenzie and Sean were left single."
+    }
+   ],
+   "id": "week1-e25",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "left_single",
+   "islanders": [
+    "Kenzie"
+   ],
+   "others": [],
+   "day": 3,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "As a result, Trinity and Bryce remained in their couple, while Kenzie and Sean were left single."
+    }
+   ],
+   "id": "week1-e26",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "left_single",
+   "islanders": [
+    "Sean"
+   ],
+   "others": [],
+   "day": 3,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "As a result, Trinity and Bryce remained in their couple, while Kenzie and Sean were left single."
+    }
+   ],
+   "id": "week1-e27",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "date",
+   "islanders": [
+    "Gabriel",
+    "Kayda",
+    "Beatriz",
+    "Zach"
+   ],
+   "others": [],
+   "day": 3,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S2",
+     "quote": "On Day 3, bombshells Gabriel and Kayda got to take Beatriz and Zach on a date."
+    }
+   ],
+   "id": "week1-e28",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "given_power",
+   "islanders": [
+    "Corbin"
+   ],
+   "others": [],
+   "day": 6,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "However, as the newest arrival, Corbin was given first pick, to which he chose Kenzie."
+    }
+   ],
+   "id": "week1-e29",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "coupled_up",
+   "islanders": [
+    "Corbin",
+    "Kenzie"
+   ],
+   "others": [],
+   "day": 6,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "However, as the newest arrival, Corbin was given first pick, to which he chose Kenzie."
+    }
+   ],
+   "id": "week1-e30",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "stayed_coupled",
+   "islanders": [
+    "Aniya",
+    "KC"
+   ],
+   "others": [],
+   "day": 6,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "Aniya and KC, Beatriz and Gabriel, Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all remained in their couples."
+    }
+   ],
+   "id": "week1-e31",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "stayed_coupled",
+   "islanders": [
+    "Beatriz",
+    "Gabriel"
+   ],
+   "others": [],
+   "day": 6,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "Aniya and KC, Beatriz and Gabriel, Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all remained in their couples."
+    }
+   ],
+   "id": "week1-e32",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "stayed_coupled",
+   "islanders": [
+    "Kayda",
+    "Zach"
+   ],
+   "others": [],
+   "day": 6,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "Aniya and KC, Beatriz and Gabriel, Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all remained in their couples."
+    }
+   ],
+   "id": "week1-e33",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "stayed_coupled",
+   "islanders": [
+    "Melanie",
+    "Sincere"
+   ],
+   "others": [],
+   "day": 6,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "Aniya and KC, Beatriz and Gabriel, Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all remained in their couples."
+    }
+   ],
+   "id": "week1-e34",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "stayed_coupled",
+   "islanders": [
+    "Trinity",
+    "Bryce"
+   ],
+   "others": [],
+   "day": 6,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "Aniya and KC, Beatriz and Gabriel, Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all remained in their couples."
+    }
+   ],
+   "id": "week1-e35",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "left_single",
+   "islanders": [
+    "Sean"
+   ],
+   "others": [],
+   "day": 6,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "As Sean remained single, he was dumped from the island."
+    }
+   ],
+   "id": "week1-e36",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "dumped",
+   "islanders": [
+    "Sean"
+   ],
+   "others": [],
+   "day": 6,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "As Sean remained single, he was dumped from the island."
+    }
+   ],
+   "id": "week1-e37",
+   "week": "Week 1",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  }
+ ]
+}

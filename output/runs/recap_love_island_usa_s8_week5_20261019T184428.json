@@ -1,0 +1,164 @@
+{
+ "run": {
+  "agent": "recapper",
+  "season": "love_island_usa_s8",
+  "week": "Week 5",
+  "mode": "snapshot",
+  "self_correct": true,
+  "started": "2026-10-19T18:44:28+00:00",
+  "seconds": 18.4,
+  "usage": {
+   "requests": 2,
+   "input_tokens": 4511,
+   "cached_input_tokens": 1320,
+   "cache_write_tokens": 2939,
+   "output_tokens": 2042,
+   "reasoning_tokens": 446,
+   "web_searches": 0,
+   "cost_usd": 0.001427
+  },
+  "events_proposed": 6,
+  "events_verified": 6,
+  "events_rejected": 0,
+  "first_draft_rejections": 8,
+  "self_correct_rounds": 1
+ },
+ "events": [
+  {
+   "type": "dumped",
+   "islanders": [
+    "Kenzie"
+   ],
+   "others": [],
+   "day": 30,
+   "detail": "fewest public votes",
+   "evidence": [
+    {
+     "source_id": "S10",
+     "quote": "As Kenzie and Dylan, and KC and Tierra received the fewest votes, they were dumped from the island."
+    },
+    {
+     "source_id": "S9",
+     "quote": "On Day 30, America voted for the four couples they would like to see in the finale. Kenzie & Dylan and KC & Tierra received the fewest amount of votes and therefore were dumped from the island."
+    }
+   ],
+   "id": "week5-e1",
+   "week": "Week 5",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "dumped",
+   "islanders": [
+    "Dylan"
+   ],
+   "others": [],
+   "day": 30,
+   "detail": "fewest public votes",
+   "evidence": [
+    {
+     "source_id": "S10",
+     "quote": "As Kenzie and Dylan, and KC and Tierra received the fewest votes, they were dumped from the island."
+    },
+    {
+     "source_id": "S9",
+     "quote": "On Day 30, America voted for the four couples they would like to see in the finale. Kenzie & Dylan and KC & Tierra received the fewest amount of votes and therefore were dumped from the island."
+    }
+   ],
+   "id": "week5-e2",
+   "week": "Week 5",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "dumped",
+   "islanders": [
+    "KC"
+   ],
+   "others": [],
+   "day": 30,
+   "detail": "fewest public votes",
+   "evidence": [
+    {
+     "source_id": "S10",
+     "quote": "As Kenzie and Dylan, and KC and Tierra received the fewest votes, they were dumped from the island."
+    },
+    {
+     "source_id": "S9",
+     "quote": "On Day 30, America voted for the four couples they would like to see in the finale. Kenzie & Dylan and KC & Tierra received the fewest amount of votes and therefore were dumped from the island."
+    }
+   ],
+   "id": "week5-e3",
+   "week": "Week 5",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "dumped",
+   "islanders": [
+    "Tierra"
+   ],
+   "others": [],
+   "day": 30,
+   "detail": "fewest public votes",
+   "evidence": [
+    {
+     "source_id": "S10",
+     "quote": "As Kenzie and Dylan, and KC and Tierra received the fewest votes, they were dumped from the island."
+    },
+    {
+     "source_id": "S9",
+     "quote": "On Day 30, America voted for the four couples they would like to see in the finale. Kenzie & Dylan and KC & Tierra received the fewest amount of votes and therefore were dumped from the island."
+    }
+   ],
+   "id": "week5-e4",
+   "week": "Week 5",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "winner",
+   "islanders": [
+    "Bryce"
+   ],
+   "others": [],
+   "day": 32,
+   "detail": "season winner",
+   "evidence": [
+    {
+     "source_id": "S9",
+     "quote": "Bryce and Trinity were then announced as the winners, leaving Aniya and Carl as runners-up."
+    }
+   ],
+   "id": "week5-e5",
+   "week": "Week 5",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "winner",
+   "islanders": [
+    "Trinity"
+   ],
+   "others": [],
+   "day": 32,
+   "detail": "season winner",
+   "evidence": [
+    {
+     "source_id": "S9",
+     "quote": "Bryce and Trinity were then announced as the winners, leaving Aniya and Carl as runners-up."
+    }
+   ],
+   "id": "week5-e6",
+   "week": "Week 5",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  }
+ ]
+}

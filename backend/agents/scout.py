@@ -183,7 +183,7 @@ def run_scout(season_key: str, week: str) -> tuple[SourceBundle, dict]:
                           episodes=report.episodes, sources=chosen, gaps=report.gaps, notes=report.notes,
                           rejected_ids=[i for i in report.source_ids if i not in deps.sources])
 
-    agent_usage = llm.usage_totals([c["usage"] for c in recorder.calls])
+    agent_usage = llm.recorder_totals(recorder)
     # In snapshot mode the web search answers are replayed from disk: nothing was spent on them.
     replayed = config.SOURCE_MODE == "snapshot"
     search_usage = llm.usage_totals([] if replayed else deps.web_search_usage,

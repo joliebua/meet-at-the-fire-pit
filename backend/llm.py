@@ -18,7 +18,8 @@ class UsageRecorder:
         if response.request.url.path.endswith("/responses"):
             await response.aread()
             body = response.json()
-            self.calls.append({"agent": None, "response_id": body.get("id"), "usage": body.get("usage")})
+            self.calls.append({"response_id": body.get("id"), "usage": body.get("usage"),
+                               "portkey_cache": response.headers.get("x-portkey-cache-status", "")})
 
 
 def build_model(recorder: UsageRecorder) -> OpenAIResponsesModel:
@@ -40,10 +41,10 @@ def cost_usd(input_tokens: int, cached: int, cache_write: int, output_tokens: in
         + web_searches * p["web_search_per_call"]
 
 
-def usage_totals(usages: list[dict], web_searches: int = 0) -> dict:
-    """Sum raw Responses-API usage objects for one run."""
-    t = {"requests": len(usages), "input_tokens": 0, "cached_input_tokens": 0, "cache_write_tokens": 0,
-         "output_tokens": 0, "reasoning_tokens": 0, "web_searches": web_searches}
+def usage_totals(usages: list[dict], web_searches: int = 0, gateway_hits: int = 0) -> dict:
+    """Sum raw Responses-API usage objects for one run (pass only calls that reached the model)."""
+    t = {"requests": len(usages), "gateway_cache_hits": gateway_hits, "input_tokens": 0, "cached_input_tokens": 0,
+         "cache_write_tokens": 0, "output_tokens": 0, "reasoning_tokens": 0, "web_searches": web_searches}
     for u in usages:
         u = u or {}
         details = u.get("input_tokens_details") or {}
@@ -55,6 +56,13 @@ def usage_totals(usages: list[dict], web_searches: int = 0) -> dict:
     t["cost_usd"] = round(cost_usd(t["input_tokens"], t["cached_input_tokens"], t["cache_write_tokens"],
                                    t["output_tokens"], web_searches), 6)
     return t
+
+
+def recorder_totals(recorder: UsageRecorder) -> dict:
+    """Usage for a run. Calls answered from Portkey's response cache never reached OpenAI, so they cost nothing."""
+    hits = [c for c in recorder.calls if c["portkey_cache"].upper() == "HIT"]
+    real = [c["usage"] for c in recorder.calls if c not in hits]
+    return usage_totals(real, gateway_hits=len(hits))
 
 
 def tool_trace(messages, limit: int = 600) -> list[dict]:
