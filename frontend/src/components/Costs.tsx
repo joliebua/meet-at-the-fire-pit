@@ -10,6 +10,7 @@ const AGENTS: Record<string, { name: string; role: string; per: string }> = {
   host: { name: "🎙️ Host", role: "Writes the weekly drop", per: "per league-week" },
   ref: { name: "⚖️ Ref", role: "Investigates a dispute", per: "per dispute" },
   rulesmith: { name: "📜 Rulesmith", role: "Drafts house rules", per: "per request" },
+  strategist: { name: "🎯 Strategist", role: "Coaches your draft and weekly moves (or autopilot)", per: "per advice / autopilot week" },
 };
 
 export default function Costs({ version, weeksScored, players }: Props) {

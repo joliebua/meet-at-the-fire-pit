@@ -16,8 +16,8 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 from pydantic_ai.exceptions import AgentRunError, ModelHTTPError, UsageLimitExceeded
 
-from backend import config, scoring, usage_log
-from backend.agents import host, recapper, ref, rulesmith, scout
+from backend import config, scoring, season_play, usage_log
+from backend.agents import host, recapper, ref, rulesmith, scout, strategist
 
 app = FastAPI(title="Villa Commissioner", version="0.1")
 app.add_middleware(CORSMiddleware, allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
@@ -29,6 +29,25 @@ WRITE_LOCK = threading.Lock()
 
 class HouseRulesIn(BaseModel):
     text: str = Field(min_length=3, max_length=rulesmith.MAX_REQUEST_CHARS)
+
+
+class PlayLeagueIn(BaseModel):
+    name: str = Field(min_length=1, max_length=60)
+    you: str = Field("You", min_length=1, max_length=20)
+
+
+class PickIn(BaseModel):
+    islander: str
+
+
+class MoveIn(BaseModel):
+    add: str | None = None
+    drop: str | None = None
+    reason: str = ""
+
+
+class AutopilotIn(BaseModel):
+    on: bool
 
 
 class DisputeIn(BaseModel):
@@ -47,6 +66,8 @@ def _guard(fn, *args, **kwargs):
     try:
         with WRITE_LOCK:
             return fn(*args, **kwargs)
+    except season_play.MoveError as e:
+        raise HTTPException(409, str(e))
     except KeyError as e:
         raise HTTPException(400, str(e.args[0]) if e.args else "Not found")
     except (ValueError, FileNotFoundError) as e:
@@ -118,8 +139,74 @@ def refresh_week(season: str, n: int):
 
 @app.get("/api/leagues")
 def leagues():
-    return [{"key": p.stem, "name": json.loads(p.read_text())["name"]}
-            for p in sorted((config.DATA / "leagues").glob("*.json"))]
+    out = []
+    for p in sorted((config.DATA / "leagues").glob("*.json")):
+        lg = json.loads(p.read_text())
+        out.append({"key": p.stem, "name": lg["name"], "mode": lg.get("mode", "classic"),
+                    "current_week": lg.get("current_week")})
+    return out
+
+
+# ---------- play-along leagues (draft, weeks, moves, Strategist) ----------
+
+@app.post("/api/play")
+def create_play_league(body: PlayLeagueIn):
+    key = _guard(season_play.create, body.name, body.you)
+    return season_play.state(key)
+
+
+@app.get("/api/play/{key}")
+def play_state(key: str):
+    _league(key)
+    return _guard(season_play.state, key)
+
+
+@app.post("/api/play/{key}/pick")
+def play_pick(key: str, body: PickIn):
+    _league(key)
+
+    def run():
+        league = season_play.load(key)
+        mine = season_play.make_pick(league, league["you"], body.islander, by="you")
+        bots = season_play.run_bot_picks(league)
+        season_play.save(key, league)
+        return {"your_pick": mine, "bot_picks": bots, "state": season_play.state(key)}
+    return _guard(run)
+
+
+@app.post("/api/play/{key}/advice")
+def play_advice(key: str):
+    _league(key)
+    return _guard(strategist.advise, key)
+
+
+@app.post("/api/play/{key}/move")
+def play_move(key: str, body: MoveIn):
+    _league(key)
+
+    def run():
+        league = season_play.load(key)
+        move = season_play.apply_move(league, league["you"], body.add or None, body.drop or None, by="you",
+                                      reason=body.reason)
+        season_play.save(key, league)
+        return {"move": move, "state": season_play.state(key)}
+    return _guard(run)
+
+
+@app.post("/api/play/{key}/advance")
+def play_advance(key: str):
+    _league(key)
+
+    def run():
+        result = season_play.advance(key, autopilot_fn=strategist.autopilot)
+        return {**result, "state": season_play.state(key)}
+    return _guard(run)
+
+
+@app.post("/api/play/{key}/autopilot")
+def play_autopilot(key: str, body: AutopilotIn):
+    _league(key)
+    return _guard(season_play.set_autopilot, key, body.on)
 
 
 @app.get("/api/leagues/{key}")
@@ -139,8 +226,8 @@ def league_ledger(key: str, week: str | None = None, islander: str | None = None
     lg = _league(key)
     lines = scoring.score_league(key, save=False)["ledger"]
     if player:
-        roster = {s["islander"]: s.get("from_week", 1) for p in lg["players"] if p["name"] == player for s in p["roster"]}
-        lines = [l for l in lines if l["islander"] in roster and scoring.week_num(l["week"]) >= roster[l["islander"]]]
+        slots = [s for p in lg["players"] if p["name"] == player for s in p["roster"]]
+        lines = [l for l in lines if any(s["islander"] == l["islander"] and scoring.slot_active(s, l["week"]) for s in slots)]
     return [l for l in lines if (not week or l["week"] == week) and (not islander or l["islander"] == islander)]
 
 

@@ -1,0 +1,36 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_browser_test_villa",
+ "started": "2026-10-19T20:26:18+00:00",
+ "seconds": 15.6,
+ "usage": {
+  "requests": 1,
+  "gateway_cache_hits": 1,
+  "input_tokens": 1762,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 1636,
+  "output_tokens": 201,
+  "reasoning_tokens": 65,
+  "web_searches": 0,
+  "cost_usd": 0.000318
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules"
+ ],
+ "advice": {
+  "moves": [
+   {
+    "add": "Corbin",
+    "drop": null,
+    "reason": "Add Corbin: he already has 15 points, secured a couple with Kenzie, and got first pick as the newest arrival\u2014strong early upside for an open roster spot.",
+    "evidence": [
+     "\u201cas the newest arrival, Corbin was given first pick, to which he chose Kenzie.\u201d"
+    ]
+   }
+  ],
+  "summary": "Yes\u2014use the open roster spot to pick up Corbin, whose early power and new couple give him a nice path to keep scoring. Your current trio also looks stable after all remained coupled at Week 1\u2019s end."
+ }
+}

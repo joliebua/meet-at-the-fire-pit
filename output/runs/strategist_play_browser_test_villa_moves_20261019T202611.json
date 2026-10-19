@@ -1,0 +1,36 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_browser_test_villa",
+ "started": "2026-10-19T20:26:11+00:00",
+ "seconds": 5.8,
+ "usage": {
+  "requests": 1,
+  "gateway_cache_hits": 1,
+  "input_tokens": 1571,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 1445,
+  "output_tokens": 237,
+  "reasoning_tokens": 102,
+  "web_searches": 0,
+  "cost_usd": 0.000312
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules"
+ ],
+ "advice": {
+  "moves": [
+   {
+    "add": "Kayda",
+    "drop": null,
+    "reason": "Add Kayda to capture her +5 bombshell-arrival points and diversify the roster; she entered alongside Gabriel, giving your team an immediate shared storyline, though no couple is established yet.",
+    "evidence": [
+     "On Day 2, Gabriel and Kayda entered the villa."
+    ]
+   }
+  ],
+  "summary": "I\u2019d use the move on Kayda: she already has 5 points from arriving, and her entry alongside Gabriel gives Jolie a promising connection to track. Trinity and Bryce are coupled, so this adds another angle without breaking up a working pair."
+ }
+}

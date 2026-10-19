@@ -1,0 +1,37 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_browser_test_villa",
+ "started": "2026-10-19T20:27:26+00:00",
+ "seconds": 6.1,
+ "usage": {
+  "requests": 2,
+  "gateway_cache_hits": 0,
+  "input_tokens": 2946,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 2086,
+  "output_tokens": 318,
+  "reasoning_tokens": 113,
+  "web_searches": 0,
+  "cost_usd": 0.000506
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules"
+ ],
+ "advice": {
+  "moves": [
+   {
+    "add": "Dylan",
+    "drop": "Gal",
+    "reason": "Add Dylan to replace dumped Gal: Dylan is still coupled with Kenzie, and they won the Karaoke Night Challenge, earning protection from the vote; that gives Jolie an active, comparatively safer scorer.",
+    "evidence": [
+     "Kenzie & Dylan won safety from the nights vote.",
+     "Amora and Gal and Jaiden and Caleb were dumped from the island."
+    ]
+   }
+  ],
+  "summary": "Yes\u2014Jolie should use her one move to swap out dumped Gal for Dylan. Dylan and Kenzie are together and just won safety, while Gal has left the villa; this is a clean upgrade without disturbing Jolie\u2019s active couples."
+ }
+}

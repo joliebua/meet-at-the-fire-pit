@@ -169,3 +169,27 @@ class Drop(BaseModel):
     player_lines: list[PlayerLine]
     moments: list[Moment] = Field(max_length=5)
     closer: str = Field(description="One sentence teasing next week WITHOUT naming anything that hasn't happened")
+
+
+class DraftPick(BaseModel):
+    islander: str
+    reason: str = Field(description="One sentence grounded in the tool results")
+
+
+class DraftAdvice(BaseModel):
+    """What the Strategist returns during the draft."""
+    picks: list[DraftPick] = Field(min_length=1, max_length=3, description="Best first")
+    summary: str
+
+
+class MoveIdea(BaseModel):
+    add: str | None = Field(None, description="Free agent to pick up")
+    drop: str | None = Field(None, description="Your islander to release (needed when the roster is full)")
+    reason: str
+    evidence: list[str] = Field(default_factory=list, max_length=2, description="Short quotes copied from tool results")
+
+
+class MoveAdvice(BaseModel):
+    """What the Strategist returns between weeks."""
+    moves: list[MoveIdea] = Field(default_factory=list, max_length=2)
+    summary: str

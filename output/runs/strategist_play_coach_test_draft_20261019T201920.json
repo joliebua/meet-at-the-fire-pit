@@ -1,0 +1,40 @@
+{
+ "agent": "strategist",
+ "kind": "draft",
+ "league": "play_coach_test",
+ "started": "2026-10-19T20:19:20+00:00",
+ "seconds": 8.6,
+ "usage": {
+  "requests": 2,
+  "gateway_cache_hits": 0,
+  "input_tokens": 2678,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 1839,
+  "output_tokens": 411,
+  "reasoning_tokens": 164,
+  "web_searches": 0,
+  "cost_usd": 0.000519
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules"
+ ],
+ "advice": {
+  "picks": [
+   {
+    "islander": "Gabriel",
+    "reason": "He leads the available pool with 5 points after entering the villa on Day 2, earning the bombshell-arrival bonus."
+   },
+   {
+    "islander": "Kayda",
+    "reason": "She is tied for the pool lead at 5 points from her Day 2 villa arrival and is currently unpaired, leaving room for a new-couple points opportunity."
+   },
+   {
+    "islander": "Beatriz",
+    "reason": "She has 4 points and is coupled with Sean after choosing him on Day 1, giving you a settled couple exposure distinct from the new arrivals."
+   }
+  ],
+  "summary": "With an empty roster, I\u2019d take the two fresh arrivals first for their 5-point start, then balance them with Beatriz\u2019s existing couple. It\u2019s an early-week pool, so the couples are still new\u2014but this mix spreads Jolie\u2019s exposure."
+ }
+}

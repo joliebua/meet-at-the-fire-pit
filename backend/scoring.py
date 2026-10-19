@@ -104,8 +104,14 @@ def check_rosters(league: dict, cast: verify.Cast) -> list[str]:
     return problems
 
 
+def slot_active(slot: dict, week: str | int) -> bool:
+    """A roster slot counts from its `from_week` (pickup) through its `until_week` (drop), inclusive."""
+    n = week if isinstance(week, int) else week_num(week)
+    return slot.get("from_week", 1) <= n <= slot.get("until_week", 10_000)
+
+
 def standings(league: dict, lines: list[LedgerLine], weeks: list[str]) -> list[dict]:
-    """[{player, total, by_week, by_islander}] sorted best first. Roster slots count from their `from_week`."""
+    """[{player, total, by_week, by_islander}] sorted best first. Slots only count while active (slot_active)."""
     points = defaultdict(lambda: defaultdict(int))  # islander -> week -> points
     for line in lines:
         points[line.islander][line.week] += line.points
@@ -114,9 +120,8 @@ def standings(league: dict, lines: list[LedgerLine], weeks: list[str]) -> list[d
         by_week = {w: 0 for w in weeks}
         by_islander = {}
         for slot in player["roster"]:
-            start = slot.get("from_week", 1)
-            counted = {w: p for w, p in points[slot["islander"]].items() if week_num(w) >= start}
-            by_islander[slot["islander"]] = sum(counted.values())
+            counted = {w: p for w, p in points[slot["islander"]].items() if slot_active(slot, w)}
+            by_islander[slot["islander"]] = by_islander.get(slot["islander"], 0) + sum(counted.values())
             for w, p in counted.items():
                 by_week[w] += p
         table.append({"player": player["name"], "total": sum(by_week.values()), "by_week": by_week,

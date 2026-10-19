@@ -1,0 +1,36 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_api_test",
+ "started": "2026-10-19T20:20:05+00:00",
+ "seconds": 7.7,
+ "usage": {
+  "requests": 2,
+  "gateway_cache_hits": 0,
+  "input_tokens": 2371,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 1505,
+  "output_tokens": 328,
+  "reasoning_tokens": 148,
+  "web_searches": 0,
+  "cost_usd": 0.000439
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules"
+ ],
+ "advice": {
+  "moves": [
+   {
+    "add": "Kayda",
+    "drop": null,
+    "reason": "Add Kayda while Jolie has room: she arrived as a Day 2 bombshell and already has 5 points, so this captures her arrival upside without dropping anyone.",
+    "evidence": [
+     "On Day 2, Gabriel and Kayda entered the villa."
+    ]
+   }
+  ],
+  "summary": "Yes\u2014I'd use the one move available to pick up Kayda. Jolie\u2019s roster has two open spots, so there\u2019s no need to cut anyone, and Kayda\u2019s bombshell arrival has already earned points."
+ }
+}

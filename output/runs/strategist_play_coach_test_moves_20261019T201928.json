@@ -1,0 +1,38 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_coach_test",
+ "started": "2026-10-19T20:19:28+00:00",
+ "seconds": 7.7,
+ "usage": {
+  "requests": 2,
+  "gateway_cache_hits": 0,
+  "input_tokens": 2301,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 1441,
+  "output_tokens": 250,
+  "reasoning_tokens": 29,
+  "web_searches": 0,
+  "cost_usd": 0.000391
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules",
+  "standings"
+ ],
+ "advice": {
+  "moves": [
+   {
+    "add": "Jen",
+    "drop": "Gabriel",
+    "reason": "Replace dumped Gabriel with Jen: she\u2019s available, still in the villa, and has already formed and survived a recoupling with Gabriel, so this keeps Jolie invested in an active islander instead of carrying a -10 dump risk.",
+    "evidence": [
+     "The safe girls chose Gabriel to dump.",
+     "Jen and Gabriel ... mutually wrote letters to one another and remained in their couples."
+    ]
+   }
+  ],
+  "summary": "Yes\u2014use Jolie\u2019s one move to swap Gabriel out for Jen. Gabriel has been dumped, while Jen remains in the villa and has a recent couple-survival event, giving you an active roster spot for next week."
+ }
+}

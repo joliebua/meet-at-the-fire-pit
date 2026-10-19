@@ -57,7 +57,7 @@ def build_facts(league_key: str, week: int) -> tuple[dict, dict]:
     owners = defaultdict(list)  # islander -> players who have them this week
     for p in league["players"]:
         for slot in p["roster"]:
-            if slot.get("from_week", 1) <= week:
+            if scoring.slot_active(slot, week):
                 owners[slot["islander"]].append(p["name"])
 
     by_event = defaultdict(lambda: {"islanders": set(), "labels": set(), "league_points": 0, "quote": ""})
@@ -78,7 +78,7 @@ def build_facts(league_key: str, week: int) -> tuple[dict, dict]:
     standings = [{"rank": i, "player": r["player"], "total": r["total"], "this_week": r["by_week"][wk],
                   "rank_change": (prev_rank[r["player"]] - i) if prev_rank else 0,
                   "team": [s["islander"] for p in league["players"] if p["name"] == r["player"]
-                           for s in p["roster"] if s.get("from_week", 1) <= week]}
+                           for s in p["roster"] if scoring.slot_active(s, week)]}
                  for i, r in enumerate(now["standings"], 1)]
     dumped = sorted({l["islander"] for l in now["ledger"] if l["week"] == wk and l["label"].lower().startswith("dump")})
     facts = {"league": league["name"], "week": wk, "standings": standings, "moments": moments,

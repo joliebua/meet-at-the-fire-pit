@@ -1,8 +1,8 @@
 {
- "ran": "2026-10-19T19:18:23+00:00",
+ "ran": "2026-10-19T20:28:55+00:00",
  "mode": "snapshot",
  "summary": {
-  "PASS": 20,
+  "PASS": 24,
   "FAIL": 0,
   "known limit": 1
  },
@@ -104,6 +104,50 @@
    "expected": "Rejected",
    "result": "PASS",
    "observed": "rejected: Sean was not in the villa then (days 11-11)",
+   "cost_usd": 0.0,
+   "details": {}
+  },
+  {
+   "id": "E1",
+   "category": "Agent malfunction (Strategist)",
+   "attack": "Strategist proposes moves that break league rules",
+   "defense": "check_move() in code: free agents only, own roster only, roster cap, 1 move per week",
+   "expected": "All refused",
+   "result": "PASS",
+   "observed": "pick up another team's islander → Aniya isn't a free agent in the villa right now; pick up someone not in the villa → Sean isn't a free agent in the villa right now; drop someone you don't have → Aniya isn't on Tester's roster",
+   "cost_usd": 0.0,
+   "details": {}
+  },
+  {
+   "id": "E2",
+   "category": "Spoilers / future knowledge",
+   "attack": "Coach or bots peek at weeks that haven't aired in the league",
+   "defense": "All facts come from visible_events(), cut at the league's current week (pre-season: Day 2)",
+   "expected": "After Week 2 only Weeks 1–2; pre-season only Days ≤ 2",
+   "result": "PASS",
+   "observed": "after Week 2 sees ['Week 1', 'Week 2']; pre-season latest day = 2",
+   "cost_usd": 0.0,
+   "details": {}
+  },
+  {
+   "id": "E3",
+   "category": "Spoilers / future knowledge",
+   "attack": "Coach 'remembers' a later bombshell or the winner",
+   "defense": "Advice text checked for islanders who haven't entered yet and winner talk; sent back if found",
+   "expected": "Both caught",
+   "result": "PASS",
+   "observed": "'Carl' hasn't entered the villa yet; you can't know about them; don't predict or mention the season's winner or finale",
+   "cost_usd": 0.0,
+   "details": {}
+  },
+  {
+   "id": "E4",
+   "category": "Agent malfunction (Strategist)",
+   "attack": "Autopilot is handed illegal moves (e.g. a confused or hijacked coach)",
+   "defense": "Autopilot only applies moves that pass check_move(); the rest are skipped",
+   "expected": "Nothing applied",
+   "result": "PASS",
+   "observed": "0 move(s) applied",
    "cost_usd": 0.0,
    "details": {}
   },

@@ -230,3 +230,40 @@ table.tbl { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
   background: rgba(29, 7, 48, 0.92); border: 1px solid var(--pool); color: var(--ink); padding: 10px 18px; border-radius: 999px;
   box-shadow: 0 0 20px rgba(41, 230, 214, 0.5); font-size: 0.9rem; }
 footer.foot { margin-top: 40px; text-align: center; font-size: 0.75rem; color: var(--ink-faint); }
+
+/* ---------- 3D villa ---------- */
+.villa3d-stage { position: relative; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line);
+  box-shadow: 0 10px 40px rgba(29, 7, 48, 0.45), 0 0 30px rgba(255, 46, 147, 0.25); }
+.villa3d-stage canvas { display: block; }
+.villa3d-labels { position: absolute; inset: 0; pointer-events: none; }
+.villa3d-label { display: flex; flex-direction: column; align-items: center; gap: 0; padding: 4px 10px; border-radius: 12px;
+  background: rgba(29, 7, 48, 0.72); border: 1px solid rgba(255, 255, 255, 0.35); color: var(--ink); font-size: 12px;
+  line-height: 1.2; text-align: center; white-space: nowrap; box-shadow: 0 0 12px rgba(255, 46, 147, 0.5); }
+.villa3d-label span { font-weight: 800; font-size: 15px; }
+.villa3d-label small { color: var(--ink-faint); font-size: 10px; }
+.villa3d-label.you { border-color: var(--gold); box-shadow: 0 0 14px rgba(255, 210, 63, 0.7); }
+.villa3d.fallback { display: grid; place-items: center; color: var(--ink-dim); border: 1px dashed var(--line); border-radius: var(--radius); }
+.heart-burst { position: fixed; inset: 0; pointer-events: none; z-index: 50; }
+
+/* ---------- draft & moves ---------- */
+.pool-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+.icard { background: rgba(29, 7, 48, 0.45); border: 1px solid rgba(255, 255, 255, 0.16); border-radius: 18px; padding: 12px 14px;
+  display: flex; flex-direction: column; gap: 6px; transition: transform 0.15s ease, border-color 0.15s ease; }
+.icard:hover { transform: translateY(-2px); border-color: var(--hot-soft); }
+.icard.suggested { border-color: var(--gold); box-shadow: 0 0 18px rgba(255, 210, 63, 0.45); }
+.icard .iname { font-weight: 800; font-size: 1.05rem; }
+.icard .quote { font-size: 0.75rem; color: var(--ink-dim); font-style: italic; }
+.order { display: flex; gap: 6px; flex-wrap: wrap; }
+.order span { padding: 4px 12px; border-radius: 999px; font-size: 0.8rem; background: var(--glass); border: 1px solid var(--line); }
+.order span.now { background: linear-gradient(135deg, var(--hot), var(--sunset)); border-color: var(--hot); box-shadow: 0 0 12px rgba(255, 46, 147, 0.6); }
+.coach { border-left: 4px solid var(--gold); }
+.coach .coach-title { font-family: "Pacifico", cursive; font-size: 1.35rem; }
+.timeline { display: grid; gap: 6px; }
+.timeline div { font-size: 0.85rem; padding: 6px 10px; border-radius: 10px; background: rgba(29, 7, 48, 0.35); }
+.switch { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; font-weight: 600; font-size: 0.88rem; }
+.switch input { display: none; }
+.switch .track { width: 42px; height: 24px; border-radius: 999px; background: rgba(255, 255, 255, 0.2); position: relative; transition: background 0.2s; }
+.switch .track::after { content: ""; position: absolute; top: 3px; left: 3px; width: 18px; height: 18px; border-radius: 50%; background: #fff; transition: left 0.2s; }
+.switch input:checked + .track { background: linear-gradient(135deg, var(--hot), var(--sunset)); box-shadow: 0 0 10px rgba(255, 46, 147, 0.6); }
+.switch input:checked + .track::after { left: 21px; }
+.bigplay { font-size: 1.05rem; padding: 14px 28px; }

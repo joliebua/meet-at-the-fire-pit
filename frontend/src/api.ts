@@ -38,7 +38,7 @@ export type Standings = { league: string; weeks: string[]; standings: StandingRo
 
 export type LedgerLine = { week: string; event_id: string; islander: string; rule_id: string; label: string; points: number; quote: string; source_id: string };
 
-export type Player = { name: string; roster: { islander: string; from_week?: number }[] };
+export type Player = { name: string; bot?: boolean; roster: { islander: string; from_week?: number; until_week?: number }[] };
 
 export type Ruling = {
   verdict: "uphold" | "partial" | "deny";
@@ -61,6 +61,9 @@ export type Dispute = {
 
 export type League = {
   name: string;
+  mode?: "classic" | "play";
+  you?: string;
+  current_week?: number;
   season: string;
   commissioner: string;
   players: Player[];
@@ -114,6 +117,56 @@ export type AgentUsage = {
   gateway_cache_hits: number;
 };
 
+export type IslanderFacts = {
+  name: string;
+  in_villa: boolean;
+  partner: string | null;
+  points: number;
+  events: { week: string; day: number | null; type: string; with: string[]; quote: string }[];
+};
+
+export type Move = { from_week: number; player: string; add: string | null; drop: string | null; by: string; reason: string; made_after: string };
+
+export type PlayState = {
+  key: string;
+  name: string;
+  you: string;
+  season: string;
+  current_week: number;
+  max_week: number;
+  settings: { draft_rounds: number; roster_max: number; moves_per_week: number; draft_after_day: number; autopilot: boolean };
+  draft: { order: string[]; picks: { round: number; pick: number; player: string; islander: string; by: string; reason: string }[]; done: boolean; turn: string | null };
+  free_agents: IslanderFacts[];
+  your_roster: IslanderFacts[];
+  rosters: Record<string, string[]>;
+  moves: Move[];
+  moves_left: number;
+  standings: StandingRow[];
+};
+
+export type Advice = {
+  kind: "draft" | "moves";
+  advice: {
+    summary: string;
+    picks?: { islander: string; reason: string }[];
+    moves?: { add: string | null; drop: string | null; reason: string; evidence: string[] }[];
+  };
+  cost_usd: number;
+  seconds: number;
+  steps: string[];
+};
+
+export type AdvanceResult = {
+  week: string;
+  autopilot_moves: Move[];
+  bot_moves: Move[];
+  standings: (StandingRow & { change: number })[];
+  your_points: LedgerLine[];
+  state: PlayState;
+};
+
+export type LeagueSummary = { key: string; name: string; mode: "classic" | "play"; current_week: number | null };
+
 export type AppConfig = { source_mode: string; snapshot: string; model: string; seasons: Record<string, { show: string; season: string }> };
 
 async function call<T>(path: string, init?: RequestInit): Promise<T> {
@@ -131,7 +184,16 @@ const post = <T,>(path: string, data?: unknown) => call<T>(path, { method: "POST
 export const api = {
   config: () => call<AppConfig>("/config"),
   league: (key: string) => call<League>(`/leagues/${key}`),
-  standings: (key: string, week?: number) => call<Standings>(`/leagues/${key}/standings${week ? `?week=${week}` : ""}`),
+  standings: (key: string, week?: number) => call<Standings>(`/leagues/${key}/standings${week !== undefined ? `?week=${week}` : ""}`),
+  leagues: () => call<LeagueSummary[]>("/leagues"),
+  createPlay: (name: string, you: string) => post<PlayState>("/play", { name, you }),
+  play: (key: string) => call<PlayState>(`/play/${key}`),
+  pick: (key: string, islander: string) => post<{ state: PlayState }>(`/play/${key}/pick`, { islander }),
+  advice: (key: string) => post<Advice>(`/play/${key}/advice`),
+  move: (key: string, add: string | null, drop: string | null, reason = "") =>
+    post<{ state: PlayState }>(`/play/${key}/move`, { add, drop, reason }),
+  advance: (key: string) => post<AdvanceResult>(`/play/${key}/advance`),
+  autopilot: (key: string, on: boolean) => post(`/play/${key}/autopilot`, { on }),
   ledger: (key: string, player: string) => call<LedgerLine[]>(`/leagues/${key}/ledger?player=${encodeURIComponent(player)}`),
   weeks: (season: string) => call<WeekInfo[]>(`/seasons/${season}/weeks`),
   events: (season: string, week: string) => call<Record<string, VillaEvent[]>>(`/seasons/${season}/events?week=${encodeURIComponent(week)}`),

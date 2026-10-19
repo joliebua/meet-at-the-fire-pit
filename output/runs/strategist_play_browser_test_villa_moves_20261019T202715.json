@@ -1,0 +1,37 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_browser_test_villa",
+ "started": "2026-10-19T20:27:15+00:00",
+ "seconds": 9.1,
+ "usage": {
+  "requests": 2,
+  "gateway_cache_hits": 0,
+  "input_tokens": 3305,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 2445,
+  "output_tokens": 411,
+  "reasoning_tokens": 222,
+  "web_searches": 0,
+  "cost_usd": 0.000597
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules"
+ ],
+ "advice": {
+  "moves": [
+   {
+    "add": "Gal",
+    "drop": "Gabriel",
+    "reason": "Drop Gabriel, who was dumped and is out of the villa, and pick up Gal: he is a fresh arrival who is now coupled with Jen, giving you an active couple instead of a dead roster slot.",
+    "evidence": [
+     "choosing Gabriel",
+     "Jen chose Gal"
+    ]
+   }
+  ],
+  "summary": "Yes\u2014make the move now: Gabriel\u2019s been dumped, and Gal is in a new couple with Jen after arriving this week. You\u2019ll keep three active islanders and add some fresh-arrival upside without disturbing your other couples."
+ }
+}

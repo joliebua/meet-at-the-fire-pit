@@ -1,0 +1,41 @@
+{
+ "agent": "strategist",
+ "kind": "draft",
+ "league": "play_browser_test_villa",
+ "started": "2026-10-19T20:25:43+00:00",
+ "seconds": 10.6,
+ "usage": {
+  "requests": 2,
+  "gateway_cache_hits": 0,
+  "input_tokens": 2668,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 1829,
+  "output_tokens": 427,
+  "reasoning_tokens": 174,
+  "web_searches": 0,
+  "cost_usd": 0.000526
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules",
+  "standings"
+ ],
+ "advice": {
+  "picks": [
+   {
+    "islander": "Gabriel",
+    "reason": "He leads the available pool with 5 points after entering as a fresh Day 2 bombshell, and Jolie has no roster to diversify yet."
+   },
+   {
+    "islander": "Kayda",
+    "reason": "She also has 5 points from her Day 2 villa arrival, so she brings the same strong early bombshell bonus."
+   },
+   {
+    "islander": "Trinity",
+    "reason": "She has 4 points and is already coupled with Bryce, giving Jolie a couple-based option if she wants to balance a bombshell pick."
+   }
+  ],
+  "summary": "Gabriel is my top pick: the Day 2 arrival gives him the pool\u2019s best current total, and you\u2019re starting with a clean slate. Kayda is a close second; if you\u2019d rather take an established couple connection, Trinity is the best fallback."
+ }
+}

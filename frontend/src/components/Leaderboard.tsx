@@ -1,10 +1,12 @@
-import { useEffect, useMemo, useState } from "react";
+import { lazy, Suspense, useEffect, useMemo, useState } from "react";
 import { api, weekNum, type LedgerLine, type League, type Standings } from "../api";
 import { ErrorBox, EVENT_ICONS, Loading, Points } from "./common";
 
-type Props = { leagueKey: string; league: League; week: number; version: number };
+const Villa3D = lazy(() => import("./three/Villa3D"));
 
-export default function Leaderboard({ leagueKey, league, week, version }: Props) {
+type Props = { leagueKey: string; league: League; week: number; version: number; highlight?: string };
+
+export default function Leaderboard({ leagueKey, league, week, version, highlight }: Props) {
   const [data, setData] = useState<Standings | null>(null);
   const [selected, setSelected] = useState<string | null>(null);
   const [ledger, setLedger] = useState<LedgerLine[] | null>(null);
@@ -27,6 +29,11 @@ export default function Leaderboard({ leagueKey, league, week, version }: Props)
     [ledger, week],
   );
 
+  const bars = useMemo(
+    () => (data?.standings ?? []).map((r, i) => ({ label: r.player, value: r.total, sub: `#${i + 1}`, highlight: r.player === highlight })),
+    [data, highlight],
+  );
+
   if (error) return <ErrorBox error={error} />;
   if (!data) return <Loading />;
 
@@ -36,8 +43,11 @@ export default function Leaderboard({ leagueKey, league, week, version }: Props)
   return (
     <div className="grid-side" style={{ gridTemplateColumns: selected ? "1fr 420px" : "1fr" }}>
       <section>
-        <h2 className="section">The leaderboard</h2>
-        <p className="hint">Through {data.weeks[data.weeks.length - 1]}. Tap a player to see every point and the receipt behind it.</p>
+        <Suspense fallback={<div style={{ height: 320 }} />}>
+          <Villa3D bars={bars} height={320} />
+        </Suspense>
+        <h2 className="section" style={{ marginTop: 16 }}>The leaderboard</h2>
+        <p className="hint">{data.weeks.length ? `Through ${data.weeks[data.weeks.length - 1]}.` : "Nothing has aired yet."} Tap a player to see every point and the receipt behind it.</p>
         <div className="board">
           {data.standings.map((row, i) => (
             <article key={row.player} className={`card player ${selected === row.player ? "selected" : ""}`}
@@ -47,10 +57,10 @@ export default function Leaderboard({ leagueKey, league, week, version }: Props)
                 <div className="pname">{row.player}{league.commissioner === row.player && <span className="badge gold" style={{ marginLeft: 8 }}>👑 commissioner</span>}</div>
                 <div className="chips">
                   {rosterOf(row.player).map((slot) => {
-                    const started = (slot.from_week ?? 1) <= week;
+                    const started = (slot.from_week ?? 1) <= Math.max(week, 1) && (slot.until_week ?? 99) >= Math.max(week, 1);
                     return (
-                      <span key={slot.islander} className="chip" style={started ? undefined : { opacity: 0.4 }}
-                            title={started ? undefined : `Joins this team in Week ${slot.from_week}`}>
+                      <span key={`${slot.islander}-${slot.from_week ?? 1}`} className="chip" style={started ? undefined : { opacity: 0.4 }}
+                            title={started ? undefined : slot.until_week ? `Dropped after Week ${slot.until_week}` : `Joins this team in Week ${slot.from_week}`}>
                         {slot.islander}
                         <b><Points n={row.by_islander[slot.islander] ?? 0} /></b>
                       </span>

@@ -1,0 +1,29 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_browser_test_villa",
+ "started": "2026-10-19T20:27:14+00:00",
+ "seconds": 0.5,
+ "usage": {
+  "requests": 0,
+  "gateway_cache_hits": 3,
+  "input_tokens": 0,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 0,
+  "output_tokens": 0,
+  "reasoning_tokens": 0,
+  "web_searches": 0,
+  "cost_usd": 0.0
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules",
+  "standings",
+  "free_agents"
+ ],
+ "advice": {
+  "moves": [],
+  "summary": "Jolie should look to replace Gabriel: he was dumped after Week 2, a 10-point hit, and the roster has one open slot. But the available free-agent list returned no names, so I can\u2019t recommend a valid pickup yet; hold the other three, especially Kayda (25 points) and Corbin (26), whose couples are intact."
+ }
+}
