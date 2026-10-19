@@ -14,7 +14,7 @@
   "draft_after_day": 2,
   "autopilot": false
  },
- "current_week": 2,
+ "current_week": 5,
  "players": [
   {
    "name": "Jolie",
@@ -30,7 +30,17 @@
     },
     {
      "islander": "Gabriel",
-     "from_week": 2
+     "from_week": 2,
+     "until_week": 2
+    },
+    {
+     "islander": "Jen",
+     "from_week": 3,
+     "until_week": 4
+    },
+    {
+     "islander": "Dylan",
+     "from_week": 5
     }
    ]
   },
@@ -53,7 +63,16 @@
     },
     {
      "islander": "Corbin",
-     "from_week": 2
+     "from_week": 2,
+     "until_week": 4
+    },
+    {
+     "islander": "Jaiden",
+     "from_week": 4
+    },
+    {
+     "islander": "Carl",
+     "from_week": 5
     }
    ]
   },
@@ -75,7 +94,12 @@
     },
     {
      "islander": "Sol",
-     "from_week": 2
+     "from_week": 2,
+     "until_week": 3
+    },
+    {
+     "islander": "Tierra",
+     "from_week": 4
     }
    ]
   },
@@ -89,7 +113,8 @@
     },
     {
      "islander": "Beatriz",
-     "from_week": 1
+     "from_week": 1,
+     "until_week": 3
     },
     {
      "islander": "Zach",
@@ -98,6 +123,10 @@
     {
      "islander": "Caleb",
      "from_week": 2
+    },
+    {
+     "islander": "Parmida",
+     "from_week": 4
     }
    ]
   }
@@ -240,7 +269,91 @@
    "by": "bot",
    "reason": "Caleb has 7 pts",
    "made_after": "Week 1"
+  },
+  {
+   "from_week": 3,
+   "player": "Jolie",
+   "add": "Jen",
+   "drop": "Gabriel",
+   "by": "you",
+   "reason": "Add Jen in Gabriel’s place: Gabriel has been dumped, while Jen is still in the villa and formed a couple with him before they both stayed together at the Week 2 recoupling—at least a better chance to keep earning weekly points than an eliminated Islander.",
+   "made_after": "Week 2"
+  },
+  {
+   "from_week": 4,
+   "player": "Maya",
+   "add": "Jaiden",
+   "drop": null,
+   "by": "bot",
+   "reason": "Jaiden has 11 pts",
+   "made_after": "Week 3"
+  },
+  {
+   "from_week": 4,
+   "player": "Dev",
+   "add": "Tierra",
+   "drop": "Sol",
+   "by": "bot",
+   "reason": "Sol left the villa; Tierra has 11 pts",
+   "made_after": "Week 3"
+  },
+  {
+   "from_week": 4,
+   "player": "Priya",
+   "add": "Parmida",
+   "drop": "Beatriz",
+   "by": "bot",
+   "reason": "Beatriz left the villa; Parmida has 11 pts",
+   "made_after": "Week 3"
+  },
+  {
+   "from_week": 5,
+   "player": "Jolie",
+   "add": "Dylan",
+   "drop": "Jen",
+   "by": "you",
+   "reason": "Replace dumped Jen with Dylan: he has a continuing couple with Kenzie, they survived the recoupling, and their challenge win earned safety from the night's vote.",
+   "made_after": "Week 4"
+  },
+  {
+   "from_week": 5,
+   "player": "Maya",
+   "add": "Carl",
+   "drop": "Corbin",
+   "by": "bot",
+   "reason": "Corbin left the villa; Carl has 10 pts",
+   "made_after": "Week 4"
   }
  ],
- "created": "2026-10-19T21:34:18+00:00"
+ "created": "2026-10-19T21:34:18+00:00",
+ "finale": {
+  "prize": 100,
+  "finalists": [
+   {
+    "player": "Dev",
+    "total": 158
+   },
+   {
+    "player": "Jolie",
+    "total": 104
+   }
+  ],
+  "choices": {
+   "Dev": "take",
+   "Jolie": "take"
+  },
+  "by": {
+   "Jolie": "player",
+   "Dev": "bot"
+  },
+  "revealed": true,
+  "round": 1,
+  "started": "2026-10-19T21:58:30+00:00",
+  "payout": {
+   "Dev": 0,
+   "Jolie": 0
+  },
+  "host_line": "Oh my days. Dev and Jolie both tried to take it all… so nobody gets a thing. The pot goes up in smoke. 🔥",
+  "revealed_at": "2026-10-19T22:02:10+00:00"
+ }
 }

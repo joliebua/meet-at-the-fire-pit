@@ -1,0 +1,39 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_don_t_mug_me_off",
+ "started": "2026-10-19T21:52:38+00:00",
+ "seconds": 8.9,
+ "usage": {
+  "requests": 2,
+  "gateway_cache_hits": 1,
+  "input_tokens": 3914,
+  "cached_input_tokens": 1698,
+  "cache_write_tokens": 1964,
+  "output_tokens": 339,
+  "reasoning_tokens": 160,
+  "web_searches": 0,
+  "cost_usd": 0.000457
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules",
+  "standings",
+  "islander_report"
+ ],
+ "advice": {
+  "moves": [
+   {
+    "add": "Jen",
+    "drop": "Gabriel",
+    "reason": "Add Jen in Gabriel\u2019s place: Gabriel has been dumped, while Jen is still in the villa and formed a couple with him before they both stayed together at the Week 2 recoupling\u2014at least a better chance to keep earning weekly points than an eliminated Islander.",
+    "evidence": [
+     "On Day 14, Gabriel was dumped.",
+     "Jen with Gabriel... stayed in their couples."
+    ]
+   }
+  ],
+  "summary": "Yes\u2014make the move and swap out Gabriel for Jen. Gabriel\u2019s dump ends his scoring, while Jen is still in the villa; this is a sensible low-risk replacement, though her next couple situation will be important to watch."
+ }
+}

@@ -1,0 +1,38 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_don_t_mug_me_off",
+ "started": "2026-10-19T21:56:41+00:00",
+ "seconds": 6.0,
+ "usage": {
+  "requests": 2,
+  "gateway_cache_hits": 0,
+  "input_tokens": 2861,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 1905,
+  "output_tokens": 313,
+  "reasoning_tokens": 109,
+  "web_searches": 0,
+  "cost_usd": 0.00049
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules",
+  "standings"
+ ],
+ "advice": {
+  "moves": [
+   {
+    "add": "Dylan",
+    "drop": "Jen",
+    "reason": "Replace dumped Jen with Dylan: he has a continuing couple with Kenzie, they survived the recoupling, and their challenge win earned safety from the night's vote.",
+    "evidence": [
+     "Kenzie and Dylan ... remained together.",
+     "For winning, Kenzie & Dylan won safety from the nights vote."
+    ]
+   }
+  ],
+  "summary": "Yes\u2014make the one available move and swap out dumped Jen for Dylan. His couple with Kenzie just survived recoupling, and their challenge win gave them safety, a much stronger outlook than an empty roster spot."
+ }
+}

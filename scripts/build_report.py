@@ -140,7 +140,7 @@ html = f"""<!doctype html>
 
 <h2>1. Motivation</h2>
 <p><b>Who has the problem.</b> Love Island fans who would enjoy a fantasy league the way fantasy football fans enjoy theirs: everyone drafts islanders and earns points when they couple up, win challenges or survive a dumping. Somebody would also have to be the commissioner who keeps score.</p>
-<p><b>The person behind it.</b> I'm the target user. I watch Love Island religiously and play fantasy football. In my words: <i>“I watch Love Island religiously but have never seen a fantasy league for it. I play fantasy football, which is a lot of effort to prep for the draft, and I've seen brackets for The Bachelor but nothing else.”</i> This is my own experience as a fan, not an independent interview.</p>
+<p><b>The person behind it.</b> I'm the target user. I watch Love Island religiously and play fantasy football. In my words: <i>“I watch Love Island religiously but have never seen a fantasy league for it. I play fantasy football, which is a lot of effort to prep for the draft, and I've seen brackets for The Bachelor but nothing else.”</i> This is my own experience as a fan, not an independent interview. Three friends who also watch then tried the app; their feedback is in section 6.</p>
 <p><b>How it's handled today.</b> Mostly, it isn't. The closest things I've seen are Bachelor brackets, which are prediction games. Running a Love Island points league by hand would mean one person rewatching episodes or reading recaps, deciding which events count, updating a spreadsheet, posting standings and settling arguments ("that wasn't a real date!"), every week of the season. Fantasy football is fun despite heavy draft prep because the platform does all the scoring. For Love Island, the one draft app I found (Reality Draft Picks) doesn't describe a group's own house rules or proof for each point (see section 2).</p>
 <p><b>What it costs them.</b> The league never gets started. If one does start, one friend gives up their time every episode week, makes scoring mistakes, and has no shared source of truth when people argue.</p>
 
@@ -254,7 +254,13 @@ It kept {len(scout_w2["bundle"]["sources"])} sources (two wiki week summaries + 
 <p>Caveat: for these event types, the input text and the answer key both come from wiki pages, so this mainly proves the extraction and the checks are right. Noisier sources are the next test.</p>
 {table(["Event type", "In the table", "Predicted", "Correct"], acc_rows, {1, 2, 3})}
 <p><b>Time.</b> Scout + Recapper take about {round(sum(s["seconds"] + r["seconds"] for _, s, r in season_rows) / len(season_rows))} seconds of machine time per episode week. A dispute takes about {agents["ref"]["avg_seconds"]}s, and a drop about {agents["host"]["avg_seconds"]}s.</p>
-<p><b>User evidence so far.</b> The evidence so far is my own experience as the target user, not an independent trial. The part of fantasy football I'd never want to do by hand is the scoring, and that's exactly the part the app takes over, at about {round(sum(s["seconds"] + r["seconds"] for _, s, r in season_rows) / len(season_rows))} seconds of machine time and about {usd(pipeline_week, 3)} per episode week. A timed trial with a real friend group is the next step: how long manual scoring takes compared with approving the app's results (see Limits).</p>
+<p><b>Real-user check (3 friends who watch the show, October 2026).</b> They tried the app, replaying Love Island USA season 8, and answered three questions:</p>
+{table(["Question", "What they said"], [
+    ["Would you use this with friends?", "<b>3 of 3: yes.</b> The group plans to launch a league with it next season (summer 2027) and play along as they watch."],
+    ["What did you like?", "All 3 liked the graphics, the Strategist's help with drafting, and how well organized it is. They called the share-or-take-it-all finale fun and on par with the show."],
+    ["What would you change?", "Make the recaps more live: pull straight from X, TikTok or similar, based on trending hashtags and viewer reactions."],
+])}
+<p><b>What this does and doesn't show.</b> It shows strong intent to adopt (3 of 3, plus a real league planned for next season) and which features fans care about: the visuals, the coaching and the finale. It's a small, friendly sample, and nobody timed manual scoring against the app. So the time saved is still the machine time above (about {round(sum(s["seconds"] + r["seconds"] for _, s, r in season_rows) / len(season_rows))} seconds and {usd(pipeline_week, 3)} per episode week), not a measured before/after. Their top request, live social recaps, becomes the first next step (section 7).</p>
 <p><b>Is the coach any good?</b> <code>scripts/eval_autopilot.py</code> lets the Strategist draft and run autopilot for whole seasons against the three bots, whose simple rule is points so far, plus a bonus for being coupled, plus a little random taste.</p>
 {table(["Prompt version", "Seasons", "Avg rank (of 4)", "Wins", "Coach avg points", "Bot avg points"],
        [[escape(v["summary"].get("prompt", k)), v["summary"]["seasons"], v["summary"]["avg_rank"], v["summary"]["wins"],
@@ -265,20 +271,21 @@ It kept {len(scout_w2["bundle"]["sources"])} sources (two wiki week summaries + 
 <h2>7. Limits and next steps</h2>
 <ul>
 <li><b>Truth vs. quotes (A3).</b> Require two independent sources for high-value events, and down-weight single-source news.</li>
-<li><b>Source lag and coverage.</b> Wiki weekly summaries appear days after airing and rarely name challenge winners or kisses, so those score less often than they happen. X/Twitter and Reddit, where fans react live, need paid or extra API keys the course rules don't allow.</li>
-<li><b>No outside users yet.</b> Only I have used the app. Next: a timed trial with a friend group over a few episode weeks, measuring manual vs. app time and dispute counts.</li>
+<li><b>Source lag and coverage.</b> Wiki weekly summaries appear days after airing and rarely name challenge winners or kisses, so those score less often than they happen. X/Twitter and Reddit, where fans react live, need paid or extra API keys the course rules don't allow. Live social recaps were also the testers' top request.</li>
+<li><b>Small, friendly test.</b> Three friends tried it (see Impact), but there's no timed before/after yet. Next: time manual scoring against approving the app's results when the group launches its league next season.</li>
 <li><b>One season tested.</b> Love Island USA S8 only. UK and other formats need their own page/section names in <code>data/seasons.json</code>.</li>
 <li><b>The coach isn't better than simple bots yet.</b> See Impact. It plays sensibly (it drops dumped islanders and holds when nobody is available) but hasn't shown an edge in 6 simulated seasons.</li>
 <li><b>Model memory.</b> gpt-6-luna may have read coverage of this season in training. Tools that stop at the current week and spoiler checks limit what it can use, but can't prove it isn't drawing on memory.</li>
 <li><b>Single commissioner, no logins.</b> League data lives in JSON files on one machine. Next: accounts, a database, and invite links for players.</li>
 <li><b>Next to build:</b>
   <ul>
+  <li><b>live social recaps</b>, the testers' #1 request: a Buzz agent that reads X/TikTok trends, hashtags and viewer reactions. X's API is paid and TikTok's research API is restricted, so this needs approved keys. Until then, the capped web-search tool can catch trending reactions.</li>
   <li>real-time scoring during a live season</li>
   <li>a much larger autopilot evaluation and smarter pickups</li>
   <li>push notifications for the drop</li>
   <li>a "spoiler-safe" link per player</li>
   <li>two-source rule for big events</li>
-  <li>a real-user trial over a full season</li>
+  <li>a timed trial when the testers launch their league next summer</li>
   </ul></li>
 </ul>
 <p class="small">Report generated by <code>scripts/build_report.py</code> from the app's own logs.</p>

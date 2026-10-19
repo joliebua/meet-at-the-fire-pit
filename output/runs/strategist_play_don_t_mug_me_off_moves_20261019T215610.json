@@ -1,0 +1,28 @@
+{
+ "agent": "strategist",
+ "kind": "moves",
+ "league": "play_don_t_mug_me_off",
+ "started": "2026-10-19T21:56:10+00:00",
+ "seconds": 9.4,
+ "usage": {
+  "requests": 2,
+  "gateway_cache_hits": 0,
+  "input_tokens": 3426,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 2470,
+  "output_tokens": 437,
+  "reasoning_tokens": 272,
+  "web_searches": 0,
+  "cost_usd": 0.000623
+ },
+ "steps": [
+  "my_team",
+  "free_agents",
+  "scoring_rules",
+  "standings"
+ ],
+ "advice": {
+  "moves": [],
+  "summary": "I\u2019d hold this week: your three islanders are all still in the villa, and Bryce and Kayda have each stayed in their couples across multiple recouplings. Jen has a new couple with Gal, but the available options are either newly coupled to islanders already rostered elsewhere or currently uncoupled, so there isn\u2019t a clear upgrade worth spending your move on."
+ }
+}
