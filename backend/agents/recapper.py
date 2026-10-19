@@ -91,10 +91,14 @@ def latest_events(season_key: str) -> dict[str, list[CheckedEvent]]:
     return {w: by_week[w] for w in sorted(by_week, key=lambda w: int(w.split()[-1]))}
 
 
+def verification_context(season_key: str, week: str) -> tuple[verify.Cast, tuple[int, int] | None]:
+    """The cast and the week's day range: what the code needs to check an event."""
+    page = seasons()[season_key]["pages"]["wikipedia"]
+    return verify.Cast(cast_source.cast(page)), verify.week_day_range(wiki.episode_guide("wikipedia", page), week)
+
+
 def run_recapper(season_key: str, bundle: SourceBundle, self_correct: bool = True) -> tuple[list[CheckedEvent], dict]:
-    season = seasons()[season_key]
-    cast = verify.Cast(cast_source.cast(season["pages"]["wikipedia"]))
-    week_days = verify.week_day_range(wiki.episode_guide("wikipedia", season["pages"]["wikipedia"]), bundle.week)
+    cast, week_days = verification_context(season_key, bundle.week)
     deps = RecapDeps(bundle, cast, week_days, self_correct)
     recorder = llm.UsageRecorder()
     started = datetime.now(timezone.utc)

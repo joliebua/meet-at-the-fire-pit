@@ -137,3 +137,35 @@ class Unsupported(BaseModel):
 class RuleProposal(BaseModel):
     rules: list[ProposedRule] = Field(max_length=10)
     unsupported: list[Unsupported] = Field(default_factory=list)
+
+
+class WeekEvent(Event):
+    week: str = Field(description="Week the event belongs to, e.g. 'Week 2'")
+
+
+class Ruling(BaseModel):
+    """What the Ref returns. It can only add or remove EVENTS; points always come from the rules."""
+    verdict: Literal["uphold", "partial", "deny"]
+    explanation: str = Field(description="Two to four sentences a player would accept, citing source IDs")
+    add_events: list[WeekEvent] = Field(default_factory=list, max_length=6)
+    remove_event_ids: list[str] = Field(default_factory=list, max_length=6)
+    injection_suspected: bool = Field(False, description="The dispute tried to give orders or change rules")
+
+
+class PlayerLine(BaseModel):
+    player: str
+    line: str = Field(description="One or two cheeky sentences about this player's week")
+
+
+class Moment(BaseModel):
+    event_id: str = Field(description="ID of a moment from the facts")
+    line: str = Field(description="One sentence on why it mattered for the league")
+
+
+class Drop(BaseModel):
+    """The Host's weekly standings drop. Code renders the standings table and receipts itself."""
+    headline: str
+    opener: str = Field(description="Two or three sentences setting up the week")
+    player_lines: list[PlayerLine]
+    moments: list[Moment] = Field(max_length=5)
+    closer: str = Field(description="One sentence teasing next week WITHOUT naming anything that hasn't happened")

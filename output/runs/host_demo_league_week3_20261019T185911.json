@@ -1,0 +1,19 @@
+{
+ "agent": "host",
+ "league": "demo_league",
+ "week": "Week 3",
+ "started": "2026-10-19T18:59:11+00:00",
+ "seconds": 19.5,
+ "usage": {
+  "requests": 1,
+  "gateway_cache_hits": 0,
+  "input_tokens": 1760,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 1634,
+  "output_tokens": 1025,
+  "reasoning_tokens": 608,
+  "web_searches": 0,
+  "cost_usd": 0.000729
+ },
+ "model_requests": 1
+}

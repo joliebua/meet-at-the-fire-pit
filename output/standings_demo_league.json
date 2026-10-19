@@ -288,6 +288,23 @@
    }
   },
   {
+   "player": "Priya",
+   "total": 91,
+   "by_week": {
+    "Week 1": 69,
+    "Week 2": 15,
+    "Week 3": 17,
+    "Week 4": -7,
+    "Week 5": -3
+   },
+   "by_islander": {
+    "KC": 5,
+    "Kayda": 61,
+    "Gabriel": 9,
+    "Corbin": 16
+   }
+  },
+  {
    "player": "Maya",
    "total": 85,
    "by_week": {
@@ -302,23 +319,6 @@
     "Melanie": 43,
     "Sean": -22,
     "Jen": -8
-   }
-  },
-  {
-   "player": "Priya",
-   "total": 75,
-   "by_week": {
-    "Week 1": 53,
-    "Week 2": 15,
-    "Week 3": 17,
-    "Week 4": -7,
-    "Week 5": -3
-   },
-   "by_islander": {
-    "KC": 5,
-    "Kayda": 61,
-    "Gabriel": 9,
-    "Corbin": 0
    }
   }
  ],
@@ -801,6 +801,16 @@
    "label": "Dumped penalty",
    "points": -20,
    "quote": "As Sean remained single, he was dumped from the island.",
+   "source_id": "S1"
+  },
+  {
+   "week": "Week 1",
+   "event_id": "dispute-3-kiss-corbin",
+   "islander": "Corbin",
+   "rule_id": "std-kiss",
+   "label": "Kiss",
+   "points": 1,
+   "quote": "The female islanders would then go into a secret room and kiss the new boy, Corbin.",
    "source_id": "S1"
   },
   {

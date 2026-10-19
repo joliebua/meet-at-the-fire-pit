@@ -1,0 +1,383 @@
+{
+ "run": {
+  "agent": "recapper",
+  "season": "love_island_usa_s8",
+  "week": "Week 4",
+  "mode": "snapshot",
+  "self_correct": true,
+  "started": "2026-10-19T19:01:12+00:00",
+  "seconds": 0.4,
+  "usage": {
+   "requests": 0,
+   "gateway_cache_hits": 1,
+   "input_tokens": 0,
+   "cached_input_tokens": 0,
+   "cache_write_tokens": 0,
+   "output_tokens": 0,
+   "reasoning_tokens": 0,
+   "web_searches": 0,
+   "cost_usd": 0.0
+  },
+  "events_proposed": 16,
+  "events_verified": 16,
+  "events_rejected": 0,
+  "first_draft_rejections": 0,
+  "self_correct_rounds": 0
+ },
+ "events": [
+  {
+   "type": "stayed_coupled",
+   "islanders": [
+    "Kayda",
+    "Zach"
+   ],
+   "others": [],
+   "day": 25,
+   "detail": "recoupling",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "On Day 25, the islanders recoupled with the boys choosing which girl they wanted to couple up with. Kayda and Zach, Kenzie and Dylan, Melanie and Sincere, Jaiden and Caleb, Parmida and Corbin, Tierra and KC and Trinity and Bryce remained together."
+    }
+   ],
+   "id": "week4-e1",
+   "week": "Week 4",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "stayed_coupled",
+   "islanders": [
+    "Kenzie",
+    "Dylan"
+   ],
+   "others": [],
+   "day": 25,
+   "detail": "recoupling",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "On Day 25, the islanders recoupled with the boys choosing which girl they wanted to couple up with. Kayda and Zach, Kenzie and Dylan, Melanie and Sincere, Jaiden and Caleb, Parmida and Corbin, Tierra and KC and Trinity and Bryce remained together."
+    }
+   ],
+   "id": "week4-e2",
+   "week": "Week 4",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "stayed_coupled",
+   "islanders": [
+    "Melanie",
+    "Sincere"
+   ],
+   "others": [],
+   "day": 25,
+   "detail": "recoupling",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "On Day 25, the islanders recoupled with the boys choosing which girl they wanted to couple up with. Kayda and Zach, Kenzie and Dylan, Melanie and Sincere, Jaiden and Caleb, Parmida and Corbin, Tierra and KC and Trinity and Bryce remained together."
+    }
+   ],
+   "id": "week4-e3",
+   "week": "Week 4",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "stayed_coupled",
+   "islanders": [
+    "Jaiden",
+    "Caleb"
+   ],
+   "others": [],
+   "day": 25,
+   "detail": "recoupling",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "On Day 25, the islanders recoupled with the boys choosing which girl they wanted to couple up with. Kayda and Zach, Kenzie and Dylan, Melanie and Sincere, Jaiden and Caleb, Parmida and Corbin, Tierra and KC and Trinity and Bryce remained together."
+    }
+   ],
+   "id": "week4-e4",
+   "week": "Week 4",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "stayed_coupled",
+   "islanders": [
+    "Parmida",
+    "Corbin"
+   ],
+   "others": [],
+   "day": 25,
+   "detail": "recoupling",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "On Day 25, the islanders recoupled with the boys choosing which girl they wanted to couple up with. Kayda and Zach, Kenzie and Dylan, Melanie and Sincere, Jaiden and Caleb, Parmida and Corbin, Tierra and KC and Trinity and Bryce remained together."
+    }
+   ],
+   "id": "week4-e5",
+   "week": "Week 4",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "stayed_coupled",
+   "islanders": [
+    "Tierra",
+    "KC"
+   ],
+   "others": [],
+   "day": 25,
+   "detail": "recoupling",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "On Day 25, the islanders recoupled with the boys choosing which girl they wanted to couple up with. Kayda and Zach, Kenzie and Dylan, Melanie and Sincere, Jaiden and Caleb, Parmida and Corbin, Tierra and KC and Trinity and Bryce remained together."
+    }
+   ],
+   "id": "week4-e6",
+   "week": "Week 4",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "stayed_coupled",
+   "islanders": [
+    "Trinity",
+    "Bryce"
+   ],
+   "others": [],
+   "day": 25,
+   "detail": "recoupling",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "On Day 25, the islanders recoupled with the boys choosing which girl they wanted to couple up with. Kayda and Zach, Kenzie and Dylan, Melanie and Sincere, Jaiden and Caleb, Parmida and Corbin, Tierra and KC and Trinity and Bryce remained together."
+    }
+   ],
+   "id": "week4-e7",
+   "week": "Week 4",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "coupled_up",
+   "islanders": [
+    "Carl",
+    "Aniya"
+   ],
+   "others": [],
+   "day": 25,
+   "detail": "recoupling",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "Carl chose to couple up with Aniya, whilst Gal chose to recouple with Amora."
+    }
+   ],
+   "id": "week4-e8",
+   "week": "Week 4",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "coupled_up",
+   "islanders": [
+    "Gal",
+    "Amora"
+   ],
+   "others": [],
+   "day": 25,
+   "detail": "recoupling",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "Carl chose to couple up with Aniya, whilst Gal chose to recouple with Amora."
+    }
+   ],
+   "id": "week4-e9",
+   "week": "Week 4",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "left_single",
+   "islanders": [
+    "Jen"
+   ],
+   "others": [],
+   "day": 25,
+   "detail": "recoupling",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "On Day 25, following a recoupling, Jen was left single and was dumped from the island."
+    }
+   ],
+   "id": "week4-e10",
+   "week": "Week 4",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "dumped",
+   "islanders": [
+    "Jen"
+   ],
+   "others": [],
+   "day": 25,
+   "detail": "",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "On Day 25, following a recoupling, Jen was left single and was dumped from the island."
+    }
+   ],
+   "id": "week4-e11",
+   "week": "Week 4",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 1
+  },
+  {
+   "type": "dumped",
+   "islanders": [
+    "Amora",
+    "Gal"
+   ],
+   "others": [],
+   "day": 25,
+   "detail": "least compatible vote",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "On Day 25, following a vote for least compatible couple, Amora and Gal and Jaiden and Caleb were dumped from the island."
+    },
+    {
+     "source_id": "S2",
+     "quote": "As Amora and Gal, and Jaiden and Caleb received the most votes, they were dumped from the island."
+    }
+   ],
+   "id": "week4-e12",
+   "week": "Week 4",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "dumped",
+   "islanders": [
+    "Jaiden",
+    "Caleb"
+   ],
+   "others": [],
+   "day": 25,
+   "detail": "least compatible vote",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "On Day 25, following a vote for least compatible couple, Amora and Gal and Jaiden and Caleb were dumped from the island."
+    },
+    {
+     "source_id": "S2",
+     "quote": "As Amora and Gal, and Jaiden and Caleb received the most votes, they were dumped from the island."
+    }
+   ],
+   "id": "week4-e13",
+   "week": "Week 4",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "date",
+   "islanders": [
+    "Trinity",
+    "Bryce"
+   ],
+   "others": [],
+   "day": 22,
+   "detail": "first date",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "On Day 22, Trinity and Bryce left the villa to go on their first date."
+    },
+    {
+     "source_id": "S2",
+     "quote": "On Day 22, Trinity and Bryce left the villa to go on their first date."
+    }
+   ],
+   "id": "week4-e14",
+   "week": "Week 4",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "won_challenge",
+   "islanders": [
+    "Kenzie",
+    "Dylan"
+   ],
+   "others": [],
+   "day": 26,
+   "detail": "karaoke challenge",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "On Day 26, the couples took part in a Karaoke Night Challenge. For winning, Kenzie & Dylan won safety from the nights vote."
+    },
+    {
+     "source_id": "S2",
+     "quote": "On Day 26, the couples took part in a karaoke challenge. As Kenzie and Dylan were declared the winners, they were granted safety from the public vote."
+    }
+   ],
+   "id": "week4-e15",
+   "week": "Week 4",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  },
+  {
+   "type": "dumped",
+   "islanders": [
+    "Parmida",
+    "Corbin"
+   ],
+   "others": [],
+   "day": 26,
+   "detail": "save vote",
+   "evidence": [
+    {
+     "source_id": "S1",
+     "quote": "On Day 26, as they received only one vote for save from their fellow islanders, Parmida and Corbin were dumped from the villa."
+    },
+    {
+     "source_id": "S2",
+     "quote": "As Parmida and Corbin only received one vote, while Kayda and Zach received 4 votes, Parmida and Corbin were dumped from the island."
+    }
+   ],
+   "id": "week4-e16",
+   "week": "Week 4",
+   "status": "verified",
+   "problems": [],
+   "corroborated_by": 2
+  }
+ ]
+}

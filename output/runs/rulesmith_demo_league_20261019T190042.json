@@ -1,0 +1,22 @@
+{
+ "agent": "rulesmith",
+ "league": "demo_league",
+ "started": "2026-10-19T19:00:42+00:00",
+ "seconds": 2.1,
+ "usage": {
+  "requests": 1,
+  "gateway_cache_hits": 0,
+  "input_tokens": 1264,
+  "cached_input_tokens": 0,
+  "cache_write_tokens": 1138,
+  "output_tokens": 56,
+  "reasoning_tokens": 0,
+  "web_searches": 0,
+  "cost_usd": 0.000183
+ },
+ "request": "Winning a challenge is worth 8 instead of 5.",
+ "proposed": [
+  "house-5"
+ ],
+ "unsupported": []
+}

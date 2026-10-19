@@ -1,0 +1,250 @@
+{
+ "league": "demo_league",
+ "week": "Week 3",
+ "written": "2026-10-19T18:59:11+00:00",
+ "drop": {
+  "headline": "Carl’s Villa Whiplash, Priya’s Steady Crown",
+  "opener": "Week 3 brought dumped-islander drama, a public-vote return and couples choosing to stick or switch. Priya kept her place at the top, while the points made for a lively little reshuffle of fortunes beneath her.",
+  "player_lines": [
+   {
+    "player": "Priya",
+    "line": "Rank 1 is still yours: 101 total after a strong 17 this week. The crown stays put, and the villa can take notes."
+   },
+   {
+    "player": "Dev",
+    "line": "You held rank 2 with 68 total, but just 4 this week. Carl’s departure and return made for a full-on points rollercoaster."
+   },
+   {
+    "player": "Jolie",
+    "line": "Rank 3 remains yours, with 64 total after 16 this week. A solid week—no dramatic climb needed to keep your spot."
+   },
+   {
+    "player": "Maya",
+    "line": "You’re still at rank 4, on 36 total after matching Jolie’s 16 this week. A lively points haul, even if the table didn’t budge."
+   }
+  ],
+  "moments": [
+   {
+    "event_id": "week3-e44",
+    "line": "Carl’s dumped penalty cost Dev 20 points, making it the week’s biggest sting."
+   },
+   {
+    "event_id": "week3-e20",
+    "line": "Carl’s public-vote return brought Dev 10 points back and softened the blow."
+   },
+   {
+    "event_id": "week3-e21",
+    "line": "Kayda and Zach staying together added 6 points across Dev and Priya’s teams."
+   },
+   {
+    "event_id": "week3-e22",
+    "line": "Melanie and Sincere sticking together added 6 points across Jolie and Maya’s teams."
+   },
+   {
+    "event_id": "week3-e23",
+    "line": "Trinity and Bryce stayed coupled, bringing another 6 points across Jolie and Maya’s teams."
+   }
+  ],
+  "closer": "Next week, every point and every pairing stays in play—keep those group-chat receipts ready."
+ },
+ "facts": {
+  "league": "Casa Amor-igos (demo league)",
+  "week": "Week 3",
+  "standings": [
+   {
+    "rank": 1,
+    "player": "Priya",
+    "total": 101,
+    "this_week": 17,
+    "rank_change": 0,
+    "team": [
+     "KC",
+     "Kayda",
+     "Gabriel",
+     "Corbin"
+    ]
+   },
+   {
+    "rank": 2,
+    "player": "Dev",
+    "total": 68,
+    "this_week": 4,
+    "rank_change": 0,
+    "team": [
+     "Aniya",
+     "Zach",
+     "Kenzie",
+     "Carl"
+    ]
+   },
+   {
+    "rank": 3,
+    "player": "Jolie",
+    "total": 64,
+    "this_week": 16,
+    "rank_change": 0,
+    "team": [
+     "Trinity",
+     "Sincere",
+     "Beatriz",
+     "Caleb"
+    ]
+   },
+   {
+    "rank": 4,
+    "player": "Maya",
+    "total": 36,
+    "this_week": 16,
+    "rank_change": 0,
+    "team": [
+     "Bryce",
+     "Melanie",
+     "Sean",
+     "Jen"
+    ]
+   }
+  ],
+  "moments": [
+   {
+    "event_id": "week3-e44",
+    "islanders": [
+     "Carl"
+    ],
+    "scored": [
+     "Dumped penalty (-20)"
+    ],
+    "teams": [
+     "Dev"
+    ],
+    "points_for_teams": -20,
+    "quote": "On Day 20, Casa Amor islanders Amora, Carl, Chay, Corey, Ronnie, and Sydney were dumped from the island after failing to couple up."
+   },
+   {
+    "event_id": "week3-e20",
+    "islanders": [
+     "Carl"
+    ],
+    "scored": [
+     "Re-entered the villa (+10)"
+    ],
+    "teams": [
+     "Dev"
+    ],
+    "points_for_teams": 10,
+    "quote": "On Day 21, Amora and Carl re-entered the villa after the public voted them back in."
+   },
+   {
+    "event_id": "week3-e21",
+    "islanders": [
+     "Kayda",
+     "Zach"
+    ],
+    "scored": [
+     "Survived a recoupling together (+3)"
+    ],
+    "teams": [
+     "Dev",
+     "Priya"
+    ],
+    "points_for_teams": 6,
+    "quote": "Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all chose to remain in their couples."
+   },
+   {
+    "event_id": "week3-e22",
+    "islanders": [
+     "Melanie",
+     "Sincere"
+    ],
+    "scored": [
+     "Survived a recoupling together (+3)"
+    ],
+    "teams": [
+     "Jolie",
+     "Maya"
+    ],
+    "points_for_teams": 6,
+    "quote": "Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all chose to remain in their couples."
+   },
+   {
+    "event_id": "week3-e23",
+    "islanders": [
+     "Bryce",
+     "Trinity"
+    ],
+    "scored": [
+     "Survived a recoupling together (+3)"
+    ],
+    "teams": [
+     "Jolie",
+     "Maya"
+    ],
+    "points_for_teams": 6,
+    "quote": "Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all chose to remain in their couples."
+   },
+   {
+    "event_id": "week3-e7",
+    "islanders": [
+     "Carl"
+    ],
+    "scored": [
+     "Bombshell arrival (+5)"
+    ],
+    "teams": [
+     "Dev"
+    ],
+    "points_for_teams": 5,
+    "quote": "On Day 17, Carl, Chandlar, Chay, Corey, Dylan, Gal, Keyon, Kyle, Ronnie, Ryan, Tino and Trae entered the main villa."
+   },
+   {
+    "event_id": "week3-e24",
+    "islanders": [
+     "Caleb",
+     "Jaiden"
+    ],
+    "scored": [
+     "New couple (+4)"
+    ],
+    "teams": [
+     "Jolie"
+    ],
+    "points_for_teams": 4,
+    "quote": "Elsewhere, Caleb chose to couple up with Jaiden, Corbin picked Parmida, Kenzie went with Dylan, and Jen chose Gal."
+   },
+   {
+    "event_id": "week3-e25",
+    "islanders": [
+     "Corbin",
+     "Parmida"
+    ],
+    "scored": [
+     "New couple (+4)"
+    ],
+    "teams": [
+     "Priya"
+    ],
+    "points_for_teams": 4,
+    "quote": "Elsewhere, Caleb chose to couple up with Jaiden, Corbin picked Parmida, Kenzie went with Dylan, and Jen chose Gal."
+   }
+  ],
+  "dumped_this_week": [
+   "Amora",
+   "Carl",
+   "Chandlar",
+   "Chay",
+   "Corey",
+   "Keyon",
+   "Kyle",
+   "Ronnie",
+   "Ryan",
+   "Sydney",
+   "Tino",
+   "Trae"
+  ],
+  "house_rules": [
+   "Steal coupling bonus +5",
+   "Dumped penalty -20",
+   "Hideaway date bonus +4"
+  ]
+ },
+ "markdown": "# Carl’s Villa Whiplash, Priya’s Steady Crown\n*Casa Amor-igos (demo league) · Week 3*\n\nWeek 3 brought dumped-islander drama, a public-vote return and couples choosing to stick or switch. Priya kept her place at the top, while the points made for a lively little reshuffle of fortunes beneath her.\n\n| # | Player | Total | This week | Move |\n|---|---|---|---|---|\n| 1 | Priya | 101 | +17 | – |\n| 2 | Dev | 68 | +4 | – |\n| 3 | Jolie | 64 | +16 | – |\n| 4 | Maya | 36 | +16 | – |\n\n## The group chat report\n- **Priya:** Rank 1 is still yours: 101 total after a strong 17 this week. The crown stays put, and the villa can take notes.\n- **Dev:** You held rank 2 with 68 total, but just 4 this week. Carl’s departure and return made for a full-on points rollercoaster.\n- **Jolie:** Rank 3 remains yours, with 64 total after 16 this week. A solid week—no dramatic climb needed to keep your spot.\n- **Maya:** You’re still at rank 4, on 36 total after matching Jolie’s 16 this week. A lively points haul, even if the table didn’t budge.\n\n## Moments that moved the league\n- Carl’s dumped penalty cost Dev 20 points, making it the week’s biggest sting.  \n  <sub>Receipt: “On Day 20, Casa Amor islanders Amora, Carl, Chay, Corey, Ronnie, and Sydney were dumped from the island after failing to couple up.” · Dumped penalty (-20)</sub>\n- Carl’s public-vote return brought Dev 10 points back and softened the blow.  \n  <sub>Receipt: “On Day 21, Amora and Carl re-entered the villa after the public voted them back in.” · Re-entered the villa (+10)</sub>\n- Kayda and Zach staying together added 6 points across Dev and Priya’s teams.  \n  <sub>Receipt: “Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all chose to remain in their couples.” · Survived a recoupling together (+3)</sub>\n- Melanie and Sincere sticking together added 6 points across Jolie and Maya’s teams.  \n  <sub>Receipt: “Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all chose to remain in their couples.” · Survived a recoupling together (+3)</sub>\n- Trinity and Bryce stayed coupled, bringing another 6 points across Jolie and Maya’s teams.  \n  <sub>Receipt: “Kayda and Zach, Melanie and Sincere, and Trinity and Bryce all chose to remain in their couples.” · Survived a recoupling together (+3)</sub>\n\n_Next week, every point and every pairing stays in play—keep those group-chat receipts ready._\n"
+}

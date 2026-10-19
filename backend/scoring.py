@@ -115,7 +115,7 @@ def standings(league: dict, lines: list[LedgerLine], weeks: list[str]) -> list[d
         by_islander = {}
         for slot in player["roster"]:
             start = slot.get("from_week", 1)
-            counted = {w: p for w, p in points[slot["islander"]].items() if int(w.split()[-1]) >= start}
+            counted = {w: p for w, p in points[slot["islander"]].items() if week_num(w) >= start}
             by_islander[slot["islander"]] = sum(counted.values())
             for w, p in counted.items():
                 by_week[w] += p
@@ -124,7 +124,30 @@ def standings(league: dict, lines: list[LedgerLine], weeks: list[str]) -> list[d
     return sorted(table, key=lambda r: -r["total"])
 
 
-def score_league(league_key: str, save: bool = True, also_approve: set[str] = frozenset()) -> dict:
+def week_num(week: str) -> int:
+    return int(week.split()[-1])
+
+
+def apply_adjustments(events_by_week: dict[str, list[CheckedEvent]], league: dict,
+                      also_apply: set[str] = frozenset()) -> dict[str, list[CheckedEvent]]:
+    """Approved Ref rulings: drop events by ID and add events the code already verified."""
+    out = {w: list(evs) for w, evs in events_by_week.items()}
+    for adj in league.get("adjustments", []):
+        if not (adj["status"] == "approved" or (adj["status"] == "pending" and adj["id"] in also_apply)):
+            continue
+        week = adj["week"]
+        if week not in out:
+            continue
+        if adj["action"] == "remove_event":
+            out[week] = [e for e in out[week] if e.id != adj["event_id"]]
+        elif adj["action"] == "add_event":
+            out[week].append(CheckedEvent(**adj["event"]))
+    return out
+
+
+def score_league(league_key: str, save: bool = True, also_approve: set[str] = frozenset(),
+                 up_to_week: int | None = None, also_apply: set[str] = frozenset()) -> dict:
+    """Score a league. up_to_week stops at that week (spoiler-safe); also_* preview pending rules/adjustments."""
     league = load_league(league_key)
     season = seasons()[league["season"]]
     cast = verify.Cast(cast_source.cast(season["pages"]["wikipedia"]))
@@ -132,11 +155,14 @@ def score_league(league_key: str, save: bool = True, also_approve: set[str] = fr
     if problems:
         raise ValueError("; ".join(problems))
     events = latest_events(league["season"])
+    if up_to_week is not None:
+        events = {w: e for w, e in events.items() if week_num(w) <= up_to_week}
+    events = apply_adjustments(events, league, also_apply)
     rules = load_rules(league, also_approve)
     lines = ledger(events, rules)
     result = {"league": league["name"], "weeks": list(events), "rules": [r.model_dump() for r in rules],
               "standings": standings(league, lines, list(events)), "ledger": [l.model_dump() for l in lines]}
-    if save:
+    if save and up_to_week is None and not also_approve and not also_apply:
         (config.OUTPUT / f"standings_{league_key}.json").write_text(json.dumps(result, indent=1, ensure_ascii=False))
     return result
 
