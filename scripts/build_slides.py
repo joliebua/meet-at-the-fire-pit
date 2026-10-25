@@ -82,6 +82,9 @@ table.cmp tr:last-child td { background: rgba(255,46,147,.25); font-weight: 700;
 .todo { background: rgba(255,210,63,.18); border: 2px dashed var(--gold); border-radius: 14px; padding: 8px 14px; font-size: .6em; color: #fff3c4; }
 .missing { border: 2px dashed rgba(255,255,255,.5); padding: 60px; border-radius: 14px; }
 .small { font-size: .62em; }
+.repo { display: inline-block; margin-top: 16px; padding: 12px 22px; border-radius: 16px; font-size: .62em; line-height: 1.6;
+  background: rgba(29,7,48,.55); border: 1px solid rgba(255,255,255,.45); color: #fff; }
+.repo code { background: rgba(255,255,255,.12); padding: 2px 8px; border-radius: 6px; font-size: .95em; }
 """
 
 slides = []
@@ -92,7 +95,8 @@ slides.append(f"""
   <h1>Meet at the Fire Pit 🔥</h1>
   <p class="big">An AI agent team that runs your Love Island fantasy league</p>
   <p class="sub">Live sources in · a receipt behind every point · disputes settled · an AI coach that drafts and plays for you · a share-or-take finale · a 3D villa</p>
-  <p class="sub" style="margin-top:1.4em">Jolie Bua · MGT 409 AI Foundations for Managers · Fall 2026<br>{REPO.replace("https://", "")}</p>
+  <p class="sub" style="margin-top:1.2em">Jolie Bua · MGT 409 AI Foundations for Managers · Fall 2026</p>
+  <div class="repo">GitHub repo (public): <b>{REPO}</b><br><code>git clone {REPO}.git</code> · then follow the README</div>
   {notes("One sentence: it's the commissioner's job, done by agents, with proof for every point.")}
 </section>""")
 
@@ -248,7 +252,7 @@ slides.append(f"""
       </ul>
     </div>
   </div>
-  <p class="sub" style="margin-top:20px">💖 Thanks! Try it: {REPO.replace("https://", "")}</p>
+  <div class="repo" style="margin-top:18px">💖 Thanks! Clone the public repo: <b>{REPO}</b><br><code>git clone {REPO}.git</code> · README has the 3 run steps (about a minute)</div>
   {notes("Close on the real-user trial plan.")}
 </section>""")
 
